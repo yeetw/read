@@ -28,3 +28,58 @@ li > a > strong {
 li > a > strong:hover {
   color: #23527c;
 }
+
+// Search button
+.searchbox {
+  display: flex;
+  justify-content: center;
+}
+.search {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  border: 1px solid #d1d5db;
+  border-radius: 9999px;
+  padding: 1rem;
+
+  width: max-content;
+}
+.search--expanded .search__input {
+  width: 10rem;
+}
+
+.search__input {
+  /* Reset */
+  border: none;
+  padding: 0;
+
+  width: 0;
+  transition: width 120ms;
+  font-size: 16px;
+}
+.search__input:focus {
+  outline: none;
+}
+.search__button {
+  /* Reset */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.search__icon {
+  fill: none;
+  stroke: #d1d5db;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1;
+
+  height: 1.5rem;
+  width: 1.5rem;
+}
