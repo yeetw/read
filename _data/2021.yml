@@ -1,0 +1,522 @@
+- name: 外卡效應
+  author: Angela Steinmüller, Karlheinz Steinmüller
+  isbn: 9789867058072
+
+- name: 藏地牛皮書
+  author: 一直
+  isbn: 9789570411577
+
+- name: 也許你該找人聊聊
+  author: Lori Gottlieb
+  isbn: 9789869804097
+  star: true
+
+- name: 女性面對的戰爭：及那些敢於抵抗的勇者
+  author: Sue Lloyd-Roberts
+  isbn: 9789869537865
+
+- name: 別以為還有20年, 你跟父母相處的時間其實只剩下55天
+  author: 孝行執行委員會
+  isbn: 9789866272851
+
+- name: 每一天，都是放手的練習
+  author: Melody Beattie
+  isbn: 9789573271062
+
+- name: 求職大作戰
+  author: 楊萃先
+  isbn: 9789865855321
+
+- name: 《裸人》
+  author: Marc Dugain, Christophe Labbé
+  isbn: 9789863445265
+
+- name: 貝加爾湖隱居札記：在這喧囂的世界，一個人到西伯利亞森林住半年
+  author: Sylvain Tesson
+  isbn: 9789863597971
+  star: true
+
+- name: 臺灣數據百閱
+  author: Re-lab 團隊
+  isbn: 9789571379654
+
+- name: 走在，沒人想去的地方：樹木希林離世前的最後採訪
+  author: 樹木希林
+  isbn: 9789865071387
+
+- name: 面對久病家人的勇氣
+  author: Barry J. Jacobs, Julia L. Mayer
+  isbn: 9789863428060
+
+- name: 高敏感是種天賦
+  author: Ilse Sand
+  isbn: 9789863428510
+
+- name: 業的盡頭：印度青年的憤怒與希望
+  author: Somini Sengupta
+  isbn: 9789866319952
+
+- name: 創新的兩難
+  author: Clayton M. Christensen
+  isbn: 9786263181618
+
+- name: 悲慟的保存期限
+  author: Nora McInerny
+  isbn: 9789863984863
+
+- name: 資訊戰爭
+  author: David E. Sanger
+  isbn: 9789862624029
+
+- name: 精準提問的力量
+  author: Frank Sesno
+  isbn: 9789576587153
+  star: true
+
+- name: 穀倉效應
+  author: Gillian Tett
+  isbn: 9789863425472
+
+- name: 窮忙：我們這樣的世代
+  author: David K. Shipler
+  isbn: 9789571367187
+  star: true
+
+- name: 鹽淚：巴特羅醫生眼裡的難民血淚
+  author: Pietro Bartolo, Lidia Tilotta
+  isbn: 9789869551939
+
+- name: 幸福的麵包
+  author: 三島有紀子
+  isbn: 9789573329213
+
+- name: 下流社會：新社會階級的出現
+  author: 三浦展
+  isbn: 9789867088543
+
+- name: 文藝少女的矽谷進擊
+  author: 王文珮
+  isbn: 9789571387642
+
+- name: 跑過、煩惱過，才能發現的事。
+  author: 大迫傑
+  isbn: 9789571381060
+
+- name: 火來了，快跑
+  author: 大師兄
+  isbn: 9789864062416
+
+- name: Dr. 小百合，今天也要堅強啊！
+  author: 小百合
+  isbn: 9789869233842
+
+- name: 中年打工族
+  author: 小林美希
+  isbn: 9789571381978
+
+- name: 人
+  author: 小野寺史宜
+  isbn: 9789865100841
+
+- name: 設計與革新
+  author: 太刀川英輔
+  isbn: 9789869782326
+
+- name: 自我介紹聖經
+  author: 立川光昭
+  isbn: 9789865626877
+
+- name: 獻給炒高麗菜
+  author: 井上荒野
+  isbn: 9789865967383
+
+- name: 我們的幸福時光
+  author: 孔枝泳
+  isbn: 9789863448747
+
+- name: 比鬼故事更可怕的是你我身邊的故事
+  author: 少女老王
+  isbn: 9789861337159
+  star: true
+
+- name: 那一年，那些沒人說的故事
+  author: 少女老王
+  isbn: 9789861337715
+
+- name: 讚美日記：日本最受歡迎的生命課程
+  author: 手塚千砂子
+  isbn: 9789861752884
+
+- name: 致美好的你
+  author: 生活手帖社
+  isbn: 9786267288542
+
+- name: 只要出問題，小說都能搞定
+  author: 朱宥勳
+  isbn: 9789862137871
+
+- name: 劇作家坂元裕二
+  author: 坂元裕二
+  isbn: 9789869892407
+
+- name: 不是看手機的時候
+  author: 吉本芭娜娜
+  isbn: 9786263534117
+
+- name: 不再獨自悲傷的夜晚
+  author: 吉本芭娜娜
+  isbn: 9789571370033
+
+- name: 惆悵又幸福的粉圓夢
+  author: 吉本芭娜娜
+  isbn: 9789571373010
+
+- name: 想想下北澤
+  author: 吉本芭娜娜
+  isbn: 9789571383118
+
+- name: 這樣那樣生活的訣竅
+  author: 吉本芭娜娜
+  isbn: 9789571363325
+
+- name: 喂！喂！下北澤
+  author: 吉本芭娜娜
+  isbn: 9789571383125
+
+- name: 黃阿瑪的後宮生活：貓永遠是對的
+  author: 志明與狸貓
+  isbn: 9789571373133
+
+- name: 老派少女購物路線
+  author: 洪愛珠
+  isbn: 9789573289982
+
+- name: 那些殺死你的都並不致命
+  author: 沈意卿
+  isbn: 9789868954649
+
+- name: 無框身體
+  author: 烏恩慈
+  isbn: 9789865061869
+
+- name: 昆蟲老師上課了！吳沁婕的超級生物課
+  author: 吳沁婕
+  isbn: 9789868834156
+
+- name: 天橋上的魔術師
+  author: 吳明益
+  isbn: 9789868781900
+  star: true
+
+- name: 我在榮民醫院的日子
+  author: 吳明瑞
+  isbn: 9789863583912
+
+- name: 我們沒有祕密
+  author: 吳曉樂
+  isbn: 9789869886857
+  star: true
+
+- name: 倒數五秒月牙
+  author: 李琴峰
+  isbn: 9789863233688
+
+- name: 讓人一看就想買的 9 個秘密
+  author: 李朗州
+  isbn: 9789864772308
+
+- name: 器而不捨，以愛延續生命
+  author: 李明哲
+  isbn: 9789869945677
+
+- name: 便利店人間
+  author: 村田沙耶香
+  isbn: 9789865102289
+
+- name: 日日 100
+  author: 松浦彌太郎
+  isbn: 9789868811133
+
+- name: 假如我現在 25 歲，最想做的 50 件事
+  author: 松浦彌太郎
+  isbn: 9789865100964
+
+- name: 放下包袱的輕生活練習
+  author: 松浦彌太郎
+  isbn: 9789863200437
+
+- name: 如此人生
+  author: 林立青
+  isbn: 9789864061280
+  star: true
+
+- name: 台客劇場的人生實驗室
+  author: 林冠廷
+  isbn: 9789861336602
+
+- name: 診間裡的女人
+  author: 林靜儀
+  isbn: 9789869545679
+  star: true
+
+- name: 虛構的海
+  author: 林達陽
+  isbn: 9789868039148
+
+- name: 甲狀腺的生活練習題
+  author: 林毅欣
+  isbn: 9789869670692
+
+- name: 襲擊麵包店
+  author: 村上春樹
+  isbn: 9789571358017
+
+- name: 我是護理師
+  author: 金炫我
+  isbn: 9789579439589
+
+- name: 關於女兒
+  author: 金惠珍
+  isbn: 9789571376370
+
+- name: 我是金智恩
+  author: 金智恩
+  isbn: 9789571389387
+
+- name: 我們是在天堂上班：看韓國知名企業，如何打造幸福公司
+  author: 金鐘勳
+  isbn: 9789866209611
+
+- name: 解憂書店：出租大叔的人生借問站
+  author: 銀色快手
+  isbn: 9789571382043
+
+- name: 上流老人：不為金錢所困的75個老後生活提案
+  author: 保坂隆
+  isbn: 9789570848632
+
+- name: 在這樣的雨天
+  author: 是枝裕和
+  isbn: 9789571088440
+
+- name: 賈如幸福慢點來
+  author: 賈靜雯
+  isbn: 9789571371771
+
+- name: 耳朵借我
+  author: 馬世芳
+  isbn: 9789865824211
+
+- name: 牛蛙
+  author: 胡遷
+  isbn: 9789869749510
+
+- name: 您已登入 N 號房
+  author: 追蹤團火花
+  isbn: 9789571389400
+  star: true
+
+- name: 我妹妹
+  author: 張大春
+  isbn: 9789866631269
+
+- name: 我還是會繼續釀梅子酒
+  author: 張西
+  isbn: 9789576582691
+
+- name: 我討厭過的大人們
+  author: 張亦絢
+  isbn: 9789863598237
+
+- name: 永不放棄的跑者魂
+  author: 張嘉哲
+  isbn: 9789571372709
+
+- name: 遇見未知的自己
+  author: 張德芬
+  isbn: 9789573335085
+
+- name: 命案現場清潔公司
+  author: 得第一環境維護公司
+  isbn: 9789865113704
+  star: true
+
+- name: 情緒寄生
+  author: 許皓宜
+  isbn: 9789573283713
+
+- name: 迎向溫柔生產之路
+  author: 諶淑婷
+  isbn: 9789869450461
+  star: true
+
+- name: 愛情，真相大白
+  author: 酪梨壽司
+  isbn: 9789861332642
+
+- name: 這些年我們一起寫下的故事
+  author: 郭漢崇
+  isbn: 9789869850278
+
+- name: 出發！成為我們期待的大人
+  author: 陳怡彣
+  isbn: 9789571380124
+
+- name: 玩心設計
+  author: 陳威帆
+  isbn: 9789861343563
+
+- name: 佛羅里達變形記
+  author: 陳思宏
+  isbn: 9789869950251
+
+- name: 下雨的人
+  author: 陳繁齊
+  isbn: 9789571368238
+
+- name: 來談談那些痛苦的事吧！商務人士的父親為孩子所寫下的「工作本質」！
+  author: 森岡毅
+  isbn: 9789865100582
+
+- name: 我在柯文哲身邊的日子
+  author: 黃大維、楊緬因
+  isbn: 9789863424697
+
+- name: 黃阿瑪的後宮生活：貓咪哪有那麼可愛
+  author: 黃阿瑪、志銘與狸貓 
+  isbn: 9789865405489
+
+- name: 聽說時光記得你
+  author: 溫如生
+  isbn: 9789573340447
+
+- name: 老人詐欺
+  author: 鈴木大介
+  isbn: 9789869742764
+
+- name: 最貧困女子
+  author: 鈴木大介
+  isbn: 9789869805858
+
+- name: 女神自助餐
+  author: 劉芷妤
+  isbn: 9789869817042
+
+- name: 少年粉紅
+  author: 潘柏霖
+  isbn: 9789571078304
+
+- name: 忘了我是誰
+  author: 蔡怡
+  isbn: 9789571372259
+
+- name: 不要在最好的年紀，吃得隨便、過得廉價
+  author: 蔡侑霖
+  isbn: 9789865101176
+
+- name: 倒數 60 天職場生存日記
+  author: 蔣宗信
+  isbn: 9789865072759
+
+- name: 歲月靜好
+  author: 蔣勳
+  isbn: 9789571356068
+
+- name: 孤獨六講
+  author: 蔣勳
+  isbn: 9789863233596
+
+- name: 2030 轉職地圖
+  author: 蘇盈如
+  isbn: 9789573286769
+
+- name: 秋刀魚一條半
+  author: 盧怡安
+  isbn: 9789869595841
+
+- name: 命案現場清潔師
+  author: 盧拉拉
+  isbn: 9789865613983
+
+- name: 灰階思考
+  author: 謝孟恭
+  isbn: 9789865251024
+  star: true
+
+- name: 黑日
+  author: 韓麗珠
+  isbn: 9789869643597
+
+- name: 拚教養 – 全球化、親職焦慮與不平等童年
+  author: 藍佩嘉
+  isbn: 9789869735940
+
+- name: 二人生活
+  author: 櫻木紫乃
+  isbn: 9789571385921
+
+- name: 冰平線
+  author: 櫻木紫乃
+  isbn: 9789571373348
+
+- name: 皇家賓館
+  author: 櫻木紫乃
+  isbn: 9789571365459
+  star: true
+
+- name: 蛇行之月
+  author: 櫻木紫乃
+  isbn: 9789869533331
+
+- name: 愛的荒蕪地帶
+  author: 櫻木紫乃
+  isbn: 9789869533317
+
+- name: 繁星點點
+  author: 櫻木紫乃
+  isbn: 9789864011339
+
+- name: 玻璃蘆葦
+  author: 櫻木紫乃
+  isbn: 9789571360966
+
+- name: 黃檸檬
+  author: 權汝宜
+  isbn: 9789570857382
+
+- name: 新聞的騷動：狄波頓的深入報導與慰藉
+  author: Alain de Botton
+  isbn: 9789861342320
+
+- name: 第三道門
+  author: Alex Banyan
+  isbn: 9789576581069
+
+- name: 室內軟裝師養成術
+  author: Carol Li
+  isbn: 9789860629330
+
+- name: 暗數據
+  author: David Hand
+  isbn: 9789865549961
+
+- name: 想我苦哈哈的一生
+  author: James Thurber
+  isbn: 9789869278607
+
+- name: 提昇的時刻
+  author: Melinda French Gates
+  isbn: 9789573286288
+
+- name: 為什麼Google、LinkedIn、波音、高通、迪士尼都找他合作？
+  author: Oren Klaff
+  isbn: 9789867778185
+
+- name: 老衰死
+  author: NHK 特別採訪小組
+  isbn: 9789863428329
+  star: true
+
+- name: 我的慢療之路
+  author: Victoria Sweet 
+  isbn: 9789869669535

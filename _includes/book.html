@@ -1,0 +1,15 @@
+<h2>{{ include.year }} 年</h2>
+
+<ol>
+  {% for book in site.data[include.year] %}
+    {% unless book.pending %}
+      <li>
+        <a href="https://isbn.tw/{{ book.isbn }}">
+          {% if book.star %}<strong>{% endif %}
+          {{ book.author }}《{{ book.name }}》
+          {% if book.star %}</strong>{% endif %}
+        </a>
+      </li>
+    {% endunless %}
+  {% endfor %}
+</ol>

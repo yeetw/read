@@ -1,0 +1,30 @@
+---
+# Add custom CSS under the original `core.scss` file.
+---
+
+@import 'main';
+@import 'syntax';
+
+// Custom CSS
+ol {
+  margin: 0px;
+}
+li {
+  padding-top: .25em;
+  line-height: 24px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+li > a {
+  border-bottom: 0px;
+  font-size: 16px;
+  color: #337ab7;
+}
+li > a:hover {
+  text-decoration: underline;
+}
+li > a > strong {
+  color: #f4978e;
+}
+li > a > strong:hover {
+  color: #23527c;
+}

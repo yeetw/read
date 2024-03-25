@@ -1,0 +1,7 @@
+# for the-plain theme
+author_name: yee
+logo_url: https://avatars.githubusercontent.com/u/73866496?v=4
+
+plugins:
+  - jekyll-remote-theme
+remote_theme: heiswayi/the-plain
