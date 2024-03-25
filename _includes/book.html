@@ -4,7 +4,13 @@
   {% for book in site.data[include.year] %}
     {% unless book.pending %}
       <li>
-        <a href="https://isbn.tw/{{ book.isbn }}">
+        <a
+          {% if book.isbn %}
+          href="https://isbn.tw/{{ book.isbn }}"
+          target="_blank"
+          {% else %}
+          class="no-isbn"
+          {% endif %}>
           {% if book.star %}<strong>{% endif %}
           {{ book.author }}《{{ book.name }}》
           {% if book.star %}</strong>{% endif %}

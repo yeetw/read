@@ -28,6 +28,9 @@ li > a > strong {
 li > a > strong:hover {
   color: #23527c;
 }
+li > a.no-isbn {
+  color: #666;
+}
 
 // Search button
 .searchbox {
