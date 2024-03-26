@@ -154,7 +154,7 @@
   isbn: 9789865543808
   star: true
 
-- name: 松浦彌太郎のHello、Bonjour、你好
+- name: 松浦彌太郎の Hello、Bonjour、你好
   author: 松浦彌太郎
   isbn: 9789578787667
 
@@ -205,7 +205,6 @@
 - name: 追不到夢想就創一個！
   author: 鄭雅慈
   isbn: 9789863618515
-  star: true
 
 - name: 急診鋼鐵人2.0 戰鬥吧！
   author: 急診醫師 Dr. 魏
@@ -257,6 +256,7 @@
 - name: 吃飽睡飽，人生不怕
   author: 瞿欣怡
   isbn: 9789863598312
+  star: true
 
 - name: 我的過動人生
   author: 吳沁婕
