@@ -2,6 +2,7 @@
 author_name: yee
 logo_url: https://avatars.githubusercontent.com/u/73866496?v=4
 title: 2021 到現在看完的書
+social_share_previews: true
 
 plugins:
   - jekyll-remote-theme
