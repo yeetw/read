@@ -135,6 +135,11 @@
   isbn: 9786263531031
   date: 04/05
 
+- name: 愛的手札：給我的女兒們
+  author: 井村和清
+  isbn: 9789861760643
+  date: 04/07
+
 - name: 泅泳夜空的巧克力飛船魚
   author: 町田苑香
   isbn: 9786263611658
@@ -143,9 +148,4 @@
 - name: 一個人的內在朝聖之路
   author: Melody Beattie
   isbn: 9786267313695
-  pending: true
-
-- name: 跑步勝者的100天修練
-  author: 關家良一
-  isbn: 9789573271758
   pending: true
