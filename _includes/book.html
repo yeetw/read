@@ -1,7 +1,7 @@
 <h2>{{ include.year }} 年 - {{ site.data[include.year] | where_exp: "book", "book.pending != true" | size }} 本</h2>
 
 <ol>
-  {% for book in site.data[include.year] %}
+  {% for book in site.data[include.year] reversed %}
     {% unless book.pending %}
       <li>
         <a
