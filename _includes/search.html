@@ -14,11 +14,23 @@
       const filter = e.target.value.toLowerCase();
       const lis = document.getElementsByTagName('li');
       for (var i = 0; i < lis.length; i++) {
-        var name = lis[i].innerText.toLowerCase();
-        if (name.indexOf(filter) == -1) {
-          lis[i].style.display = 'none';
+        let name = lis[i].innerText.toLowerCase();
+        let isbn = lis[i].getAttribute('isbn');
+        let star = lis[i].getAttribute('star');
+        if (filter == 'star') {
+          /* Show only starred books. */
+          if (star == 'true') {
+            lis[i].style.display = 'list-item';
+          } else {
+            lis[i].style.display = 'none';
+          }
         } else {
-          lis[i].style.display = 'list-item';
+          /* Filter by name or ISBN. */
+          if (name.indexOf(filter) == -1 && isbn.indexOf(filter) == -1) {
+            lis[i].style.display = 'none';
+          } else {
+            lis[i].style.display = 'list-item';
+          }
         }
       }
     });

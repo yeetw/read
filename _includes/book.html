@@ -3,7 +3,7 @@
 <ol>
   {% for book in site.data[include.year] reversed %}
     {% unless book.pending %}
-      <li>
+      <li isbn="{{ book.isbn }}" star="{{ book.star }}">
         <a
           {% if book.isbn %}
           href="https://isbn.tw/{{ book.isbn }}"
