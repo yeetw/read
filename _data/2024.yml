@@ -8,6 +8,12 @@
   isbn: 9786263611658
   pending: true
 
+- name: 希望你也在這裡
+  author: 劉梓潔
+  isbn: 9789573337591
+  star: true
+  date: 04/24
+
 - name: 讀者太太解鎖跨文化婚姻
   author: 讀者太太 Mrs Reader
   isbn: 9789573295068
