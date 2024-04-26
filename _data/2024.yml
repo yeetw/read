@@ -8,21 +8,30 @@
   isbn: 9786263611658
   pending: true
 
+- name: 東京宅女共居生活好自在
+  author: 藤谷千明
+  isbn: 9789573299592
+  date: 04/26
+  comment: 東京四名共居女子的日常
+
 - name: 希望你也在這裡
   author: 劉梓潔
   isbn: 9789573337591
   star: true
   date: 04/24
+  comment: 一對母女生命交錯卻又平行的故事，讀起來很順暢
 
 - name: 日本監獄官現身說法：死刑紀實
   author: 一之瀨はち
   isbn: 9786263296107
   date: 04/24
+  comment: 用監獄官的角色介紹日本死刑犯及絞刑
 
 - name: 讀者太太解鎖跨文化婚姻
   author: 讀者太太 Mrs Reader
   isbn: 9789573295068
   date: 04/23
+  comment: 在和伴侶生活中也要經濟、精神獨立才能維持長期關係
 
 - name: 我們是血脈相連的陌生人
   author: 孫廷沇
