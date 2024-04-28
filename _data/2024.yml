@@ -8,6 +8,13 @@
   isbn: 9786263611658
   pending: true
 
+- name: 斯德哥爾摩宜居指引
+  author: 瑞典劉先生
+  isbn: 9786263742154
+  star: ture
+  date: 04/29
+  comment: 很像開箱瑞典的人文風情介紹，因此會想找其他國家的居住心得書來看
+
 - name: 人生下半場，我想要這樣的生活
   author: 廣瀨裕子
   isbn: 9789869455220
