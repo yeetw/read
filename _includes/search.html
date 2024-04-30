@@ -17,6 +17,7 @@
         let name = lis[i].innerText.toLowerCase();
         let isbn = lis[i].getAttribute('isbn');
         let star = lis[i].getAttribute('star');
+        let date = lis[i].getAttribute('date');
         if (filter == 'star') {
           /* Show only starred books. */
           if (star == 'true') {
@@ -25,12 +26,21 @@
             lis[i].style.display = 'none';
           }
         } else {
-          /* Filter by name or ISBN. */
-          if (name.indexOf(filter) == -1 && isbn.indexOf(filter) == -1) {
+          /* Filter by name or date or ISBN. */
+          if (name.indexOf(filter) == -1 && isbn.indexOf(filter) == -1 && date.indexOf(filter) == -1) {
             lis[i].style.display = 'none';
           } else {
             lis[i].style.display = 'list-item';
           }
+        }
+      }
+      /* Hide year total number if search input is not empty. */
+      const yearTotal = document.getElementsByClassName('year-total');
+      for (var i = 0; i < yearTotal.length; i++) {
+        if (filter == '') {
+          yearTotal[i].style.display = 'inline';
+        } else {
+          yearTotal[i].style.display = 'none';
         }
       }
     });
