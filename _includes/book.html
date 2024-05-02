@@ -13,12 +13,16 @@
           {% if book.isbn %}
           href="https://isbn.tw/{{ book.isbn }}"
           target="_blank"
+          class="tooltip"
           {% else %}
-          class="no-isbn"
+          class="no-isbn tooltip"
           {% endif %}>
           {% if book.star %}<strong>{% endif %}
           {{ book.author }}《{{ book.name }}》
           {% if book.star %}</strong>{% endif %}
+          {% if book.comment %}
+            <span class="tooltiptext">{{ book.comment }}</span>
+          {% endif %}
         </a>
       </li>
     {% endunless %}
