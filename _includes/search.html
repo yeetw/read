@@ -12,28 +12,42 @@
     });
     inputEle.addEventListener('change', (e) => {
       const filter = e.target.value.toLowerCase();
-      const lis = document.getElementsByTagName('li');
-      for (var i = 0; i < lis.length; i++) {
-        let name = lis[i].innerText.toLowerCase();
-        let isbn = lis[i].getAttribute('isbn');
-        let star = lis[i].getAttribute('star');
-        let date = lis[i].getAttribute('date');
-        if (filter == 'star') {
-          /* Show only starred books. */
-          if (star == 'true') {
-            lis[i].style.display = 'list-item';
+      for (var year = 2021; year <= 2024; year++) {
+        const yearList = document.getElementById('year-' + year + '-list');
+        const lis = yearList.getElementsByTagName('li');
+        let count = 0;
+        for (var i = 0; i < lis.length; i++) {
+          let name = lis[i].innerText.toLowerCase();
+          let isbn = lis[i].getAttribute('isbn');
+          let star = lis[i].getAttribute('star');
+          let date = lis[i].getAttribute('date');
+          if (filter == 'star') {
+            /* Show only starred books. */
+            if (star == 'true') {
+              lis[i].style.display = 'list-item';
+              count++;
+            } else {
+              lis[i].style.display = 'none';
+            }
           } else {
-            lis[i].style.display = 'none';
-          }
-        } else {
-          /* Filter by name or date or ISBN. */
-          if (name.indexOf(filter) == -1 && isbn.indexOf(filter) == -1 && date.indexOf(filter) == -1) {
-            lis[i].style.display = 'none';
-          } else {
-            lis[i].style.display = 'list-item';
+            /* Filter by name or date or ISBN. */
+            if (name.indexOf(filter) == -1 && isbn.indexOf(filter) == -1 && date.indexOf(filter) == -1) {
+              lis[i].style.display = 'none';
+            } else {
+              lis[i].style.display = 'list-item';
+              count++;
+            }
           }
         }
+        /* Hide year header if no book is shown. */
+        const yearHeader = document.getElementById('year-' + year);
+        if (count == 0) {
+          yearHeader.style.display = 'none';
+        } else {
+          yearHeader.style.display = 'block';
+        }
       }
+
       /* Hide year total number if search input is not empty. */
       const yearTotal = document.getElementsByClassName('year-total');
       for (var i = 0; i < yearTotal.length; i++) {

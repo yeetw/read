@@ -1,8 +1,8 @@
-<h2>{{ include.year }} 年
+<h2 id="year-{{ include.year }}">{{ include.year }} 年
   <span class="year-total">- {{ site.data[include.year] | where_exp: "book", "book.pending != true" | size }} 本</span>
 </h2>
 
-<ol>
+<ol id="year-{{ include.year }}-list">
   {% for book in site.data[include.year] reversed %}
     {% unless book.pending %}
       <li
