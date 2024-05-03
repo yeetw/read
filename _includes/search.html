@@ -58,6 +58,18 @@
         }
       }
     });
+
+    /* Handle scoll event to fix search button on top. */
+    const offset = searchEle.offsetTop;
+    window.onscroll = function() {
+      if (window.pageYOffset > offset) {
+        searchEle.classList.add('search--fixed');
+        document.getElementById('searchSpacer').classList.add('search__spacer');
+      } else {
+        searchEle.classList.remove('search--fixed');
+        document.getElementById('searchSpacer').classList.remove('search__spacer');
+      }
+    };
   });
 </script>
 
@@ -72,4 +84,5 @@
       </svg>
     </button>
   </div>
+  <div id="searchSpacer" class="search__spacer"></div>
 </div>
