@@ -3,6 +3,13 @@
   isbn: 9786267313695
   pending: true
 
+- name: 活得像個穿制服的人：我是警察
+  author: 王惀宇
+  isbn: 9789864063383
+  star: true
+  date: 2024/06/02
+  comment: 關於基層警察的鬼故事，包山包海的業務與輪班疲憊的身心
+
 - name: 只是咳嗽，怎麼變成癌症末期？
   author: 星希亞
   isbn: 9789865853914
