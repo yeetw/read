@@ -3,10 +3,16 @@
   isbn: 9786267313695
   pending: true
 
+- name: 極地探險家的美好生活祕密
+  author: Erling Kagge
+  isbn: 9789865549473
+  star: true
+  date: 2024/06/06
+  comment: 繼《聆聽寂靜》、《就是走路》的第三本，印象深刻的是學會獨處與訓練自己保持樂觀
+
 - name: 活得像個穿制服的人：我是警察
   author: 王惀宇
   isbn: 9789864063383
-  star: true
   date: 2024/06/02
   comment: 關於基層警察的鬼故事，包山包海的業務與輪班疲憊的身心
 
