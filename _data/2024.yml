@@ -3,6 +3,23 @@
   isbn: 9786267313695
   pending: true
 
+- name: 神的病歷簿 3
+  author: 夏川草介
+  isbn: 9789863610458
+  pending: true
+
+- name: 神的病歷簿 2
+  author: 夏川草介
+  isbn: 9789861856865
+  pending: true
+
+- name: 神的病歷簿 1
+  author: 夏川草介
+  isbn: 9789861855547
+  date: 2024/06/15
+  star: true
+  comment: 好看的醫學溫馨小說，人物描寫刻畫細膩，情節有趣生動
+
 - name: 德州媽媽沒有崩潰
   author: Mumu
   date: 2024/06/14
