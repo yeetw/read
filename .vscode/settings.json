@@ -5,5 +5,8 @@
     },
     "[scss]": {
         "editor.formatOnSave": false,
+    },
+    "[liquid]": {
+        "editor.formatOnSave": false
     }
 }

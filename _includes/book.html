@@ -18,7 +18,7 @@
           class="no-isbn tooltip"
           {% endif %}>
           {% if book.star %}<strong>{% endif %}
-          {{ book.author }}《{{ book.name }}》
+          {{ book.author }}《{{ book.name }}》{% if book.series %}{{ book.series }}{% endif %}
           {% if book.star %}</strong>{% endif %}
           {% if book.comment %}
             <span class="tooltiptext">{{ book.comment }}</span>
