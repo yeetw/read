@@ -3,17 +3,8 @@
   isbn: 9786267313695
   pending: true
 
-- name: 神的病歷簿 3
-  author: 夏川草介
-  isbn: 9789863610458
-  pending: true
-
-- name: 神的病歷簿 2
-  author: 夏川草介
-  isbn: 9789861856865
-  pending: true
-
-- name: 神的病歷簿 1
+- name: 神的病歷簿
+  series: 1
   author: 夏川草介
   isbn: 9789861855547
   date: 2024/06/15
