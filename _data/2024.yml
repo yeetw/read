@@ -3,6 +3,12 @@
   isbn: 9786267313695
   pending: true
 
+- name: 我是兒子，我來照顧
+  author: 平山亮
+  isbn: 9789570532043
+  date: 2024/07/01
+  comment:
+
 - name: 怪獸 8 號
   author: 松本直也
   series: １－５
