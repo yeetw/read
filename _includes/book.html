@@ -3,7 +3,7 @@
 </h2>
 
 <ol id="year-{{ include.year }}-list">
-  {% for book in site.data[include.year] reversed %}
+  {% for book in site.data[include.year] %}
     {% unless book.pending %}
       <li
         isbn="{{ book.isbn }}"
