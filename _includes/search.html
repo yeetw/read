@@ -17,10 +17,14 @@
         const lis = yearList.getElementsByTagName('li');
         let count = 0;
         for (var i = 0; i < lis.length; i++) {
-          let name = lis[i].innerText.toLowerCase();
+          let name = lis[i].textContent.toLowerCase();
           let isbn = lis[i].getAttribute('isbn');
           let star = lis[i].getAttribute('star');
           let date = lis[i].getAttribute('date');
+          let comment = '';
+          if (lis[i].getElementsByClassName('tooltiptext').length > 0) {
+            comment = lis[i].getElementsByClassName('tooltiptext')[0].textContent.toLowerCase();
+          }
           if (filter == 'star') {
             /* Show only starred books. */
             if (star == 'true') {
@@ -31,7 +35,7 @@
             }
           } else {
             /* Filter by name or date or ISBN. */
-            if (name.indexOf(filter) == -1 && isbn.indexOf(filter) == -1 && date.indexOf(filter) == -1) {
+            if (name.indexOf(filter) == -1 && isbn.indexOf(filter) == -1 && date.indexOf(filter) == -1 && comment.indexOf(filter) == -1){
               lis[i].style.display = 'none';
             } else {
               lis[i].style.display = 'list-item';
