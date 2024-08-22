@@ -10,6 +10,14 @@
   comment:
   pending: true
 
+- name: 神的病歷簿
+  series: １、２
+  author: 夏川草介
+  isbn: 9789861855547
+  date: 2024/08/22
+  star: true
+  comment: 好看的醫療溫馨小說，人物描寫刻畫細膩，喜歡人物間友善有愛的互動✨
+
 - name: 我是照顧者：成為照顧者篇
   author: 米奧
   date: 2024/08/21
@@ -166,14 +174,6 @@
   date: 2024/06/19
   isbn: 9789579542968
   comment: 一本很厚的憂鬱症科普書，貧窮會惡化憂鬱，憂鬱也會導致貧窮；相信醫生規律吃藥；試著把思緒專注在可以控制的事情上
-
-- name: 神的病歷簿
-  series: １
-  author: 夏川草介
-  isbn: 9789861855547
-  date: 2024/06/16
-  star: true
-  comment: 好看的醫學溫馨小說，人物描寫刻畫細膩，情節有趣生動✨
 
 - name: 德州媽媽沒有崩潰
   author: Mumu
