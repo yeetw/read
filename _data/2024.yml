@@ -3,6 +3,12 @@
   isbn: 9786267313695
   pending: true
 
+- name: 圖書館奇譚
+  author: 村上春樹
+  date: 2024/09/03
+  isbn: 9789571360348
+  comment: 不可思議的故事，結合奇幻和愛情，加上羊男和老爺爺
+
 - name: 男孩、鼴鼠、狐狸與馬
   author: Charlie Mackesy
   date: 2024/09/03
