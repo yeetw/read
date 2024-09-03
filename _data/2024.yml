@@ -3,12 +3,12 @@
   isbn: 9786267313695
   pending: true
 
-- name:
-  author:
-  date:
-  isbn:
-  comment:
-  pending: true
+- name: 男孩、鼴鼠、狐狸與馬
+  author: Charlie Mackesy
+  date: 2024/09/03
+  isbn: 9789863987871
+  comment: 「生活不容易，但你是被愛的。」
+  star: true
 
 - name: 為什麼吃蛋糕、看電影、去了健身房，都還是好不起來
   author: 精神科醫師 Sidow
