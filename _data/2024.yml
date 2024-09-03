@@ -10,19 +10,18 @@
   comment:
   pending: true
 
-- name: 美麗由此誕生
-  author: MEGUMI
-  date: 2024/09/03
-  isbn: 9786267406793
-  comment: 獲得許多新商品的資訊，從臉部皮膚到體態都需要費心照顧，成為看起來好親近的人也會吸引好運
-  pending: true
-
 - name: 為什麼吃蛋糕、看電影、去了健身房，都還是好不起來
   author: 精神科醫師 Sidow
   date: 2024/08/29
   isbn: 9786264020220
   comment: 壓力分為物理跟心理的，物理可以避免（例如太冷、太吵、太亮），心理可以藉由消除的方法減少累積的壓力
   pending: true
+
+- name: 美麗由此誕生
+  author: MEGUMI
+  date: 2024/09/03
+  isbn: 9786267406793
+  comment: 獲得許多新商品的資訊，從臉部皮膚到體態都需要費心照顧，成為看起來好親近的人也會吸引好運
 
 - name: 柚子醫師雞婆診療室
   author: 陳木榮
