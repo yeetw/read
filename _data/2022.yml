@@ -18,11 +18,13 @@
   author: 謝松善
   isbn: 9789869946957
   star: true
+  comment: 阿善師的書，對刑事、鑑識有興趣的人會喜歡
 
 - name: 解答交朋友的煩惱
   author: 吉本芭娜娜
   isbn: 9789571398617
   star: true
+  comment: 用好讀溫暖的文字分享自己交朋友的方式，練習用舒服自在的心態和朋友相處
 
 - name: 邊境角落關鍵字：413 天異地觀察實錄
   author: 葉兆中
@@ -50,6 +52,7 @@
   author: 何致和
   isbn: 9786263141063
   star: true
+  comment: 很好看的長篇小說，人物刻劃深刻，描述故事場景的文字很立體
 
 - name: 毒舌的技術
   author: 北野武
@@ -75,11 +78,13 @@
 - name: 不便利的便利店
   author: 金浩然
   isbn: 9786269593842
+  series: １、２ 
   star: true
 
 - name: 放慢速度的勇氣
   author: 關家良一
   isbn: 9789573275923
+  comment: 因為東吳超馬知道這名日本上班族跑者，對長跑或作者有興趣的話可以讀
 
 - name: 上班時，別演太多內心戲
   author: 井上智介
