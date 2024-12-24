@@ -14,3 +14,27 @@ layout: default
     href="{{ "/" | prepend: site.baseurl | prepend: site.url }}"
     title="Back to Top">All</a>
 </div>
+
+<script>
+  function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+  }
+
+  function handleTooltipClick(event, element) {
+    if (isMobileDevice()) {
+      if (!element.classList.contains('active')) {
+        event.preventDefault();
+        element.classList.add('active');
+      }
+    }
+  }
+
+  document.addEventListener('click', function(event) {
+    const tooltips = document.querySelectorAll('.tooltip');
+    tooltips.forEach(function(tooltip) {
+      if (!tooltip.contains(event.target)) {
+        tooltip.classList.remove('active');
+      }
+    });
+  });
+</script>

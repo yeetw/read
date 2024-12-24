@@ -1,3 +1,6 @@
+{% assign nbooks = site.data[include.year] | size %}
+{% if nbooks > 0 %}
+
 <h2 id="year-{{ include.year }}">{{ include.year }} 年
   <span class="year-total">- {{ site.data[include.year] | where_exp: "book", "book.pending != true" | size }} 本</span>
 </h2>
@@ -30,26 +33,4 @@
   {% endfor %}
 </ol>
 
-<script>
-  function isMobileDevice() {
-    return /Mobi|Android/i.test(navigator.userAgent);
-  }
-
-  function handleTooltipClick(event, element) {
-    if (isMobileDevice()) {
-      if (!element.classList.contains('active')) {
-        event.preventDefault();
-        element.classList.add('active');
-      }
-    }
-  }
-
-  document.addEventListener('click', function(event) {
-    const tooltips = document.querySelectorAll('.tooltip');
-    tooltips.forEach(function(tooltip) {
-      if (!tooltip.contains(event.target)) {
-        tooltip.classList.remove('active');
-      }
-    });
-  });
-</script>
+{% endif %}
