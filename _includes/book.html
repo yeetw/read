@@ -1,35 +1,36 @@
-{% assign nbooks = site.data[include.year] | where_exp: "book", "book.pending != true" | size %}
+{% assign books = site.data[include.year] | where_exp: "book", "book.pending != true" %}
+{% assign nbooks = books | size %}
+{% assign year = include.year %}
+
 {% if nbooks > 0 %}
 
-<h2 id="year-{{ include.year }}">{{ include.year }} 年
-  <span class="year-total">- {{ site.data[include.year] | where_exp: "book", "book.pending != true" | size }} 本</span>
+<h2 id="year-{{ year }}">{{ year }} 年
+  <span class="year-total">- {{ nbooks }} 本</span>
 </h2>
 
-<ol id="year-{{ include.year }}-list">
-  {% for book in site.data[include.year] %}
-    {% unless book.pending %}
-      <li
-        isbn="{{ book.isbn }}"
-        star="{{ book.star }}"
-        date="{{ book.date }}">
-        <a
-          onclick="handleTooltipClick(event, this)"
-          {% if book.isbn %}
-          href="https://isbn.tw/{{ book.isbn }}"
-          target="_blank"
-          class="tooltip"
-          {% else %}
-          class="no-isbn tooltip"
-          {% endif %}>
-          {% if book.star %}<strong>{% endif %}
-          {{ book.author }}《{{ book.name }}》{% if book.series %}{{ book.series }}{% endif %}
-          {% if book.star %}</strong>{% endif %}
-          {% if book.comment %}
-            <span class="tooltiptext">{{ book.comment }}</span>
-          {% endif %}
-        </a>
-      </li>
-    {% endunless %}
+<ol id="year-{{ year }}-list">
+  {% for book in books %}
+    <li
+      isbn="{{ book.isbn }}"
+      star="{{ book.star }}"
+      date="{{ book.date }}">
+      <a
+        onclick="handleTooltipClick(event, this)"
+        {% if book.isbn %}
+        href="https://isbn.tw/{{ book.isbn }}"
+        target="_blank"
+        class="tooltip"
+        {% else %}
+        class="no-isbn tooltip"
+        {% endif %}>
+        {% if book.star %}<strong>{% endif %}
+        {{ book.author }}《{{ book.name }}》{% if book.series %}{{ book.series }}{% endif %}
+        {% if book.star %}</strong>{% endif %}
+        {% if book.comment %}
+          <span class="tooltiptext">{{ book.comment }}</span>
+        {% endif %}
+      </a>
+    </li>
   {% endfor %}
 </ol>
 
