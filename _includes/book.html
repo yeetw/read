@@ -1,4 +1,4 @@
-{% assign nbooks = site.data[include.year] | size %}
+{% assign nbooks = site.data[include.year] | where_exp: "book", "book.pending != true" | size %}
 {% if nbooks > 0 %}
 
 <h2 id="year-{{ include.year }}">{{ include.year }} 年
