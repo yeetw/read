@@ -1,4 +1,4 @@
-name: test
-author: test
-isbn: test
-comment: test
+- name: test
+  author: test
+  isbn: test
+  comment: test
