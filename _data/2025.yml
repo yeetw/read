@@ -3,3 +3,11 @@
   isbn: test
   comment: test
   pending: true
+
+- name: 我決定簡單的生活
+  author: 佐佐木典士
+  date: 2025/01/03
+  series: １、２
+  isbn: 9789576581052
+  comment: 養成習慣的方法是降低門檻，找到容易上手容易開始做的方式，用愉快的心情引發好的意志力持續有規劃的執行
+
