@@ -4,3 +4,8 @@
   comment: test
   pending: true
 
+- name: 我簡單豐富的生活提案
+  author: 澀谷直人
+  isbn: 9789869662413
+  star: true
+  comment: 我覺得很好看，有些本來就知道但是沒有認真實行，看完之後離簡單清爽的生活更靠近
