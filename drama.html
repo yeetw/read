@@ -1,0 +1,28 @@
+---
+layout: page
+title: 看過的劇 / 電影 / 動畫
+---
+
+{% include search.html %}
+
+{% assign dramas = site.data["drama"] | where_exp: "drama", "drama.pending != true" %}
+
+<ol id="drama-list">
+  {% for drama in dramas %}
+    <li
+      star="{{ drama.star }}"
+      platform="{{ drama.platform }}"
+      date="{{ drama.date }}">
+      <a
+        onclick="handleTooltipClick(event, this)"
+        class="tooltip">
+        {% if drama.star %}<strong>{% endif %}
+        {{ drama.type }}《{{ drama.name }}》
+        {% if drama.star %}</strong>{% endif %}
+        {% if drama.comment %}
+          <span class="tooltiptext">{{ drama.comment }}</span>
+        {% endif %}
+      </a>
+    </li>
+  {% endfor %}
+</ol>

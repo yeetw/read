@@ -1,4 +1,102 @@
 <script>
+  function searchBookList(filter) {
+    /* Elements begin with year- */
+    const elements = document.querySelectorAll('[id^="year-"]');
+
+    /* Then match `year-*-list` pattern */
+    const pattern = /^year-\d+-list$/;
+    const yearLists = Array.from(elements).filter(element => pattern.test(element.id));
+
+    /* Iterate through each year list. */
+    for (let y = 0; y < yearLists.length; y++) {
+      const yearList = yearLists[y];
+      const year = yearList.id.replace('year-', '').replace('-list', '');
+      const lis = yearList.getElementsByTagName('li');
+      let count = 0;
+      for (var i = 0; i < lis.length; i++) {
+        let name = lis[i].textContent.toLowerCase();
+        let isbn = lis[i].getAttribute('isbn');
+        let star = lis[i].getAttribute('star');
+        let date = lis[i].getAttribute('date');
+        let comment = '';
+        if (lis[i].getElementsByClassName('tooltiptext').length > 0) {
+          comment = lis[i].getElementsByClassName('tooltiptext')[0].textContent.toLowerCase();
+        }
+        if (filter == 'star') {
+          /* Show only starred books. */
+          if (star == 'true') {
+            lis[i].style.display = 'list-item';
+            count++;
+          } else {
+            lis[i].style.display = 'none';
+          }
+        } else {
+          /* Filter by name or date or ISBN. */
+          if (name.indexOf(filter) == -1 && isbn.indexOf(filter) == -1 && date.indexOf(filter) == -1 && comment.indexOf(filter) == -1){
+            lis[i].style.display = 'none';
+          } else {
+            lis[i].style.display = 'list-item';
+            count++;
+          }
+        }
+      }
+
+      /* Hide year header if no book is shown. */
+      const yearHeader = document.getElementById('year-' + year);
+      if (count == 0) {
+        yearHeader.style.display = 'none';
+      } else {
+        yearHeader.style.display = 'block';
+      }
+    }
+
+    /* Hide year total number if search input is not empty. */
+    const yearTotal = document.getElementsByClassName('year-total');
+    for (var i = 0; i < yearTotal.length; i++) {
+      if (filter == '') {
+        yearTotal[i].style.display = 'inline';
+      } else {
+        yearTotal[i].style.display = 'none';
+      }
+    }
+  }
+
+  function searchDramaList(filter) {
+    const dramaList = document.getElementById('drama-list');
+    if (!dramaList) {
+      return;
+    }
+    const lis = dramaList.getElementsByTagName('li');
+    for (let i = 0; i < lis.length; i++) {
+      /* Get attributes. */
+      let name = lis[i].textContent.toLowerCase();
+      let star = lis[i].getAttribute('star');
+      let platform = lis[i].getAttribute('platform').toLowerCase();
+      let date = lis[i].getAttribute('date');
+      let comment = '';
+      if (lis[i].getElementsByClassName('tooltiptext').length > 0) {
+        comment = lis[i].getElementsByClassName('tooltiptext')[0].textContent.toLowerCase();
+      }
+
+      if (filter == 'star') {
+        /* Show only starred books. */
+        if (star == 'true') {
+          lis[i].style.display = 'list-item';
+        } else {
+          lis[i].style.display = 'none';
+        }
+      } else {
+        /* Filter by search fields. */
+        const searchFields = [name, platform, date, comment];
+        if (searchFields.every(field => field.indexOf(filter) === -1)) {
+          lis[i].style.display = 'none';
+        } else {
+          lis[i].style.display = 'list-item';
+        }
+      }
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     const searchEle = document.getElementById('search');
     const inputEle = document.getElementById('searchInput');
@@ -12,63 +110,8 @@
     });
     inputEle.addEventListener('change', (e) => {
       const filter = e.target.value.toLowerCase();
-
-      /* Elements begin with year- */
-      const elements = document.querySelectorAll('[id^="year-"]');
-      /* Then match `year-*-list` pattern */
-      const pattern = /^year-\d+-list$/;
-      const yearLists = Array.from(elements).filter(element => pattern.test(element.id));
-      /* Iterate through each year list. */
-      for (let y = 0; y < yearLists.length; y++) {
-        const yearList = yearLists[y];
-        const year = yearList.id.replace('year-', '').replace('-list', '');
-        const lis = yearList.getElementsByTagName('li');
-        let count = 0;
-        for (var i = 0; i < lis.length; i++) {
-          let name = lis[i].textContent.toLowerCase();
-          let isbn = lis[i].getAttribute('isbn');
-          let star = lis[i].getAttribute('star');
-          let date = lis[i].getAttribute('date');
-          let comment = '';
-          if (lis[i].getElementsByClassName('tooltiptext').length > 0) {
-            comment = lis[i].getElementsByClassName('tooltiptext')[0].textContent.toLowerCase();
-          }
-          if (filter == 'star') {
-            /* Show only starred books. */
-            if (star == 'true') {
-              lis[i].style.display = 'list-item';
-              count++;
-            } else {
-              lis[i].style.display = 'none';
-            }
-          } else {
-            /* Filter by name or date or ISBN. */
-            if (name.indexOf(filter) == -1 && isbn.indexOf(filter) == -1 && date.indexOf(filter) == -1 && comment.indexOf(filter) == -1){
-              lis[i].style.display = 'none';
-            } else {
-              lis[i].style.display = 'list-item';
-              count++;
-            }
-          }
-        }
-        /* Hide year header if no book is shown. */
-        const yearHeader = document.getElementById('year-' + year);
-        if (count == 0) {
-          yearHeader.style.display = 'none';
-        } else {
-          yearHeader.style.display = 'block';
-        }
-      }
-
-      /* Hide year total number if search input is not empty. */
-      const yearTotal = document.getElementsByClassName('year-total');
-      for (var i = 0; i < yearTotal.length; i++) {
-        if (filter == '') {
-          yearTotal[i].style.display = 'inline';
-        } else {
-          yearTotal[i].style.display = 'none';
-        }
-      }
+      searchBookList(filter);
+      searchDramaList(filter);
     });
 
     /* Handle scoll event to fix search button on top. */

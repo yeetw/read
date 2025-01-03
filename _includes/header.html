@@ -1,5 +1,11 @@
+{% if page.url == "/" %}
+  {% assign target_url = "/drama" %}
+{% else %}
+  {% assign target_url = "/" %}
+{% endif %}
+
 <aside class="logo">
-  <a href="{{ site.baseurl | prepend: site.url }}">
+  <a href="{{ target_url | prepend: site.url }}">
     <img
       src="{{ site.logo_url }}"
       alt=""
