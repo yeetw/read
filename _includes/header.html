@@ -5,7 +5,7 @@
 {% endif %}
 
 <aside class="logo">
-  <a href="{{ target_url | prepend: site.url }}">
+  <a href="{{ target_url | prepend: site.baseurl | prepend: site.url }}">
     <img
       src="{{ site.logo_url }}"
       alt=""
