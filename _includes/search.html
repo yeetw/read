@@ -12,8 +12,16 @@
     });
     inputEle.addEventListener('change', (e) => {
       const filter = e.target.value.toLowerCase();
-      for (var year = 2021; year <= 2025; year++) {
-        const yearList = document.getElementById('year-' + year + '-list');
+
+      /* Elements begin with year- */
+      const elements = document.querySelectorAll('[id^="year-"]');
+      /* Then match `year-*-list` pattern */
+      const pattern = /^year-\d+-list$/;
+      const yearLists = Array.from(elements).filter(element => pattern.test(element.id));
+      /* Iterate through each year list. */
+      for (let y = 0; y < yearLists.length; y++) {
+        const yearList = yearLists[y];
+        const year = yearList.id.replace('year-', '').replace('-list', '');
         const lis = yearList.getElementsByTagName('li');
         let count = 0;
         for (var i = 0; i < lis.length; i++) {
