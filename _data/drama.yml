@@ -3,35 +3,41 @@
   star: true
   type: 電影
   date: 2025/01/02
+  comment: 主角役所廣司演得超好，在樹影下吃簡單的午餐．工作之餘去書店買一本100円的書，到相館洗底片，是完美的日常
 
 - name: Last mile
   platform: 電影院
   star: true
   type: 電影
   date: 2024/12/20
+  comment: 主角是滿島光和岡田將生，編劇是野木亞紀子，結合電視劇《Unnatural》和《MIU404》的世界觀和演員，卡司太強了這部
 
 - name: 我的 2 年妓女生涯
   platform: CATCHPLAY+
   type: 電影
   date: 2024
+  comment: 女作家為了寫作題材到妓院驗性工作者的生活與社會陰暗面
 
 - name: 銀之匙
   platform: KKTV
   type: 動畫
   date: 2024
   star: true
+  comment: 漫畫家荒川弘創作的農業學校背景校園漫畫作品，描繪主角八軒勇吾從清晨起床整理馬廄、騎馬、養小豬到購買豬肉做成培根的故事
   
 - name: 海街日記
   platform: KKTV
   type: 電影
   date: 2024
   star: true
+  comment: 導演是枝裕和的電影，三姐妹是綾瀨遙、長澤雅美、夏帆和意外帶回家的妹妹廣瀨鈴，淡淡的日常
 
 - name: 小偷家族
   platform: KKTV
   star: true
   type: 電影
   date: 2024
+  comment: 
 
 - name: 那一年我們談的那場戀愛
   platform: friDay
