@@ -1,6 +1,7 @@
 # for the-plain theme
 author_name: yee
-logo_url: https://avatars.githubusercontent.com/u/73866496?v=4
+book_logo_url: /assets/book_logo.jpg
+drama_logo_url: /assets/drama_logo.jpg
 title: yee
 social_share_previews: true
 

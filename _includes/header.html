@@ -4,10 +4,16 @@
   {% assign target_url = "/" %}
 {% endif %}
 
+{% if page.url == "/" %}
+  {% assign logo_url = site.book_logo_url %}
+{% else %}
+{% assign logo_url = site.drama_logo_url %}
+{% endif %}
+
 <aside class="logo">
   <a href="{{ target_url | prepend: site.baseurl | prepend: site.url }}">
     <img
-      src="{{ site.logo_url }}"
+      src="{{ logo_url }}"
       alt=""
       class="logo-avatar">
   </a>
