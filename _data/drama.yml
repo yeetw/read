@@ -1,3 +1,11 @@
+- name: 孤獨的美食家
+  platform: KKTV
+  series: 2025 跨年特別篇
+  star: true
+  type: 日劇
+  date: 2025/01/05
+  comment: 跟著五郎享受一個人的美食
+
 - name: 我的完美日常
   platform: Hami
   star: true
