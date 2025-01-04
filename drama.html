@@ -17,7 +17,7 @@ title: 看過的劇 / 電影 / 動畫
         onclick="handleTooltipClick(event, this)"
         class="tooltip">
         {% if drama.star %}<strong>{% endif %}
-        {{ drama.type }}《{{ drama.name }}》
+        {{ drama.type }}《{{ drama.name }}》{% if drama.series %}{{ drama.series }}{% endif %}
         {% if drama.star %}</strong>{% endif %}
         {% if drama.comment %}
           <span class="tooltiptext">{{ drama.comment }}</span>
