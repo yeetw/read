@@ -13,7 +13,7 @@
 <aside class="logo">
   <a href="{{ target_url | prepend: site.baseurl | prepend: site.url }}">
     <img
-      src="{{ logo_url }}"
+      src="{{ logo_url | prepend: site.baseurl | prepend: site.url}}"
       alt=""
       class="logo-avatar">
   </a>
