@@ -18,9 +18,9 @@
 - name: 那日清晨真令人感到空虛
   platform: friDay
   type: 電影
-  date: 2025/01
-  pending: true
-  comment: 
+  date: 2025/01/14
+  star: true
+  comment: 工作的每一天都心力交瘁，為什麼其他人都做得到是不是我不夠好，雖然活著的每一天都不容易，還好能被朋友接住沮喪和孤獨
   
 - name: 曾經、魔法少女和邪惡相互為敵。 
   platform: KKTV
