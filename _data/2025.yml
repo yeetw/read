@@ -5,6 +5,13 @@
   comment: test
   pending : true
 
+- name: 從急診室，致你
+  author: 南宮仁
+  isbn: 9786263745766
+  date: 2025/01/20
+  comment: test
+  pending : true
+
 - name: 世界上最透明的故事
   author: 杉井光
   isbn: 9789573342076
