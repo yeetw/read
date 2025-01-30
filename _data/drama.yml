@@ -7,6 +7,13 @@
   pending: true
   comment: 跟著五郎享受一個人的美食，看他吃的津津有味又吃很多的樣子覺得很好吃
 
+- name: 奇蹟
+  platform: MyVideo
+  type: 電影
+  date: 2025/01/30
+  star: true
+  comment: 是枝裕和的電影，平淡的畫面、簡單的配樂與柔順的運鏡，卻散發著濃濃的韻味
+
 - name: 北極百貨的秋乃小姐
   platform: MyVideo
   type: 電影
