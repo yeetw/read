@@ -4,13 +4,6 @@
   date: test
   comment: test
   pending : true
-
-- name: 為什麼要睡覺？
-  author: Matthew Walker
-  isbn: 9789864796311
-  date: 2025/02/01
-  star: true
-  comment: 
   
 - name: 日本奇妙知識不思議
   author: 梅用知世
