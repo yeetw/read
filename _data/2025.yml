@@ -4,6 +4,12 @@
   date: test
   comment: test
   pending : true
+
+- name: 如果我的朋友是婦科醫生，我會這樣問她
+  author: 柳知沅
+  isbn: 9786267311363
+  date: 2025/02/02
+  comment: m/4h6
   
 - name: 日本奇妙知識不思議
   author: 梅用知世
