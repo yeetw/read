@@ -27,7 +27,7 @@
         {{ book.author }}《{{ book.name }}》{% if book.series %}{{ book.series }}{% endif %}
         {% if book.star %}</strong>{% endif %}
         {% if book.comment %}
-          <span class="tooltiptext">{{ book.comment }}</span>
+          <span class="tooltiptext">{{ book.comment | newline_to_br | strip_newlines }}</span>
         {% endif %}
       </a>
     </li>

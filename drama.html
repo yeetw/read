@@ -20,7 +20,7 @@ title: 看過的劇 / 電影 / 動畫
         {{ drama.type }}《{{ drama.name }}》{% if drama.series %}{{ drama.series }}{% endif %}
         {% if drama.star %}</strong>{% endif %}
         {% if drama.comment %}
-          <span class="tooltiptext">{{ drama.comment }}</span>
+          <span class="tooltiptext">{{ drama.comment | newline_to_br | strip_newlines }}</span>
         {% endif %}
       </a>
     </li>
