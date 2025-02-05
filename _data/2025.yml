@@ -5,6 +5,12 @@
   comment: test
   pending : true
 
+- name: 別想了，好好生活吧！
+  author: Anne Bogel
+  isbn: 9789863987895
+  date: 2025/02/07
+  comment: 作者提出很多情境舉例和改變的方法，減少多慮的過度思考，為生活帶來更多平靜與快樂
+
 - name: 如果我的朋友是婦科醫生，我會這樣問她
   author: 柳知沅
   isbn: 9786267311363
