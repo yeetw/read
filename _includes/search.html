@@ -105,6 +105,10 @@
       const isExpanded = searchEle.classList.contains('search--expanded');
       if (!isExpanded) {
         inputEle.focus();
+      } else {
+        inputEle.value = '';
+        searchBookList('');
+        searchDramaList('');
       }
       searchEle.classList.toggle('search--expanded');
     });
