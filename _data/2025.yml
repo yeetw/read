@@ -5,6 +5,13 @@
   comment: test
   pending : true
 
+- name: 白醫師回憶錄
+  author: 時間魔術師
+  isbn: 9786269917433
+  date: 2025/02/06
+  comment: 
+  pending : true
+
 - name: 獨活女子的守則
   author: 朝井麻由美
   isbn: 9786264180580
