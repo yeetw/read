@@ -9,9 +9,10 @@
 
 - name: 福岡愛情故事
   platform: KKTV
+  type: 日劇
   series: 2020 永不消逝的愛的花火
   date: 2025/02/08
-  comment: 依據真實故事改編，劇情有點拖，因為要去福岡的關係對福岡有關的題材特別感興趣
+  comment: 依據真實故事改編，劇情有點拖，因為要去福岡的關係對福岡有關的題材特別感興趣🎆
 
 - name: 四月，她將到來。
   platform: MyVideo
