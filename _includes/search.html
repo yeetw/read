@@ -101,14 +101,21 @@
     const searchEle = document.getElementById('search');
     const inputEle = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchButton');
+    const searchIcon = searchButton.querySelector('.search-icon');
+    const closeIcon = searchButton.querySelector('.close-icon');
+
     searchButton.addEventListener('click', (e) => {
       const isExpanded = searchEle.classList.contains('search--expanded');
       if (!isExpanded) {
         inputEle.focus();
+        searchIcon.style.display = 'none';
+        closeIcon.style.display = 'block';
       } else {
         inputEle.value = '';
         searchBookList('');
         searchDramaList('');
+        searchIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
       }
       searchEle.classList.toggle('search--expanded');
     });
@@ -136,9 +143,14 @@
   <div class="search" id="search">
     <input type="text" class="search__input" id="searchInput" placeholder="" />
     <button class="search__button" id="searchButton">
-      <svg class="search__icon" focusable="false" viewBox="0 0 24 24">
+      <svg class="search__icon search-icon" focusable="false" viewBox="0 0 24 24">
         <path
           d="M10.5,0.5c5.523,0,10,4.477,10,10s-4.477,10-10,10s-10-4.477-10-10S4.977,0.5,10.5,0.5z M23.5,23.5 l-5.929-5.929">
+        </path>
+      </svg>
+      <svg class="search__icon close-icon" focusable="false" viewBox="0 0 24 24" style="display: none;">
+        <path
+          d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
         </path>
       </svg>
     </button>
