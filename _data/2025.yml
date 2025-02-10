@@ -8,9 +8,15 @@
 - name: 白醫師回憶錄
   author: 時間魔術師
   isbn: 9786269917433
-  date: 2025/02/08
+  date: 2025/02/10
   star: true
   comment: 書展買的，對醫療的故事沒有抵抗力，文字寫實又流暢好讀，每篇文章後面有附有小百科
+
+- name: 會好起來的，就算不是現在
+  author: Alessandra Olanow
+  isbn: 9789861798455
+  date: 2025/02/10
+  comment: 生命總會有一些起起伏伏，收拾好情緒，會好起來的，就算不是現在。
 
 - name: 堇莊的房客
   author: 凪良汐
