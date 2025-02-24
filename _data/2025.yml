@@ -4,13 +4,6 @@
   date: test
   comment: test
   pending : true
-  
-- name: 我在荷蘭當都更說客
-  author: 鄭采和
-  isbn: 9786263748149
-  date: 2025/02/24
-  comment: 透過作者在荷蘭十年的視角認識荷蘭，集結人類學、都市更新、居住正義、街區再生的阿姆斯特丹觀察筆記
-  star: true
 
 - name: 東京‧時時刻刻
   author: Miho
