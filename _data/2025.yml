@@ -5,6 +5,12 @@
   comment: test
   pending : true
 
+- name: 師徒百景
+  author: 井上理津子
+  isbn: 9786267388235
+  date: 2025/03/01
+  comment: 
+
 - name: 找到了，不必努力讓人喜愛的我
   author: 金志洙
   isbn: 9786267405055
