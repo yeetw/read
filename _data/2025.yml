@@ -4,6 +4,13 @@
   date: test
   comment: test
   pending : true
+  
+- name: 法官的日常
+  author: P 律師
+  isbn: 9786263746558
+  date: 
+  comment: 讀起來很輕鬆，以爲會是關於法律條文，但其實是講述法官私下的一面
+  pending : true
 
 - name: 師徒百景
   author: 井上理津子
