@@ -5,6 +5,13 @@
   comment: test
   pending : true
 
+- name: 上白石萌音的心情點滴
+  author: 上白石萌音
+  isbn: 9789570868197
+  date: 2025/03/05
+  comment: 讀起來放鬆的散文，作者週末和高中同學講電話，和住附近的朋友交換食物，很親民的日常，透過文字更喜歡上石白萌音😍
+  star: true
+
 - name: 不平等的屍體
   author: 西尾元
   isbn: 9789864063987
