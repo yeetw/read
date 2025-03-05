@@ -14,12 +14,21 @@
   date: 2025/02
   comment: 笨蛋節奏編劇太神啦，台詞很日常，劇情很精彩，市川實日子演得很好而且臉很美很精緻💯
 
-- name: 寬鬆世代又怎樣：INTERNATIONAL
+- name: 寬鬆世代又怎樣
+  serirs: SP 純米吟釀純情篇
+  platform: Gimy
+  type: 日劇
+  date: 2025/03/06
+  pedding: true
+  star: true
+
+- name: 寬鬆世代又怎樣
+  serirs: INTERNATIONAL
   platform: friDay
   type: 電影
   date: 2025/03/06
   star: true
-  comment: ゆとり的三個男子，很喜歡岡田將生、松坂桃李和安藤櫻😍
+  comment: ゆとり世代的故事，努力求生的樣貌很真實，喜歡演員岡田將生、松坂桃李和安藤櫻的表現😍
 
 - name: 異國日記
   platform: friDay
