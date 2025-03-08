@@ -5,6 +5,12 @@
   comment: test
   pending : true
 
+- name: 喵的呼嚕呼嚕生存之道
+  author: Gianluca Bavagnoli
+  isbn: 9789865068707
+  date: 2025/03/07
+  comment: 這本書超可愛，不只插圖可愛，文字敘述也很療癒❤️
+
 - name: 牽手就不放手
   author: 王素梅、陳良基
   isbn: 9786263745964
