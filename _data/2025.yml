@@ -5,6 +5,13 @@
   comment: test
   pending : true
 
+- name: 再見，總有一天
+  star: true
+  author: 辻仁成
+  isbn: 9789863444008
+  date: 2025/03/16
+  comment: 一讀會停不下來的愛情小說，這本的場景主要在泰國，目前辻仁成的兩本作品都好好看
+
 - name: 這樣開始也不錯，擺脫束縛的一年
   author: Gretchen Rubin
   isbn: 9789575035389
