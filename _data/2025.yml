@@ -5,6 +5,13 @@
   comment: test
   pending : true
 
+- name: 甜美的來生
+  author: 吉本芭娜娜
+  isbn: 9789571357041
+  date: 2025/03/18
+  comment: 失去相愛的人，慢慢把靈魂找回來，淡淡的但是很溫暖
+  star: true
+
 - name: 台灣女孩頑張れ！
   author: Miho
   isbn: 9789865751289
