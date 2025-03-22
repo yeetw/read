@@ -5,6 +5,12 @@
   comment: test
   pending : true
 
+- name: 日本人，你不累嗎？
+  author: Miho
+  isbn: 9789869261838
+  date: 2025/03/22
+  comment: 看作者的第三本書，對日本職場要裝忙晚下班、下班後喝酒應酬印象深刻
+  
 - name: 甜美的來生
   author: 吉本芭娜娜
   isbn: 9789571357041
