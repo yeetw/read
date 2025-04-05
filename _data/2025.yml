@@ -5,6 +5,13 @@
   comment: test
   pending : true
 
+- name: 再見了，過去的我
+  author: 小川糸
+  isbn: 9789573342489
+  date: 2024/04/02
+  star: true
+  comment: 日文原著是 2013 出版，短篇小說集，由三個故事組成，最印象深刻是蒙古的自然描寫
+
 - name: 椅人：沒試過，怎麼知道你不行！
   author: Chairman 椅人（何秉錡）
   isbn: 9786263585508
