@@ -6,8 +6,13 @@
 @import 'syntax';
 
 // Custom CSS
+h2 {
+  color: #a6a6a6;
+}
 ol {
   margin: 0px;
+  padding-left: 30px;
+  color: #a6a6a6;
 }
 li {
   padding-top: .25em;
@@ -17,16 +22,18 @@ li {
 li > a {
   border-bottom: 0px;
   font-size: 16px;
-  color: #337ab7;
+  color: #7bb2b9;
 }
 li > a:hover {
   text-decoration: underline;
+  color: #7bb2b9;
 }
 li > a > strong {
-  color: #f4978e;
+  font-weight: 500 ;
+  color: #f9b3b3;
 }
 li > a > strong:hover {
-  color: #23527c;
+  color: #f9b3b3;
 }
 li > a.no-isbn {
   color: #666;
@@ -110,7 +117,7 @@ li > a.no-isbn {
   line-height: 20px;
   visibility: hidden;
   width: 140px;
-  background-color: #444;
+  background-color: #777;
   color: #fff;
   text-align: center;
   padding: 10px;
@@ -133,7 +140,7 @@ li > a.no-isbn {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent #444 transparent;
+  border-color: transparent transparent #777 transparent;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
