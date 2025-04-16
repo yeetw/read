@@ -14,6 +14,8 @@ h1.drama {
 }
 h2 {
   color: #a6a6a6;
+  font-size: 24px;   /* 根據瀏覽器預設，h1 通常是 32px～24px */
+  font-weight: bold;
 }
 ol {
   margin: 0px;
