@@ -6,6 +6,12 @@
 @import 'syntax';
 
 // Custom CSS
+.logo {
+  margin-bottom: 0px;
+}
+.divider {
+  margin: 12px 0px !important;
+}
 h1.index {
   color: #a09e85;
   font-size: 26px;
@@ -63,6 +69,7 @@ li > a.no-isbn {
 .searchbox {
   display: flex;
   justify-content: center;
+  margin-top: 15px;
 }
 .search {
   align-items: center;
