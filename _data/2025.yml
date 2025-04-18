@@ -5,10 +5,17 @@
   comment: test
   pending : true
 
+- name: 北極百貨的秋乃小姐
+  author: 西村培
+  series: １
+  isbn: 9786267483251
+  date: 2025/04/18
+  comment: 秋乃小姐很努力，也被看見努力的成果，可愛的畫風和有趣的故事，重要的客人是 V.I.A.  
+
 - name: 路易氏體的天空
   author: Sean Lin
   isbn: 9789860646801
-  date: 2025/04/16
+  date: 2025/04/18
   comment: 透過嘖嘖募資上架到各圖書館，關於年輕型失智症，2021 年出版，不知道作者現在好不好
 
 - name: 我的公寓
