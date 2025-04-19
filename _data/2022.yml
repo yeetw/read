@@ -210,12 +210,15 @@
   author: 久坂部羊
   date: 2022
   isbn: 9789869599337
+  star: true
+  comment: 六個改編自真實個案的在宅醫療故事
 
 - name: 惡醫
   author: 久坂部羊
   date: 2022
   isbn: 9789869599320
   star: true
+  comment: 面對癌症末期的病人，如果再繼續治療，即可能縮短餘命，且造成身體上的痛苦，醫生應該繼續救到最後一刻嗎？
 
 - name: 百吻巴黎
   author: 楊雅晴
