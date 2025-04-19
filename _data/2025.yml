@@ -5,6 +5,13 @@
   comment: test
   pending : true
 
+- name: 素食者
+  author: 韓江
+  isbn: 9789864897773
+  date: 2025/04/20
+  star: true
+  comment: 🤍
+
 - name: 北極百貨的秋乃小姐
   author: 西村培
   series: １
