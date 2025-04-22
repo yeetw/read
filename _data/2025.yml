@@ -5,6 +5,12 @@
   comment: test
   pending : true
 
+- name: 在愛裡，我逆著光飛翔
+  author: 黃裕翔、李翠卿
+  isbn: 9789862418833
+  date: 2025/04/22
+  comment: 文字流暢好讀，傳遞能量很正向，依時間序陳述從出生到一路求學和學琴的點滴
+
 - name: 素食者
   author: 韓江
   isbn: 9789864897773
