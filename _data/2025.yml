@@ -5,12 +5,6 @@
   comment: test
   pending : true
 
-- name: 我在底層的生活
-  author: Barbara Ehrenreich
-  isbn: 9789869800686
-  date: 2025/05/14
-  comment: 指出「在職貧窮」，生活就是找到工作，把工作做好，努力量入為出，使收支平衡，一面工作一面跟薪水奴隸的絕望感對抗
-
 - name: 滾石檢察官不生苔
   author: 直島翔
   isbn: 9789862273364
