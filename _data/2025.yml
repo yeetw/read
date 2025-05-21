@@ -1,9 +1,15 @@
-- name: test
-  author: test
-  isbn: test
-  date: test
-  comment: test
+- name: 💕
+  author: 💕
+  isbn: 💕
+  date: 💕
+  comment: 💕
   pending : true
+
+  - name: 最討厭的哥哥死了
+  author: 村井理子
+  isbn: 9789573295044
+  date: 2025/05/21
+  comment: 在死亡的永遠分別之下，學著用愛和解，故事平淡寫實
 
 - name: 滾石檢察官不生苔
   author: 直島翔
