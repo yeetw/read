@@ -7,6 +7,12 @@
   pending: true
   comment: 跟著五郎享受一個人的美食，看他吃的津津有味又吃很多的樣子覺得很好吃
 
+- name: 我的完美秘書
+  platform: Hami
+  type: 韓劇
+  date: 2025/06/05
+  comment: 是獵頭公司的浪漫劇，被李浚赫圈粉，身材跟臉蛋穿西裝非常帥✨
+
 - name: 渴水
   platform: Hami Video
   type: 電影
@@ -32,12 +38,6 @@
   type: 電影
   date: 2025/05/15
   comment: 緊湊好看鐵道片，行控中心和列車車廂拍得很細節，救援畫面壯觀🧯
-
-- name: 完美到難以接近的聖女遭到解除婚約後被賣到鄰國
-  platform: KKTV
-  type: 動畫
-  date: 2025/05/14
-  comment: 主角能力強又認真，在原生家庭過得有點灰暗又沒自信，被交易到鄰國終於被好好對待🤍
 
 - name: 孤獨的美食家
   platform: 國賓長春
