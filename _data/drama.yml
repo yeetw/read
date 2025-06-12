@@ -7,6 +7,12 @@
   pending: true
   comment: 跟著五郎享受一個人的美食，看他吃的津津有味又吃很多的樣子覺得很好吃
 
+- name: 海岸村的日出日落
+  platform: friDay
+  type: 電影
+  date: 2025/06/12
+  comment: 菅田將暉搭配海邊小鎮，故事療癒溫暖，看了好想吃生魚片🐟
+
 - name: 我的完美秘書
   platform: Hami
   type: 韓劇
