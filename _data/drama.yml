@@ -7,6 +7,13 @@
   pending: true
   comment: 跟著五郎享受一個人的美食，看他吃的津津有味又吃很多的樣子覺得很好吃
 
+- name: 馴龍高手
+  platform: Hami
+  star: true
+  date: 2025/06/17
+  type: 電影
+  comment: 2010 年的動畫電影，很好看耶，最後龍從敵人變成寵物有點太美好（？
+  
 - name: 被接住的思念
   platform: friDay
   type: 電影
