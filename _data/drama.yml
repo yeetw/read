@@ -7,6 +7,12 @@
   pending: true
   comment: 跟著五郎享受一個人的美食，看他吃的津津有味又吃很多的樣子覺得很好吃
 
+- name: 馴龍高手 真人版
+  platform: 電影院
+  date: 2025/06/18
+  type: 電影
+  comment: 昨天看完動畫今天看真人版有點太熟悉，真人版動作台詞非常還原動畫，特效跟音樂很棒✨
+
 - name: 馴龍高手
   platform: Hami
   star: true
