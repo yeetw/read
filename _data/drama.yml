@@ -7,7 +7,8 @@
   pending: true
   comment: 跟著五郎享受一個人的美食，看他吃的津津有味又吃很多的樣子覺得很好吃
 
-- name: 馴龍高手 真人版
+- name: 馴龍高手
+  series: 真人版
   platform: 電影院
   date: 2025/06/18
   type: 電影
