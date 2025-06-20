@@ -16,6 +16,7 @@
 
 - name: 馴龍高手
   platform: Hami
+  series: １
   star: true
   date: 2025/06/17
   type: 電影
