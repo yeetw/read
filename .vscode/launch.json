@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "command": "bash -c 'sleep 2; open http://localhost:4000'&; bundle exec jekyll serve",
+            "name": "Run",
+            "request": "launch",
+            "type": "node-terminal"
+        }
+    ]
+}
