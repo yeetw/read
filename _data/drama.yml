@@ -7,6 +7,12 @@
   pending: true
   comment: 跟著五郎享受一個人的美食，看他吃的津津有味又吃很多的樣子覺得很好吃
 
+- name: 29 號公路
+  platform: 電影院
+  type: 電影
+  date: 2025/07/29
+  comment: 日本電影，劇情步調偏慢，柔和的調色和遠景的構圖敘說質樸自然的故事，老爺爺很可愛，綾瀨遙和市川實日子很讚
+
 - name: 愛情是什麼
   platform: friDay
   type: 電影
