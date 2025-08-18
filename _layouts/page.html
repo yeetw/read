@@ -1,6 +1,23 @@
----
-layout: default
----
+<!doctype html>
+<html lang="zh-Hant">
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+
+    {% assign name = page.name | split: "." | first %}
+    <article>
+      {% unless page.hide_title %}<h1 class="title {{ name }}">{{ page.title }}</h1>{% endunless %}
+      <div class="divider"></div>
+      {{ content }}
+    </article>
+
+    <div class="page-navigation code">
+      <a class="home" href="{{ '/' | relative_url }}" title="Back to Top">All</a>
+    </div>
+
+    <!-- 下面支援按鈕與腳本同你原本 -->
+  </body>
+</html>
 
 {% assign name = page.name | split: "." | first %}
 
