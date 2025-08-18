@@ -1,10 +1,20 @@
-# for the-plain theme
+# 基本設定
 author_name: yee
-book_logo_url: /assets/book_logo.png
-drama_logo_url: /assets/drama_logo.png
-title: yee
+title: "yee 的閱讀與追劇日常"
+description: "分享我的閱讀書籍與追劇心得，讓文字與影像成為生活的陪伴。"
+
+# 網站 URL 設定（方案 B: 放在 /read）
+url: "https://yeekuo.tw"
+baseurl: "/read"
+
+# Logo 設定（注意去掉前導斜線，配合 relative_url 使用）
+book_logo_url: "assets/book_logo.png"
+drama_logo_url: "assets/drama_logo.png"
+
+# 社群分享
 social_share_previews: true
 
+# Plugins 與主題
 plugins:
   - jekyll-remote-theme
 remote_theme: heiswayi/the-plain
