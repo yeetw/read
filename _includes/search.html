@@ -13,18 +13,18 @@
       const year = yearList.id.replace('year-', '').replace('-list', '');
       const lis = yearList.getElementsByTagName('li');
       let count = 0;
-      for (var i = 0; i < lis.length; i++) {
+      for (let i = 0; i < lis.length; i++) {
         let name = lis[i].textContent.toLowerCase();
-        let isbn = lis[i].getAttribute('isbn');
+        let isbn = (lis[i].getAttribute('isbn') || '').toLowerCase();
         let star = lis[i].getAttribute('star');
-        let date = lis[i].getAttribute('date');
+        let date = (lis[i].getAttribute('date') || '').toLowerCase();
         let comment = '';
         if (lis[i].getElementsByClassName('tooltiptext').length > 0) {
           comment = lis[i].getElementsByClassName('tooltiptext')[0].textContent.toLowerCase();
         }
-        if (filter == 'star') {
+        if (filter === 'star') {
           /* Show only starred books. */
-          if (star == 'true') {
+          if (star === 'true') {
             lis[i].style.display = 'list-item';
             count++;
           } else {
@@ -32,7 +32,10 @@
           }
         } else {
           /* Filter by name, date, ISBN, or comment. */
-          if (name.indexOf(filter) == -1 && isbn.indexOf(filter) == -1 && date.indexOf(filter) == -1 && comment.indexOf(filter) == -1){
+          if (name.indexOf(filter) === -1 &&
+              isbn.indexOf(filter) === -1 &&
+              date.indexOf(filter) === -1 &&
+              comment.indexOf(filter) === -1) {
             lis[i].style.display = 'none';
           } else {
             lis[i].style.display = 'list-item';
@@ -43,48 +46,37 @@
 
       /* Hide year header if no book is shown. */
       const yearHeader = document.getElementById('year-' + year);
-      if (count == 0) {
-        yearHeader.style.display = 'none';
-      } else {
-        yearHeader.style.display = 'block';
+      if (yearHeader) {
+        yearHeader.style.display = (count === 0) ? 'none' : 'block';
       }
     }
 
     /* Hide year total number if search input is not empty. */
     const yearTotal = document.getElementsByClassName('year-total');
-    for (var i = 0; i < yearTotal.length; i++) {
-      if (filter == '') {
-        yearTotal[i].style.display = 'inline';
-      } else {
-        yearTotal[i].style.display = 'none';
-      }
+    for (let i = 0; i < yearTotal.length; i++) {
+      yearTotal[i].style.display = (filter === '') ? 'inline' : 'none';
     }
   }
 
   function searchDramaList(filter) {
     const dramaList = document.getElementById('drama-list');
-    if (!dramaList) {
-      return;
-    }
+    if (!dramaList) return;
+
     const lis = dramaList.getElementsByTagName('li');
     for (let i = 0; i < lis.length; i++) {
       /* Get attributes. */
       let name = lis[i].textContent.toLowerCase();
       let star = lis[i].getAttribute('star');
-      let platform = lis[i].getAttribute('platform').toLowerCase();
-      let date = lis[i].getAttribute('date');
+      let platform = (lis[i].getAttribute('platform') || '').toLowerCase();
+      let date = (lis[i].getAttribute('date') || '').toLowerCase();
       let comment = '';
       if (lis[i].getElementsByClassName('tooltiptext').length > 0) {
         comment = lis[i].getElementsByClassName('tooltiptext')[0].textContent.toLowerCase();
       }
 
-      if (filter == 'star') {
-        /* Show only starred books. */
-        if (star == 'true') {
-          lis[i].style.display = 'list-item';
-        } else {
-          lis[i].style.display = 'none';
-        }
+      if (filter === 'star') {
+        /* Show only starred dramas. */
+        lis[i].style.display = (star === 'true') ? 'list-item' : 'none';
       } else {
         /* Filter by search fields. */
         const searchFields = [name, platform, date, comment];
@@ -104,7 +96,7 @@
     const searchIcon = searchButton.querySelector('.search-icon');
     const closeIcon = searchButton.querySelector('.close-icon');
 
-    searchButton.addEventListener('click', (e) => {
+    searchButton.addEventListener('click', () => {
       const isExpanded = searchEle.classList.contains('search--expanded');
       if (!isExpanded) {
         inputEle.focus();
@@ -119,7 +111,9 @@
       }
       searchEle.classList.toggle('search--expanded');
     });
-    inputEle.addEventListener('change', (e) => {
+
+    /* 即時觸發搜尋 */
+    inputEle.addEventListener('input', (e) => {
       const filter = e.target.value.toLowerCase();
       searchBookList(filter);
       searchDramaList(filter);
@@ -127,7 +121,7 @@
 
     /* Handle scroll event to fix search button on top. */
     const offset = searchEle.offsetTop;
-    window.onscroll = function() {
+    window.addEventListener('scroll', () => {
       if (window.pageYOffset > offset) {
         searchEle.classList.add('search--fixed');
         document.getElementById('searchSpacer').classList.add('search__spacer');
@@ -135,7 +129,7 @@
         searchEle.classList.remove('search--fixed');
         document.getElementById('searchSpacer').classList.remove('search__spacer');
       }
-    };
+    }, { passive: true });
   });
 </script>
 
