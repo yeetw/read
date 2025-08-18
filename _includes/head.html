@@ -18,16 +18,20 @@
 <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<link rel="icon" href="{{ "/assets/favicon.png" | prepend: site.baseurl | prepend: site.url }}">
-<link rel="apple-touch-icon" href="{{ logo_url | prepend: site.baseurl | prepend: site.url }}">
-<link rel="stylesheet" href="{{ "/assets/core.css" | prepend: site.baseurl | prepend: site.url }}">
-<link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">
+
+<!-- 本地資源用 relative_url -->
+<link rel="icon" href="{{ '/assets/favicon.png' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ logo_url | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/core.css' | relative_url }}">
+
+<!-- canonical 用 absolute_url -->
+<link rel="canonical" href="{{ page.url | absolute_url }}">
 
 {% if site.social_share_previews %}
 	<meta property="og:title" content="{{ title }}">
 	<meta property="og:description" content="{{ site.description }}">
-	<meta property="og:image" content="{{ logo_url | prepend: site.baseurl | prepend: site.url }}">
-	<meta property="og:url" content="{{ site.url }}">
+	<meta property="og:image" content="{{ logo_url | absolute_url }}">
+	<meta property="og:url" content="{{ page.url | absolute_url }}">
 	<meta name="twitter:card" content="summary_large_image">
 
 	<meta property="og:site_name" content="{{ site.title }}">
