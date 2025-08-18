@@ -1,16 +1,19 @@
 ---
 ---
 
-//@import 'main';
-//@import 'syntax';
+/* 如果沒有 _sass/main.scss 或 _sass/syntax.scss，這兩行要拿掉，否則 Jekyll 會編譯失敗 */
+// @import 'main';
+// @import 'syntax';
 
-// Custom CSS
+/* Custom CSS */
 .logo {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
+
 .divider {
-  margin: 12px 0px !important;
+  margin: 12px 0 !important;
 }
+
 h1.index {
   color: #a09e85;
   font-size: 26px;
@@ -18,6 +21,7 @@ h1.index {
   margin-top: 0.25em;
   margin-bottom: 0.25em;
 }
+
 h1.drama {
   color: #7b9a9c;
   font-size: 26px;
@@ -25,94 +29,103 @@ h1.drama {
   margin-top: 0.25em;
   margin-bottom: 0.25em;
 }
+
 h2 {
   color: #7b9a9c;
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 0.5em;
 }
+
 ol {
-  margin: 0px;
+  margin: 0;
   padding-left: 20px;
   color: #a6a6a6;
 }
+
 li {
   padding-top: .25em;
   line-height: 24px;
   -webkit-font-smoothing: subpixel-antialiased;
 }
+
 li > a {
-  border-bottom: 0px;
+  border-bottom: 0;
   font-size: 16px;
   color: #7b9a9c;
 }
+
 li > a:hover {
   text-decoration: underline;
   color: #7b9a9c;
 }
+
 li > a > strong {
   font-weight: 400;
   color: #FFB85C;
 }
+
 li > a > strong:hover {
   color: #FFB85C;
 }
+
 li > a.no-isbn {
   color: #666;
 }
+
 #drama-list {
   margin-top: 2em;
 }
 
-// Search button
+/* Search button */
 .searchbox {
   display: flex;
   justify-content: center;
   margin-top: 15px;
 }
+
 .search {
   align-items: center;
   display: flex;
   justify-content: center;
-
   border: 1px solid #d1d5db;
   border-radius: 9999px;
   padding: 1rem;
-
   width: max-content;
 }
+
 .search--expanded .search__input {
   width: 10rem;
 }
+
 .search--fixed {
   z-index: 100;
   background-color: white;
   position: fixed;
   top: 0;
 }
+
 .search__spacer {
   height: 58px;
 }
 
 .search__input {
-  /* Reset */
   border: none;
   padding: 0;
-
   width: 0;
   transition: width 120ms;
   font-size: 16px;
 }
+
 .search__input:focus {
   outline: none;
 }
+
 .search__button {
-  /* Reset */
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
-
   align-items: center;
   display: flex;
   justify-content: center;
@@ -124,17 +137,15 @@ li > a.no-isbn {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1;
-
   height: 1.5rem;
   width: 1.5rem;
 }
 
-/* Tooltip container */
+/* Tooltip */
 .tooltip {
   position: relative;
 }
 
-/* Tooltip text */
 .tooltip .tooltiptext {
   font-size: 14px;
   line-height: 20px;
@@ -145,20 +156,18 @@ li > a.no-isbn {
   text-align: center;
   padding: 10px;
   border-radius: 6px;
-
-  /* Position the tooltip text */
   position: absolute;
   z-index: 1;
   top: 100%;
   left: 50%;
   margin-left: -70px;
-  margin-top: 5px; // 5px for the arrow
+  margin-top: 5px; /* 5px for the arrow */
 }
 
 .tooltip .tooltiptext::after {
-  content: " ";
+  content: "";
   position: absolute;
-  bottom: 100%;  /* At the top of the tooltip */
+  bottom: 100%;
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
@@ -166,7 +175,6 @@ li > a.no-isbn {
   border-color: transparent transparent #777 transparent;
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext,
 .tooltip.active .tooltiptext {
   visibility: visible;
