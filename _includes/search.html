@@ -61,42 +61,6 @@
     }
   }
 
-  function searchDramaList(filter) {
-    const dramaList = document.getElementById('drama-list');
-    if (!dramaList) {
-      return;
-    }
-    const lis = dramaList.getElementsByTagName('li');
-    for (let i = 0; i < lis.length; i++) {
-      /* Get attributes. */
-      let name = lis[i].textContent.toLowerCase();
-      let star = lis[i].getAttribute('star');
-      let platform = lis[i].getAttribute('platform').toLowerCase();
-      let date = lis[i].getAttribute('date');
-      let comment = '';
-      if (lis[i].getElementsByClassName('tooltiptext').length > 0) {
-        comment = lis[i].getElementsByClassName('tooltiptext')[0].textContent.toLowerCase();
-      }
-
-      if (filter == 'star') {
-        /* Show only starred books. */
-        if (star == 'true') {
-          lis[i].style.display = 'list-item';
-        } else {
-          lis[i].style.display = 'none';
-        }
-      } else {
-        /* Filter by search fields. */
-        const searchFields = [name, platform, date, comment];
-        if (searchFields.every(field => field.indexOf(filter) === -1)) {
-          lis[i].style.display = 'none';
-        } else {
-          lis[i].style.display = 'list-item';
-        }
-      }
-    }
-  }
-
   document.addEventListener('DOMContentLoaded', () => {
     const searchEle = document.getElementById('search');
     const inputEle = document.getElementById('searchInput');
@@ -113,7 +77,6 @@
       } else {
         inputEle.value = '';
         searchBookList('');
-        searchDramaList('');
         searchIcon.style.display = 'block';
         closeIcon.style.display = 'none';
       }
@@ -122,7 +85,6 @@
     inputEle.addEventListener('change', (e) => {
       const filter = e.target.value.toLowerCase();
       searchBookList(filter);
-      searchDramaList(filter);
     });
 
     /* Handle scroll event to fix search button on top. */

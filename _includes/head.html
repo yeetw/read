@@ -9,24 +9,18 @@
 {% endif %}
 <title>{{ title }}</title>
 
-{% if page.url == "/" %}
-  {% assign logo_url = site.book_logo_url %}
-{% else %}
-  {% assign logo_url = site.drama_logo_url %}
-{% endif %}
-
 <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <link rel="icon" href="{{ "/assets/favicon.png" | prepend: site.baseurl | prepend: site.url }}">
-<link rel="apple-touch-icon" href="{{ logo_url | prepend: site.baseurl | prepend: site.url }}">
+<link rel="apple-touch-icon" href="{{ "/assets/logo.png" | prepend: site.baseurl | prepend: site.url }}">
 <link rel="stylesheet" href="{{ "/assets/core.css" | prepend: site.baseurl | prepend: site.url }}">
 <link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">
 
 {% if site.social_share_previews %}
 	<meta property="og:title" content="{{ title }}">
 	<meta property="og:description" content="{{ site.description }}">
-	<meta property="og:image" content="{{ logo_url | prepend: site.baseurl | prepend: site.url }}">
+	<meta property="og:image" content="{{ "/assets/logo.png" | prepend: site.baseurl | prepend: site.url }}">
 	<meta property="og:url" content="{{ site.url }}">
 	<meta name="twitter:card" content="summary_large_image">
 
