@@ -1,19 +1,7 @@
-{% if page.url == "/" %}
-  {% assign target_url = "/drama" %}
-{% else %}
-  {% assign target_url = "/" %}
-{% endif %}
-
-{% if page.url == "/" %}
-  {% assign logo_url = site.book_logo_url %}
-{% else %}
-{% assign logo_url = site.drama_logo_url %}
-{% endif %}
-
 <aside class="logo">
-  <a href="{{ target_url | prepend: site.baseurl | prepend: site.url }}">
+  <a href="https://drama.yeekuo.tw">
     <img
-      src="{{ logo_url | prepend: site.baseurl | prepend: site.url}}"
+      src="{{ "/assets/logo.png" | prepend: site.baseurl | prepend: site.url}}"
       alt=""
       class="logo-avatar">
   </a>
