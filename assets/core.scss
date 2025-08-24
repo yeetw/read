@@ -29,6 +29,8 @@ h1.drama {
 }
 h2 {
   color: #888888;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 500;
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 0.5em;
@@ -46,25 +48,17 @@ li {
 li > a {
   border-bottom: 0px;
   font-size: 16px;
-  font-family: 'Noto Sans TC', sans-serif;
-  font-weight: 400;
   color: #666666 ;
 }
 li > a:hover {
   text-decoration: underline;
-  font-family: 'Noto Sans TC', sans-serif;
-  font-weight: 400;
   color: #666666 ;
 }
 li > a > strong {
   font-weight: 400;
-  font-family: 'Noto Sans TC', sans-serif;
-  font-weight: 400;
   color: #4a7c9d;
 }
 li > a > strong:hover {
-  font-family: 'Noto Sans TC', sans-serif;
-  font-weight: 400;
   color: #7c9aaf;
 }
 li > a.no-isbn {
