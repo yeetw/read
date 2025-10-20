@@ -8,7 +8,7 @@
   author: 李韓率
   date: 2021
   isbn: 9789862488539
-  comment: 🤍
+  comment: 「對人類來說，「共鳴」的能力既是不幸的原因，也是幸福的源泉。」
 
 - name: 腎友川柳
   author: 黃柏軒
@@ -21,68 +21,69 @@
   author: Victoria Sweet
   date: 2021
   isbn: 9789869669535
-  comment: 🤍
+  comment: 「做出正確的診斷，幫患者移除不必要的藥物、副作用和不良反應，以及運用大量的時間。長遠來看，如此省下的支出遠比花費的成本還多。慢慢來，但效果更好。」
 
 - name: 老衰死
   author: NHK 特別採訪小組
   isbn: 9789863428329
   date: 2021
   star: true
-  comment: 🤍
+  comment: 「老衰死」代表的是順應人體自然變化，從細胞老化 → 臟器衰弱 → 無痛離世
 
-- name: 為什麼Google、LinkedIn、波音、高通、迪士尼都找他合作？
+- name: 為什麼 Google、LinkedIn、波音、高通、迪士尼都找他合作？
   author: Oren Klaff
   isbn: 9789867778185
   date: 2021
-  comment: 🤍
+  comment: 「想像一下，我們每個人周圍都包覆著強大的氣場，所有能量都是由潛意識深處靜靜發送。這道無形的防護罩天生用來保護我們的心智，不會突然受到他人理念和看法的侵擾。」
 
 - name: 提昇的時刻
   author: Melinda French Gates
   isbn: 9789573286288
   date: 2021
-  comment: 🤍
+  star: true
+  comment: 文字情感洋溢又條理分明，「現代職場形塑員工的生活規則，經常不重視員工在職場外的生活，這可能讓職場成為敵意的地方——因為它讓你的工作和家庭互相競爭，其中一邊非輸不可。」
 
 - name: 想我苦哈哈的一生
   author: James Thurber
   isbn: 9789869278607
   date: 2021
-  comment: 🤍
+  comment: 本書是作者的自傳，描繪了他從童年因射蘋果而失明、大學肄業，到成為《紐約客》的作家及插畫家，再到創作各類作品的過程
 
 - name: 暗數據
   author: David Hand
   isbn: 9789865549961
   date: 2021
-  comment: 🤍
+  comment: 探討在大數據時代被忽略的「暗數據」對決策的影響，「犯罪地圖很可能顯示的是哪裡的人比較願意報案，而非案件確實發生在哪裡，兩者並非同一回事。」
 
 - name: 室內軟裝師養成術
-  author: Carol Li
+  author: 李佩芳
   isbn: 9789860629330
   date: 2021
-  comment: 🤍
+  comment: 軟裝師養成實戰書，深入了解「軟裝」觀念著手，藉由收納、風格、配色、陳列擺設、家具規劃、照明設備、織品選擇，一步步建立居家美感與品味養成
 
 - name: 第三道門
   author: Alex Banyan
   isbn: 9789576581069
   date: 2021
-  comment: 🤍
+  comment: 「有時候你需要研究哪些方法對別人有用，但也有時候，你得全神貫注於那些使你獨特的事情上。」
 
 - name: 新聞的騷動：狄波頓的深入報導與慰藉
   author: Alain de Botton
   isbn: 9789861342320
   date: 2021
-  comment: 🤍
+  comment: 探討當代新聞媒體如何透過不斷轟炸、缺乏脈絡與過度聳動，削弱了人們理解世界的能力，並催生了不必要的憤怒與焦慮
 
 - name: 黃檸檬
   author: 權汝宜
   isbn: 9789570857382
   date: 2021
-  comment: 🤍
+  comment: 有點懸疑灰暗的小說🥲
 
 - name: 玻璃蘆葦
   author: 櫻木紫乃
   isbn: 9789571360966
   date: 2021
-  comment: 🤍
+  comment: 「我只是覺得如果回家會有比工作更煎熬的環境在等著，任何人都會心情扭曲。甚至無法再談什麼父母子女。」
 
 - name: 繁星點點
   author: 櫻木紫乃
@@ -100,7 +101,7 @@
   author: 櫻木紫乃
   isbn: 9789869533331
   date: 2021
-  comment: 🤍
+  comment: 小說圍繞著女主角清美的「幸福」展開，也探討了許多人為何總習慣與他人比較幸福的現象
 
 - name: 皇家賓館
   author: 櫻木紫乃
@@ -200,25 +201,25 @@
   author: 劉芷妤
   isbn: 9789869817042
   date: 2021
-  comment: 🤍
+  comment: 關於性關於痛，都是活生生的故事
 
 - name: 最貧困女子
   author: 鈴木大介
   date: 2021
   isbn: 9789869805858
-  comment: 講在社會底層，工作是兼職零工，在網咖過夜睡覺，或是依靠男生的貧困女子們
+  comment: 描寫在社會底層，工作是兼職零工，在網咖過夜睡覺，或是依靠男生的貧困女子們
 
 - name: 老人詐欺
   author: 鈴木大介
   isbn: 9789869742764
   date: 2021
-  comment: 講日本關於專門針對高齡人士的詐騙行為
+  comment: 寫日本關於專門針對高齡人士的詐騙行為
 
 - name: 聽說時光記得你
   author: 溫如生
   date: 2021
   isbn: 9789573340447
-  comment: 🤍
+  comment: 「妳要告訴自己，那麼久以來的努力值得最好的。」
 
 - name: 黃阿瑪的後宮生活：貓咪哪有那麼可愛
   author: 黃阿瑪、志銘與狸貓 
@@ -230,7 +231,7 @@
   author: 黃大維、楊緬因
   date: 2021
   isbn: 9789863424697
-  comment: 🤍
+  comment: 2015 年出版的書，不到十年，柯文哲已經入獄🙁
 
 - name: 來談談那些痛苦的事吧！商務人士的父親為孩子所寫下的「工作本質」！
   author: 森岡毅
@@ -243,7 +244,7 @@
   author: 陳繁齊
   date: 2021
   isbn: 9789571368238
-  comment: 🤍
+  comment: 「我一直是個太鑽牛角尖的人，一件事情我能夠反覆著，短則數日，長則數年。配上自卑的性格，總是會想著更好的平行結果，或是希望藉由每次的思緒翻攪，能夠讓自己變好一些。」
 
 - name: 佛羅里達變形記
   author: 陳思宏
@@ -255,25 +256,25 @@
   author: 陳威帆
   isbn: 9789861343563
   date: 2021
-  comment: 🤍
+  comment: 作者是 Fourdesire 創辦人，公司現在更名為 SPARKFUL
 
 - name: 出發！成為我們期待的大人
   author: 陳怡彣
   date: 2021
   isbn: 9789571380124
-  comment: 🤍
+  comment: 「事件的發生，是世界在鞭策我們，要進行思維上的修正與調整，成為一個懂得做出睿智選擇的人。」
 
-- name: 這些年我們一起寫下的故事
+- name: 這些年我們一起寫下的故事：泌尿科醫師和他的病人
   author: 郭漢崇
   date: 2021
   isbn: 9789869850278
-  comment: 🤍
+  comment: 作者是花蓮慈濟醫院的醫師與醫學院教授，也是排尿障礙治療的權威
 
 - name: 愛情，真相大白
   author: 酪梨壽司
   date: 2021
   isbn: 9789861332642
-  comment: 大概是把🤍臉🤍書粉磚的內容再複習一遍，跟大白的愛情故事，覺得酪梨壽司是能力強的人，文筆行銷都很厲害
+  comment: 大概是把臉書粉專的內容再複習一遍，跟大白的愛情故事，覺得酪梨壽司是能力強的人，文筆行銷都很厲害
 
 - name: 迎向溫柔生產之路
   author: 諶淑婷
