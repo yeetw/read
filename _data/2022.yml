@@ -224,7 +224,7 @@
   author: 楊雅晴
   date: 2022
   isbn: 9789869125222
-  comment: 🤍
+  comment: 2009 年暑假一個台灣女孩在巴黎的行動藝術
 
 - name: 媽媽離開的時候想穿什麼顏色的衣服？
   author: 申昭潾
@@ -270,7 +270,7 @@
   author: 鹿目將至
   date: 2022
   isbn: 9786269500468
-  comment: 🤍
+  comment: 滿療癒，作者提出 5 步驟 39 個提案，唯一的重點就是「輕鬆」，這個方法不行就換下一個
 
 - name: 三十三歲的逆襲
   author: 徐妍珠
@@ -307,7 +307,7 @@
   author: Morgan Housel
   date: 2022
   isbn: 9789865250348
-  comment: 🤍
+  comment: 「金錢最大的內在價值，就是賦予你掌控時間的能力。」
 
 - name: 93 奇蹟，Dora 給我們的生命禮物
   author: Dora 媽咪
@@ -331,13 +331,13 @@
   author: 安倍夜郎
   isbn: 9789865824341
   date: 2022
-  comment: 🤍
+  comment: 漫畫家安倍夜郎創作原點初揭幕，首本散文集🌙
 
 - name: 歡迎光臨161號：從萬華開始，那些夢想城鄉的故事
   author: 
   isbn: 9789869987264
   date: 2022
-  comment: 🤍
+  comment: 「每個人一輩子中都一定會遭受某些失敗經驗，這都是已經發生，而且無法改變的事實。」
 
 - name: 精疲力竭的一天：雖然想死，但卻成為醫生的我
   author: 南宮仁
@@ -350,20 +350,20 @@
   author: 松浦彌太郎
   isbn: 9789863445784
   date: 2022
-  comment: 🤍
+  comment: 「最重要的工作就是健康管理。」
 
 - name: 掙扎的貝類
   author: 煮雪的人
   isbn: 9789869818841
   date: 2022
-  comment: 🤍
+  comment: 作者的第二部詩集
 
 - name: 剩下的人生都是休假
   author: 伊坂幸太郎
   date: 2022
   isbn: 9789865651428
   star: true
-  comment: 🤍
+  comment: 「到那時候，我會找個地方好好享受休假生活。剩下的人生都是暑假，而且是沒有作業的暑假。」
 
 - name: 奶奶來了！從陪伴到送別，我與奶奶的 1825 天交往日記
   author: 賴思豪
@@ -564,31 +564,32 @@
   author: 急診醫師 Dr. 魏
   date: 2022
   isbn: 9789863427797
-  comment: 🤍
+  comment: 以醫師角度，為護理師發聲的圖文漫畫
 
 - name: 追不到夢想就創一個！
   author: 鄭雅慈
   date: 2022
   isbn: 9789863618515
-  comment: 🤍
+  comment: 「忠於自己的興趣，敞開心胸嘗試，有機會就把握，遇到不會就學習。」
 
 - name: 藥學系學什麼
   author: 藥學系邊緣人
   date: 2022
   isbn: 9789865510282
-  comment: 🤍
+  star: true
+  comment: 作者文筆幽默，從作者的文字中對藥學產生好奇、憧憬也了解一些藥師相關的日常
 
 - name: 雖然想死，但還是想吃辣炒年糕
   author: 白洗嬉
   date: 2022
   isbn: 9789863843788
-  comment: 🤍
+  comment: 「如果一直不去試著了解自己，只有一味地納悶：「我到底為什麼會這樣？」是不行的。」
   
 - name: 女子力不是溫柔，是戰鬥
   author: 劉冠吟
   date: 2022
   isbn: 9789862488799
-  comment: 🤍
+  comment: 「人生畏的是，跟你共處在婚姻生活中的另一位，並沒有覺得出了問題，那就是一個人的荒涼了，不知道從何戰鬥起，手無寸鐵的荒涼。」
 
 - name: 洗車人家
   author: 姜泰宇
@@ -698,18 +699,19 @@
   date: 2022
   isbn: 9789863986102
   star: true
+  comment: 透過「高人才密度 × 完全透明 × 最低管控」來打造一個 Netflix 充滿創意與效率的文化
 
 - name: 愈少人認識我們愈好
   author: Axton Betz-Hamilton
   date: 2022
   isbn: 9786263100497
-  comment: 🤍
+  comment: 「我的人生中，有幾個近似電視機壞掉的瞬間，現實彷彿在我眼前閃爍、躍動，這一刻便是如此。」
 
 - name: 閒人出租：出租無用的自己，尋找嶄新的生存之道！
   author: 閒人出租
   date: 2022
   isbn: 9789865077198
-  comment: 🤍
+  comment: 有趣的書，「我現在衷心期盼，一無是處的人，儘管對人類跟社會毫無貢獻，也能毫無壓力地活在世上。用誇張點的說法，這就是「閒人出租」的活動理念。」
 
 - name: 她們的韓國夢
   author: Fion
