@@ -6,6 +6,13 @@
   star: true
   pending: true
 
+- name: 品味，從知識開始
+  author: 水野學
+  isbn: 9789571398921
+  date: 2025/10/24 
+  comment: 透過行動，一點一點累積知識，品味就會被建立起來
+  star: true
+
 - name: 銀髮川柳
   author: 日本公益社團法人全國自費老人之家協會
   isbn: 9786263585157
