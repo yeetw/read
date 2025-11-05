@@ -6,6 +6,14 @@
   star: true
   pending: true
 
+- name: 銀髮川柳
+  series: １
+  author: 日本公益社團法人全國自費老人之家協會
+  star: true
+  isbn: 9786263585140
+  comment: 插畫筆觸細膩，色彩柔和，內容讓人會心一笑，「蔬菜要吃無農藥／身體卻是／藥罐子」
+  date: 2025/11/05
+
 - name: 今日的佳餚
   author: 橋本紡
   isbn: 9789571367415
