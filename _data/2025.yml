@@ -6,6 +6,13 @@
   star: true
   pending: true
 
+- name: 失智症患者想告訴你的事
+  author: Wendy Mitchell
+  isbn: 9789570534948
+  date: 2025/11/11
+  star: true
+  comment: 「書裡的架構實際又冷靜：先介紹一種困難，然後找出克服的方式；面對變化要隨機應變而不是心灰意冷；連結，原諒，接受，擁抱。好好活著。」
+
 - name: 樹木希林 一切隨心
   author: 樹木希林
   isbn: 9789864777693
