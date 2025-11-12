@@ -1,5 +1,11 @@
 <script>
   function searchBookList(filter) {
+    const normalizedFilter = (filter || '').trim().toLowerCase();
+    const terms = normalizedFilter ? normalizedFilter.split(/\s+/) : [];
+    const requiresStar = terms.includes('star');
+    const searchTerms = requiresStar ? terms.filter(term => term !== 'star') : terms;
+    const hasFilter = requiresStar || searchTerms.length > 0;
+
     /* Elements begin with year- */
     const elements = document.querySelectorAll('[id^="year-"]');
 
@@ -15,29 +21,35 @@
       let count = 0;
       for (var i = 0; i < lis.length; i++) {
         let name = lis[i].textContent.toLowerCase();
-        let isbn = lis[i].getAttribute('isbn');
+        let isbn = (lis[i].getAttribute('isbn') || '').toLowerCase();
         let star = lis[i].getAttribute('star');
-        let date = lis[i].getAttribute('date');
+        let date = (lis[i].getAttribute('date') || '').toLowerCase();
         let comment = '';
         if (lis[i].getElementsByClassName('tooltiptext').length > 0) {
           comment = lis[i].getElementsByClassName('tooltiptext')[0].textContent.toLowerCase();
         }
-        if (filter == 'star') {
-          /* Show only starred books. */
-          if (star == 'true') {
-            lis[i].style.display = 'list-item';
-            count++;
-          } else {
-            lis[i].style.display = 'none';
-          }
+        let matches = true;
+
+        if (requiresStar && star !== 'true') {
+          matches = false;
+        }
+
+        if (matches && searchTerms.length > 0) {
+          const yearMatch = year.toLowerCase();
+          matches = searchTerms.every(term =>
+            name.indexOf(term) !== -1 ||
+            isbn.indexOf(term) !== -1 ||
+            date.indexOf(term) !== -1 ||
+            comment.indexOf(term) !== -1 ||
+            yearMatch.indexOf(term) !== -1
+          );
+        }
+
+        if (matches) {
+          lis[i].style.display = 'list-item';
+          count++;
         } else {
-          /* Filter by name, date, ISBN, or comment. */
-          if (name.indexOf(filter) == -1 && isbn.indexOf(filter) == -1 && date.indexOf(filter) == -1 && comment.indexOf(filter) == -1){
-            lis[i].style.display = 'none';
-          } else {
-            lis[i].style.display = 'list-item';
-            count++;
-          }
+          lis[i].style.display = 'none';
         }
       }
 
@@ -53,7 +65,7 @@
     /* Hide year total number if search input is not empty. */
     const yearTotal = document.getElementsByClassName('year-total');
     for (var i = 0; i < yearTotal.length; i++) {
-      if (filter == '') {
+      if (!hasFilter) {
         yearTotal[i].style.display = 'inline';
       } else {
         yearTotal[i].style.display = 'none';
@@ -82,7 +94,7 @@
       }
       searchEle.classList.toggle('search--expanded');
     });
-    inputEle.addEventListener('change', (e) => {
+    inputEle.addEventListener('input', (e) => {
       const filter = e.target.value.toLowerCase();
       searchBookList(filter);
     });
