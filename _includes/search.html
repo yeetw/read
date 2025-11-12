@@ -1,11 +1,44 @@
 <script>
   function searchBookList(filter) {
+    const normalizedFilter = (filter || '').trim().toLowerCase();
+    const tokens = normalizedFilter === '' ? [] : normalizedFilter.split(/\s+/);
+
     /* Elements begin with year- */
     const elements = document.querySelectorAll('[id^="year-"]');
 
     /* Then match `year-*-list` pattern */
     const pattern = /^year-\d+-list$/;
     const yearLists = Array.from(elements).filter(element => pattern.test(element.id));
+
+    const isStarToken = (token) => token === 'star' || token === '⭐' || token === '⭐️';
+
+    const matchesAllTokens = (li) => {
+      if (tokens.length === 0) {
+        return true;
+      }
+
+      const name = (li.dataset.name || li.textContent || '').toLowerCase();
+      const author = (li.dataset.author || '').toLowerCase();
+      const isbn = (li.getAttribute('isbn') || '').toLowerCase();
+      const date = (li.getAttribute('date') || '').toLowerCase();
+      const commentFromAttr = (li.dataset.comment || '').toLowerCase();
+      let comment = commentFromAttr;
+      if (!comment) {
+        const tooltip = li.getElementsByClassName('tooltiptext');
+        if (tooltip.length > 0) {
+          comment = tooltip[0].textContent.toLowerCase();
+        }
+      }
+      const isStarred = (li.getAttribute('star') || '').toLowerCase() === 'true';
+      const searchableFields = [name, author, comment, isbn, date];
+
+      return tokens.every((token) => {
+        if (isStarToken(token)) {
+          return isStarred;
+        }
+        return searchableFields.some((field) => field.indexOf(token) !== -1);
+      });
+    };
 
     /* Iterate through each year list. */
     for (let y = 0; y < yearLists.length; y++) {
@@ -14,30 +47,11 @@
       const lis = yearList.getElementsByTagName('li');
       let count = 0;
       for (var i = 0; i < lis.length; i++) {
-        let name = lis[i].textContent.toLowerCase();
-        let isbn = lis[i].getAttribute('isbn');
-        let star = lis[i].getAttribute('star');
-        let date = lis[i].getAttribute('date');
-        let comment = '';
-        if (lis[i].getElementsByClassName('tooltiptext').length > 0) {
-          comment = lis[i].getElementsByClassName('tooltiptext')[0].textContent.toLowerCase();
-        }
-        if (filter == 'star') {
-          /* Show only starred books. */
-          if (star == 'true') {
-            lis[i].style.display = 'list-item';
-            count++;
-          } else {
-            lis[i].style.display = 'none';
-          }
+        if (matchesAllTokens(lis[i])) {
+          lis[i].style.display = 'list-item';
+          count++;
         } else {
-          /* Filter by name, date, ISBN, or comment. */
-          if (name.indexOf(filter) == -1 && isbn.indexOf(filter) == -1 && date.indexOf(filter) == -1 && comment.indexOf(filter) == -1){
-            lis[i].style.display = 'none';
-          } else {
-            lis[i].style.display = 'list-item';
-            count++;
-          }
+          lis[i].style.display = 'none';
         }
       }
 
@@ -53,7 +67,7 @@
     /* Hide year total number if search input is not empty. */
     const yearTotal = document.getElementsByClassName('year-total');
     for (var i = 0; i < yearTotal.length; i++) {
-      if (filter == '') {
+      if (tokens.length === 0) {
         yearTotal[i].style.display = 'inline';
       } else {
         yearTotal[i].style.display = 'none';
@@ -82,9 +96,8 @@
       }
       searchEle.classList.toggle('search--expanded');
     });
-    inputEle.addEventListener('change', (e) => {
-      const filter = e.target.value.toLowerCase();
-      searchBookList(filter);
+    inputEle.addEventListener('input', (e) => {
+      searchBookList(e.target.value);
     });
 
     /* Handle scroll event to fix search button on top. */

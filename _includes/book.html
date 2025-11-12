@@ -13,7 +13,10 @@
     <li
       isbn="{{ book.isbn }}"
       star="{{ book.star }}"
-      date="{{ book.date }}">
+      date="{{ book.date }}"
+      data-name="{{ book.name | escape }}"
+      data-author="{{ book.author | escape }}"
+      {% if book.comment %}data-comment="{{ book.comment | strip_newlines | escape }}"{% endif %}>
       <a
         onclick="handleTooltipClick(event, this)"
         {% if book.isbn %}
