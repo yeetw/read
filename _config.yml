@@ -6,4 +6,5 @@ title: yee
 social_share_previews: true
 
 plugins:
-  - jekyll-feed
+  - jekyll-remote-theme
+remote_theme: heiswayi/the-plain
