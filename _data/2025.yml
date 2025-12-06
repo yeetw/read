@@ -6,6 +6,12 @@
   star: true
   pending: true
 
+- name: 億男
+  author: 川村元氣
+  date: 2025/12/06
+  isbn: 9789865607449
+  comment: 譯者是王蘊潔，「金錢或許無法買到幸福，但至少可以得到自由——做自己喜歡的事的自由，以及不必做自己討厭的事的自由。」
+
 - name: 吃貨筆記。
   author: 松重豐
   star: true
