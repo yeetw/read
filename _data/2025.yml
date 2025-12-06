@@ -6,6 +6,13 @@
   star: true
   pending: true
 
+- name: 吃貨筆記。
+  author: 松重豐
+  star: true
+  date: 2025/12/06
+  isbn: 9786264331180
+  comment: 閱讀很像聽他說話，覺得讀起來很親切，食物插畫很細緻擬真，終於看到他的第二本書覺得活著真好
+
 - name: 重塑情緒的腦內獨白
   author: 吉村園子
   isbn: 9786267446584
