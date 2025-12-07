@@ -6,8 +6,14 @@
   star: true
   pending: true
 
+- name: 低成本生活
+  author: 風野民
+  date: 2025/12/08
+  isbn: 9789577419880
+  comment: 作者分享自己的生活和想法的轉變，覺得被提醒要喜歡現在的自己
+
 - name: 失智失蹤：一萬個遊走失蹤家庭的衝擊
-  author:  NHK 特別採訪小組
+  author: NHK 特別採訪小組
   date: 2025/12/07
   star: true
   isbn: 9789570388879
