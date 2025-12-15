@@ -156,8 +156,8 @@ li > a.no-isbn {
   position: absolute;
   z-index: 1;
   top: 100%;
-  left: 50%;
-  margin-left: -70px;
+  left: 0;
+  margin-left: 0;
   margin-top: 5px; // 5px for the arrow
 }
 
@@ -165,8 +165,8 @@ li > a.no-isbn {
   content: " ";
   position: absolute;
   bottom: 100%;  /* At the top of the tooltip */
-  left: 50%;
-  margin-left: -5px;
+  left: 12px;
+  margin-left: 0;
   border-width: 5px;
   border-style: solid;
   border-color: transparent transparent #777 transparent;
