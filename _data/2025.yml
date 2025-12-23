@@ -6,6 +6,13 @@
   star: true
   pending: true
 
+- name: 山茶花情書
+  author: 小川糸
+  date: 2025/12/23
+  isbn: 9789861339443
+  star: true
+  comment: 可以透過寫信傳達心意真是太好了，譯者是王蘊潔，山茶花文具店系列第三作
+
 - name: 罹癌母親給的七堂課
   author: 吳佳璇
   series: 抗癌之役必修的心理腫瘤學
