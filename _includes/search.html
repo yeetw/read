@@ -1,7 +1,20 @@
 <script>
   function searchBookList(filter) {
     const normalizedFilter = (filter || '').trim().toLowerCase();
-    const tokens = normalizedFilter === '' ? [] : normalizedFilter.split(/\s+/);
+    const rawTokens = normalizedFilter === '' ? [] : normalizedFilter.split(/\s+/);
+    const yearPattern = /^(?:19|20)\d{2}$/;
+    const MIN_FILTER_YEAR = 2021;
+    const yearTokenSet = new Set();
+    rawTokens.forEach((token) => {
+      if (!yearPattern.test(token)) {
+        return;
+      }
+      const yearNumber = parseInt(token, 10);
+      if (!Number.isNaN(yearNumber) && yearNumber >= MIN_FILTER_YEAR) {
+        yearTokenSet.add(String(yearNumber));
+      }
+    });
+    const contentTokens = rawTokens.filter((token) => !yearTokenSet.has(token));
 
     /* Elements begin with year- */
     const elements = document.querySelectorAll('[id^="year-"]');
@@ -13,7 +26,7 @@
     const isStarToken = (token) => token === 'star' || token === '⭐' || token === '⭐️';
 
     const matchesAllTokens = (li) => {
-      if (tokens.length === 0) {
+      if (contentTokens.length === 0) {
         return true;
       }
 
@@ -32,7 +45,7 @@
       const isStarred = (li.getAttribute('star') || '').toLowerCase() === 'true';
       const searchableFields = [name, author, comment, isbn, date];
 
-      return tokens.every((token) => {
+      return contentTokens.every((token) => {
         if (isStarToken(token)) {
           return isStarred;
         }
@@ -44,6 +57,23 @@
     for (let y = 0; y < yearLists.length; y++) {
       const yearList = yearLists[y];
       const year = yearList.id.replace('year-', '').replace('-list', '');
+      const matchesYearFilter = yearTokenSet.size === 0 || yearTokenSet.has(year);
+      yearList.style.display = matchesYearFilter ? 'block' : 'none';
+
+      const yearHeader = document.getElementById('year-' + year);
+      if (!yearHeader) {
+        continue;
+      }
+      const yearTotal = yearHeader.querySelector('.year-total');
+
+      if (!matchesYearFilter) {
+        yearHeader.style.display = 'none';
+        if (yearTotal) {
+          yearTotal.style.display = 'none';
+        }
+        continue;
+      }
+
       const lis = yearList.getElementsByTagName('li');
       let count = 0;
       for (var i = 0; i < lis.length; i++) {
@@ -55,22 +85,20 @@
         }
       }
 
-      /* Hide year header if no book is shown. */
-      const yearHeader = document.getElementById('year-' + year);
+      if (yearTotal) {
+        yearTotal.textContent = `． ${count} 本`;
+      }
+
       if (count == 0) {
         yearHeader.style.display = 'none';
+        if (yearTotal) {
+          yearTotal.style.display = 'none';
+        }
       } else {
         yearHeader.style.display = 'block';
-      }
-    }
-
-    /* Hide year total number if search input is not empty. */
-    const yearTotal = document.getElementsByClassName('year-total');
-    for (var i = 0; i < yearTotal.length; i++) {
-      if (tokens.length === 0) {
-        yearTotal[i].style.display = 'inline';
-      } else {
-        yearTotal[i].style.display = 'none';
+        if (yearTotal) {
+          yearTotal.style.display = 'inline';
+        }
       }
     }
   }
