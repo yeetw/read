@@ -6,6 +6,13 @@
   star: true
   pending: true
 
+- name: 蝸牛食堂
+  author: 小川糸
+  isbn: 9786267288955
+  date: 2026/01/08
+  star: true
+  comment: 2008 出版，譯者是丁世佳
+
 - name: 跑步勝者的 100 天修練
   author: 關家良一
   isbn: 9789573271758
