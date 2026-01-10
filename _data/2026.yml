@@ -18,6 +18,7 @@
   date: 2026/01/10
   series: １–７
   star: true
+  platform: BookWalker
   comment: 大小姐與從小就一直在身邊照顧自己的僕人之間的主僕戀愛故事💖
 
 - name: 歡迎回來，初戀。
@@ -25,13 +26,15 @@
   isbn: 9786264221368
   date: 2026/01/10
   series: １–２
-  comment: BookWalker 買的漫畫，雙向奔赴的初戀故事，喜歡人物畫風🫶🏼
+  platform: BookWalker
+  comment: 全彩漫畫，雙向奔赴的初戀故事，喜歡人物畫風🫶🏼
 
 - name: 重複一次的初戀
   author: RISA AOYAMA 
   date: 2026/01/10
   series: １–６
-  comment: BookWalker 買的漫畫，長大後和初戀重逢的故事
+  platform: BookWalker
+  comment: 畫風還好，長大後和初戀重逢的故事
 
 - name: 本命男神上門告白！
   author: 慎本真
