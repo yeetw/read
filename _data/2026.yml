@@ -6,6 +6,13 @@
   star: true
   pending: true
 
+- name: 陸王
+  author: 池井戶潤
+  isbn: 9789861336947
+  date: 2026/02/08
+  comment: 有 542 頁的超厚小說，「放棄也不會怎樣，但是啊，不做不會怎樣，做了很不一樣。」
+  star: true
+
 - name: 她的右腦與粉紅色的大象
   author: Nakao Eki Pacidal
   date: 2026/02/04
