@@ -6,6 +6,13 @@
   star: true
   pending: true
 
+- name: 流氓書店
+  author: 謝東霖
+  isbn: 9786267440162
+  date: 2026/02/12
+  star: true
+  comment: 背景是獨立書店
+
 - name: 妖怪五星好評
   author: 謝東霖
   isbn: 9786267440728
