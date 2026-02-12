@@ -6,6 +6,13 @@
   star: true
   pending: true
 
+- name: 我在詐騙公司上班
+  author: 謝東霖
+  isbn: 9789869837323
+  date: 2026/02/12
+  comment: 很好笑又好看的漫畫，畫風喜歡
+  star: true
+
 - name: 陸王
   author: 池井戶潤
   isbn: 9789861336947
