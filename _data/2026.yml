@@ -6,12 +6,17 @@
   star: true
   pending: true
 
+- name: 妖怪五星好評
+  author: 謝東霖
+  isbn: 9786267440728
+  date: 2026/02/12
+  comment: 有梗又細膩幽默的漫畫
+
 - name: 我在詐騙公司上班
   author: 謝東霖
   isbn: 9789869837323
   date: 2026/02/12
   comment: 很好笑有梗的漫畫，題材新鮮，劇情詼諧，線條感的畫風，人設很有趣
-  star: true
 
 - name: 陸王
   author: 池井戶潤
