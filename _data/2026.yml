@@ -6,6 +6,13 @@
   star: true
   pending: true
 
+- name: 惡人
+  author: 吉田修一
+  isbn: 9789863447269
+  date: 2026/03/04
+  star: true
+  comment: 文筆超好，九州的風景描寫地歷歷在目，寫場景的對話充滿細節讓人物很立體，雖然字很多但會想一直看下去
+
 - name: 出門買蛋去
   author: 小川糸
   isbn: 9786267288207
