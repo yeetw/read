@@ -17,26 +17,33 @@ layout: default
     title="Back to Top">All</a>
 </div>
 
-<div class="support" style="position: fixed; bottom: 0px; right: 0px; z-index: 1000;">
-  <a href="https://buymeacoffee.com/yeetw" target="_blank" style="color: #fff; text-decoration: none;">
-    <div style="background-color: #CECEC1; color: #fff; padding: 6px 12px; border-radius: 5px; display: inline-block; text-align: center; cursor: pointer; font-family: 'Kosugi Maru', serif; font-size: 16px;">
-      <b><span style="color: white;">📚</span></b>
-    </div>
-  </a>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+<div class="menu-overlay" onclick="toggleMenu()"></div>
+<div class="slide-menu">
+  <div class="slide-menu__header">
+    <button class="slide-menu__close" onclick="toggleMenu()">✕</button>
+  </div>
+  <ul class="slide-menu__list">
+    <li><a href="/authors"><span class="slide-menu__emoji">📖</span> 常讀的作者</a></li>
+    <li class="slide-menu__divider"></li>
+    {% assign years = "2026,2025,2024,2023,2022,2021" | split: "," %}
+    {% for y in years %}
+      {% assign books = site.data[y] | where_exp: "b", "b.pending != true" %}
+      {% assign count = books | size %}
+      {% if count > 0 %}
+        <li><a href="/?q={{ y }}">{{ y }} 年 ‧ {{ count }} 本</a></li>
+      {% endif %}
+    {% endfor %}
+    <li class="slide-menu__divider"></li>
+    <li><a href="https://buymeacoffee.com/yeetw" target="_blank"><span class="slide-menu__emoji">☕</span> Buy Me a Coffee</a></li>
+    <li><a href="mailto:yee@yeekuo.tw"><span class="slide-menu__emoji">✉️</span> Contact Me</a></li>
+  </ul>
 </div>
 
 <script>
-  function isMobileDevice() {
-    return /Mobi|Android/i.test(navigator.userAgent);
-  }
-
-  function handleTooltipClick(event, element) {
-    if (isMobileDevice()) {
-      if (!element.classList.contains('active')) {
-        event.preventDefault();
-        element.classList.add('active');
-      }
-    }
+  function toggleMenu() {
+    document.querySelector('.slide-menu').classList.toggle('open');
+    document.querySelector('.menu-overlay').classList.toggle('open');
   }
 
   document.addEventListener('click', function(event) {
