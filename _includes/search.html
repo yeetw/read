@@ -141,6 +141,16 @@
       searchBookList(e.target.value);
     });
 
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('q');
+    if (q) {
+      inputEle.value = q;
+      searchEle.classList.add('search--expanded');
+      searchIcon.style.display = 'none';
+      closeIcon.style.display = 'block';
+      searchBookList(q);
+    }
+
     /* Handle scroll event to fix search button on top. */
     const offset = searchEle.offsetTop;
     window.onscroll = function() {
