@@ -54,7 +54,7 @@ permalink: /authors
       {% endif %}
     {% endif %}
   {% endfor %}
-  {% if count > 1 %}
+  {% if count > 0 %}
     {% assign entry = author | append: "|||" | append: count | append: "|||" | append: star_count %}
     {% assign author_entries = author_entries | push: entry %}
   {% endif %}
