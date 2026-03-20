@@ -15,6 +15,18 @@
 article h1.title {
 font-size: 20px;
 }
+
+@media (max-width: 480px) {
+  article {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  article ol {
+    padding-left: 24px;
+  }
+}
+
 h1.index, h1.authors {
   color: #a09e85;
   font-family: 'Noto Sans TC', sans-serif;

@@ -37,7 +37,8 @@ permalink: /authors
 {% assign author_entries = "" | split: "" %}
 {% for author in individual_authors %}
   {% assign count = 0 %}
-  {% assign star_count = 0 %}
+  {% assign star_total = 0 %}
+  {% assign latest_year = 0 %}
   {% for book in all_books %}
     {% assign book_authors = book.author | split: "、" %}
     {% assign found = false %}
@@ -49,46 +50,67 @@ permalink: /authors
     {% endfor %}
     {% if found %}
       {% assign count = count | plus: 1 %}
+      {% assign book_year = book.date | append: "" | slice: 0, 4 | plus: 0 %}
+      {% if book_year > latest_year %}
+        {% assign latest_year = book_year %}
+      {% endif %}
       {% if book.star %}
-        {% assign star_count = star_count | plus: 1 %}
+        {% assign star_value = book.star | plus: 0 %}
+        {% if star_value == 0 %}
+          {% assign star_value = 1 %}
+        {% endif %}
+        {% assign star_total = star_total | plus: star_value %}
       {% endif %}
     {% endif %}
   {% endfor %}
   {% if count > 0 %}
-    {% assign entry = author | append: "|||" | append: count | append: "|||" | append: star_count %}
+    {% assign entry = author | append: "|||" | append: count | append: "|||" | append: star_total | append: "|||" | append: latest_year %}
     {% assign author_entries = author_entries | push: entry %}
   {% endif %}
 {% endfor %}
 
 {% comment %}
-  Sort by count descending using zero-padded counts for correct numeric ordering.
+  Sort after aggregation by:
+  1. count desc
+  2. star total desc
+  3. latest year desc
+  4. author asc (deterministic fallback)
 {% endcomment %}
 
-{% assign padded_entries = "" | split: "" %}
+{% assign sortable_entries = "" | split: "" %}
 {% for entry in author_entries %}
   {% assign parts = entry | split: "|||" %}
-  {% assign count = parts[1] | plus: 0 %}
   {% assign author = parts[0] %}
-  {% assign star_count = parts[2] %}
-  {% if count < 10 %}
-    {% assign padded = "0" | append: count | append: "|||" | append: author | append: "|||" | append: star_count %}
-  {% else %}
-    {% assign padded = count | append: "|||" | append: author | append: "|||" | append: star_count %}
-  {% endif %}
-  {% assign padded_entries = padded_entries | push: padded %}
+  {% assign count = parts[1] | plus: 0 %}
+  {% assign star_total = parts[2] | plus: 0 %}
+  {% assign latest_year = parts[3] | plus: 0 %}
+
+  {% assign count_sort = 999999 | minus: count %}
+  {% assign star_sort = 999999 | minus: star_total %}
+  {% assign year_sort = 9999 | minus: latest_year %}
+
+  {% capture count_key %}000000{{ count_sort }}{% endcapture %}
+  {% assign count_key = count_key | slice: -6, 6 %}
+  {% capture star_key %}000000{{ star_sort }}{% endcapture %}
+  {% assign star_key = star_key | slice: -6, 6 %}
+  {% capture year_key %}0000{{ year_sort }}{% endcapture %}
+  {% assign year_key = year_key | slice: -4, 4 %}
+
+  {% assign sortable = count_key | append: "|||" | append: star_key | append: "|||" | append: year_key | append: "|||" | append: author | append: "|||" | append: count | append: "|||" | append: star_total | append: "|||" | append: latest_year %}
+  {% assign sortable_entries = sortable_entries | push: sortable %}
 {% endfor %}
 
-{% assign sorted_padded = padded_entries | sort | reverse %}
+{% assign sorted_entries = sortable_entries | sort %}
 
 <ol id="authors-list">
-{% for entry in sorted_padded %}
+{% for entry in sorted_entries %}
   {% assign parts = entry | split: "|||" %}
-  {% assign count = parts[0] | plus: 0 %}
-  {% assign author = parts[1] %}
-  {% assign star_count = parts[2] | plus: 0 %}
+  {% assign author = parts[3] %}
+  {% assign count = parts[4] | plus: 0 %}
+  {% assign star_total = parts[5] | plus: 0 %}
   <li data-name="{{ author | escape }}">
     <a href="/?q={{ author | url_encode }}">{{ author }}．{{ count }} 本</a>
-    {% if star_count > 0 %} <a href="/?q={{ author | append: " star" | url_encode }}"><span style="font-size: 13px; color: #aaaaaa;">✩ {{ star_count }}</span></a>{% endif %}
+    {% if star_total > 0 %} <a href="/?q={{ author | append: " star" | url_encode }}"><span style="font-size: 13px; color: #aaaaaa;">✩ {{ star_total }}</span></a>{% endif %}
   </li>
 {% endfor %}
 </ol>
