@@ -80,14 +80,14 @@ permalink: /authors
 
 {% assign sorted_padded = padded_entries | sort | reverse %}
 
-<ol id="authors-list" style="margin-top: 16px;">
+<ol id="authors-list">
 {% for entry in sorted_padded %}
   {% assign parts = entry | split: "|||" %}
   {% assign count = parts[0] | plus: 0 %}
   {% assign author = parts[1] %}
   {% assign star_count = parts[2] | plus: 0 %}
-  <li data-name="{{ author | escape }}" style="font-family: 'Huninn', sans-serif; font-size: 16px; color: #666666;">
-    <a href="/?q={{ author | url_encode }}" style="color: inherit;">{{ author }}．{{ count }} 本</a>
+  <li data-name="{{ author | escape }}">
+    <a href="/?q={{ author | url_encode }}">{{ author }}．{{ count }} 本</a>
     {% if star_count > 0 %} <a href="/?q={{ author | append: " star" | url_encode }}"><span style="font-size: 13px; color: #aaaaaa;">✩ {{ star_count }}</span></a>{% endif %}
   </li>
 {% endfor %}
