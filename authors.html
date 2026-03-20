@@ -22,13 +22,38 @@ permalink: /authors
   Build a list of unique authors with counts.
 {% endcomment %}
 
-{% assign authors = all_books | map: "author" | compact | uniq %}
+{% assign individual_authors = "" | split: "" %}
+{% for book in all_books %}
+  {% assign book_authors = book.author | split: "、" %}
+  {% for a in book_authors %}
+    {% assign trimmed = a | strip %}
+    {% if trimmed == "" %}{% continue %}{% endif %}
+    {% unless individual_authors contains trimmed %}
+      {% assign individual_authors = individual_authors | push: trimmed %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+
 {% assign author_entries = "" | split: "" %}
-{% for author in authors %}
-  {% if author == "" or author == nil %}{% continue %}{% endif %}
-  {% assign author_books = all_books | where: "author", author %}
-  {% assign count = author_books | size %}
-  {% assign star_count = author_books | where: "star", true | size %}
+{% for author in individual_authors %}
+  {% assign count = 0 %}
+  {% assign star_count = 0 %}
+  {% for book in all_books %}
+    {% assign book_authors = book.author | split: "、" %}
+    {% assign found = false %}
+    {% for a in book_authors %}
+      {% assign trimmed = a | strip %}
+      {% if trimmed == author %}
+        {% assign found = true %}
+      {% endif %}
+    {% endfor %}
+    {% if found %}
+      {% assign count = count | plus: 1 %}
+      {% if book.star %}
+        {% assign star_count = star_count | plus: 1 %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
   {% if count > 1 %}
     {% assign entry = author | append: "|||" | append: count | append: "|||" | append: star_count %}
     {% assign author_entries = author_entries | push: entry %}
