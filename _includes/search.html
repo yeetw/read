@@ -2,6 +2,19 @@
   function searchBookList(filter) {
     const normalizedFilter = (filter || '').trim().toLowerCase();
     const rawTokens = normalizedFilter === '' ? [] : normalizedFilter.split(/\s+/);
+
+    /* Check if we're on the authors page */
+    const authorsList = document.getElementById('authors-list');
+    if (authorsList) {
+      const lis = authorsList.getElementsByTagName('li');
+      for (var i = 0; i < lis.length; i++) {
+        const name = (lis[i].dataset.name || lis[i].textContent || '').toLowerCase();
+        const matches = rawTokens.length === 0 || rawTokens.every((token) => name.indexOf(token) !== -1);
+        lis[i].style.display = matches ? 'list-item' : 'none';
+      }
+      return;
+    }
+
     const yearPattern = /^(?:19|20)\d{2}$/;
     const MIN_FILTER_YEAR = 2021;
     const yearTokenSet = new Set();

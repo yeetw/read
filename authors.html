@@ -1,0 +1,68 @@
+---
+layout: page
+title: 我的閱讀旅程
+permalink: /authors
+---
+
+{% include search.html %}
+
+{% comment %}
+  Collect all non-pending books from all years and count by author.
+{% endcomment %}
+
+{% assign all_books = "" | split: "" %}
+{% for year_pair in site.data %}
+  {% assign year_books = year_pair[1] | where_exp: "book", "book.pending != true" %}
+  {% for book in year_books %}
+    {% assign all_books = all_books | push: book %}
+  {% endfor %}
+{% endfor %}
+
+{% comment %}
+  Build a list of unique authors with counts.
+{% endcomment %}
+
+{% assign authors = all_books | map: "author" | compact | uniq %}
+{% assign author_entries = "" | split: "" %}
+{% for author in authors %}
+  {% if author == "" or author == nil %}{% continue %}{% endif %}
+  {% assign author_books = all_books | where: "author", author %}
+  {% assign count = author_books | size %}
+  {% assign star_count = author_books | where: "star", true | size %}
+  {% if count > 1 %}
+    {% assign entry = author | append: "|||" | append: count | append: "|||" | append: star_count %}
+    {% assign author_entries = author_entries | push: entry %}
+  {% endif %}
+{% endfor %}
+
+{% comment %}
+  Sort by count descending using zero-padded counts for correct numeric ordering.
+{% endcomment %}
+
+{% assign padded_entries = "" | split: "" %}
+{% for entry in author_entries %}
+  {% assign parts = entry | split: "|||" %}
+  {% assign count = parts[1] | plus: 0 %}
+  {% assign author = parts[0] %}
+  {% assign star_count = parts[2] %}
+  {% if count < 10 %}
+    {% assign padded = "0" | append: count | append: "|||" | append: author | append: "|||" | append: star_count %}
+  {% else %}
+    {% assign padded = count | append: "|||" | append: author | append: "|||" | append: star_count %}
+  {% endif %}
+  {% assign padded_entries = padded_entries | push: padded %}
+{% endfor %}
+
+{% assign sorted_padded = padded_entries | sort | reverse %}
+
+<ol id="authors-list" style="margin-top: 16px;">
+{% for entry in sorted_padded %}
+  {% assign parts = entry | split: "|||" %}
+  {% assign count = parts[0] | plus: 0 %}
+  {% assign author = parts[1] %}
+  {% assign star_count = parts[2] | plus: 0 %}
+  <li data-name="{{ author | escape }}" style="font-family: 'Huninn', sans-serif; font-size: 16px; color: #666666;">
+    {{ author }}．{{ count }} 本{% if star_count > 0 %} <span style="font-size: 13px; color: #aaaaaa;">✩ {{ star_count }}</span>{% endif %}
+  </li>
+{% endfor %}
+</ol>
