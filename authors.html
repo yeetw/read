@@ -109,7 +109,7 @@ permalink: /authors
   {% assign count = parts[4] | plus: 0 %}
   {% assign star_total = parts[5] | plus: 0 %}
   <li data-name="{{ author | escape }}">
-    <a href="/?q={{ author | url_encode }}">{{ author }}．{{ count }} 本</a>
+    <a href="/?q={{ author | url_encode }}">{% if star_total > 1 %}<strong>{% endif %}{{ author }}．{{ count }} 本{% if star_total > 1 %}</strong>{% endif %}</a>
     {% if star_total > 0 %} <a href="/?q={{ author | append: " star" | url_encode }}"><span style="font-size: 13px; color: #aaaaaa;">✩ {{ star_total }}</span></a>{% endif %}
   </li>
 {% endfor %}
