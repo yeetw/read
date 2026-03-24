@@ -46,12 +46,60 @@ layout: default
     document.querySelector('.menu-overlay').classList.toggle('open');
   }
 
-  document.addEventListener('click', function(event) {
-    const tooltips = document.querySelectorAll('.tooltip');
-    tooltips.forEach(function(tooltip) {
-      if (!tooltip.contains(event.target)) {
-        tooltip.classList.remove('active');
+  (function() {
+    const mobileBreakpoint = window.matchMedia('(max-width: 480px)');
+    const hoverlessPointer = window.matchMedia('(hover: none), (pointer: coarse)');
+    let activeTooltip = null;
+
+    function isTouchMobileTooltipMode() {
+      return mobileBreakpoint.matches && (hoverlessPointer.matches || navigator.maxTouchPoints > 0 || 'ontouchstart' in window);
+    }
+
+    function closeActiveTooltip() {
+      if (!activeTooltip) return;
+      activeTooltip.classList.remove('active');
+      activeTooltip = null;
+    }
+
+    window.handleTooltipClick = function(event, link) {
+      const hasTooltip = link.querySelector('.tooltiptext');
+
+      if (!isTouchMobileTooltipMode() || !hasTooltip) {
+        return;
+      }
+
+      if (activeTooltip === link && link.href) {
+        return;
+      }
+
+      event.preventDefault();
+
+      if (activeTooltip && activeTooltip !== link) {
+        activeTooltip.classList.remove('active');
+      }
+
+      link.classList.add('active');
+      activeTooltip = link;
+    };
+
+    document.addEventListener('click', function(event) {
+      if (activeTooltip && !activeTooltip.contains(event.target)) {
+        closeActiveTooltip();
       }
     });
-  });
+
+    function syncTooltipMode() {
+      if (!isTouchMobileTooltipMode()) {
+        closeActiveTooltip();
+      }
+    }
+
+    if (typeof mobileBreakpoint.addEventListener === 'function') {
+      mobileBreakpoint.addEventListener('change', syncTooltipMode);
+      hoverlessPointer.addEventListener('change', syncTooltipMode);
+    } else {
+      mobileBreakpoint.addListener(syncTooltipMode);
+      hoverlessPointer.addListener(syncTooltipMode);
+    }
+  })();
 </script>

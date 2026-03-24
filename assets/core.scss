@@ -184,10 +184,15 @@ li > a.no-isbn {
   border-color: transparent transparent #777 transparent;
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext,
+/* Desktop keeps hover behavior; mobile/touch uses the JS-driven active state. */
 .tooltip.active .tooltiptext {
   visibility: visible;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
 }
 
 // Slide-in menu
