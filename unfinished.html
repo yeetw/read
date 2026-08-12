@@ -1,0 +1,43 @@
+---
+layout: page
+title: 我的閱讀旅程
+permalink: /unfinished
+---
+
+{% include search.html %}
+
+{% comment %}
+  Collect books explicitly marked unfinished.
+{% endcomment %}
+
+{% assign unfinished_books = "" | split: "" %}
+{% for year_pair in site.data %}
+  {% assign year_books = year_pair[1] | where_exp: "book", "book.finish == false" %}
+  {% for book in year_books %}
+    {% assign unfinished_books = unfinished_books | push: book %}
+  {% endfor %}
+{% endfor %}
+{% assign unfinished_books = unfinished_books | sort: "date" | reverse %}
+
+{% comment %}
+  Since the books are newest first, each author's first appearance is their
+  latest unfinished record. This orders author groups by that date while also
+  keeping books within each group newest first.
+{% endcomment %}
+
+{% assign unfinished_authors = "" | split: "" %}
+{% for book in unfinished_books %}
+  {% unless unfinished_authors contains book.author %}
+    {% assign unfinished_authors = unfinished_authors | push: book.author %}
+  {% endunless %}
+{% endfor %}
+
+<ol id="unfinished-list">
+{% for author in unfinished_authors %}
+  {% for book in unfinished_books %}
+    {% if book.author == author %}
+      {% include book-row.html book=book %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+</ol>

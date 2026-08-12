@@ -10,30 +10,7 @@
 
 <ol id="year-{{ year }}-list">
   {% for book in books %}
-    <li
-      isbn="{{ book.isbn }}"
-      star="{{ book.star }}"
-      date="{{ book.date }}"
-      data-name="{{ book.name | escape }}"
-      data-author="{{ book.author | escape }}"
-      {% if book.comment %}data-comment="{{ book.comment | strip_newlines | escape }}"{% endif %}>
-      <a
-        onclick="handleTooltipClick(event, this)"
-        {% if book.isbn %}
-        href="https://isbn.tw/{{ book.isbn }}"
-        target="_blank"
-        class="tooltip"
-        {% else %}
-        class="no-isbn tooltip"
-        {% endif %}>
-        {% if book.star %}<strong>{% endif %}
-        {{ book.author }}《{{ book.name }}》{% if book.series %}{{ book.series }}{% endif %}
-        {% if book.star %}</strong>{% endif %}
-        {% if book.comment %}
-          <span class="tooltiptext">{{ book.comment | newline_to_br | strip_newlines }}</span>
-        {% endif %}
-      </a>
-    </li>
+    {% include book-row.html book=book %}
   {% endfor %}
 </ol>
 

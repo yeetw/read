@@ -3,6 +3,36 @@
     const normalizedFilter = (filter || '').trim().toLowerCase();
     const rawTokens = normalizedFilter === '' ? [] : normalizedFilter.split(/\s+/);
 
+    const isStarToken = (token) => token === 'star' || token === '⭐' || token === '⭐️';
+
+    const matchesAllTokens = (li, tokens) => {
+      if (tokens.length === 0) {
+        return true;
+      }
+
+      const name = (li.dataset.name || li.textContent || '').toLowerCase();
+      const author = (li.dataset.author || '').toLowerCase();
+      const isbn = (li.getAttribute('isbn') || '').toLowerCase();
+      const date = (li.getAttribute('date') || '').toLowerCase();
+      const commentFromAttr = (li.dataset.comment || '').toLowerCase();
+      let comment = commentFromAttr;
+      if (!comment) {
+        const tooltip = li.getElementsByClassName('tooltiptext');
+        if (tooltip.length > 0) {
+          comment = tooltip[0].textContent.toLowerCase();
+        }
+      }
+      const isStarred = (li.getAttribute('star') || '').toLowerCase() === 'true';
+      const searchableFields = [name, author, comment, isbn, date];
+
+      return tokens.every((token) => {
+        if (isStarToken(token)) {
+          return isStarred;
+        }
+        return searchableFields.some((field) => field.indexOf(token) !== -1);
+      });
+    };
+
     /* Check if we're on the authors page */
     const authorsList = document.getElementById('authors-list');
     if (authorsList) {
@@ -11,6 +41,16 @@
         const name = (lis[i].dataset.name || lis[i].textContent || '').toLowerCase();
         const matches = rawTokens.length === 0 || rawTokens.every((token) => name.indexOf(token) !== -1);
         lis[i].style.display = matches ? 'list-item' : 'none';
+      }
+      return;
+    }
+
+    /* The unfinished page has one flat book list without year headers. */
+    const unfinishedList = document.getElementById('unfinished-list');
+    if (unfinishedList) {
+      const lis = unfinishedList.getElementsByTagName('li');
+      for (var i = 0; i < lis.length; i++) {
+        lis[i].style.display = matchesAllTokens(lis[i], rawTokens) ? 'list-item' : 'none';
       }
       return;
     }
@@ -36,36 +76,6 @@
     const pattern = /^year-\d+-list$/;
     const yearLists = Array.from(elements).filter(element => pattern.test(element.id));
 
-    const isStarToken = (token) => token === 'star' || token === '⭐' || token === '⭐️';
-
-    const matchesAllTokens = (li) => {
-      if (contentTokens.length === 0) {
-        return true;
-      }
-
-      const name = (li.dataset.name || li.textContent || '').toLowerCase();
-      const author = (li.dataset.author || '').toLowerCase();
-      const isbn = (li.getAttribute('isbn') || '').toLowerCase();
-      const date = (li.getAttribute('date') || '').toLowerCase();
-      const commentFromAttr = (li.dataset.comment || '').toLowerCase();
-      let comment = commentFromAttr;
-      if (!comment) {
-        const tooltip = li.getElementsByClassName('tooltiptext');
-        if (tooltip.length > 0) {
-          comment = tooltip[0].textContent.toLowerCase();
-        }
-      }
-      const isStarred = (li.getAttribute('star') || '').toLowerCase() === 'true';
-      const searchableFields = [name, author, comment, isbn, date];
-
-      return contentTokens.every((token) => {
-        if (isStarToken(token)) {
-          return isStarred;
-        }
-        return searchableFields.some((field) => field.indexOf(token) !== -1);
-      });
-    };
-
     /* Iterate through each year list. */
     for (let y = 0; y < yearLists.length; y++) {
       const yearList = yearLists[y];
@@ -90,7 +100,7 @@
       const lis = yearList.getElementsByTagName('li');
       let count = 0;
       for (var i = 0; i < lis.length; i++) {
-        if (matchesAllTokens(lis[i])) {
+        if (matchesAllTokens(lis[i], contentTokens)) {
           lis[i].style.display = 'list-item';
           count++;
         } else {
