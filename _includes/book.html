@@ -1,4 +1,4 @@
-{% assign books = site.data[include.year] | where_exp: "book", "book.pending != true" %}
+{% assign books = site.data[include.year] | where_exp: "book", "book.pending != true" | where_exp: "book", "book.finished != false" %}
 {% assign nbooks = books | size %}
 {% assign year = include.year %}
 

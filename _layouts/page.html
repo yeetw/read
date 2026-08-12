@@ -29,7 +29,7 @@ layout: default
     <li class="slide-menu__divider"></li>
     {% assign years = "2026,2025,2024,2023,2022,2021" | split: "," %}
     {% for y in years %}
-      {% assign books = site.data[y] | where_exp: "b", "b.pending != true" %}
+      {% assign books = site.data[y] | where_exp: "b", "b.pending != true" | where_exp: "b", "b.finished != false" %}
       {% assign count = books | size %}
       {% if count > 0 %}
         <li><a href="/?q={{ y }}">{{ y }} 年 ‧ {{ count }} 本</a></li>
