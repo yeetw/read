@@ -5,9 +5,12 @@ title: 我的閱讀旅程
 
 {% include search.html %}
 
-{% include book.html year="2026" %}
-{% include book.html year="2025" %}
-{% include book.html year="2024" %}
-{% include book.html year="2023" %}
-{% include book.html year="2022" %}
-{% include book.html year="2021" %}
+{% assign years = site.data | sort %}
+{% for year_data in years reversed %}
+  {% assign year = year_data[0] | append: "" %}
+  {% assign year_number = year | plus: 0 %}
+  {% assign normalized_year = year_number | append: "" %}
+  {% if year_number >= 1000 and year_number <= 9999 and year == normalized_year %}
+    {% include book.html year=year %}
+  {% endif %}
+{% endfor %}
