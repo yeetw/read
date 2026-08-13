@@ -7,37 +7,41 @@ permalink: /unfinished
 {% include search.html %}
 
 {% comment %}
-  Collect books explicitly marked unfinished.
+  Match the index page's year sections while only showing books explicitly
+  marked unfinished.
 {% endcomment %}
 
-{% assign unfinished_books = "" | split: "" %}
-{% for year_pair in site.data %}
-  {% assign year_books = year_pair[1] | where_exp: "book", "book.finished == false" %}
-  {% for book in year_books %}
-    {% assign unfinished_books = unfinished_books | push: book %}
-  {% endfor %}
-{% endfor %}
-{% assign unfinished_books = unfinished_books | sort: "date" | reverse %}
+{% assign years = "2026,2025,2024,2023,2022,2021" | split: "," %}
+{% for year in years %}
+  {% assign unfinished_books = site.data[year] | where_exp: "book", "book.finished == false" | sort: "date" | reverse %}
+  {% assign nbooks = unfinished_books | size %}
 
-{% comment %}
-  Since the books are newest first, each author's first appearance is their
-  latest unfinished record. This orders author groups by that date while also
-  keeping books within each group newest first.
-{% endcomment %}
+  {% if nbooks > 0 %}
+    <h2 id="year-{{ year }}">{{ year }} 年
+      <span class="year-total">． {{ nbooks }} 本</span>
+    </h2>
 
-{% assign unfinished_authors = "" | split: "" %}
-{% for book in unfinished_books %}
-  {% unless unfinished_authors contains book.author %}
-    {% assign unfinished_authors = unfinished_authors | push: book.author %}
-  {% endunless %}
-{% endfor %}
+    {% comment %}
+      Since the books are newest first, each author's first appearance is their
+      latest unfinished record. This orders author groups by that date while
+      also keeping books within each group newest first.
+    {% endcomment %}
 
-<ol id="unfinished-list">
-{% for author in unfinished_authors %}
-  {% for book in unfinished_books %}
-    {% if book.author == author %}
-      {% include book-row.html book=book %}
-    {% endif %}
-  {% endfor %}
+    {% assign unfinished_authors = "" | split: "" %}
+    {% for book in unfinished_books %}
+      {% unless unfinished_authors contains book.author %}
+        {% assign unfinished_authors = unfinished_authors | push: book.author %}
+      {% endunless %}
+    {% endfor %}
+
+    <ol id="year-{{ year }}-list">
+    {% for author in unfinished_authors %}
+      {% for book in unfinished_books %}
+        {% if book.author == author %}
+          {% include book-row.html book=book %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    </ol>
+  {% endif %}
 {% endfor %}
-</ol>

@@ -45,16 +45,6 @@
       return;
     }
 
-    /* The unfinished page has one flat book list without year headers. */
-    const unfinishedList = document.getElementById('unfinished-list');
-    if (unfinishedList) {
-      const lis = unfinishedList.getElementsByTagName('li');
-      for (var i = 0; i < lis.length; i++) {
-        lis[i].style.display = matchesAllTokens(lis[i], rawTokens) ? 'list-item' : 'none';
-      }
-      return;
-    }
-
     const yearPattern = /^(?:19|20)\d{2}$/;
     const MIN_FILTER_YEAR = 2021;
     const yearTokenSet = new Set();
