@@ -14,6 +14,13 @@
   pending: true
   comment: 寫彰化海線偏鄉漁村的成長紀實，對親情糾結的部分很有感，我們都不要對彼此抱有歉意地活著，「就在那瞬間，大腦冒出一條無法撫平的界線，我跨越不了，發現自己再也無法開口對她多說些什麼。那時我突然明白，母親大概弄丟真正的我了。」
 
+- name: 超級外送員：使命必達的省時戰
+  author: 蔡宛芸
+  date: 2026/08/20
+  isbn: 9786269716449
+  pending: true
+  comment: 作者是台灣大學建築與城鄉研究所碩士，他親身去當外送員了解實際勞動環境，本書是論文作品《省時戰：數位中介食物配送勞動的移動政治》改寫之作
+
 - name: 生命的最後一刻，都活得像自己
   author: 謝宛婷
   date: 2026/08/13
@@ -76,6 +83,55 @@
   isbn: 9789571376912
   finished: false
   comment: 對當兵故事不太有共鳴
+
+- name: 在世界盡頭遇到松茸 : 論資本主義廢墟中生命的可能性
+  author: Anna Lowenhaupt Tsing
+  date: 2026/08/12
+  isbn: 9786269821891
+  finished: false
+  comment: 從經濟活動、人類學、生態學三個面向深入的民族誌，還是比較喜歡小說
+
+- name: 不要忘記我 : 我與阿茲海默阿嬤的公路逃亡之旅
+  author: Alix Garin
+  date: 2026/08/12
+  isbn: 9786263150607
+  finished: false
+  comment: 作者是比利時人，這是他的出道漫畫，主角用關愛與耐心照顧著阿茲海默症的阿嬤，畫風比較不是我喜歡的風格
+
+- name: 極限返航
+  author: Andy Weir
+  date: 2026/08/12
+  isbn: 9789576587207
+  finished: false
+  comment: 作者是寫實派科幻作家兼電腦工程師，父母分別是微粒子物理學家及工程師，硬科學的科幻小說我讀不動 QQ
+
+- name: 安寧伴行
+  author: 趙可式
+  date: 2026/08/12
+  isbn: 9789864179763
+  finished: false
+  comment: 2018 年出版，寫末期病人安寧療護的生命故事，對其中宗教的討論比較沒有共鳴
+
+- name: 半導體地緣政治學
+  author: 太田泰彥
+  date: 2026/08/12
+  isbn: 9789863847793
+  finished: false
+  comment: 這本是覺得自己應該看但看不下去的知識書，對半導體產業、財經和企業的書比較還好
+
+- name: 我在億萬豪宅當保母
+  author: Stephanie Kiser
+  date: 2026/08/12
+  isbn: 9789861345246
+  finished: false
+  comment: 書名很像我會喜歡的人文類、社會寫實的書，但在最前面寫頂層社會的貼身紀錄就卡住讀不下去了
+
+- name: 動物教我成為更好的人
+  author: Sy Montgomery
+  date: 2026/08/12
+  isbn: 9789863616993
+  finished: false
+  comment: 本書包含作者人生中遇到最特別、美麗、稀有的動物，對作者的經歷不太有共鳴
 
 - name: 以為有錢就了不起的客人，請默默找個地方去死
   author: 夕鷺叶
