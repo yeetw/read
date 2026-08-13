@@ -25,43 +25,57 @@
   author: 韓江
   date: 2026/08/12
   finished: false
+  isbn: 9789864897865
   comment: 韓江說故事能力超級好，細膩又具體地描述光州事件的黑暗與殘忍，銳利又血肉無法讀下去
 
 - name: 尋找你的牛
   author: 枡野俊明、松重豐
   date: 2026/08/12
   finished: false
+  isbn: 9786267397510
   comment: 因為松重豐而看，原來他已經六十歲了，書中很多禪的修行與人生建議，有點太心靈雞湯，悟性不足吸收不良
 
 - name: 鎌倉車站徒步八分鐘，空房招租中
   author: 越智月子
   date: 2026/08/12
   finished: false
+  isbn: 9786267637326
   comment: 有點厚的長篇小說，人物滿多，背景是復古老宅《我家咖啡館》的二樓正在招募房客
 
 - name: 就算你每天失敗，我也會陪著你
   author: 崔芝淑、金瑞玄
   date: 2026/08/12
   finished: false
+  isbn: 9786263490437
   comment: 陪病者媽媽與憂鬱者女兒與憂鬱相處的真實故事，偏了覺得有點沉重，覺得自己好像也沒有完全好起來
 
 - name: 人生喜事
   author: 騷夏
   date: 2026/08/12
   finished: false
+  isbn: 9786264192965
   comment: 對作者的文字用詞和人生背景沒有共鳴，現在看書變得很挑，完書率甚低，沒有共鳴的書就不勉強自己看完
 
 - name: 夾縫中的小日子
   author: 具縫縫
   date: 2026/08/12
   finished: false
+  isbn: 9786264183987
   comment: 韓國作家用漫畫描寫育兒日常的點滴，對作者不了解加上沒有育兒經驗所以沒有看完
 
 - name: 同棲生活
   author: 吉田修一
   date: 2026/08/12
   finished: false
+  isbn: 9789863447672
   comment: 書有點厚，人物有點多，寫到人性黑暗面的部分覺得讀起來有點負擔
+
+- name: 入伍吧！魔法少女
+  author: 謝東霖、綜合口味
+  date: 2026/08/12
+  isbn: 9789571376912
+  finished: false
+  comment: 對當兵故事不太有共鳴
 
 - name: 以為有錢就了不起的客人，請默默找個地方去死
   author: 夕鷺叶
