@@ -21,6 +21,13 @@
   pending: true
   comment: 作者是台灣大學建築與城鄉研究所碩士，他親身去當外送員了解實際勞動環境，本書是論文作品《省時戰：數位中介食物配送勞動的移動政治》改寫之作
 
+- name: 熱情人生的冰淇淋哲學
+  author: Margaret Lobenstine
+  date: 2026/08/18
+  isbn: 9789862130148
+  finished: false
+  comment: 「用你熱愛的事物來賺取金錢」，是經典自我探索的書
+
 - name: 鬼的新娘
   series: １
   author: クレハ
