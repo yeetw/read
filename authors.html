@@ -7,12 +7,12 @@ permalink: /authors
 {% include search.html %}
 
 {% comment %}
-  Collect all non-pending books from all years and count by author.
+  Collect all finished, non-pending books from all years and count by author.
 {% endcomment %}
 
 {% assign all_books = "" | split: "" %}
 {% for year_pair in site.data %}
-  {% assign year_books = year_pair[1] | where_exp: "book", "book.pending != true" %}
+  {% assign year_books = year_pair[1] | where_exp: "book", "book.pending != true" | where_exp: "book", "book.finished != false" %}
   {% for book in year_books %}
     {% assign all_books = all_books | push: book %}
   {% endfor %}
