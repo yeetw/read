@@ -238,7 +238,7 @@ li > a.no-isbn {
   top: 0;
   right: 0;
   width: 260px;
-  height: 100%;
+  height: 100vh;
   background: #fff;
   z-index: 1002;
   transform: translateX(100%);
@@ -246,6 +246,12 @@ li > a.no-isbn {
   box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+
+  // Keep the bottom of the menu above mobile browser chrome.
+  @supports (height: 100dvh) {
+    height: 100dvh;
+  }
 
   &.open {
     transform: translateX(0);
@@ -324,4 +330,30 @@ li > a.no-isbn {
   height: 18px;
   min-height: 18px;
   max-height: 18px;
+}
+
+@media (max-width: 480px) {
+  .slide-menu__header {
+    padding: 8px 12px;
+  }
+
+  .slide-menu__list {
+    padding-top: 4px;
+    padding-bottom: calc(4px + env(safe-area-inset-bottom));
+
+    > li {
+      padding-top: 0;
+      line-height: 20px;
+    }
+
+    li a {
+      padding: 6px 20px;
+      line-height: 22px;
+    }
+  }
+
+  .slide-menu__divider {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
 }
