@@ -28,6 +28,17 @@ layout: default
     <li><a href="/unfinished"><span class="slide-menu__emoji">📚</span> 沒讀完的書</a></li>
     <li class="slide-menu__divider"></li>
     {% assign years = site.data | sort %}
+    {% assign total_books = 0 %}
+    {% for year_data in years %}
+      {% assign year = year_data[0] | append: "" %}
+      {% assign year_number = year | plus: 0 %}
+      {% assign normalized_year = year_number | append: "" %}
+      {% if year_number >= 1000 and year_number <= 9999 and year == normalized_year %}
+        {% assign books = year_data[1] | where_exp: "b", "b.pending != true" | where_exp: "b", "b.finished != false" %}
+        {% assign total_books = total_books | plus: books.size %}
+      {% endif %}
+    {% endfor %}
+    <li><a href="/">Total．{{ total_books }} 本</a></li>
     {% for year_data in years reversed %}
       {% assign year = year_data[0] | append: "" %}
       {% assign year_number = year | plus: 0 %}
