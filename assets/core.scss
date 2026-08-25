@@ -338,6 +338,8 @@ li > a.no-isbn {
   }
 
   .slide-menu__list {
+    display: flex;
+    flex-direction: column;
     padding-top: 4px;
     padding-bottom: calc(4px + env(safe-area-inset-bottom));
 
@@ -346,13 +348,23 @@ li > a.no-isbn {
       line-height: 20px;
     }
 
+    > li:not(.slide-menu__divider) {
+      flex: 1 1 34px;
+      min-height: 34px;
+    }
+
     li a {
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      height: 100%;
       padding: 6px 20px;
       line-height: 22px;
     }
   }
 
   .slide-menu__divider {
+    flex: 0 0 1px;
     margin-top: 4px;
     margin-bottom: 4px;
   }
