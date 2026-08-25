@@ -38,7 +38,7 @@ layout: default
         {% assign total_books = total_books | plus: books.size %}
       {% endif %}
     {% endfor %}
-    <li><a href="/">Total．{{ total_books }} 本</a></li>
+    <li><a href="/">累計．{{ total_books }} 本</a></li>
     {% for year_data in years reversed %}
       {% assign year = year_data[0] | append: "" %}
       {% assign year_number = year | plus: 0 %}
