@@ -228,7 +228,7 @@
 
 - name: 銀髮川柳
   author: 日本公益社團法人全國自費老人之家協會
-  country: false
+  country: 日本
   isbn: 9786263585157
   date: 2025/10/24
   series: ３
@@ -237,7 +237,7 @@
 
 - name: 銀髮川柳
   author: 日本公益社團法人全國自費老人之家協會
-  country: false
+  country: 日本
   isbn: 9786263585157
   date: 2025/10/21
   series: ２
@@ -377,7 +377,7 @@
 
 - name: 夢想比痛還重
   author: 林郁婷、邱淑宜
-  country: false
+  country: 臺灣
   isbn: 4711488873852
   date: 2025/08/25
   comment: 因為林郁婷才關注拳擊運動，用數十年光陰和努力站上奧運的舞台贏得冠軍很厲害，拳擊場下也把自己經營的很出色，很喜歡他
@@ -519,7 +519,7 @@
 
 - name: 我們的移居
   author: 朝日新聞出版
-  country: false
+  country: 日本
   isbn: 9786269647552
   date: 2025/05/09
   comment: 移居的準備工作，釐清目的>決定移居地點>收集移居地點的資訊>擬定資金計畫>實際探訪當地>找工作>找住處>展開移居生活🏠
@@ -534,7 +534,7 @@
 
 - name: 在愛裡，我逆著光飛翔
   author: 黃裕翔、李翠卿
-  country: false
+  country: 臺灣
   isbn: 9789862418833
   date: 2025/04/22
   comment: 文字流暢且故事好讀，傳遞能量正向，依時間序陳述從出生到一路求學和學琴的點滴🎹
@@ -735,7 +735,7 @@
 
 - name: 報導者事件簿 003：無體溫關係
   author: 報導者
-  country: false
+  country: 臺灣
   isbn: 9786263840850
   date: 2025/02/02
   comment: 前半部分為漫畫，由臺灣漫畫家廢廢子操刀，後半部分為深度專題報導👫🏼
