@@ -79,6 +79,10 @@ hide_title: true
       return '/?q=' + encodeURIComponent(year + '/' + paddedMonth);
     }
 
+    function yearSearchUrl(year) {
+      return '/?q=' + encodeURIComponent(year);
+    }
+
     function monthlyCounts(year) {
       var counts = new Array(12).fill(0);
       var lastMonth = 0;
@@ -428,18 +432,24 @@ hide_title: true
             ? center - pairGap / 2 - barWidth
             : center + pairGap / 2;
           var y = yPosition(count);
+          var barLabel = item.year + ' 年 ' + (monthIndex + 1) + ' 月累積 ' + count +
+            ' 本；查看 ' + item.year + ' 年書目';
+          var barLink = createSvgElement('a', {
+            class: 'monthly-reading-chart__bar-link',
+            href: yearSearchUrl(item.year),
+            'aria-label': barLabel
+          });
           var bar = createSvgElement('rect', {
             class: 'monthly-reading-chart__bar',
             x: x,
             y: y,
             width: barWidth,
             height: Math.max(0, plotBottom - y),
-            rx: 2,
-            'aria-label': item.year + ' 年 ' + (monthIndex + 1) + ' 月累積 ' + count + ' 本'
+            rx: 2
           });
-          bar.appendChild(createSvgElement('title', {},
-            item.year + ' 年 ' + (monthIndex + 1) + ' 月：累積 ' + count + ' 本'));
-          group.appendChild(bar);
+          barLink.appendChild(bar);
+          barLink.appendChild(createSvgElement('title', {}, barLabel));
+          group.appendChild(barLink);
 
           group.appendChild(createSvgElement('text', {
             class: 'monthly-reading-chart__value monthly-reading-chart__bar-value ' + item.labelClass,

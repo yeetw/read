@@ -153,6 +153,25 @@ h1.index, h1.authors, h1.unfinished {
 
 .monthly-reading-chart__bar {
   fill: currentColor;
+  transition: fill-opacity 120ms ease, stroke-width 120ms ease;
+}
+
+.monthly-reading-chart__bar-link {
+  color: inherit;
+  cursor: pointer;
+}
+
+.monthly-reading-chart__bar-link:hover .monthly-reading-chart__bar {
+  fill-opacity: 0.72;
+}
+
+.monthly-reading-chart__bar-link:focus-visible {
+  outline: none;
+}
+
+.monthly-reading-chart__bar-link:focus-visible .monthly-reading-chart__bar {
+  stroke: #777;
+  stroke-width: 2;
 }
 
 .monthly-reading-chart__bar-value {
