@@ -1,7 +1,33 @@
 <script>
   function searchBookList(filter) {
     const normalizedFilter = (filter || '').trim().toLowerCase();
-    const rawTokens = normalizedFilter === '' ? [] : normalizedFilter.split(/\s+/);
+    const tokenizeSearch = (value) => {
+      const tokens = [];
+      let token = '';
+      let insideQuotes = false;
+
+      for (const character of value) {
+        if (character === '"') {
+          insideQuotes = !insideQuotes;
+          continue;
+        }
+        if (/\s/.test(character) && !insideQuotes) {
+          if (token !== '') {
+            tokens.push(token);
+            token = '';
+          }
+          continue;
+        }
+        token += character;
+      }
+
+      if (token !== '') {
+        tokens.push(token);
+      }
+      return tokens;
+    };
+
+    const rawTokens = normalizedFilter === '' ? [] : tokenizeSearch(normalizedFilter);
     const supportedFields = new Set(['author', 'country', 'year']);
 
     const searchTerms = rawTokens.map((token) => {
