@@ -34,6 +34,149 @@ h1.index, h1.authors, h1.unfinished {
   margin-top: 0.25em;
   margin-bottom: 0.25em;
 }
+
+// Monthly reading chart
+.monthly-reading-chart {
+  --stats-2025-line: #e9d3c8;
+  --stats-2026-line: #d4e6db;
+  --stats-2025-label: #6b4e34;
+  --stats-2026-label: #2a9193;
+  width: 100%;
+  margin-top: 4px;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+#cumulative-reading-title {
+  margin-top: 44px;
+}
+
+.monthly-reading-chart__legend {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 6px 0 2px;
+  color: #666;
+  font-size: 12px;
+}
+
+.monthly-reading-chart__legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.monthly-reading-chart__swatch {
+  display: inline-block;
+  width: 22px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.monthly-reading-chart__swatch--2025 {
+  background: var(--stats-2025-line);
+}
+
+.monthly-reading-chart__swatch--2026 {
+  background: var(--stats-2026-line);
+}
+
+.monthly-reading-chart--cumulative .monthly-reading-chart__swatch {
+  width: 12px;
+  height: 10px;
+}
+
+#monthly-reading-chart,
+#cumulative-reading-chart {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+
+.monthly-reading-chart__grid line {
+  stroke: #ececec;
+  stroke-width: 1;
+}
+
+.monthly-reading-chart__grid text,
+.monthly-reading-chart__months text,
+.monthly-reading-chart__axis-title {
+  fill: #777;
+  font-size: 12px;
+}
+
+.monthly-reading-chart__frame {
+  fill: none;
+  stroke: #e2e2e2;
+  stroke-width: 1;
+}
+
+.monthly-reading-chart__line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.monthly-reading-chart__point {
+  fill: currentColor;
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.monthly-reading-chart__bar {
+  fill: currentColor;
+}
+
+.monthly-reading-chart__bar-value {
+  pointer-events: none;
+}
+
+.monthly-reading-chart__series.series-2025 {
+  color: var(--stats-2025-line);
+}
+
+.monthly-reading-chart__series.series-2026 {
+  color: var(--stats-2026-line);
+}
+
+.monthly-reading-chart__value {
+  font-size: 12px;
+  font-weight: 500;
+  paint-order: stroke;
+  stroke: #fff;
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
+.monthly-reading-chart__value.label-2025 {
+  fill: var(--stats-2025-label);
+}
+
+.monthly-reading-chart__value.label-2026 {
+  fill: var(--stats-2026-label);
+}
+
+.monthly-reading-chart__description {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 480px) {
+  .monthly-reading-chart__grid text,
+  .monthly-reading-chart__months text,
+  .monthly-reading-chart__axis-title,
+  .monthly-reading-chart__value {
+    font-size: 11px;
+  }
+}
 h1.drama {
   color: #7b9a9c;
   font-size: 26px;

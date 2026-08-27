@@ -1,0 +1,457 @@
+---
+layout: page
+title: 每月閱讀本數
+permalink: /stats
+hide_title: true
+---
+
+<h2 id="monthly-reading-title">每月閱讀本數</h2>
+
+<div class="monthly-reading-chart">
+  <div class="monthly-reading-chart__legend" aria-label="年份圖例">
+    <span><i class="monthly-reading-chart__swatch monthly-reading-chart__swatch--2025"></i>2025</span>
+    <span><i class="monthly-reading-chart__swatch monthly-reading-chart__swatch--2026"></i>2026</span>
+  </div>
+  <svg
+    id="monthly-reading-chart"
+    role="img"
+    aria-labelledby="monthly-reading-title monthly-reading-description">
+  </svg>
+  <p id="monthly-reading-description" class="monthly-reading-chart__description"></p>
+</div>
+
+<h2 id="cumulative-reading-title">每月累積本數</h2>
+
+<div class="monthly-reading-chart monthly-reading-chart--cumulative">
+  <div class="monthly-reading-chart__legend" aria-label="年份圖例">
+    <span><i class="monthly-reading-chart__swatch monthly-reading-chart__swatch--2025"></i>2025</span>
+    <span><i class="monthly-reading-chart__swatch monthly-reading-chart__swatch--2026"></i>2026</span>
+  </div>
+  <svg
+    id="cumulative-reading-chart"
+    role="img"
+    aria-labelledby="cumulative-reading-title cumulative-reading-description">
+  </svg>
+  <p id="cumulative-reading-description" class="monthly-reading-chart__description"></p>
+</div>
+
+{% assign stats_years = "2025,2026" | split: "," %}
+<script id="monthly-reading-data" type="application/json">
+{
+  {% for stats_year in stats_years %}
+    {% assign stats_books = site.data[stats_year] | where_exp: "book", "book.pending != true" | where_exp: "book", "book.finished != false" %}
+    "{{ stats_year }}": [
+      {% for book in stats_books %}{{ book.date | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}
+    ]{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+}
+</script>
+
+<script>
+  (function () {
+    var svg = document.getElementById('monthly-reading-chart');
+    var cumulativeSvg = document.getElementById('cumulative-reading-chart');
+    var dataElement = document.getElementById('monthly-reading-data');
+    var description = document.getElementById('monthly-reading-description');
+    var cumulativeDescription = document.getElementById('cumulative-reading-description');
+
+    if (!svg || !cumulativeSvg || !dataElement) return;
+
+    var rawData = JSON.parse(dataElement.textContent);
+    var namespace = 'http://www.w3.org/2000/svg';
+    var today = new Date();
+    var series = [
+      { year: '2025', lineClass: 'series-2025', labelClass: 'label-2025' },
+      { year: '2026', lineClass: 'series-2026', labelClass: 'label-2026' }
+    ];
+
+    function createSvgElement(name, attributes, text) {
+      var element = document.createElementNS(namespace, name);
+      Object.keys(attributes || {}).forEach(function (key) {
+        element.setAttribute(key, attributes[key]);
+      });
+      if (typeof text !== 'undefined') element.textContent = text;
+      return element;
+    }
+
+    function monthlyCounts(year) {
+      var counts = new Array(12).fill(0);
+      var lastMonth = 0;
+
+      (rawData[year] || []).forEach(function (dateValue) {
+        var normalizedDate = String(dateValue || '').normalize('NFKC');
+        var match = normalizedDate.match(/^(\d{4})\/(\d{1,2})\//);
+        if (!match || match[1] !== year) return;
+
+        var month = Number(match[2]);
+        if (month < 1 || month > 12) return;
+
+        counts[month - 1] += 1;
+        lastMonth = Math.max(lastMonth, month);
+      });
+
+      return { counts: counts, lastMonth: lastMonth };
+    }
+
+    function visibleMonthCount(year) {
+      var numericYear = Number(year);
+      var currentYear = today.getFullYear();
+      if (numericYear < currentYear) return 12;
+      if (numericYear > currentYear) return 0;
+      return today.getMonth() + 1;
+    }
+
+    var countedSeries = series.map(function (item) {
+      var counted = monthlyCounts(item.year);
+      var runningTotal = 0;
+      var cumulativeCounts = counted.counts.map(function (count) {
+        runningTotal += count;
+        return runningTotal;
+      });
+      return Object.assign({}, item, counted, { cumulativeCounts: cumulativeCounts });
+    });
+
+    description.textContent = countedSeries.map(function (item) {
+      var values = item.counts.slice(0, item.lastMonth).join('、');
+      return item.year + ' 年一月至' + item.lastMonth + '月依序為 ' + values + ' 本';
+    }).join('；') + '。';
+
+    cumulativeDescription.textContent = countedSeries.map(function (item) {
+      var visibleMonths = visibleMonthCount(item.year);
+      return item.year + ' 年一月至' + visibleMonths + '月的累積本數依序為 ' +
+        item.cumulativeCounts.slice(0, visibleMonths).join('、') + ' 本';
+    }).join('；') + '。';
+
+    function smoothPath(points) {
+      if (!points.length) return '';
+      if (points.length === 1) return 'M ' + points[0].x + ' ' + points[0].y;
+
+      var slopes = [];
+      var tangents = [];
+
+      for (var index = 0; index < points.length - 1; index += 1) {
+        slopes[index] = (points[index + 1].y - points[index].y) /
+          (points[index + 1].x - points[index].x);
+      }
+
+      tangents[0] = slopes[0];
+      tangents[points.length - 1] = slopes[slopes.length - 1];
+
+      for (var tangentIndex = 1; tangentIndex < points.length - 1; tangentIndex += 1) {
+        tangents[tangentIndex] = slopes[tangentIndex - 1] * slopes[tangentIndex] <= 0
+          ? 0
+          : (slopes[tangentIndex - 1] + slopes[tangentIndex]) / 2;
+      }
+
+      for (var slopeIndex = 0; slopeIndex < slopes.length; slopeIndex += 1) {
+        if (slopes[slopeIndex] === 0) {
+          tangents[slopeIndex] = 0;
+          tangents[slopeIndex + 1] = 0;
+          continue;
+        }
+
+        var alpha = tangents[slopeIndex] / slopes[slopeIndex];
+        var beta = tangents[slopeIndex + 1] / slopes[slopeIndex];
+        var magnitude = alpha * alpha + beta * beta;
+
+        if (magnitude > 9) {
+          var scale = 3 / Math.sqrt(magnitude);
+          tangents[slopeIndex] = scale * alpha * slopes[slopeIndex];
+          tangents[slopeIndex + 1] = scale * beta * slopes[slopeIndex];
+        }
+      }
+
+      var path = 'M ' + points[0].x + ' ' + points[0].y;
+      for (var pointIndex = 0; pointIndex < points.length - 1; pointIndex += 1) {
+        var current = points[pointIndex];
+        var next = points[pointIndex + 1];
+        var width = next.x - current.x;
+        path += ' C ' +
+          (current.x + width / 3) + ' ' + (current.y + tangents[pointIndex] * width / 3) + ', ' +
+          (next.x - width / 3) + ' ' + (next.y - tangents[pointIndex + 1] * width / 3) + ', ' +
+          next.x + ' ' + next.y;
+      }
+
+      return path;
+    }
+
+    function renderLineChart() {
+      var measuredWidth = svg.parentElement.clientWidth;
+      var width = Math.max(300, Math.floor(measuredWidth));
+      var height = width <= 480 ? 350 : 420;
+      var margin = { top: 28, right: 22, bottom: 42, left: 58 };
+      var plotLeft = margin.left;
+      var plotRight = width - margin.right;
+      var plotTop = margin.top;
+      var plotBottom = height - margin.bottom;
+      var plotWidth = plotRight - plotLeft;
+      var plotHeight = plotBottom - plotTop;
+
+      var allCounts = countedSeries.reduce(function (values, item) {
+        return values.concat(item.counts.slice(0, item.lastMonth));
+      }, []);
+      var maximum = Math.max.apply(null, allCounts.concat([1]));
+      var yMaximum = Math.max(5, Math.ceil((maximum + 1) / 5) * 5);
+
+      function xPosition(month) {
+        return plotLeft + ((month - 1) / 11) * plotWidth;
+      }
+
+      function yPosition(value) {
+        return plotBottom - (value / yMaximum) * plotHeight;
+      }
+
+      svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height);
+      svg.setAttribute('height', height);
+      svg.replaceChildren();
+
+      var grid = createSvgElement('g', { class: 'monthly-reading-chart__grid' });
+      for (var tick = 0; tick <= yMaximum; tick += 5) {
+        var tickY = yPosition(tick);
+        grid.appendChild(createSvgElement('line', {
+          x1: plotLeft,
+          x2: plotRight,
+          y1: tickY,
+          y2: tickY
+        }));
+        grid.appendChild(createSvgElement('text', {
+          x: plotLeft - 10,
+          y: tickY + 4,
+          'text-anchor': 'end'
+        }, tick));
+      }
+      svg.appendChild(grid);
+
+      svg.appendChild(createSvgElement('rect', {
+        class: 'monthly-reading-chart__frame',
+        x: plotLeft,
+        y: plotTop,
+        width: plotWidth,
+        height: plotHeight
+      }));
+
+      var months = createSvgElement('g', { class: 'monthly-reading-chart__months' });
+      for (var month = 1; month <= 12; month += 1) {
+        months.appendChild(createSvgElement('text', {
+          x: xPosition(month),
+          y: plotBottom + 24,
+          'text-anchor': 'middle'
+        }, month + '月'));
+      }
+      svg.appendChild(months);
+
+      svg.appendChild(createSvgElement('text', {
+        class: 'monthly-reading-chart__axis-title',
+        x: -(plotTop + plotBottom) / 2,
+        y: 15,
+        transform: 'rotate(-90)',
+        'text-anchor': 'middle'
+      }, '閱讀本數'));
+
+      var rendered = countedSeries.map(function (item) {
+        var points = item.counts.slice(0, item.lastMonth).map(function (count, index) {
+          return {
+            month: index + 1,
+            count: count,
+            x: xPosition(index + 1),
+            y: yPosition(count),
+            year: item.year,
+            lineClass: item.lineClass,
+            labelClass: item.labelClass
+          };
+        });
+        return { item: item, points: points };
+      });
+
+      var labelDirections = {};
+      rendered.forEach(function (renderedSeries) {
+        renderedSeries.points.forEach(function (point) {
+          labelDirections[point.year + '-' + point.month] = -1;
+        });
+      });
+
+      for (var comparedMonth = 1; comparedMonth <= 12; comparedMonth += 1) {
+        var comparablePoints = rendered.map(function (renderedSeries) {
+          return renderedSeries.points[comparedMonth - 1];
+        }).filter(Boolean);
+
+        if (comparablePoints.length === 2 && Math.abs(comparablePoints[0].y - comparablePoints[1].y) < 30) {
+          var upper = comparablePoints[0].y <= comparablePoints[1].y ? comparablePoints[0] : comparablePoints[1];
+          var lower = upper === comparablePoints[0] ? comparablePoints[1] : comparablePoints[0];
+          labelDirections[upper.year + '-' + upper.month] = -1;
+          labelDirections[lower.year + '-' + lower.month] = 1;
+        }
+      }
+
+      rendered.forEach(function (renderedSeries) {
+        var item = renderedSeries.item;
+        var points = renderedSeries.points;
+        var group = createSvgElement('g', {
+          class: 'monthly-reading-chart__series ' + item.lineClass,
+          'aria-label': item.year + ' 年'
+        });
+
+        group.appendChild(createSvgElement('path', {
+          class: 'monthly-reading-chart__line',
+          d: smoothPath(points)
+        }));
+
+        points.forEach(function (point) {
+          group.appendChild(createSvgElement('circle', {
+            class: 'monthly-reading-chart__point',
+            cx: point.x,
+            cy: point.y,
+            r: 6
+          }));
+
+          var direction = labelDirections[point.year + '-' + point.month];
+          var anchor = point.month === 1 ? 'start' : point.month === 12 ? 'end' : 'middle';
+          group.appendChild(createSvgElement('text', {
+            class: 'monthly-reading-chart__value ' + point.labelClass,
+            x: point.x,
+            y: point.y,
+            dy: direction < 0 ? -12 : 18,
+            'text-anchor': anchor
+          }, point.count));
+        });
+
+        svg.appendChild(group);
+      });
+    }
+
+    function renderCumulativeChart() {
+      var measuredWidth = cumulativeSvg.parentElement.clientWidth;
+      var width = Math.max(300, Math.floor(measuredWidth));
+      var height = width <= 480 ? 350 : 420;
+      var margin = { top: 28, right: 22, bottom: 42, left: 58 };
+      var plotLeft = margin.left;
+      var plotRight = width - margin.right;
+      var plotTop = margin.top;
+      var plotBottom = height - margin.bottom;
+      var plotWidth = plotRight - plotLeft;
+      var plotHeight = plotBottom - plotTop;
+      var groupWidth = plotWidth / 12;
+      var pairGap = Math.max(2, Math.min(4, groupWidth * 0.12));
+      var barWidth = Math.max(5, Math.min(15, (groupWidth - pairGap - 4) / 2));
+
+      var cumulativeValues = countedSeries.reduce(function (values, item) {
+        return values.concat(item.cumulativeCounts);
+      }, []);
+      var maximum = Math.max.apply(null, cumulativeValues.concat([1]));
+      var tickStep = maximum <= 50 ? 10 : 20;
+      var yMaximum = Math.max(tickStep, Math.ceil((maximum + tickStep / 2) / tickStep) * tickStep);
+
+      function groupCenter(month) {
+        return plotLeft + (month - 0.5) * groupWidth;
+      }
+
+      function yPosition(value) {
+        return plotBottom - (value / yMaximum) * plotHeight;
+      }
+
+      cumulativeSvg.setAttribute('viewBox', '0 0 ' + width + ' ' + height);
+      cumulativeSvg.setAttribute('height', height);
+      cumulativeSvg.replaceChildren();
+
+      var grid = createSvgElement('g', { class: 'monthly-reading-chart__grid' });
+      for (var tick = 0; tick <= yMaximum; tick += tickStep) {
+        var tickY = yPosition(tick);
+        grid.appendChild(createSvgElement('line', {
+          x1: plotLeft,
+          x2: plotRight,
+          y1: tickY,
+          y2: tickY
+        }));
+        grid.appendChild(createSvgElement('text', {
+          x: plotLeft - 10,
+          y: tickY + 4,
+          'text-anchor': 'end'
+        }, tick));
+      }
+      cumulativeSvg.appendChild(grid);
+
+      cumulativeSvg.appendChild(createSvgElement('rect', {
+        class: 'monthly-reading-chart__frame',
+        x: plotLeft,
+        y: plotTop,
+        width: plotWidth,
+        height: plotHeight
+      }));
+
+      var months = createSvgElement('g', { class: 'monthly-reading-chart__months' });
+      for (var month = 1; month <= 12; month += 1) {
+        months.appendChild(createSvgElement('text', {
+          x: groupCenter(month),
+          y: plotBottom + 24,
+          'text-anchor': 'middle'
+        }, month + '月'));
+      }
+      cumulativeSvg.appendChild(months);
+
+      cumulativeSvg.appendChild(createSvgElement('text', {
+        class: 'monthly-reading-chart__axis-title',
+        x: -(plotTop + plotBottom) / 2,
+        y: 15,
+        transform: 'rotate(-90)',
+        'text-anchor': 'middle'
+      }, '累積本數'));
+
+      countedSeries.forEach(function (item, seriesIndex) {
+        var group = createSvgElement('g', {
+          class: 'monthly-reading-chart__series ' + item.lineClass,
+          'aria-label': item.year + ' 年'
+        });
+
+        var visibleMonths = visibleMonthCount(item.year);
+        item.cumulativeCounts.slice(0, visibleMonths).forEach(function (count, monthIndex) {
+          var center = groupCenter(monthIndex + 1);
+          var x = seriesIndex === 0
+            ? center - pairGap / 2 - barWidth
+            : center + pairGap / 2;
+          var y = yPosition(count);
+          var bar = createSvgElement('rect', {
+            class: 'monthly-reading-chart__bar',
+            x: x,
+            y: y,
+            width: barWidth,
+            height: Math.max(0, plotBottom - y),
+            rx: 2,
+            'aria-label': item.year + ' 年 ' + (monthIndex + 1) + ' 月累積 ' + count + ' 本'
+          });
+          bar.appendChild(createSvgElement('title', {},
+            item.year + ' 年 ' + (monthIndex + 1) + ' 月：累積 ' + count + ' 本'));
+          group.appendChild(bar);
+
+          group.appendChild(createSvgElement('text', {
+            class: 'monthly-reading-chart__value monthly-reading-chart__bar-value ' + item.labelClass,
+            x: x + barWidth / 2,
+            y: y - 8,
+            'text-anchor': 'middle'
+          }, count));
+        });
+
+        cumulativeSvg.appendChild(group);
+      });
+    }
+
+    var scheduledFrame;
+    function scheduleRender() {
+      cancelAnimationFrame(scheduledFrame);
+      scheduledFrame = requestAnimationFrame(function () {
+        renderLineChart();
+        renderCumulativeChart();
+      });
+    }
+
+    if ('ResizeObserver' in window) {
+      var observer = new ResizeObserver(scheduleRender);
+      observer.observe(svg.parentElement);
+      observer.observe(cumulativeSvg.parentElement);
+    } else {
+      window.addEventListener('resize', scheduleRender);
+    }
+
+    renderLineChart();
+    renderCumulativeChart();
+  })();
+</script>
