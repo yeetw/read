@@ -169,8 +169,13 @@ h1.index, h1.authors, h1.unfinished, h1.stats {
   transition: background-color 120ms ease;
 }
 
-.author-country-stats__table tbody tr:hover {
+.author-country-stats__table tbody tr:hover,
+.author-country-stats__table tbody tr:focus-within {
   background: #fbfcfa;
+}
+
+.author-country-stats__row {
+  cursor: pointer;
 }
 
 .author-country-stats__rank {
@@ -199,6 +204,19 @@ h1.index, h1.authors, h1.unfinished, h1.stats {
   color: #555b57;
   font-size: 14px;
   font-weight: 500;
+}
+
+.author-country-stats__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.author-country-stats__link:focus-visible {
+  outline: none;
+}
+
+.author-country-stats__table tbody tr:focus-within {
+  box-shadow: inset 0 0 0 2px var(--country-accent);
 }
 
 .author-country-stats__value {

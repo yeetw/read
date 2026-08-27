@@ -89,6 +89,7 @@ permalink: /stats
       var percentage = total === 0 ? 0 : item.count / total * 100;
       var percentageText = percentage.toFixed(1) + '%';
       var row = document.createElement('tr');
+      row.className = 'author-country-stats__row';
 
       var rankCell = document.createElement('td');
       rankCell.className = 'author-country-stats__rank';
@@ -100,7 +101,17 @@ permalink: /stats
       var countryCell = document.createElement('th');
       countryCell.scope = 'row';
       countryCell.className = 'author-country-stats__country';
-      countryCell.textContent = item.country;
+      var countryLink = document.createElement('a');
+      countryLink.className = 'author-country-stats__link';
+      countryLink.href = '/?q=' + encodeURIComponent(item.country);
+      countryLink.textContent = item.country;
+      countryLink.setAttribute('aria-label', '篩選作者國家：' + item.country);
+      countryCell.appendChild(countryLink);
+
+      row.addEventListener('click', function (event) {
+        if (event.target.closest('a')) return;
+        window.location.assign(countryLink.href);
+      });
 
       var distributionCell = document.createElement('td');
       var value = document.createElement('span');

@@ -12,6 +12,7 @@
 
       const name = (li.dataset.name || li.textContent || '').toLowerCase();
       const author = (li.dataset.author || '').toLowerCase();
+      const country = (li.dataset.country || '').toLowerCase();
       const isbn = (li.getAttribute('isbn') || '').toLowerCase();
       const date = (li.getAttribute('date') || '').toLowerCase();
       const commentFromAttr = (li.dataset.comment || '').toLowerCase();
@@ -23,7 +24,7 @@
         }
       }
       const isStarred = (li.getAttribute('star') || '').toLowerCase() === 'true';
-      const searchableFields = [name, author, comment, isbn, date];
+      const searchableFields = [name, author, country, comment, isbn, date];
 
       return tokens.every((token) => {
         if (isStarToken(token)) {
@@ -57,7 +58,6 @@
         yearTokenSet.add(String(yearNumber));
       }
     });
-    const contentTokens = rawTokens.filter((token) => !yearTokenSet.has(token));
 
     /* Elements begin with year- */
     const elements = document.querySelectorAll('[id^="year-"]');
@@ -65,6 +65,17 @@
     /* Then match `year-*-list` pattern */
     const pattern = /^year-\d+-list$/;
     const yearLists = Array.from(elements).filter(element => pattern.test(element.id));
+    const countryNames = new Set();
+    yearLists.forEach((yearList) => {
+      Array.from(yearList.getElementsByTagName('li')).forEach((li) => {
+        const country = (li.dataset.country || '').trim().toLowerCase();
+        if (country) {
+          countryNames.add(country);
+        }
+      });
+    });
+    const countryTokenSet = new Set(rawTokens.filter((token) => countryNames.has(token)));
+    const contentTokens = rawTokens.filter((token) => !yearTokenSet.has(token) && !countryTokenSet.has(token));
 
     /* Iterate through each year list. */
     for (let y = 0; y < yearLists.length; y++) {
@@ -90,7 +101,9 @@
       const lis = yearList.getElementsByTagName('li');
       let count = 0;
       for (var i = 0; i < lis.length; i++) {
-        if (matchesAllTokens(lis[i], contentTokens)) {
+        const country = (lis[i].dataset.country || '').trim().toLowerCase();
+        const matchesCountryFilter = countryTokenSet.size === 0 || countryTokenSet.has(country);
+        if (matchesCountryFilter && matchesAllTokens(lis[i], contentTokens)) {
           lis[i].style.display = 'list-item';
           count++;
         } else {
