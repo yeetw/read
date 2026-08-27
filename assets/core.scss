@@ -141,9 +141,10 @@ h1.index, h1.authors, h1.unfinished, h1.stats {
 .author-country-stats__table thead th {
   padding: 10px 14px;
   color: #969a95;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.08em;
+  white-space: nowrap;
 }
 
 .author-country-stats__table thead th:first-child {
@@ -278,11 +279,11 @@ h1.index, h1.authors, h1.unfinished, h1.stats {
   }
 
   .author-country-stats__table thead th:first-child {
-    width: 42px;
+    width: 52px;
   }
 
   .author-country-stats__table thead th:nth-child(2) {
-    width: 72px;
+    width: 62px;
   }
 
   .author-country-stats__table thead th,
