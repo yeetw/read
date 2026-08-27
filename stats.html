@@ -103,7 +103,7 @@ permalink: /stats
       countryCell.className = 'author-country-stats__country';
       var countryLink = document.createElement('a');
       countryLink.className = 'author-country-stats__link';
-      countryLink.href = '/?q=' + encodeURIComponent(item.country);
+      countryLink.href = '/?q=' + encodeURIComponent('country:' + item.country);
       countryLink.textContent = item.country;
       countryLink.setAttribute('aria-label', '篩選作者國家：' + item.country);
       countryCell.appendChild(countryLink);
@@ -220,7 +220,7 @@ permalink: /stats
     }
 
     function yearSearchUrl(year) {
-      return '/?q=' + encodeURIComponent(year);
+      return '/?q=' + encodeURIComponent('year:' + year);
     }
 
     function monthlyCounts(year) {

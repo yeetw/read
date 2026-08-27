@@ -50,7 +50,7 @@ layout: default
         {% assign books = year_data[1] | where_exp: "b", "b.pending != true" | where_exp: "b", "b.finished != false" %}
         {% assign count = books | size %}
         {% if count > 0 %}
-          <li><a href="/?q={{ year }}">{{ year }} 年 ‧ {{ count }} 本</a></li>
+          <li><a href="/?q={{ "year:" | append: year | url_encode }}">{{ year }} 年 ‧ {{ count }} 本</a></li>
         {% endif %}
       {% endif %}
     {% endfor %}
