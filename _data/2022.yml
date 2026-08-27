@@ -1,5 +1,6 @@
 - name: 不幹了！我開除了黑心公司
   author: 北川惠海
+  country: 日本
   isbn: 9789863667896
   date: 2022/10/26
   comment: 寫給為工作苦惱迷惘的上班族，療癒親切的人生打氣書
@@ -7,6 +8,7 @@
 
 - name: 移工怎麼都在直播
   author: 江婉琦
+  country: 臺灣
   isbn: 9786263142602
   star: true
   comment: 作者本人進行深入的田野調查，難得看到移工自我而非工作上的面向，作者文筆很好，期待作者的新作
@@ -14,6 +16,7 @@
 
 - name: 下級國民 A：日本很美好？我在三一一災區復興最前線，成了遊走工地討生活的人
   author: 赤松利市
+  country: 日本
   isbn: 9789860672350
   date: 2022
   star: true
@@ -21,6 +24,7 @@
 
 - name: 臺灣大案鑑識現場
   author: 謝松善
+  country: 臺灣
   date: 2022
   isbn: 9789869946957
   star: true
@@ -28,6 +32,7 @@
 
 - name: 解答交朋友的煩惱
   author: 吉本芭娜娜
+  country: 日本
   date: 2022
   isbn: 9789571398617
   star: true
@@ -35,18 +40,21 @@
 
 - name: 邊境角落關鍵字：413 天異地觀察實錄
   author: 葉兆中
+  country: 臺灣
   date: 2022
   isbn: 9789869705547
   comment: 不是看了覺得世界很美好的旅遊書，作者一個人探索世界，本書是真實的外在環境與自己內心掙扎對話的直白紀錄
 
 - name: 我是遺物整理師
   author: 金完
+  country: 南韓
   isbn: 9789865080877
   date: 2022
   comment: 穿梭在各種死亡現場的遺物整理師，與體液與髒亂打交道，謝謝作者寫出這本書
 
 - name: 最好的告別
   author: 馮以量
+  country: 馬來西亞
   isbn: 9789864060191
   star: true
   date: 2022
@@ -54,13 +62,15 @@
 
 - name: 雖然血淚，我還是喜歡翻譯：我的書桌、女兒、老狗，還有那些療癒我的日本大作家
   author: 權南姬
+  country: 南韓
   isbn: 9789865509941
   star: true
   date: 2022
-  comment: 作者是韓國專門研究日本文學的翻譯，謙遜而坦率地描述他的譯者生活
+  comment: 作者是南韓專門研究日本文學的翻譯，謙遜而坦率地描述他的譯者生活
 
 - name: 地鐵站
   author: 何致和
+  country: 臺灣
   date: 2022
   isbn: 9786263141063
   star: true
@@ -68,12 +78,14 @@
 
 - name: 毒舌的技術
   author: 北野武
+  country: 日本
   isbn: 9789865797959
   date: 2022
   comment: 第一次看覺得哇這個大叔好直接，有話就說不介意別人眼光，現在覺得他就是任性吧...
 
 - name: 接棒家族
   author: 瀨尾麻衣子
+  country: 日本
   isbn: 9789571090405
   star: true
   date: 2022
@@ -81,24 +93,28 @@
 
 - name: 我只是個計程車司機
   author: 王國春
+  country: 臺灣
   isbn: 9789869939355
   date: 2022
   comment: 了解計程車司機的職業日常🚖
 
 - name: 全思考：吧台旁說人生
   author: 北野武
+  country: 日本
   isbn: 9789865824846
   date: 2022
   comment: 翻譯是陳系美，「你若問我要選擇哪一種人生，我不必想就能回答：我選擇發光發熱的人生。」
 
 - name: 想到明天要上班就失眠
   author: 李河鏤
+  country: 南韓
   isbn: 9786267087091
   date: 2022
   comment: 「很遺憾的是，假如薪水真是如此，那我們的未來就等於是完蛋了。無論再怎麼努力，都不可能比人工智慧更有胸襟，更不可能在被臭罵之後毫無情緒起伏，而我們人類也沒有那個體力，可以在被持續利用後卻不感到疲乏。此外，在我們想法中根深蒂固的「本來就這樣」也會逐漸失去力量。」
 
 - name: 不便利的便利店
   author: 金浩然
+  country: 南韓
   isbn: 9786269593842
   series: １、２
   date: 2022
@@ -107,18 +123,21 @@
 
 - name: 放慢速度的勇氣
   author: 關家良一
+  country: 日本
   date: 2022
   isbn: 9789573275923
   comment: 因為東吳超馬知道這名日本上班族跑者，對長跑或作者有興趣的話可以讀
 
 - name: 上班時，別演太多內心戲
   author: 井上智介
+  country: 日本
   date: 2022
   isbn: 9786269500420
   comment: 作者是職業醫學科及精神科醫生，寫上班族所遭遇到的問題與作者所提供的解決辦法，「為了存活下去，我們需要的不是獲取新的事物，而是學會放手」
 
 - name: 當收入只夠填飽肚子
   author: Linda Tirado
+  country: 美國
   isbn: 9789869466585
   date: 2022
   star: true
@@ -126,12 +145,14 @@
 
 - name: 我是你的觀護人
   author: 唐珮玲
+  country: 臺灣
   date: 2022
   isbn: 9789864895830
   comment: 一開始是對觀護人這個工作有興趣，除了故事動人，作者的文筆非常幽默風趣，內容讓人一直想看下去
 
 - name: 趁熱品嚐
   author: 小川糸
+  country: 日本
   date: 2022
   isbn: 9789571356181
   comment: 很好看，由七篇短篇小說組成，七樣食物，訴說了七則不同的人生風景
@@ -139,6 +160,7 @@
 
 - name: 為什麼沒人告訴過我？
   author: Julie Smith
+  country: 英國
   date: 2022
   isbn: 9789573296935
   comment: 作者強調「覺察自己」——這是能自救的關鍵，並且倚靠語言的力量，把這些當下感受與念頭具體，進而的能夠控制自己的注意力和想法
@@ -146,6 +168,7 @@
 
 - name: 放棄天才夢
   author: 山里亮太
+  country: 日本
   isbn: 9786263182363
   date: 2022
   star: true
@@ -153,6 +176,7 @@
 
 - name: 獨舞
   author: 李琴峰
+  country: 臺灣
   isbn: 9789863232902
   date: 2022
   star: true
@@ -160,47 +184,55 @@
 
 - name: 旅跑．日本
   author: 歐陽靖
+  country: 臺灣
   date: 2022
   isbn: 9789862136249
   comment: 介紹 6 個日本經典馬拉松賽事，東京、沖繩、靜崗、鳥取、長野、北海道千歲
 
 - name: 溫馨提醒：洗衣服請記得拿
   author: 張瑞夫
+  country: 臺灣
   isbn: 9789571397641
   comment: 作者在后里小鎮的「萬秀洗衣店」成長的日常，透過一則阿公阿嬤穿著舊時衣服的穿搭po文，作者與阿公阿嬤一同創造了許多故事與回憶
 
 - name: 說好一起老
   date: 2022
   author: 瞿欣怡
+  country: 臺灣
   isbn: 9789864060313
   star: true
 
 - name: 媽媽的解僱通知
   date: 2022
   author: 五百田達成、櫻場江利子
+  country: 日本
   isbn: 9789571359632
   comment: 運用「愛的斷捨離」，看清母女關係的愛恨、糾葛與和解
 
 - name: 30 歲的禮物：謝謝癌症，讓我更勇敢
   author: 吳娮翎
+  country: 臺灣
   date: 2022
   isbn: 9789869352727
   comment: 「可以一起好好跟過去的自己告別，告別總是輕忽身體訊息的自己，總是恣意揮霍青春，甚至對家人的愛覺得理所當然的自己。」
 
 - name: 新創空間的 10x10 堂創業實作課
   author: 張家銘
+  country: 臺灣
   date: 2022
   isbn: 9789864082254
   comment: 四大流程：找 -> 看 -> 談 -> 簽
 
 - name: 決戰撒哈拉
   author: 林義傑
+  country: 臺灣
   date: 2022
   isbn: 9789867010926
   comment: 111 天 7500 公里，橫越撒哈拉世紀大挑戰🌵
 
 - name: 有一天，你也會遇到
   author: 久坂部羊
+  country: 日本
   date: 2022
   isbn: 9789869599337
   star: true
@@ -208,6 +240,7 @@
 
 - name: 惡醫
   author: 久坂部羊
+  country: 日本
   date: 2022
   isbn: 9789869599320
   star: true
@@ -215,12 +248,14 @@
 
 - name: 百吻巴黎
   author: 楊雅晴
+  country: 臺灣
   date: 2022
   isbn: 9789869125222
   comment: 2009 年暑假一個台灣女孩在巴黎的行動藝術🇫🇷
 
 - name: 媽媽離開的時候想穿什麼顏色的衣服？
   author: 申昭潾
+  country: 南韓
   date: 2022
   isbn: 9789860693591
   star: true
@@ -228,6 +263,7 @@
 
 - name: 再也沒有蒜苗佐烏魚子了
   author: 宋尚緯
+  country: 臺灣
   date: 2022
   isbn: 9786269521036
   star: true
@@ -235,6 +271,7 @@
 
 - name: 我討厭我自己
   author: 潘柏霖
+  country: 臺灣
   date: 2022
   isbn: 9786260116897
   comment: 少數能好好讀完的詩集，「沒有關係喔。現在的我，比以前的我，還要喜歡自己了。」
@@ -242,11 +279,13 @@
 - name: 針與糸
   date: 2022
   author: 小川糸
+  country: 日本
   isbn: 9789865101008
   comment: 「深深渴望著被愛卻笨拙的母親，用了與內心完全相反的行為，變得與我漸行漸遠。」
 
 - name: 獅子的點心
   author: 小川糸
+  country: 日本
   date: 2022
   isbn: 9789865101626
   star: true
@@ -254,6 +293,7 @@
 
 - name: 閃亮亮共和國
   author: 小川糸
+  country: 日本
   date: 2022
   isbn: 9789861336787
   star: true
@@ -261,6 +301,7 @@
 
 - name: 山茶花文具店
   author: 小川糸
+  country: 日本
   isbn: 9789861336275
   star: true
   comment: 2017 年本屋大賞第四名，故事背景在鐮倉，平實温馨的小說，譯者是王蘊潔，「在這個什麼都用通訊軟體和電子郵件往來的世界裡，書寫、寄出、等待回覆的這段時間不僅讓人期待、心跳不已。」
@@ -268,24 +309,28 @@
 
 - name: 一整天沒跟人說話也 OK
   author: 鹿目將至
+  country: 日本
   date: 2022
   isbn: 9786269500468
   comment: 滿療癒，作者提出 5 步驟 39 個提案，唯一的重點就是「輕鬆」，這個方法不行就換下一個
 
 - name: 三十三歲的逆襲
   author: 徐妍珠
+  country: 南韓
   date: 2022
   isbn: 9789571392219
   comment: 「即使不怎麼戲劇化，我們還是每天都產生了細微的變化。」
 
 - name: 效率UP！準時下班的 77 個工作神技
   author: 鈴木真理子
+  country: 日本
   isbn: 9789863317562
   date: 2022
   comment: 適合坐辦公室上班族閱讀的書，掌握「速度」與「正確性」的 77 個方法
 
 - name: 沉默：特教學校集體性侵事件
   author: 陳昭如
+  country: 臺灣
   isbn: 9786269585953
   date: 2022
   star: true
@@ -293,54 +338,63 @@
 
 - name: 生命自主：最先進的醫療是救命？還是延長痛苦？
   author: 中村仁一、久坂部羊
+  country: 日本
   date: 2022
   isbn: 9789862299982
   comment: 兩位醫生的對談，針對如何好好死去的討論，究竟該如何停止違反自然的延命治療
 
 - name: 那些電影教我的事
   author: 水ㄤ水某
+  country: 臺灣
   date: 2022
   isbn: 9789864775095
   comment: 臉書粉絲專頁的集結，大部分是主流電影🎬
 
 - name: 致富心態：關於財富、貪婪與幸福的20堂理財課
   author: Morgan Housel
+  country: 美國
   date: 2022
   isbn: 9789865250348
   comment: 「金錢最大的內在價值，就是賦予你掌控時間的能力。」
 
 - name: 93 奇蹟，Dora 給我們的生命禮物
   author: Dora 媽咪
+  country: 臺灣
   date: 2022
   isbn: 9789863586524
   comment: Dora 努力抗癌，媽媽也很堅強
 
 - name: 太陽的血是黑的
   author: 胡淑雯
+  country: 臺灣
   date: 2022
   isbn: 9789866135637
   comment: 「愛是騙不了人的，就像「不愛」也是騙不了人的。」
 
 - name: 大概是時間在煮我吧
   author: 張西
+  country: 臺灣
   isbn: 9789576587405
   date: 2022
   comment: 「活得越趨清楚不是為了證明，而是能夠分辨什麼是自己的真實、什麼是別人的真實。」
 
 - name: 酒友，飯友
   author: 安倍夜郎
+  country: 日本
   isbn: 9789865824341
   date: 2022
   comment: 漫畫家安倍夜郎創作原點初揭幕，首本散文集🌙
 
 - name: 歡迎光臨 161 號：從萬華開始，那些夢想城鄉的故事
   author: 徐敏雄、古明韻、陳亮君、陳秋欣、謝宜潔
+  country: 臺灣
   isbn: 9789869987264
   date: 2022
   comment: 「每個人一輩子中都一定會遭受某些失敗經驗，這都是已經發生，而且無法改變的事實。」
 
 - name: 精疲力竭的一天：雖然想死，但卻成為醫生的我
   author: 南宮仁
+  country: 南韓
   isbn: 9789571381152
   date: 2022
   star: true
@@ -348,18 +402,21 @@
 
 - name: 給 40 歲的嶄新開始
   author: 松浦彌太郎
+  country: 日本
   isbn: 9789863445784
   date: 2022
   comment: 「最重要的工作就是健康管理。」
 
 - name: 掙扎的貝類
   author: 煮雪的人
+  country: 臺灣
   isbn: 9789869818841
   date: 2022
   comment: 作者的第二部詩集
 
 - name: 剩下的人生都是休假
   author: 伊坂幸太郎
+  country: 日本
   date: 2022
   isbn: 9789865651428
   star: true
@@ -367,24 +424,28 @@
 
 - name: 奶奶來了！從陪伴到送別，我與奶奶的 1825 天交往日記
   author: 賴思豪
+  country: 臺灣
   isbn: 9789571374321
   date: 2022
   comment: 金孫陪伴奶奶的最後五年🧑‍🤝‍🧑
 
 - name: 做自己，為什麼還要說抱歉？
   author: 林依晨
+  country: 臺灣
   isbn: 9789570861471
   date: 2022
   comment: 是有氣質有想法的女生寫出的書
 
 - name: 手槍女王 HAND JOB QUEEN
   author: 涼圓
+  country: 臺灣
   isbn: 9789860647822
   date: 2022
   comment: 「有些事情妳就是必須按部就班地做，為了斜槓，就必須按部就班地上班賺錢、按部就班地存錢、按部就班地學習、按部就班地投資⋯⋯同時還要當個按部就班的上班族。」
 
 - name: 蛤蟆先生去看心理師
   author: Robert de Board
+  country: 英國
   isbn: 9789576587399
   date: 2022
   star: true
@@ -392,6 +453,7 @@
 
 - name: 流浪的月
   author: 凪良汐
+  country: 日本
   date: 2022
   isbn: 9789865102395
   star: true
@@ -399,6 +461,7 @@
 
 - name: 百工職魂
   author: 目映．台北
+  country: 臺灣
   date: 2022
   isbn: 9789864062560
   star: true
@@ -406,6 +469,7 @@
 
 - name: 廢墟少年：被遺忘的高風險家庭孩子們
   author: 李雪莉，簡永達
+  country: 臺灣
   isbn: 9789869681766
   date: 2022
   star: true
@@ -413,18 +477,21 @@
 
 - name: 以太奇襲
   author: Camila Russo
+  country: 智利
   isbn: 9789869932974
   date: 2022
   comment: 「這個在以太坊平台上打造的數位代幣和網路，使阿根廷某個偏遠省分的勞工，可以從一位遠在世界另一端的匿名投資者那裡借錢。借貸雙方都不知道彼此是誰。」
 
 - name: 相親 35 次，煩到離家出走逃去美國，最後卻變成僧侶回來了！
   author: 英月
+  country: 日本
   isbn: 9789571472317
   date: 2022
   comment: 「人生沒有什麼是徒勞無功的。」
 
 - name: 北極星灑落之夜
   author: 李琴峰
+  country: 臺灣
   isbn: 97862631638500
   date: 2022
   star: true
@@ -432,12 +499,14 @@
 
 - name: 阿姨，我不想努力了！？ 
   author: 劉仲敬
+  country: 中國
   isbn: 9786267129449
   date: 2022
   comment: 「如果他們錯過了這個機會，明明有這樣的條件卻不加利用，或者是已經享有了一般人享受不到的優惠條件，而沒有做出相應的回饋的話，他們就辜負了自己。」
 
 - name: 不要做自己了，你做個人吧
   author: Mumu
+  country: 臺灣
   isbn: 9786263352292
   date: 2022
   star: true
@@ -445,35 +514,41 @@
 
 - name: 孝子
   author: 大師兄
+  country: 臺灣
   isbn: 9789864063086
   comment: 「人不會生下來就很完美，有好的一面，也有壞的一面。不要把自己想得那麼絕望。」
 
 - name: 雖然想死，但還是想吃辣炒年糕 2
   author: 白洗嬉
+  country: 南韓
   isbn: 9789863844150
   date: 2022
   comment: 「正因為我們會感到孤單、空虛，所以才會與人維持關係、交往聯絡，也可透過定期性地做某件事情來降低孤單感。」
 
 - name: 寫吧！為了抵達自己
   author: 沒力史翠普
+  country: 臺灣
   isbn: 9789571390277
   date: 2022
   comment: 「我們曾經以為，人生的所有旅程都是為了抵達遠方。事實上，當你走得越遠，你就離自己越近——我們所有旅程的目的，都是為了抵達自己。」
 
 - name: 公民不盲從
   author: 法律白話文
+  country: 臺灣
   date: 2022
   isbn: 9786263102422
   comment: 「思想控制，最可怕的地方在於自我審查。當你知道一件事情你不能講，就無法好好地想。」
 
 - name: 廚房小情歌
   author: 番紅花
+  country: 臺灣
   date: 2022
   isbn: 9789573272700
   comment: 「我們在消費端多吃了什麼，就多造就了生產端農民的什麼。」
 
 - name: 斷食善終：送母遠行，學習面對死亡的生命課題
   author: 畢柳鶯
+  country: 臺灣
   isbn: 9786263101913
   date: 2022
   star: true
@@ -481,6 +556,7 @@
 
 - name: 五星級廚餘
   author: Anna Lee 李宛蓉
+  country: 臺灣
   isbn: 9789869879323
   star: true
   date: 2022
@@ -488,12 +564,14 @@
 
 - name: 我的過動人生
   author: 吳沁婕
+  country: 臺灣
   date: 2022
   isbn: 9789869484411
   comment: 用過動兒的第一人稱書寫，可以幫助了解特殊兒的生理與心理需要
 
 - name: 吃飽睡飽，人生不怕
   author: 瞿欣怡
+  country: 臺灣
   isbn: 9789863598312
   date: 2022
   star: true
@@ -501,12 +579,14 @@
 
 - name: 文藝女青年這種病，生個孩子就好了
   author: 蘇美
+  country: 中國
   date: 2022
   comment: 作者是中國人，「他的確是一個人了。而和人打交道可謂是這個星球上最困難的任務。而他還這麼小，你既不能說服他，也不能打服他，又不能一刀兩斷，又不能一拍兩散。」
   isbn: 9789869333603
 
 - name: 空洞的內在
   author: 松重豐
+  country: 日本
   date: 2022
   isbn: 9786263151437
   star: true
@@ -514,12 +594,14 @@
 
 - name: 我們都要好好的：無人知曉的獸醫現場
   author: 陳凌
+  country: 臺灣
   isbn: 9789869673464
   date: 2022
   comment: 記錄臺灣獸醫師艱苦的工作環境，以及獸醫日日面對無常處境的書
 
 - name: 犯罪手法系列3－法醫昆蟲學
   author: Madison Lee Goff
+  country: 美國
   date: 2022
   isbn: 9789863446620
   comment: 文字生動，本書生動描述結合死亡調查實例和法醫昆蟲學故事，很有收穫
@@ -527,6 +609,7 @@
 
 - name: 過度飲食心理學
   author: Kima Cargill
+  country: 美國
   date: 2022
   isbn: 9789869620215
   star: true
@@ -534,6 +617,7 @@
 
 - name: 祝葬
   author: 久坂部羊
+  country: 日本
   date: 2022
   isbn: 9789577415028
   star: true
@@ -541,6 +625,7 @@
 
 - name: 情緒勒索
   author: 周慕姿
+  country: 臺灣
   date: 2022
   isbn: 9789864060788
   star: true
@@ -548,6 +633,7 @@
 
 - name: 冷知識背後的熱思考
   author: 啾啾鞋
+  country: 臺灣
   date: 2022
   isbn: 9789864779611
   star: true
@@ -555,6 +641,7 @@
 
 - name: 可是我偏偏不喜歡
   author: 吳曉樂
+  country: 臺灣
   date: 2022
   isbn: 9789869760317
   comment: 「我到了更久之後，才徹底地釐清，母親送給我一樣很大的禮物：若某天你受情勢所逼，而沒有足夠勇敢，你依舊值得一份諒解。」
@@ -562,18 +649,21 @@
 
 - name: 急診鋼鐵人 2.0 戰鬥吧！
   author: 急診醫師 Dr. 魏
+  country: 臺灣
   date: 2022
   isbn: 9789863427797
   comment: 醫師角度，為護理師發聲的圖文漫畫
 
 - name: 追不到夢想就創一個！
   author: 鄭雅慈
+  country: 臺灣
   date: 2022
   isbn: 9789863618515
   comment: 「忠於自己的興趣，敞開心胸嘗試，有機會就把握，遇到不會就學習。」
 
 - name: 藥學系學什麼
   author: 藥學系邊緣人
+  country: 臺灣
   date: 2022
   isbn: 9789865510282
   star: true
@@ -581,24 +671,28 @@
 
 - name: 雖然想死，但還是想吃辣炒年糕
   author: 白洗嬉
+  country: 南韓
   date: 2022
   isbn: 9789863843788
   comment: 「如果一直不去試著了解自己，只有一味地納悶：「我到底為什麼會這樣？」是不行的。」
   
 - name: 女子力不是溫柔，是戰鬥
   author: 劉冠吟
+  country: 臺灣
   date: 2022
   isbn: 9789862488799
   comment: 「人生畏的是，跟你共處在婚姻生活中的另一位，並沒有覺得出了問題，那就是一個人的荒涼了，不知道從何戰鬥起，手無寸鐵的荒涼。」
 
 - name: 洗車人家
   author: 姜泰宇
+  country: 臺灣
   date: 2022
   isbn: 9789864062072
   comment: 作者以作家之眼、洗車工之手，記錄一條與骯髒無奈為伍的路
 
 - name: 那時候，我只剩下勇敢：一千一百哩太平洋屋脊步道尋回的人
   author: Cheryl Strayed
+  country: 美國
   date: 2022
   isbn: 9789862356562
   star: true
@@ -606,6 +700,7 @@
 
 - name: 我只想讓我女兒有個家
   author: Stephanie Land
+  country: 美國
   isbn: 9789865406103
   date: 2022
   comment: 「我仍渴望有別人喜歡、有人碰觸、有人愛，我想不出自己有哪個時候不渴望那些東西。我想當個堅強的人，不需要別人愛我，但我做不到。」
@@ -613,6 +708,7 @@
 
 - name: 為什麼要拋棄我？日本「嬰兒信箱」十年紀實
   author: NHK 特別採訪小組
+  country: 日本
   isbn: 9789869987240
   date: 2022
   star: true
@@ -620,18 +716,21 @@
 
 - name: 你剛吃了韭菜水餃？
   author: 林峰丕
+  country: 臺灣
   date: 2022
   isbn: 9789865853075
   comment: 牙醫師的書，印象最深刻是看牙醫的禮貌，要刷完牙再去、準時到、專心治療不要滑手機
 
 - name: 少年與狗
   author: 馳星周
+  country: 日本
   isbn: 9789865073480
   date: 2022
   comment: 「行動派與不夠深思熟慮往往是一線之隔。」
 
 - name: 你要如何衡量你的人生？
   author: Clayton M. Christensen
+  country: 美國
   date: 2022
   isbn: 9789864792900
   star: true
@@ -639,12 +738,14 @@
 
 - name: 松浦彌太郎の Hello、Bonjour、你好
   author: 松浦彌太郎
+  country: 日本
   date: 2022
   isbn: 9789578787667
   comment: 作者分享如何利用「英文」、「法文」、「中文」三國語言，提升個人價值、拓展國際視野、深化美學教養
 
 - name: 你值得好好悲傷：我們都是自殺者遺族
   author: 高璿圭
+  country: 南韓
   date: 2022
   isbn: 9789865543808
   star: true
@@ -652,18 +753,21 @@
 
 - name: 如何活用行為經濟學
   author: 大竹文雄
+  country: 日本
   date: 2022
   isbn: 9789860611601
   comment: 「「禁止亂丟垃圾！」或「在吸菸場所以外吸菸是違規的行為」之類有意識的推力，對那些明知故犯的人或許不太有效，人們也可能不去注意這類標示，這時在地上標示前往垃圾桶的足跡，或者前往吸菸區的箭頭，人就會在不知不覺間跟著走去。」
 
 - name: 聽說你在創業
   author: 林育聖
+  country: 臺灣
   date: 2022
   isbn: 9789869691840
   comment: 有點負能量🙁
 
 - name: 誰在暗中眨眼睛
   author: 王定國
+  country: 臺灣
   date: 2022
   isbn: 9789865823955
   star: true
@@ -671,12 +775,14 @@
 
 - name: 不在他方
   author: 陳綺貞
+  country: 臺灣
   date: 2022
   isbn: 9789865823962
   comment: 作者第一本散文集
 
 - name: 偽魚販指南
   author: 林楷倫
+  country: 臺灣
   date: 2022
   isbn: 9789864062867
   star: true
@@ -684,18 +790,21 @@
   
 - name: 別在走遠後才想起說再見
   author: 阿飛
+  country: 臺灣
   date: 2022
   isbn: 9789865100056
   comment: 20 則穿梭於不同關係之間的故事，可以看很快的書
 
 - name: 時間不感症者
   author: 徐禎苓
+  country: 臺灣
   date: 2022
   isbn: 9789863873358
   comment: 作者透過走訪上海等地，追溯劉吶鷗的足跡，並結合自己的交換學生經驗，描寫了 1930 年代上海的風貌與文人生活
 
 - name: 零規則
   author: Reed Hastings、Erin Meyer
+  country: 美國
   date: 2022
   isbn: 9789863986102
   star: true
@@ -703,24 +812,28 @@
 
 - name: 愈少人認識我們愈好
   author: Axton Betz-Hamilton
+  country: 美國
   date: 2022
   isbn: 9786263100497
   comment: 「我的人生中，有幾個近似電視機壞掉的瞬間，現實彷彿在我眼前閃爍、躍動，這一刻便是如此。」
 
 - name: 閒人出租：出租無用的自己，尋找嶄新的生存之道！
   author: 閒人出租
+  country: 日本
   date: 2022
   isbn: 9789865077198
   comment: 有趣的書，「我現在衷心期盼，一無是處的人，儘管對人類跟社會毫無貢獻，也能毫無壓力地活在世上。用誇張點的說法，這就是「閒人出租」的活動理念。」
 
 - name: 她們的韓國夢
   author: Fion
+  country: 臺灣
   date: 2022
   isbn: 9789571373997
   comment: 「我覺得這是投資，我握有別人沒有的資訊，多知道一些什麼東西在哪賣，那我的無可取代性就比別人高一點。」
 
 - name: 安寧的祝福
   author: 南杏子
+  country: 日本
   date: 2022
   isbn: 9789577413550
   star: true
@@ -728,6 +841,7 @@
 
 - name: 人魚紀
   author: 李維菁
+  country: 臺灣
   date: 2022
   isbn: 9789869749558
   star: true
@@ -735,18 +849,21 @@
 
 - name: 精準醫學
   author: 曾嶔元
+  country: 臺灣
   date: 2022
   isbn: 9789571383453
   comment: 「在減重方面，飲食控制比運動有效。因為，在不增加運動量的情況下，每天光是食物熱量減少 500 大卡就可讓我們每週減重 0.45 公斤。」
 
 - name: 都更危老大解密，耕築共好家園
   author: 黃張維
+  country: 臺灣
   date: 2022
   isbn: 9786267014028
   comment: 家裡的房子都更談了好幾年還沒有明確的開工時間，都更好難呀
 
 - name: 小武君、有！
   author: 北野武
+  country: 日本
   date: 2022
   isbn: 9789869014755
   star: true
@@ -754,6 +871,7 @@
 
 - name: 就是走路
   author: Erling Kagge
+  country: 挪威
   date: 2022
   isbn: 9789865406523
   star: true
@@ -761,30 +879,35 @@
 
 - name: 綁架張愛玲
   author: 李桐豪
+  country: 臺灣
   date: 2022
   isbn: 9789578320437
   comment: 讀不懂張愛玲也讀不懂李桐豪🥹
 
 - name: 離職後的自由
   author: 稻垣惠美子
+  country: 日本
   date: 2022
   isbn: 9789863428947
   comment: 爆炸頭的封面很吸睛，作者決定以人生的下半場為賭注，在最低的物質需求中，挑戰就算沒什麼錢也能滿足的生活方式💪🏼
 
 - name: 離開時，以我喜歡的樣子
   author: 樹木希林
+  country: 日本
   date: 2022
   isbn: 9789573286066
   comment: 很喜歡作者傳遞的人生觀，「我覺得那樣也沒什麼不好，我只是剛好選擇對自己有利的想法而已。」
 
 - name: 如果理想生活還在半路
   author: 柯采岑
+  country: 臺灣
   date: 2022
   isbn: 9789865101565
   comment: 「你在對方身上看到的，你最厭惡或是討厭的那些毛病，其實說不定都是你自己畏懼面對的己身黑暗。」
 
 - name: 無緣社會
   author: NHK 特別採訪小組
+  country: 日本
   date: 2022
   isbn: 9789862271827
   star: true
@@ -792,24 +915,28 @@
 
 - name: 路過：這個世界教我的事
   author: 黃于洋
+  country: 臺灣
   date: 2022
   isbn: 9789571359250
   comment: 作者十六歲出發闖蕩世界，造訪許多對於一個女生較危險的國家，文字很有想法
 
 - name: 北海道央男子休日
   author: 男子休日委員會
+  country: 臺灣
   date: 2022
   isbn: 9789869202114
   comment: 北海道旅行指南，圖文並茂，好想再去北海道🇯🇵
 
 - name: 我長在打開的樹洞
   author: 程廷
+  country: 臺灣
   date: 2022
   isbn: 9789864503421
   comment: 描寫原住民和男同志身份的自我認同
 
 - name: 媽媽離開以後，我一個人的旅行
   author: 金仁淑
+  country: 南韓
   date: 2022
   isbn: 9789861794990
   star: true
@@ -817,12 +944,14 @@
 
 - name: 最後一個人：韓國第一部以「慰安婦」受害者證言為藍本的小說
   author: 金息
+  country: 南韓
   date: 2022
   isbn: 9789571394114
   comment: 翻譯是胡椒筒，「每當思考自己時，最先湧上心頭的感情是羞恥。對她而言，思考自己，是一件充滿恥辱和痛苦的事。她既不思考也不講話，最終忘記了自己是怎樣的一個人。」
 
 - name: 新手作家求生指南
   author: 陳又津
+  country: 臺灣
   date: 2022
   isbn: 9789863872542
   star: true
@@ -830,24 +959,28 @@
 
 - name: 醫學系在幹嘛？笑中帶淚的超狂醫界人生
   author: 蓋瑞醫生
+  country: 臺灣
   date: 2022
   isbn: 9789578587229
   comment: 幽默逗趣又能引人深思的醫院故事，記得醫師也是人，記得對你的醫師笑一下😄
 
 - name: 計程人生：23 段用愛跳表的旅程
   author: 李瓊淑、詹云茜
+  country: 臺灣
   date: 2022
   isbn: 9789864779253
   comment: 「真正的家會讓你感覺時間彷彿停止，彼此的感情將永遠保存下來。」
 
 - name: 焦慮的人
   author: Fredrik Backman
+  country: 瑞典
   date: 2022
   isbn: 9789869930550
   comment: 「我們試著找到方法告訴我們自己：我們做的已經足夠了。這樣一來，我們才能繼續活下去，不被自己的失敗淹死。」
 
 - name: 今天也要去見殺人犯
   author: 李珍淑
+  country: 南韓
   date: 2022
   isbn: 9789862489765
   star: true
@@ -855,6 +988,7 @@
 
 - name: 我跑，故我在
   author: 鄭匡寓
+  country: 臺灣
   date: 2022
   isbn: 9789571382098
   comment: 16 位職人跑者的馬場人生，「跑步的世界有兩種人，一是從小就是田徑班、田徑隊，後來再踏上跑步之路，二是到達某個年紀、忽然有所感觸而開始跑步，或許是人事或許是為了健康。」
@@ -862,6 +996,7 @@
 
 - name: 追逐怪物的人
   author: 權日勇、高納穆
+  country: 南韓
   isbn: 9789865060930
   date: 2022
   star: true

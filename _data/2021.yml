@@ -1,17 +1,20 @@
 - name: 雖然想死，但卻成為醫生的我：徘徊在生死邊界的急診故事
   author: 南宮仁
+  country: 韓國
   date: 2021
   isbn: 9789571380667
   comment: 以憂鬱症與痛苦為起點的醫療文學，三十八篇在死亡現場奔走的告白
 
 - name: 消逝的韓光：低薪、過勞、霸凌，揭發華麗韓劇幕後的血汗與悲鳴
   author: 李韓率
+  country: 韓國
   date: 2021
   isbn: 9789862488539
   comment: 「對人類來說，「共鳴」的能力既是不幸的原因，也是幸福的源泉。」
 
 - name: 腎友川柳
   author: 黃柏軒
+  country: 臺灣
   date: 2021
   isbn: 9789869729864
   star: true
@@ -19,12 +22,14 @@
 
 - name: 我的慢療之路
   author: Victoria Sweet
+  country: 美國
   date: 2021
   isbn: 9789869669535
   comment: 「做出正確的診斷，幫患者移除不必要的藥物、副作用和不良反應，以及運用大量的時間。長遠來看，如此省下的支出遠比花費的成本還多。慢慢來，但效果更好。」
 
 - name: 老衰死
   author: NHK 特別採訪小組
+  country: 日本
   isbn: 9789863428329
   date: 2021
   star: true
@@ -32,12 +37,14 @@
 
 - name: 為什麼 Google、LinkedIn、波音、高通、迪士尼都找他合作？
   author: Oren Klaff
+  country: 美國
   isbn: 9789867778185
   date: 2021
   comment: 「想像一下，我們每個人周圍都包覆著強大的氣場，所有能量都是由潛意識深處靜靜發送。這道無形的防護罩天生用來保護我們的心智，不會突然受到他人理念和看法的侵擾。」
 
 - name: 提昇的時刻
   author: Melinda French Gates
+  country: 美國
   isbn: 9789573286288
   date: 2021
   star: true
@@ -45,66 +52,77 @@
 
 - name: 想我苦哈哈的一生
   author: James Thurber
+  country: 美國
   isbn: 9789869278607
   date: 2021
   comment: 作者的自傳，描繪了他從童年因射蘋果而失明、大學肄業，到成為《紐約客》的作家及插畫家，再到創作各類作品的過程
 
 - name: 暗數據
   author: David Hand
+  country: 英國
   isbn: 9789865549961
   date: 2021
   comment: 探討在大數據時代被忽略的「暗數據」對決策的影響，「犯罪地圖很可能顯示的是哪裡的人比較願意報案，而非案件確實發生在哪裡，兩者並非同一回事。」
 
 - name: 室內軟裝師養成術
   author: 李佩芳
+  country: 臺灣
   isbn: 9789860629330
   date: 2021
   comment: 軟裝師養成實戰書，深入了解「軟裝」觀念著手，藉由收納、風格、配色、陳列擺設、家具規劃、照明設備、織品選擇，一步步建立居家美感與品味養成
 
 - name: 第三道門
   author: Alex Banyan
+  country: 美國
   isbn: 9789576581069
   date: 2021
   comment: 「有時候你需要研究哪些方法對別人有用，但也有時候，你得全神貫注於那些使你獨特的事情上。」
 
 - name: 新聞的騷動：狄波頓的深入報導與慰藉
   author: Alain de Botton
+  country: [英國, 瑞士]
   isbn: 9789861342320
   date: 2021
   comment: 探討當代新聞媒體如何透過不斷轟炸、缺乏脈絡與過度聳動，削弱了人們理解世界的能力，並催生了不必要的憤怒與焦慮
 
 - name: 黃檸檬
   author: 權汝宜
+  country: 韓國
   isbn: 9789570857382
   date: 2021
   comment: 懸疑灰暗的小說😱
 
 - name: 玻璃蘆葦
   author: 櫻木紫乃
+  country: 日本
   isbn: 9789571360966
   date: 2021
   comment: 「我只是覺得如果回家會有比工作更煎熬的環境在等著，任何人都會心情扭曲。甚至無法再談什麼父母子女。」
 
 - name: 繁星點點
   author: 櫻木紫乃
+  country: 日本
   isbn: 9789864011339
   date: 2021
   comment: 作者展現高超的敘事技巧，藉由九個短篇不同人物的視角、書寫他們紛紛擾擾的人生故事
 
 - name: 愛的荒蕪地帶
   author: 櫻木紫乃
+  country: 日本
   isbn: 9789869533317
   date: 2021
   comment: 「幸或不幸，或許只是事過境遷後回想起的遙遠景色。」
 
 - name: 蛇行之月
   author: 櫻木紫乃
+  country: 日本
   isbn: 9789869533331
   date: 2021
   comment: 小說圍繞著女主角清美的「幸福」展開，也探討了許多人為何總習慣與他人比較幸福的現象
 
 - name: 皇家賓館
   author: 櫻木紫乃
+  country: 日本
   isbn: 9789571365459
   star: true
   date: 2021
@@ -112,18 +130,21 @@
 
 - name: 冰平線
   author: 櫻木紫乃
+  country: 日本
   isbn: 9789571373348
   date: 2021
   comment: 作者的出道之作，「身體與心靈，想先碰觸哪一方呢？如今回想起來好像是身體。沒有激情的碰撞，就這麼細水長流的關係很舒服。」
 
 - name: 二人生活
   author: 櫻木紫乃
+  country: 日本
   isbn: 9789571385921
   date: 2021
   comment: 十篇俐落的短篇故事刻劃夫妻如何相處，「價值觀因人而異，無論是一人或二人，其實我覺得只要選擇自己能夠妥協接受的生活就好。結婚或離別都要看時機和緣分，誰也說不準將來會怎樣。」
 
 - name: 拚教養 – 全球化、親職焦慮與不平等童年
   author: 藍佩嘉
+  country: 臺灣
   date: 2021
   isbn: 9789869735940
   date: 2021
@@ -131,12 +152,14 @@
 
 - name: 黑日
   author: 韓麗珠
+  country: 香港
   date: 2021
   isbn: 9789869643597
   comment: 驚人的香港危城書寫，「時間也是金錢。你可自由地分配自己的時間，使用這些時間創造不同的事物，這也是一種富足。」
 
 - name: 灰階思考
   author: 謝孟恭
+  country: 臺灣
   date: 2021
   isbn: 9789865251024
   star: true
@@ -144,18 +167,21 @@
 
 - name: 命案現場清潔師
   author: 盧拉拉
+  country: 臺灣
   date: 2021
   isbn: 9789865613983
   comment: 很不容易的工作，跨越生與死的斷捨離，清掃死亡最前線的真實世界
 
 - name: 秋刀魚一條半
   author: 盧怡安
+  country: 臺灣
   date: 2021
   isbn: 9789869595841
   comment: 寫食物與記憶，温柔的書🍲
 
 - name: 2030 轉職地圖
   author: 蘇盈如
+  country: 臺灣
   date: 2021
   star: true
   isbn: 9789573286769
@@ -163,78 +189,91 @@
 
 - name: 孤獨六講
   author: 蔣勳
+  country: 臺灣
   date: 2021
   isbn: 9789863233596
   comment: 深入討論六種存在於當代社會的孤獨議題，「一個真正完整快樂的人，不需要藉助別人的隱私來使自己豐富，他自己就能讓生命豐富起來。」
 
 - name: 歲月靜好
   author: 蔣勳
+  country: 臺灣
   date: 2021
   isbn: 9789571356068
   comment: 「花期還沒有到，看到別的花燦爛奪目，可以不焦慮，不著急，安安靜靜，沉穩內歛，儲蓄自己的生命能量。」
 
 - name: 倒數 60 天職場生存日記
   author: 蔣宗信
+  country: 臺灣
   date: 2021
   isbn: 9789865072759
   comment: 「環境很重要，找到適合自己的環境才能體會到「如魚得水」的暢快感受，平凡的我們沒法改變環境，但可以選擇環境。」
 
 - name: 不要在最好的年紀，吃得隨便、過得廉價
   author: 蔡侑霖
+  country: 臺灣
   date: 2021
   isbn: 9789865101176
   comment: 「都這麼努力過好每一個日子了，更應該找個能一塊快樂生活的人。」
 
 - name: 忘了我是誰
   author: 蔡怡
+  country: 臺灣
   date: 2021
   isbn: 9789571372259
   comment: 關於陪伴失智父親的生活回顧和，與家人之間的歷歷回憶，「在照顧父親的歲月，我領悟孝順二字貴在「順」字，一切順父親之心。不說理，不糾正，不要求找回原來的父親，這是長照失智家人首要方針。大家糊塗過日，是最明智、舒適的方法。」
 
 - name: 少年粉紅
   author: 潘柏霖
+  country: 臺灣
   isbn: 9789571078304
   date: 2021
   comment: 作者首部小說作品，「事實上，人生多數時候找到答案也是沒有用的，因為你只會更加惶恐。你知道答案，但你無法解決，那就像某種無解之病。你知道它在那裡，但你無能為力。」
 
 - name: 女神自助餐
   author: 劉芷妤
+  country: 臺灣
   isbn: 9789869817042
   date: 2021
   comment: 關於性關於痛，都是活生生的故事
 
 - name: 最貧困女子
   author: 鈴木大介
+  country: 日本
   date: 2021
   isbn: 9789869805858
   comment: 描寫在社會底層，工作是兼職零工，在網咖過夜睡覺，或是依靠男生的貧困女子們
 
 - name: 老人詐欺
   author: 鈴木大介
+  country: 日本
   isbn: 9789869742764
   date: 2021
   comment: 寫日本專門針對高齡人士的詐騙行為
 
 - name: 聽說時光記得你
   author: 溫如生
+  country: 臺灣
   date: 2021
   isbn: 9789573340447
   comment: 「妳要告訴自己，那麼久以來的努力值得最好的。」
 
 - name: 黃阿瑪的後宮生活：貓咪哪有那麼可愛
   author: 黃阿瑪、志銘與狸貓 
+  country: 臺灣
   isbn: 9789865405489
   date: 2021
   comment: 看貓貓🐈‍⬛🐈
 
 - name: 我在柯文哲身邊的日子
   author: 黃大維、楊緬因
+  country: 臺灣
   date: 2021
   isbn: 9789863424697
   comment: 2015 年出版的書，不到十年，柯文哲已經入獄🙁
 
 - name: 來談談那些痛苦的事吧！商務人士的父親為孩子所寫下的「工作本質」！
   author: 森岡毅
+  country: 日本
   date: 2021
   star: true
   isbn: 9789865100582
@@ -242,42 +281,49 @@
 
 - name: 下雨的人
   author: 陳繁齊
+  country: 臺灣
   date: 2021
   isbn: 9789571368238
   comment: 「我一直是個太鑽牛角尖的人，一件事情我能夠反覆著，短則數日，長則數年。配上自卑的性格，總是會想著更好的平行結果，或是希望藉由每次的思緒翻攪，能夠讓自己變好一些。」
 
 - name: 佛羅里達變形記
   author: 陳思宏
+  country: 臺灣
   date: 2021
   isbn: 9789869950251
   comment: 陳思宏的書會覺得想看但常常看不完，這本看完了👍
 
 - name: 玩心設計
   author: 陳威帆
+  country: 臺灣
   isbn: 9789861343563
   date: 2021
   comment: 作者是 Fourdesire 創辦人，公司現在更名為 SPARKFUL
 
 - name: 出發！成為我們期待的大人
   author: 陳怡彣
+  country: 臺灣
   date: 2021
   isbn: 9789571380124
   comment: 「事件的發生，是世界在鞭策我們，要進行思維上的修正與調整，成為一個懂得做出睿智選擇的人。」
 
 - name: 這些年我們一起寫下的故事：泌尿科醫師和他的病人
   author: 郭漢崇
+  country: 臺灣
   date: 2021
   isbn: 9789869850278
   comment: 作者是花蓮慈濟醫院的醫師與醫學院教授，也是排尿障礙治療的權威
 
 - name: 愛情，真相大白
   author: 酪梨壽司
+  country: 臺灣
   date: 2021
   isbn: 9789861332642
   comment: 大概是把臉書粉專的內容再複習一遍，跟大白的愛情故事，覺得酪梨壽司是能力強的人，文筆行銷都很厲害
 
 - name: 迎向溫柔生產之路
   author: 諶淑婷
+  country: 臺灣
   isbn: 9789869450461
   date: 2021
   star: true
@@ -285,48 +331,56 @@
 
 - name: 情緒寄生：與自我和解的 34 則情感教育
   author: 許皓宜
+  country: 臺灣
   isbn: 9789573283713
   date: 2021
   comment: 作者書寫的情感真摯，「我們總渴望著往下墜落時，能被人牢牢接住；我們一生的苦惱或憂傷，或許就是找不到那個可以接住自己的人。」
 
 - name: 命案現場清潔公司
   author: 得第一環境維護公司
+  country: 臺灣
   isbn: 9789865113704
   date: 2021
   comment: 近年很常看關於死亡的書，但 2025 開始覺得看得夠多了，屍體血淋淋的書先不要
 
 - name: 遇見未知的自己
   author: 張德芬
+  country: 臺灣
   date: 2021
   isbn: 9789573335085
   comment: 「當你心裡有個深切、真誠的渴望，整個宇宙都會聯合起來幫助你，這就是你心目中的神。當你祈禱的時候，你的內在會發出一股正面的能量，把你想要的東西吸引過來，這就是神在回應你的禱告，而賜給你真心想要的事物。」
 
 - name: 永不放棄的跑者魂
   author: 張嘉哲
+  country: 臺灣
   date: 2021
   isbn: 9789571372709
   comment: 很敬佩這位運動家，從他的人生故事中得到許多勇氣💪🏼
 
 - name: 我討厭過的大人們
   author: 張亦絢
+  country: 臺灣
   date: 2021
   isbn: 9789863598237
   comment: 「我們很容易認為存在一個「母親的標準值」，不會有哪個母親太不善良，或是太過陰狠—就連女兒也會傾向「自欺欺人」，對自己或他人，呈現一個美化的母女關係。」
 
 - name: 我還是會繼續釀梅子酒
   author: 張西
+  country: 臺灣
   date: 2021
   isbn: 9789576582691
   comment: 「人們在青春的當下，不會聽見青春的聲響，直到我們搬離了那段日子，也許開始有了生活壓力，有了房貸、有了妻子孩子，我們才會聽見青春的叫喊聲，而那些時候，我們已經不住在原來的那個小房間裡了。」
 
 - name: 我妹妹
   author: 張大春
+  country: 臺灣
   date: 2021
   isbn: 9789866631269
   comment: 作者藉著觀看妹妹 0 歲到 19 歲的生命旅程，穿插對自己家庭父母關係的感受
 
 - name: 您已登入 N 號房
   author: 追蹤團火花
+  country: 南韓
   date: 2021
   isbn: 9789571389400
   star: true
@@ -334,84 +388,98 @@
 
 - name: 牛蛙
   author: 胡遷
+  country: 中國
   date: 2021
   isbn: 9789869749510
   comment: 《大象席地而坐》導演胡遷最具企圖心的長篇小說
 
 - name: 耳朵借我
   author: 馬世芳
+  country: 臺灣
   isbn: 9789865824211
   date: 2021
   comment: 專欄集結的三十餘篇文章，「就像我沒有辦法形容白雲籠罩著的大武山的顏色，你只能親自站到它的前面，用你自己的眼睛去看。」
 
 - name: 賈如幸福慢點來
   author: 賈靜雯
+  country: 臺灣
   isbn: 9789571371771
   date: 2021
   comment: 看了更欣賞賈靜雯，覺得他是很真很勇敢的人
 
 - name: 在這樣的雨天：圍繞是枝裕和的《真實》二三事
   author: 是枝裕和
+  country: 日本
   date: 2021
   isbn: 9789571088440
   comment: 作者文筆絕佳，把電影的工作和劇情描寫的生動精彩🇫🇷
 
 - name: 上流老人：不為金錢所困的 75 個老後生活提案
   author: 保坂隆
+  country: 日本
   date: 2021
   isbn: 9789570848632
   comment: 「常保知足常樂的生活態度。所謂的物欲是深不見底的，相反地，只要換個想法，滿足於當下，所有的欠缺和不滿就都會煙消雲散。」
 
 - name: 解憂書店：出租大叔的人生借問站
   author: 銀色快手
+  country: 臺灣
   date: 2021
   isbn: 9789571382043
   comment: 「把目光放在想去的地方，而不是擔心的地方。」
 
 - name: 我們是在天堂上班：看韓國知名企業，如何打造幸福公司
   author: 金鐘勳
+  country: 韓國
   date: 2021
   isbn: 9789866209611
   comment: 作者是南韓創業家，致力於打造上班族天堂，讓員工獲得滿足和成就，看了覺得離真實職場好遠
 
 - name: 我是金智恩
   author: 金智恩
+  country: 韓國
   isbn: 9789571389387
   date: 2021
   comment: 「這是個性暴力氾濫的世界，痛苦橫行霸道，人們對性暴力的一切卻很無知。」
 
 - name: 關於女兒
   author: 金惠珍
+  country: 韓國
   isbn: 9789571376370
   date: 2021
   comment: 譯者是簡郁璇，「永無止盡的勞動。我領悟到沒人能將我從這種吃力的勞動之中解救出來，於是擔憂起當我沒有能力工作的那一刻到來時，該怎麼辦才好。也就是說，令我擔憂的永遠不是死亡，而是生活。不管用什麼方法，在活著的這段時間就得承受這沒完沒了的寂寥。」
 
 - name: 我是護理師
   author: 金炫我
+  country: 韓國
   date: 2021
   isbn: 9789579439589
   comment: 「若說醫師透過治療拯救生命，護理師便是透過照護，挽留逐漸消逝的生命。」
 
 - name: 襲擊麵包店
   author: 村上春樹
+  country: 日本
   isbn: 9789571358017
   date: 2021
   comment: 有趣題材的短篇小說
 
 - name: 甲狀腺的生活練習題
   author: 林毅欣
+  country: 臺灣
   isbn: 9789869670692
   date: 2021
   comment: 專科醫生寫的甲狀腺疾病書
 
 - name: 虛構的海
   author: 林達陽
+  country: 臺灣
   isbn: 9789868039148
   date: 2021
   comment: 作者的第一本詩集
 
 - name: 診間裡的女人
   author: 林靜儀
+  country: 臺灣
   series: 1、2
   isbn: 9789869545679
   date: 2021
@@ -420,12 +488,14 @@
 
 - name: 台客劇場的人生實驗室
   author: 林冠廷
+  country: 臺灣
   date: 2021
   isbn: 9789861336602
   comment: 台客劇場的導演，醫生爸爸林經甫也活得很精彩
 
 - name: 如此人生
   author: 林立青
+  country: 臺灣
   isbn: 9789864061280
   star: true
   date: 2021
@@ -433,24 +503,28 @@
 
 - name: 放下包袱的輕生活練習
   author: 松浦彌太郎
+  country: 日本
   isbn: 9789863200437
   date: 2021
   comment: 譯者是王蘊潔，「學習和自己相處，找出生活秩序，為生命創造變化。」
 
 - name: 假如我現在 25 歲，最想做的 50 件事
   author: 松浦彌太郎
+  country: 日本
   isbn: 9789865100964
   date: 2021
   comment: 譯者是楊明綺，「無論是為了逃避現實，還是投資自我，金錢和時間都要耗費在能夠幫助自己的事物上。」
 
 - name: 日日 100
   author: 松浦彌太郎
+  country: 日本
   isbn: 9789868811133
   date: 2021
   comment: 作者選出日常生活中愛不釋手的一百件物品，寫出和這些物品共處的點滴、相遇的情境、情感與記憶等。
 
 - name: 便利店人間
   author: 村田沙耶香
+  country: 日本
   isbn: 9789865102289
   date: 2021
   star: true
@@ -458,24 +532,28 @@
 
 - name: 器而不捨，以愛延續生命
   author: 李明哲
+  country: 臺灣
   date: 2021
   isbn: 9789869945677
   comment: 醫生寫器官捐贈的故事🫀
 
 - name: 讓人一看就想買的 9 個秘密
   author: 李朗州
+  country: 韓國
   isbn: 9789864772308
   date: 2021
   comment: 滿有收穫的，關於視覺行銷法則，分析讓商品「賞心悅目」的祕密
 
 - name: 倒數五秒月牙
   author: 李琴峰
+  country: 臺灣
   date: 2021
   isbn: 9789863233688
   comment: 語言很有趣，日語字：浅羽実。簡體字：浅羽实樱。繁體字：淺羽實櫻。
 
 - name: 我們沒有祕密
   author: 吳曉樂
+  country: 臺灣
   isbn: 9789869886857
   star: true
   date: 2021
@@ -483,12 +561,14 @@
 
 - name: 我在榮民醫院的日子
   author: 吳明瑞
+  country: 臺灣
   isbn: 9789863583912
   date: 2021
   comment: 腎臟專科醫生寫在榮民醫院的 14 篇有趣又感人的故事
 
 - name: 天橋上的魔術師
   author: 吳明益
+  country: 臺灣
   isbn: 9789868781900
   date: 2021
   star: true
@@ -496,102 +576,119 @@
 
 - name: 昆蟲老師上課了！吳沁婕的超級生物課
   author: 吳沁婕
+  country: 臺灣
   isbn: 9789868834156
   date: 2021
   comment: 生動有趣的生物知識圖文書，作者的爸媽很開明✨
 
 - name: 無框身體
   author: 烏恩慈
+  country: 臺灣
   isbn: 9789865061869
   date: 2021
   comment: 「經痛就像許多人生困境一樣，毫無意義、令人心煩，倒不如別再糾結背後的原因，找一個實際的方法讓自己輕鬆過。」
 
 - name: 那些殺死你的都並不致命
   author: 沈意卿
+  country: 臺灣
   isbn: 9789868954649
   date: 2021
   comment: 「感情中最後讓人生出根深蒂固仇恨的，都不是什麼巨大的事。」
 
 - name: 老派少女購物路線
   author: 洪愛珠
+  country: 臺灣
   isbn: 9789573289982
   date: 2021
   comment: 書中描述的料理，從小以來我印象最深的是阿公的家常菜，像是小黃瓜、炒高麗菜、自己包的水餃、滷味、紅燒魚和粉蒸肉，爸媽煮的有記憶但不太好吃🤔
 
 - name: 黃阿瑪的後宮生活：貓永遠是對的
   author: 黃阿瑪、志明與狸貓
+  country: 臺灣
   isbn: 9789571373133
   date: 2021
   comment: 養貓很幸福，但養貓之路不如意十之八九，但貓貓永遠是對的🐈‍⬛
 
 - name: 喂！喂！下北澤
   author: 吉本芭娜娜
+  country: 日本
   isbn: 9789571383125
   date: 2021
   comment: 書寫思念與告別的作品，「被拋棄而隱隱作痛的我，漸漸被温暖的下北澤包覆著。」
 
 - name: 這樣那樣生活的訣竅
   author: 吉本芭娜娜
+  country: 日本
   isbn: 9789571363325
   date: 2021
   comment: 吉本芭娜娜的一年之書，筆記他從傷痛中慢慢站起來的模樣，月復一月的生活體悟，化為文字，但願有同樣遭遇的人能珍藏著回憶，繼續往前走。
 
 - name: 想想下北澤
   author: 吉本芭娜娜
+  country: 日本
   isbn: 9789571383118
   date: 2021
   comment: 因為吉本芭娜娜的文字很有畫面，想要去親身體會下北澤的街道與氛圍🇯🇵
 
 - name: 惆悵又幸福的粉圓夢
   author: 吉本芭娜娜
+  country: 日本
   isbn: 9789571373010
   date: 2021
   comment: 「人生僅此一次，還是盡量過得幸福比較好。還是盡量與心愛的人開懷享受美食比較好。」
 
 - name: 不再獨自悲傷的夜晚
   author: 吉本芭娜娜
+  country: 日本
   isbn: 9789571370033
   date: 2021
   comment: 療癒的短篇小說⛅️
 
 - name: 不是看手機的時候
   author: 吉本芭娜娜
+  country: 日本
   isbn: 9786263534117
   date: 2021
   comment: 「比起財富或美麗，更極致的奢侈，是專注在眼前。」
 
 - name: 劇作家坂元裕二
   author: 坂元裕二
+  country: 日本
   date: 2021
   isbn: 9789869892407
   comment: 欣賞的劇作家，合作的演員也很出色
 
 - name: 只要出問題，小說都能搞定
   author: 朱宥勳
+  country: 臺灣
   isbn: 9789862137871
   date: 2021
   comment: 有趣的觀點，把世界當小說來讀
 
 - name: 致美好的你
   author: 生活手帖社
+  country: 日本
   isbn: 9786267288542
   date: 2021
   comment: 十二個月的美好瞬間，包含美味的食物與最美麗的日常
 
 - name: 讚美日記：日本最受歡迎的生命課程
   author: 手塚千砂子
+  country: 日本
   isbn: 9789861752884
   date: 2021
   comment: 很療癒的書，告訴你聚焦在自己的「優點」、「成就」以及「做過很棒的事」上，學習讚美自己、學會感恩這世界和感謝自己的身體🥰
 
 - name: 那一年，那些沒人說的故事
   author: 少女老王
+  country: 臺灣
   isbn: 9789861337715
   date: 2021
   comment: 被作者的文字吸引讀了第二本，字字句句都感受出少女老王的用心書寫與真誠的情感
 
 - name: 比鬼故事更可怕的是你我身邊的故事
   author: 少女老王
+  country: 臺灣
   isbn: 9789861337159
   star: true
   date: 2021
@@ -599,60 +696,70 @@
 
 - name: 我們的幸福時光
   author: 孔枝泳
+  country: 韓國
   isbn: 9789863448747
   date: 2021
   comment: 故事內容有些沉重，探討關於「生」與「死」的辯論，「活著，其實沒有那麼容易。」
 
 - name: 獻給炒高麗菜
   author: 井上荒野
+  country: 日本
   isbn: 9789865967383
   date: 2021
   comment: 三個女人的在因緣際會下一起經營這家具有濃濃人情味的熟食店，譯者是王蘊潔✨
 
 - name: 自我介紹聖經
   author: 立川光昭
+  country: 日本
   isbn: 9789865626877
   date: 2021
   comment: 好的自我介紹會留下好印象，對建立關係是個好的開始
 
 - name: 設計與革新：給年輕設計師的 50 個備忘錄
   author: 太刀川英輔
+  country: 日本
   isbn: 9789869782326
   date: 2021
   comment: 「當你樹立目標時，請描繪出具體的情景。」
 
 - name: 人
   author: 小野寺史宜
+  country: 日本
   isbn: 9789865100841
   date: 2021
   comment: 2019 年本屋大賞第二名，以第一人稱方式敘述主角的日常，看似平舖直述卻充滿對人的細微觀察及感受
 
 - name: 中年打工族：為什麼努力工作，卻依然貧困？日本社會棄之不顧的失業潮世代
   author: 小林美希
+  country: 日本
   isbn: 9789571381978
   date: 2021
   comment: 這本也是跟窮忙相關的書，穩定的工作到底在哪裡？
 
 - name: Dr. 小百合，今天也要堅強啊！
   author: 小百合
+  country: 臺灣
   date: 2021
   isbn: 9789869233842
   comment: 在美國執醫的小百合，從粉絲專頁到出書，可惜近年已經退隱社群
 
 - name: 火來了，快跑
   author: 大師兄
+  country: 臺灣
   isbn: 9789864062416
   date: 2021
   comment: 寫在火葬場中每個人的不同故事，透過這本書比較能直面死亡一點
 
 - name: 跑過、煩惱過，才能發現的事。
   author: 大迫傑
+  country: 日本
   isbn: 9789571381060
   date: 2021
   comment: 雖然我 2025 年 5 月才開始跑步，但我 2021 年就對跑步感興趣了呀🏃
 
 - name: 文藝少女的矽谷進擊
   author: 王文珮
+  country: 臺灣
   isbn: 9789571387642
   date: 2021
   star: true
@@ -660,24 +767,28 @@
 
 - name: 下流社會：新社會階級的出現
   author: 三浦展
+  country: 日本
   isbn: 9789867088543
   date: 2021
   comment: 階級從中往下流動，所謂「下流」，並非只有所得低，還包括溝通能力、生活能力、工作積極性、學習積極性、消費積極性等；也就是說，對整個人生的積極性都比較低。
 
 - name: 幸福的麵包
   author: 三島有紀子
+  country: 日本
   isbn: 9789573329213
   date: 2021
   comment: 有翻拍成電影的的温馨療癒小說
 
 - name: 鹽淚：巴特羅醫生眼裡的難民血淚
   author: Pietro Bartolo, Lidia Tilotta
+  country: 義大利
   isbn: 9789869551939
   date: 2021
   comment: 喜歡讀真實富有人性的紀實文學，這本是巴特羅醫生在小島蘭佩杜薩挽回一條條人命的故事
 
 - name: 窮忙：我們這樣的世代
   author: David K. Shipler
+  country: 美國
   isbn: 9789571367187
   star: true
   comment: 寫貧窮的好書，書中舉出許多窮忙家庭的日常，除了物質層面相當匱乏，家庭功能也趨近於零。家庭在生命中扮演的角色不僅在童年登場，長大之後仍潛移默化中影響一個人的行為、價值觀以及一生。
@@ -685,12 +796,14 @@
 
 - name: 穀倉效應
   author: Gillian Tett
+  country: 英國
   isbn: 9789863425472
   date: 2021
   comment: 「你無法預先串起人生裡的點點滴滴，只有回顧時才能恍然大悟。」
 
 - name: 精準提問的力量
   author: Frank Sesno
+  country: 美國
   isbn: 9789576587153
   star: true
   date: 2021
@@ -698,42 +811,49 @@
 
 - name: 資訊戰爭
   author: David E. Sanger
+  country: 美國
   isbn: 9789862624029
   date: 2021
   comment: 由國家資源在背後撐腰的駭客行動，已經掀起了另一種新的戰爭形式
 
 - name: 悲慟的保存期限
   author: Nora McInerny
+  country: 美國
   isbn: 9789863984863
   date: 2021
   comment: 書中與悲傷同行的減痛方案和安慰指南很實用👍
 
 - name: 創新的兩難
   author: Clayton M. Christensen
+  country: 美國
   isbn: 9786263181618
   date: 2021
   comment: 是我比較少看的商業思維書，「我們的計畫不應堅持在技術上有全新的突破。事實上，突破性科技並非是全新的科技；他們利用現有的技術組合現有的元件，而後建構在一個新穎的產品架構內，提供過去無法達成的產品屬性。」
 
 - name: 業的盡頭：印度青年的憤怒與希望
   author: Somini Sengupta
+  country: 美國
   isbn: 9789866319952
   date: 2021
   comment: 印度為背景的書🇮🇳
 
 - name: 高敏感是種天賦
   author: Ilse Sand
+  country: 丹麥
   isbn: 9789863428510
   date: 2021
   comment: 很有收穫，接受自己的高敏感，找到自在舒服的模式，不要和別人比較
 
 - name: 面對久病家人的勇氣
   author: Barry J. Jacobs, Julia L. Mayer
+  country: 美國
   isbn: 9789863428060
   date: 2021
   comment: 長照是一條漫長而辛苦的道路🥲
 
 - name: 走在，沒人想去的地方：樹木希林離世前的最後採訪
   author: 樹木希林
+  country: 日本
   isbn: 9789865071387
   date: 2021
   star: true
@@ -741,12 +861,14 @@
 
 - name: 臺灣數據百閱
   author: Re-lab 團隊
+  country: 臺灣
   isbn: 9789571379654
   date: 2021
   comment: 蒐集臺灣的統計數據，用數字呈現出臺灣的另一個面向，有趣的一本書
 
 - name: 貝加爾湖隱居札記：在這喧囂的世界，一個人到西伯利亞森林住半年
   author: Sylvain Tesson
+  country: 法國
   isbn: 9789863597971
   star: true
   date: 2021
@@ -754,18 +876,21 @@
 
 - name: 裸人
   author: Marc Dugain, Christophe Labbé
+  country: 法國
   isbn: 9789863445265
   date: 2021
   comment: 原來 2021 就開始看大數據的書📊
 
 - name: 求職大作戰
   author: 楊萃先
+  country: 臺灣
   isbn: 9789865855321
   date: 2021
   comment: 早期還會看中國人的書，長大之後有意識地不看了
 
 - name: 每一天，都是放手的練習
   author: Melody Beattie
+  country: 美國
   isbn: 9789573271062
   star: true
   date: 2021
@@ -773,6 +898,7 @@
 
 - name: 別以為還有 20 年, 你跟父母相處的時間其實只剩下 55 天
   author: 孝行執行委員會
+  country: 日本
   isbn: 9789866272851
   date: 2021
   star: true
@@ -780,12 +906,14 @@
 
 - name: 女性面對的戰爭：及那些敢於抵抗的勇者
   author: Sue Lloyd-Roberts
+  country: 英國
   isbn: 9789869537865
   date: 2021
   comment: 揭露各種殘酷的真相，人類怎麼能對彼此這麼殘忍🥲
 
 - name: 也許你該找人聊聊
   author: Lori Gottlieb
+  country: 美國
   isbn: 9789869804097
   star: true
   comment: 「正視你的感受，不要認為自己應該如何如何，而去調整你的感受。」
@@ -793,12 +921,14 @@
 
 - name: 藏地牛皮書
   author: 一直
+  country: 中國
   isbn: 9789570411577
   date: 2021
   comment: 一本寫在路上，倡導真實、樸素、簡單的旅行指引書
 
 - name: 外卡效應
   author: Angela Steinmüller, Karlheinz Steinmüller
+  country: 德國
   isbn: 9789867058072
   date: 2021
   comment: 滿有趣，外卡最大的意義在於：試著拋棄既存的思考模式並且發現新契機

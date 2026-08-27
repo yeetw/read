@@ -1,5 +1,6 @@
 - name: 🪵
   author: 🪵
+  country: false
   isbn: 🪵
   date: 🪵
   comment: １２３４５６７８９０
@@ -8,6 +9,7 @@
 
 - name: 賣瓜的人
   author: 洪倪
+  country: 臺灣
   date: 2026/07/12
   isbn: 9786264186421
   star: true
@@ -16,6 +18,7 @@
 
 - name: 超級外送員：使命必達的省時戰
   author: 蔡宛芸
+  country: 臺灣
   date: 2026/08/20
   isbn: 9786269716449
   pending: true
@@ -23,6 +26,7 @@
 
 - name: 當呼吸化為空氣：一位天才神經外科醫師最後的生命洞察
   author: Paul Kalanithi
+  country: 美國
   date: 2026/08/27
   isbn: 9789571388793
   star: true
@@ -30,6 +34,7 @@
 
 - name: 後台紐約：慾望城市裡的華麗與荒唐
   author: 艾佳妏 Elise Ay
+  country: 臺灣
   date: 2026/08/26
   isbn: 9786267506905
   star: true
@@ -37,6 +42,7 @@
 
 - name: 生命的最後一刻，都活得像自己：安寧照護的真義
   author: 謝宛婷
+  country: 臺灣
   date: 2026/08/18
   isbn: 9789864064700
   finished: false
@@ -44,6 +50,7 @@
 
 - name: 我是特教老師，我是 ADHD
   author: 秦郁涵
+  country: 臺灣
   date: 2026/08/18
   isbn: 9789869693059
   finished: false
@@ -51,6 +58,7 @@
 
 - name: 熱情人生的冰淇淋哲學
   author: Margaret Lobenstine
+  country: 美國
   date: 2026/08/18
   isbn: 9789862130148
   finished: false
@@ -59,6 +67,7 @@
 - name: 鬼的新娘
   series: １
   author: クレハ
+  country: 日本
   date: 2026/08/17
   isbn: 9786264660204
   star: true
@@ -66,12 +75,14 @@
 
 - name: 我記不得每隻貓的名字
   author: 葛大為
+  country: 臺灣
   date: 2026/08/16
   isbn: 9789869756808
   comment: 人稱葛大，文筆細膩又温柔的詩集🤍
 
 - name: 毀滅前的香格里拉
   author: 凪良汐
+  country: 日本
   date: 2026/08/14
   isbn: 9786263494282
   finished: false
@@ -79,6 +90,7 @@
 
 - name: 以為無人傾聽的她們：台灣首部人工流產文集
   author: 吳曉樂、胡淑雯、張嘉真、徐珮芬、鄧九雲、陳宜倩、吳燕秋、梁秋虹、烏烏醫師
+  country: 臺灣
   date: 2026/08/14
   finished: false
   isbn: 9786269952267
@@ -86,6 +98,7 @@
 
 - name: 少年來了
   author: 韓江
+  country: 韓國
   date: 2026/08/12
   finished: false
   isbn: 9789864897865
@@ -93,6 +106,7 @@
 
 - name: 尋找你的牛
   author: 枡野俊明、松重豐
+  country: 日本
   date: 2026/08/12
   finished: false
   isbn: 9786267397510
@@ -100,6 +114,7 @@
 
 - name: 鎌倉車站徒步八分鐘，空房招租中
   author: 越智月子
+  country: 日本
   date: 2026/08/12
   finished: false
   isbn: 9786267637326
@@ -107,6 +122,7 @@
 
 - name: 就算你每天失敗，我也會陪著你
   author: 崔芝淑、金瑞玄
+  country: 韓國
   date: 2026/08/12
   finished: false
   isbn: 9786263490437
@@ -114,6 +130,7 @@
 
 - name: 人生喜事
   author: 騷夏
+  country: 臺灣
   date: 2026/08/12
   finished: false
   isbn: 9786264192965
@@ -121,6 +138,7 @@
 
 - name: 夾縫中的小日子
   author: 具縫縫
+  country: 韓國
   date: 2026/08/12
   finished: false
   isbn: 9786264183987
@@ -128,6 +146,7 @@
 
 - name: 同棲生活
   author: 吉田修一
+  country: 日本
   date: 2026/08/12
   finished: false
   isbn: 9789863447672
@@ -135,6 +154,7 @@
 
 - name: 入伍吧！魔法少女
   author: 謝東霖、綜合口味
+  country: 臺灣
   date: 2026/08/12
   isbn: 9789571376912
   finished: false
@@ -142,6 +162,7 @@
 
 - name: 在世界盡頭遇到松茸：論資本主義廢墟中生命的可能性
   author: Anna Lowenhaupt Tsing
+  country: 美國
   date: 2026/08/12
   isbn: 9786269821891
   finished: false
@@ -149,6 +170,7 @@
 
 - name: 不要忘記我：我與阿茲海默阿嬤的公路逃亡之旅
   author: Alix Garin
+  country: 比利時
   date: 2026/08/12
   isbn: 9786263150607
   finished: false
@@ -156,6 +178,7 @@
 
 - name: 極限返航
   author: Andy Weir
+  country: 美國
   date: 2026/08/12
   isbn: 9789576587207
   finished: false
@@ -163,6 +186,7 @@
 
 - name: 安寧伴行
   author: 趙可式
+  country: 臺灣
   date: 2026/08/12
   isbn: 9789864179763
   finished: false
@@ -170,6 +194,7 @@
 
 - name: 半導體地緣政治學
   author: 太田泰彥
+  country: 日本
   date: 2026/08/12
   isbn: 9789863847793
   finished: false
@@ -177,6 +202,7 @@
 
 - name: 我在億萬豪宅當保母
   author: Stephanie Kiser
+  country: 美國
   date: 2026/08/12
   isbn: 9789861345246
   finished: false
@@ -184,6 +210,7 @@
 
 - name: 動物教我成為更好的人
   author: Sy Montgomery
+  country: 美國
   date: 2026/08/12
   isbn: 9789863616993
   finished: false
@@ -191,6 +218,7 @@
 
 - name: 以為有錢就了不起的客人，請默默找個地方去死
   author: 夕鷺叶
+  country: 日本
   date: 2026/08/06
   isbn: 9789577418364
   star: true
@@ -198,6 +226,7 @@
 
 - name: 幸福移動餐車營業中！
   author: 高森美由紀
+  country: 日本
   date: 2026/08/03
   isbn: 9786267520376
   star: true
@@ -205,6 +234,7 @@
 
 - name: 海邊的暖爐
   author: 大白小蟹
+  country: 臺灣
   date: 2026/08/03
   isbn: 9786263156456
   star: true
@@ -212,12 +242,14 @@
 
 - name: 左撇子
   author: 葛大為
+  country: 臺灣
   date: 2026/08/02
   isbn: 9789869887113
   comment: 很像詩也很像散文也很像歌詞，「然後，我們彼此祝福對方新年快樂；然後，他答應我會盡量地活著。」🤍
 
 - name: 生命訂製時代：捐卵、代孕、身世告知，全球人工生殖產業鏈下的臺灣
   author: 曹馥年、藍婉甄、陳德倫、洪琴宣、報導者
+  country: 臺灣
   date: 2026/07/29
   isbn: 9786267807361
   star: true
@@ -225,6 +257,7 @@
 
 - name: 獅子座、A型、丙午
   author: 鈴木保奈美
+  country: 日本
   date: 2026/07/1７
   isbn: 9786263747760
   star: true
@@ -232,6 +265,7 @@
 
 - name: 老後兩代同垮
   author: NHK 特別採訪小組
+  country: 日本
   date: 2026/07/15
   isbn: 9789864791996
   star: true
@@ -239,12 +273,14 @@
 
 - name: 日本 YAHOO 外科醫師的真心話：白袍下的醫界真相
   author: 中山祐次郎
+  country: 日本
   date: 2026/07/10
   isbn: 9789578799974
   comment: 作者是在醫療現場醫治過數千名病患的外科醫師，分享醫病互動與醫療現場的真實樣貌，文字淺顯易懂，兼具專業與可讀性🧑‍⚕️
 
 - name: 孤獨夜裡的熱可可
   author: 田邊聖子
+  country: 日本
   date: 2026/07/10
   isbn: 9789869605151
   star: true
@@ -252,12 +288,14 @@
 
 - name: 新手媽媽的育兒療癒科學
   author: NHK 特別採訪小組
+  country: 日本
   date: 2026/06/14
   isbn: 9789869534239
   comment: 適合有 0-3 歲嬰幼兒的父母，也適合作為想一窺生養小孩奧秘的科普書籍
 
 - name: 羅浮宮守護者
   author: 谷口治郎
+  country: 日本
   date: 2026/06/14
   isbn: 9789866634499
   star: true
@@ -265,6 +303,7 @@
 
 - name: 先養狗，然後……養了貓。
   author: 谷口治郎
+  country: 日本
   date: 2026/06/14
   isbn: 9789865549992
   star: true
@@ -272,18 +311,21 @@
 
 - name: 獅子座、A 型、丙午
   author: 鈴木保奈美
+  country: 日本
   date: 2026/06/09
   isbn: 9786263747760
   comment: 作者的首本散文集，每篇篇幅很短 2-3 頁，讀來輕快精彩，寫跟三個女兒的互動也很有趣
 
 - name: 不留空隙的聰明收納
   author: 森之家
+  country: 日本
   date: 2026/06/08
   isbn: 9789861305981
   comment: 很多圖，書中活用空隙三大絕招：吊起來、藏起來、立起來，選用相近的色系融合在一起也是視覺清爽的要點
 
 - name: 思考人生大哉問的早上醒來就要去買菜：尾道散漫日記
   author: 劉揚銘
+  country: 臺灣
   date: 2026/06/07
   isbn: 9786267728697
   star: true
@@ -291,18 +333,21 @@
 
 - name: 謝謝你們，我的離島病友
   author: 吳佳璇
+  country: 臺灣
   date: 2026/06/03
   isbn: 9789869332187
   comment: 2012 年出版，寫作者進出綠島、蘭嶼與台東偏鄉，訪視精神病友的故事，以及參與罪犯精神狀況鑑定的事件記述，還有從玉里返金門的紀實
 
 - name: 跟我跑船去
   author: 蔡慧儀 Edie
+  country: 香港
   date: 2026/05/28
   isbn: 9789869332187
   comment: 2017 年出版，寫作者八年郵輪的工作經歷及人生體驗，內容不只介紹郵輪產業的實際工作樣貌，也讓人了解跑船生活背後的甘苦與文化差異⛴️
 
 - name: 矛盾
   author: 梁貴子
+  country: 韓國
   date: 2026/05/27
   star: true
   isbn: 9786264091886
@@ -310,6 +355,7 @@
 
 - name: 神明便利商店
   author: 謝東霖
+  country: 臺灣
   date: 2026/05/27
   star: true
   series: １
@@ -318,6 +364,7 @@
 
 - name: 日花閃爍
   author: 温若喬
+  country: 臺灣
   date: 2026/05/26
   star: true
   isbn: 9786264199926
@@ -325,6 +372,7 @@
 
 - name: 他選擇離開，我們......
   author: 李沐芸、李曉芬
+  country: 臺灣
   date: 2026/05/25
   star: true
   isbn: 9786269728114
@@ -332,6 +380,7 @@
 
 - name: 片斷人間
   author: 岸政彦
+  country: 日本
   date: 2026/05/24
   star: true
   isbn: 9789570857122
@@ -339,6 +388,7 @@
 
 - name: 各種悲傷
   author: Mariana Leky
+  country: 德國
   date: 2026/05/12
   isbn: 9786263107557
   star: true
@@ -346,6 +396,7 @@
 
 - name: 卡芙涅
   author: 阿部曉子
+  country: 日本
   date: 2026/05/08
   star: true
   isbn: 9789573344087
@@ -353,6 +404,7 @@
 
 - name: 從 0 開始圖解莫內
   author: 陳彬彬
+  country: 臺灣
   date: 2026/05/07
   star: true
   isbn: 9789865582128
@@ -360,24 +412,28 @@
 
 - name: 東京的 20 個理由
   author: 蔡阿嘎
+  country: 臺灣
   date: 2026/05/06
   isbn: 9789869575300
   comment: 對各區域有一些基本認識，2017 年出版，有些店已經歇業，因為這本書知道東京皇居可以透過「宮內廳」官網預約參觀🇯🇵🗼
 
 - name: 醫生父親寫給孩子的信
   author: 中山祐次郎
+  country: 日本
   date: 2026/05/06
   isbn: 9786267859131
   comment: 作者的三十四篇散文自傳加上每篇後面給孩子的信，有許多從醫生涯的故事帶出作者的體悟，真摯懇切好讀，「錢能買到幸福嗎？我不知道，但錢會是你減少討厭事物的工具。」
 
 - name: 我想做一個有用的人
   author: 沈嘉悅
+  country: 臺灣
   date: 2026/05/06
   isbn: 9789868867277
   comment: 逗點文創結社出版，直面現實生活的坦率，書封果菜市場裝箱蔬菜照片搭配詩集很特別
 
 - name: 安心做父母，在愛裡無懼
   author: 黃瑽寧
+  country: 臺灣
   date: 2026/04/30
   star: true
   isbn: 9789575033798
@@ -385,6 +441,7 @@
 
 - name: 我分手之後
   author: Suzy Hopkins
+  country: 美國
   date: 2026/04/24
   star: true
   isbn: 9786264349949
@@ -392,18 +449,21 @@
 
 - name: 健康以下，照護未滿
   author: Ka-tan
+  country: 日本
   date: 2026/04/23
   isbn: 9789863714378
   comment: 用漫畫圖文深入淺出地介紹長期照護的狀況與知識，以第一線的角度書寫真實場景，照顧者多尋找資源，用開朗的心照顧家人
 
 - name: 親密的性犯罪者
   author: 安丙憲
+  country: 韓國
   date: 2026/04/21
   isbn: 9789865115470
   comment: 讀的第三本觀護人的書，作者為韓國觀護人，書中分析不同情境性犯罪模式，並提出預防對策，小心路上遇到的人，走安全的路
 
 - name: 變強，沒有終點！
   author: 原晉
+  country: 日本
   star: true
   date: 2026/04/17
   isbn: 9789862356739
@@ -411,6 +471,7 @@
 
 - name: 器物無聊：十四場與日本陶藝家的一期一會
   author: 林琪香
+  country: 臺灣
   star: true
   date: 2026/04/16
   isbn: 9786263145146
@@ -418,6 +479,7 @@
 
 - name: 哪啊哪啊神去村 夜話
   author: 三浦紫苑
+  country: 日本
   star: true
   date: 2026/04/15
   isbn: 9789865824105
@@ -425,6 +487,7 @@
 
 - name: 白
   author: 韓江
+  country: 韓國
   star: true
   date: 2026/04/10
   isbn: 9789864893607
@@ -432,6 +495,7 @@
 
 - name: 平屋慢生活
   author: 真造圭伍
+  country: 日本
   series: １－８
   star: true
   date: 2026/04/08
@@ -440,30 +504,35 @@
 
 - name: 浪人醫生日記
   author: 吳佳璇
+  country: 臺灣
   date: 2026/04/04
   isbn: 9789570525533
   comment: 2010 年出版，寫作者在行醫過程中遇到的各種病人和故事，原來躁鬱症盛行率是千分之五
 
 - name: 求其生而不可得？：台灣殺人案件背後被遺棄的世界
   author: 謝孟穎
+  country: 臺灣
   date: 2026/04/02
   isbn: 9789869245289
   comment: 在書展看到的書，由法扶和廢死聯盟所出版，寫判決書背後犯罪者的人生故事，如果某個斷點有被接住是不是就不會自我毀滅了
 
 - name: 日本人，搞不懂你ㄋㄟ！
   author: Miho
+  country: 臺灣
   date: 2026/03/31
   isbn: 9789866009440
   comment: 作者的細心的觀察和幽默的文筆撰寫出日本的樣貌，舉凡從生活、消費、飲食和交通等面向，很有趣，但排版太繽紛不易閱讀
 
 - name: 世界亂七八糟，只有瓦斯隨叫隨到：姐還在羅東賣瓦斯
   author: 王雅倫
+  country: 臺灣
   date: 2026/03/30
   isbn: 9786264441773
   comment: 寫作者在羅東賣瓦斯的紛雜亂象和對人的深情，覺得書中文字有如實傳達出作者的生命力，書很好看，但可惜作者在書中的詞彙是用「視頻」而不是「影片」🥲
 
 - name: 輪迴第 7 次的壞人大小姐，在原本的敵國自由自在地享受新娘生活
   author: 雨川透子
+  country: 日本
   series: ６
   isbn: 9786264367769
   date: 2026/03/27
@@ -472,6 +541,7 @@
 
 - name: 東京角落美食：屬於今天的滋味
   author: 成田名璃子
+  country: 日本
   date: 2026/03/24
   isbn: 9789573342731
   star: true
@@ -479,6 +549,7 @@
 
 - name: 你好，我是書店員
   author: 森田惠
+  country: 日本
   date: 2026/03/24
   isbn: 9786267680162
   star: true
@@ -486,12 +557,14 @@
 
 - name: 診療室裡的傷痕
   author: 楊重源
+  country: 臺灣
   date: 2026/03/19
   isbn: 9786267207147
   comment: 精神科醫師的診間故事，規律用藥可以高機率避免走向急性精神疾病的發作，同時也代表著腦神經功能的退化
 
 - name: 姐在羅東賣瓦斯
   author: 王雅倫
+  country: 臺灣
   date: 2026/03/19
   star: true
   isbn: 9786263968431
@@ -499,24 +572,28 @@
 
 - name: 離開舒適圈之後，抵達成熟之前
   author: Jeff C.
+  country: 臺灣
   date: 2026/03/19
   isbn: 9786263960268
   comment: 寫文化的差異性和異國職場觀察，文字幽默好讀，感覺作者是很聰明的人
 
 - name: 無家者：從未想過我有這麼一天
   author: 李玟萱
+  country: 臺灣
   date: 2026/03/18
   isbn: 9789869236461
   comment: 理性又客觀地述說十個無家者的故事，最後收錄五位街頭社工訪談，萬華五流：流氓、流鶯、流浪漢、流動工人與流動攤販
 
 - name: 北山時雨：我的京都前妻懷孕了
   author: 王琦玉
+  country: 臺灣
   date: 2026/03/16
   isbn: 9789864064588
   comment: 引人入勝的小說，寫京都的場景和食物很有畫面，感覺是吃過很多好吃又很懂吃的人，21 個短篇讀起來很輕鬆
 
 - name: 愛上極簡主義的家！
   author: 富美
+  country: 日本
   date: 2026/03/12
   star: true
   isbn: 9789864011957
@@ -524,6 +601,7 @@
 
 - name: 惡人
   author: 吉田修一
+  country: 日本
   isbn: 9789863447269
   date: 2026/03/11
   star: true
@@ -531,6 +609,7 @@
 
 - name: 出門買蛋去
   author: 小川糸
+  country: 日本
   isbn: 9786267288207
   date: 2026/02/27
   star: true
@@ -538,18 +617,21 @@
 
 - name: 吃對了不癡呆：預防失智症的最強大腦解毒飲食法
   author: 本間良子、本間龍介
+  country: 日本
   isbn: 9789863707066
   date: 2026/02/21
   comment: 壓力有分環境、生理和心理三種，減少吃醣、酪蛋白、咖啡因、食品添加物和麩質，攝取足夠的蛋白質和水份
 
 - name: 幸福死
   author: 石賀丈士
+  country: 日本
   isbn: 9789571370828
   date: 2026/02/20
   comment: 即早開始思考該如何減少遺憾並平穩地死去，練習對生命的結束不感到焦慮，希望臺灣安樂死早日合法🙌🏻
 
 - name: 郵輪環球．周遊記
   author: 周祝瑛
+  country: 臺灣
   isbn: 9786264180993
   date: 2026/02/18
   comment: 作者環遊世界四個月 26 個國家後寫成書，分享在旅程的經驗和郵輪上遇到的事，看完對郵輪旅遊多一些了解
@@ -557,6 +639,7 @@
 - name: 銀髮川柳
   series: ６
   author: 日本公益社團法人全國自費老人之家協會
+  country: 日本
   isbn: 9786263586376
   comment: 「肌肉不會背叛你／一直到了老後／才懂這個道理」，預習老後的書🙇🏻‍♀️
   date: 2026/02/01
@@ -564,12 +647,14 @@
 - name: 銀髮川柳
   series: ５
   author: 日本公益社團法人全國自費老人之家協會
+  country: 日本
   isbn: 9786263586383
   comment: 插畫有蠟筆的筆觸，畫風好可愛，「好累呀／明明什麼都沒做／還是好累呀」🤯
   date: 2026/02/01
 
 - name: 流氓書店
   author: 謝東霖
+  country: 臺灣
   isbn: 9786267440162
   date: 2026/02/12
   star: true
@@ -577,6 +662,7 @@
 
 - name: 妖怪五星好評
   author: 謝東霖
+  country: 臺灣
   isbn: 9786267440728
   date: 2026/02/12
   star: true
@@ -584,12 +670,14 @@
 
 - name: 我在詐騙公司上班
   author: 謝東霖
+  country: 臺灣
   isbn: 9789869837323
   date: 2026/02/12
   comment: 很好笑有梗的漫畫，題材新鮮，劇情詼諧，線條感的畫風，人設很有趣
 
 - name: 陸王
   author: 池井戶潤
+  country: 日本
   isbn: 9789861336947
   date: 2026/02/08
   comment: 542 頁的超厚小說，寫跑步也寫人與人之間的緣分和情感，劇情很完整，讀起來意猶未盡，「所以在人生需要賭一把的時候，就要做好心理準備，然後，為了求勝全力以赴。不抱怨，也不推卸責任；所有能做的、該做的都要盡力。最後，誠心誠意接受結果。」
@@ -597,12 +685,14 @@
 
 - name: 她的右腦與粉紅色的大象
   author: Nakao Eki Pacidal
+  country: 臺灣
   date: 2026/02/04
   star: true
   comment: 只有電子書，少有寫躁鬱症的小說，讀了覺得很有共鳴，故事背景在英國和荷蘭，作者說故事和描繪日常的文筆非常好，很讚
 
 - name: 手術室裡的小綠人
   author: 手術室小綠人 Apple
+  country: 臺灣
   isbn: 9786267539576
   date: 2026/02/03
   comment: 理性大於感性的書，說明手術室環境、手術團隊和手術室護理師工作內容與煩惱等，因此多了解醫療人員和解密手術室
@@ -610,12 +700,14 @@
 - name: 銀髮川柳
   series: ４
   author: 日本公益社團法人全國自費老人之家協會
+  country: 日本
   isbn: 9786263586390
   comment: 「我是很想活到／一百歲呀／可惜錢包不給力」，插畫契合文字很有畫面
   date: 2026/02/01
 
 - name: 美麗丘上不幸的幸福之家
   author: 町田苑香
+  country: 日本
   date: 2026/02/01
   star: true
   isbn: 9789577419330
@@ -623,6 +715,7 @@
 
 - name: 報導者事件簿 004：鳥籠時代
   author: 報導者
+  country: 臺灣
   date: 2026/01/24
   isbn: 9786263841970
   star: true
@@ -630,6 +723,7 @@
 
 - name: 人魚公主掉到酒海裡
   author: 酒村ゆっけ、
+  country: 日本
   date: 2026/01/22
   isbn: 9789573341369
   star: true
@@ -637,12 +731,14 @@
 
 - name: 我殺了我的家人：「照顧殺人」當事者的自白
   author: NHK 特別採訪小組
+  country: 日本
   date: 2026/01/21
   isbn: 9786269777525
   comment: 描寫看不到盡頭的長期照顧下引發的憾事，照顧者除了生活失序、二十四小時待命、作息混亂、收拾不完的殘局、缺乏社交、經濟上的壓力等等
 
 - name: 活下來的我們：梨泰院踩踏事故後的 319 天，創傷告白與療癒之路
   author: 金初瓏
+  country: 韓國
   date: 2026/01/15
   isbn: 9786263148970
   star: true
@@ -650,12 +746,14 @@
 
 - name: 從這房間永遠看不見東京鐵塔
   author: 麻布競馬場
+  country: 日本
   date: 2026/01/13
   isbn: 9786263106550
   comment: 由二十個短篇故事組成，文字洗鍊犀利，對書中描寫的大城市孤獨絕望有感，譯者是王華懋
 
 - name: 蝸牛食堂
   author: 小川糸
+  country: 日本
   isbn: 9786267288955
   date: 2026/01/12
   star: true
@@ -663,6 +761,7 @@
 
 - name: 黑崎社長的攻略婚～婚活失敗的我只好成為契約嬌妻～
   author: 蓮井きよ、立花実咲
+  country: 日本
   date: 2026/01/10
   series: １–９
   platform: BookWalker
@@ -671,6 +770,7 @@
 
 - name: 偽裝男友執著於我
   author: 仲乃古ノ華
+  country: 日本
   date: 2026/01/10
   series: １–５
   platform: BookWalker
@@ -679,6 +779,7 @@
 
 - name: 那男人是新娘的僕人
   author: Takeda Aiko
+  country: 日本
   date: 2026/01/10
   series: １–７
   star: true
@@ -688,6 +789,7 @@
 
 - name: 歡迎回來，初戀。
   author: かめみずとら
+  country: 日本
   isbn: 9786264221368
   date: 2026/01/10
   series: １–２
@@ -697,6 +799,7 @@
 
 - name: 重複一次的初戀
   author: RISA AOYAMA
+  country: 日本
   date: 2026/01/10
   series: １–６
   platform: BookWalker
@@ -705,6 +808,7 @@
 
 - name: 本命男神上門告白！
   author: 慎本真
+  country: 日本
   isbn: 9786264151603
   date: 2026/01/09
   series: １–９
@@ -715,12 +819,14 @@
 
 - name: 跑步勝者的 100 天修練
   author: 關家良一
+  country: 日本
   isbn: 9789573271758
   date: 2026/01/06
   comment: 作者是月跑量高達一千公里的市民跑者，本書紀錄他練習或是對於跑步的想法、經驗和知識
 
 - name: 星期三郵局
   author: 森澤明夫
+  country: 日本
   isbn: 9786267735053
   date: 2026/01/03
   star: true

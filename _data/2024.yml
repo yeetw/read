@@ -1,29 +1,34 @@
 - name: 我沒有談的那場戀愛
   author: 林婉瑜
+  country: 臺灣
   date: 2024/12/08
   isbn: 9789571086699
   comment: 有李維菁的感覺，林婉瑜是寫詩的人，這本散文集讀起來很好看，文字脈絡精巧又透著光
 
 - name: 胡思亂想很有用：吉竹伸介的靈感筆記
   author: 吉竹伸介
+  country: 日本
   isbn: 9789576583162
   date: 2024/11/23
   comment: 「萬一真的發生了，那就想辦法解決問題。」
 
 - name: 那一天，憂鬱找上我：告訴自己，一切都會好轉
   author: René Merino
+  country: 西班牙
   date: 2024/11/03
   isbn: 9789861798189
   comment: 當憂鬱恐慌襲來，只想消失的時候試著去做讓自己快樂起來的任何事，慢慢獲得好起來的力氣，會熬過去的🩹
 
 - name: 續．在森崎書店的日子
   author: 八木澤里志
+  country: 日本
   date: 2024/11/02
   isbn: 9789866319556
   comment: 譯者是張秋明，讀完好心動，想去東京的神保町實際感受書街的氛圍
 
 - name: 在森崎書店的日子
   author: 八木澤里志
+  country: 日本
   date: 2024/10/31
   isbn: 9789866319280
   star: true 
@@ -31,42 +36,49 @@
 
 - name: 選擇住在小房子
   author: 加藤鄉子
+  country: 日本
   isbn: 9789578950344
   date: 2024/10/05
   comment: 了解自己要什麼，在地段好的小房子也能舒服的生活
 
 - name: 原來是這種味道啊～《孤獨的美食家》名店全收錄
   author: 週刊SPA！「孤獨的美食家」外景特搜小組
+  country: 日本
   date: 2024/10/04
   isbn: 9789861335353
   comment: 劇中五郎吃很好吃的樣子，把書裡的店家用存下來，以後去日本可以吃
 
 - name: 滿意的話，請給我五顆星！
   author: 柳慶鉉、兪秀珍
+  country: 韓國
   date: 2024/10/02
   isbn: 9786267266328
   comment: 10 個平台勞動者故事，沒有實質的老闆，但客人的評分就是一種管理機制
  
 - name: 自律神經超圖解
   author: 小林弘幸
+  country: 日本
   date: 2024/09/24
   isbn: 9789860769135
   comment: 譯者是許郁文，書中提到像是規律作息、早點起床吃早餐、睡前三小時吃完晚餐、起床喝一杯水、吃飽散步一會都有助於自律神經正常運作
 
 - name: 憂鬱擱淺的我，也想好好工作
   author: 阪口裕樹
+  country: 日本
   date: 2024/09/24
   isbn: 9789865072230
   comment: 各種令人活不下去的理由好多，但要記住令人活下去的理由也是很多的
 
 - name: How Fun！如何爽當 YouTuber
   author: How How 陳孜昊
+  country: 臺灣
   date: 2024/09/21
   isbn: 9789863614838
   comment: 全書文字幽默淺顯，非常有 HowHow 的風格
 
 - name: 白色沙灘旁的鶴龜助產院
   author: 小川糸
+  country: 日本
   date: 2024/09/10
   isbn: 9789571358505
   star: true
@@ -74,24 +86,28 @@
 
 - name: 我是照顧者：與摯愛親人告別篇
   author: 米奧
+  country: 臺灣
   date: 2024/09/05
   isbn: 9786263168336
   comment: 陪伴父母臨終的最後一段路有長有短，還在的時候盡力與父母和解、勇敢道謝與道愛
 
 - name: 不用急著長大
   author: ひうち棚
+  country: 日本
   date: 2024/09/04
   isbn: 9786269681891
   comment: 是温馨的漫畫，看完想去作者住過的香川縣吃烏龍麵看呆呆獸
 
 - name: 圖書館奇譚
   author: 村上春樹
+  country: 日本
   date: 2024/09/03
   isbn: 9789571360348
   comment: 譯者是賴明珠，這是不可思議的故事，結合奇幻和愛情，加上羊男和老爺爺
 
 - name: 男孩、鼴鼠、狐狸與馬
   author: Charlie Mackesy
+  country: 英國
   date: 2024/09/03
   isbn: 9789863987284
   comment: 譯者是韓絜光，「生活不容易，但你是被愛的。」
@@ -99,6 +115,7 @@
 
 - name: 為什麼吃蛋糕、看電影、去了健身房，都還是好不起來
   author: 精神科醫師 Sidow
+  country: 日本
   date: 2024/08/29
   isbn: 9786264020220
   comment: 壓力分為物理跟心理的，物理可以避免（例如太冷、太吵、太亮），心理可以藉由消除的方法減少累積的壓力
@@ -106,12 +123,14 @@
 
 - name: 美麗由此誕生
   author: MEGUMI
+  country: 日本
   date: 2024/09/03
   isbn: 9786267406793
   comment: 獲得許多保養美容商品的資訊，從臉部皮膚到體態都需要費心照顧，成為看起來好親近的人也會吸引好運
 
 - name: 柚子醫師雞婆診療室
   author: 陳木榮
+  country: 臺灣
   date: 2024/08/27
   isbn: 9789869453127
   comment: 有小孩的話看了會覺得安心的書，分享小兒科的診間故事也分享育兒觀點
@@ -119,6 +138,7 @@
 - name: 神的病歷簿
   series: １、２
   author: 夏川草介
+  country: 日本
   isbn: 9789861855547
   date: 2024/08/22
   star: true
@@ -126,18 +146,21 @@
 
 - name: 我是照顧者：成為照顧者篇
   author: 米奧
+  country: 臺灣
   date: 2024/08/21
   isbn: 9786263168329
   comment: 用圖文表現照顧者的身心俱疲，用愛與疾病爭取多一點時間相處，深夜也要保持警覺無法好好休息，難以兼顧照顧與工作
 
 - name: 你的人生，我來整理
   author: 垣谷美雨
+  country: 日本
   date: 2024/08/19
   isbn: 9789573288800
   comment: 面對東西去留心態也會影響日後買東西的決定，有空間有需要再買，沒有空間沒有需要就丟
 
 - name: 點燃最後一把火的送行者：一級火葬士的工作日常
   author: 下駄華緒
+  country: 日本
   series: １、２
   date: 2024/08/17
   isbn: 9786263298149
@@ -145,18 +168,21 @@
 
 - name: 我變成了笨蛋
   author: 北野武
+  country: 日本
   date: 2024/08/17
   isbn: 9789869582001
   comment: 屬於比較白話比較好理解的詩集，詩這個文體相較散文更有情緒張力
 
 - name: 人生中途週記簿
   author: 瞿欣怡
+  country: 臺灣
   date: 2024/08/16
   isbn: 9786267262085
   comment: 告訴自己「你應該要調整工作心態。你很聰明，一定可以完成所有的工作。不需要那麼用力，放輕鬆，一樣可以做好的。」
 
 - name: 輪迴第 7 次的惡役令孃，在前敵國享受自由自在的新娘生活
   author: 木乃ひのき、雨川透子
+  country: 日本
   date: 2024/08/14
   star: true
   series: １
@@ -165,12 +191,14 @@
 
 - name: 好好變老
   author: 平松類
+  country: 日本
   isbn: 9789571384719
   date: 2024/08/14
   comment: 接納變老帶來的身心變化，把握當下過自由隨心的日子，好好變老
 
 - name: 巴黎天空下，兒子與我的三千個日子
   author: 辻仁成
+  country: 日本
   date: 2024/08/11
   isbn: 9786267288825
   star: true
@@ -178,48 +206,56 @@
 
 - name: 我是心理師，我得了憂鬱症
   author: 林博、王瑞琪
+  country: 臺灣
   date: 2024/07/25
   isbn: 9786267026472
   comment: 學著幫躁期發作精力旺盛的狀態踩一點煞車，避免鬱期時後悔做出的決定
 
 - name: 蘭嶼郵差：簽收我的愛
   author: 簡偉駿
+  country: 臺灣
   isbn: 9789864063543
   date: 2024/07/21
   comment: 作者文筆很好，書中一些圖片加深了解蘭嶼的美與可愛
 
 - name: 我的限制級人生
   author: 林欣蓓
+  country: 臺灣
   date: 2024/07/20
   isbn: 9789869716871
   comment: 作者 4 歲開始癱瘓的人生，沒有煽淚的情節，只有樸實的分享日常
 
 - name: 如何好好告別生命
   author: 畢柳鶯
+  country: 臺灣
   isbn: 9786263106857
   date: 2024/07/19
   comment: 無法有尊嚴活著且肉體不敷使用則選擇自然死亡，比起前面 2 本斷食善終多了實際案例
 
 - name: 一線三的日常
   author: 一線三
+  country: 臺灣
   isbn: 9789579054478
   date: 2024/07/18
   comment: 警察工作遇到的各種故事，人身風險高又需要大量與人接觸的辛苦工作👮
 
 - name: 那個病人，我人生的醫生
   author: Ellen de Visser
+  country: 荷蘭
   isbn: 9789861337234
   date: 2024/07/17
   comment: 86 個醫護寫下醫病互動的專欄，看了對於醫護人員有較為立體的理解🫡
 
 - name: 我是人生整理師：死亡清掃Ｘ遺物整理Ｘ囤積歸納
   author: 盧拉拉
+  country: 臺灣
   isbn: 9786263565067
   date: 2024/07/15
   comment: 有點沈重的書，衣食無憂生活無虞才能顧及尊嚴🥲
 
 - name: 船到荷蘭自然直！
   author: 任恩儀
+  country: 臺灣
   isbn: 9789865534509
   date: 2024/07/14
   star: true
@@ -227,6 +263,7 @@
 
 - name: 傴僂
   author: 市川沙央
+  country: 日本
   isbn: 9786263106703
   date: 2024/07/12
   star: true
@@ -234,42 +271,49 @@
 
 - name: 如果能夠把「謝謝」說出口
   author: 瀧波由佳利
+  country: 日本
   isbn: 9789577415615
   date: 2024/07/10
   comment: 傳達愛的書，在媽媽人生最後和他好好告別的漫畫隨筆
 
 - name: 瀕窮女子：正在家庭、職場、社會窮忙的女性
   author: 飯島裕子
+  country: 日本
   isbn: 9789865406547
   date: 2024/07/07
   comment: 喜歡跟人有關的書，這本有真實訪談還有很多數據，失去與社會的連結使得不斷錯過被人接住的機會🥲
 
 - name: 波吉的誕生：41 歲離職重拾畫家夢，國王排名作者自傳漫畫
   author: 十日草輔
+  country: 日本
   isbn: 9786263165779
   date: 2024/06/25
   comment: 國王排名動畫很好看，作者大叔從 20 幾歲開始追尋畫家夢，終於在 43 歲爆紅，繞遠路也還是抵達的成功案例
 
 - name: 我是一位「少」奶奶：2 寶地方媽媽的戰勝乳癌求生記
   author: 王筠銨
+  country: 臺灣
   isbn: 9789578904583
   date: 2024/06/25
   comment: 從發現三陰性乳癌的抗癌求生記，記錄了作者被確診罹癌，到接受治療，最終從乳癌畢業，樂觀治療的榜樣
 
 - name: 「出租大叔」日記
   author: 西本貴信
+  country: 日本
   date: 2024/06/23
   isbn: 9789571369754
   comment: 平實可愛的故事，以時薪一千日幣出租時間陪伴陌生人，感覺作者是個有趣細心的大叔
 
 - name: 但我想活：不放過 5% 的存活機會，黃博煒的截後人生
   author: 黃博煒
+  country: 臺灣
   date: 2024/06/20
   isbn: 9789869440394
   comment: 八仙塵燃傷者的截肢後人生，失去了雙腳及右手，僅剩的左手，努力活下去的奮鬥故事💪
 
 - name: 正午惡魔
   author: Andrew Solomon
+  country: 美國
   series: 上
   date: 2024/06/19
   isbn: 9789579542968
@@ -277,12 +321,14 @@
 
 - name: 德州媽媽沒有崩潰
   author: Mumu
+  country: 臺灣
   date: 2024/06/14
   isbn: 9789571383613
   comment: 作者的人生志向之一是給孩子能夠治癒一生的快樂童年，只要媽媽們體諒自己，育兒就可以繼續下去
 
 - name: 深山裡的奇蹟雞蛋拌飯店：小光的蛋
   author: 森澤明夫
+  country: 日本
   date: 2024/06/13
   isbn: 9789863840008
   star: true
@@ -290,12 +336,14 @@
 
 - name: 成為自由人
   author: 李惠貞
+  country: 臺灣
   date: 2024/06/12
   isbn: 9789868976849
   comment: 「給自己拍拍肩，不要驚慌，不要沮喪，做你能做的，這樣就好。」
 
 - name: 銀之匙
   author: 荒川弘
+  country: 日本
   series: １－１５
   date: 2024/06/12
   star: true
@@ -304,12 +352,14 @@
 
 - name: 打擾了，我是大體化妝師
   author: 李安琪
+  country: 臺灣
   isbn: 9789860628197
   date: 2024/06/10
   comment: 幫助死者整理儀容好好離去的工作，內容是關於死者在世時的故事和大體化妝師的工作所聞
 
 - name: 極地探險家的美好生活祕密
   author: Erling Kagge
+  country: 挪威
   isbn: 9789865549473
   star: true
   date: 2024/06/10
@@ -317,18 +367,21 @@
 
 - name: 活得像個穿制服的人：我是警察
   author: 王惀宇
+  country: 臺灣
   isbn: 9789864063383
   date: 2024/06/02
   comment: 關於基層警察的職場故事，包山包海的業務與輪班疲憊的身心👮
 
 - name: 只是咳嗽，怎麼變成癌症末期？
   author: 星希亞
+  country: 臺灣
   isbn: 9789865853914
   date: 2024/06/01
   comment: 當個了解自己病況及用藥的認真病人，減少攝取糖和加工食品，喝水 2,500 以上
  
 - name: 踏實感的練習
   author: Brad Stulberg
+  country: 美國
   isbn: 9786263550117
   date: 2024/05/28
   star: true
@@ -336,6 +389,7 @@
 
 - name: 該買或不買，該留或不留
   author: 廣瀨裕子
+  country: 日本
   isbn: 9789579314374
   date: 2024/05/23
   star: true
@@ -343,12 +397,14 @@
 
 - name: 我離開之後：一個母親給女兒的人生指南， 以及那些來不及說的愛與牽掛
   author: Suzy Hopkins
+  country: 美國
   isbn: 9789576581502
   date: 2024/05/20
   comment: 母親寫給女兒的繪本，書裡有深刻的母愛和寶貴的智慧
 
 - name: 奪取天下的少女
   author: 宮島未奈
+  country: 日本
   isbn: 9789861338996
   date: 2024/05/18
   star: true
@@ -356,12 +412,14 @@
 
 - name: 改變人生、開拓命運的天風哲學
   author: 佐藤萌
+  country: 日本
   isbn: 9786267212653
   date: 2024/05/14
   comment: 在睡前和起床時用和自己說正向的話，藉此改變深層潛意識
 
 - name: 人生就求一次如魚得水
   author: Cinyee Chiu
+  country: 臺灣
   isbn: 9789861337111
   date: 2024/05/09
   star: true
@@ -369,6 +427,7 @@
 
 - name: 泅泳夜空的巧克力飛船魚
   author: 町田苑香
+  country: 日本
   isbn: 9786263611658
   date: 2024/05/08
   star: true
@@ -376,36 +435,42 @@
 
 - name: 小絲，命中注定的小狗
   author: 原田舞葉
+  country: 日本
   isbn: 9789861792729
   date: 2024/05/07
   comment: 日本介助犬小絲和家庭互動的故事，有狗就是讚🐶
 
 - name: 別教出混蛋！終結霸凌、自私、厭女者
   author: Melinda Wenner Moyer
+  country: 美國
   isbn: 9786269777594
   date: 2024/05/06
   comment: 對孩子發揮同理心，建立彼此的情感連結，培養孩子成為善良的大人🫶
 
 - name: 13 年不上班卻沒餓死的秘密
   author: 米果
+  country: 臺灣
   isbn: 9789861793122
   date: 2024/05/05
   comment: 寫自由工作者的日常，不揮霍的平實生活法很適合現在無業的我，一人公司的自律與自由（2013 年初版）
 
 - name: 長橋
   author: 裴芳詩
+  country: 美國
   isbn: 9786263162105
   date: 2024/05/01
   comment: 作者生長於美國，長大後回到越南祖國，透過紀錄父母從小在戰爭的故事，透過了解和父母和解的紀錄，是本很厚的漫畫，譯者是宋瑛堂
 
 - name: 視障者的機智生活
   author: 藍介洲
+  country: 臺灣
   isbn: 9786263743830
   date: 2024/05/01
   comment: 和黑暗共處三十年的後天全盲者分享日常，如何透過輔助與學習，重拾自立、自由的生活😎
 
 - name: 現在，依然想念妳
   author: 川本三郎
+  country: 日本
   isbn: 9786267061015
   date: 2024/05/01
   star: true
@@ -413,6 +478,7 @@
 
 - name: 斯德哥爾摩宜居指引
   author: 瑞典劉先生
+  country: 臺灣
   isbn: 9786263742154
   star: ture
   date: 2024/04/30
@@ -420,18 +486,21 @@
 
 - name: 人生下半場，我想要這樣的生活
   author: 廣瀨裕子
+  country: 日本
   isbn: 9789869455220
   date: 2024/04/27
   comment: 50 歲以後的大人談，好好吃飯維持社會互動，譯者是王蘊潔
 
 - name: 東京宅女共居生活好自在
   author: 藤谷千明
+  country: 日本
   isbn: 9789573299592
   date: 2024/04/26
   comment: 東京的四名共居女子日常，輕鬆好讀
 
 - name: 希望你也在這裡
   author: 劉梓潔
+  country: 臺灣
   isbn: 9789573337591
   star: true
   date: 2024/04/24
@@ -439,24 +508,28 @@
 
 - name: 日本監獄官現身說法：死刑紀實
   author: 一之瀨はち
+  country: 日本
   isbn: 9786263296107
   date: 2024/04/24
   comment: 用監獄官的角色介紹日本死刑犯及絞刑，用漫畫揭開死刑的神祕面紗
 
 - name: 讀者太太解鎖跨文化婚姻
   author: 讀者太太 Mrs Reader
+  country: 臺灣
   isbn: 9789573295068
   date: 2024/04/23
   comment: 和伴侶生活中要經濟、精神獨立才能維持長期關係💏
 
 - name: 我們是血脈相連的陌生人
   author: 孫廷沇
+  country: 韓國
   isbn: 9786267288139
   date: 2024/04/22
   comment: 關於如何和父母好好相處，在自在跟孝順盡責間取得平衡🙌🏼
 
 - name: 生命的停車場
   author: 南杏子
+  country: 日本
   isbn: 9789862273159
   star: true
   date: 2024/04/22
@@ -464,42 +537,49 @@
 
 - name: 身為國際新聞記者
   author: 翁琬柔
+  country: 臺灣
   isbn: 9789863617518
   date: 2024/04/21
   comment: 很厲害的人，書中主要是在臺灣電視台當國際新聞記者的故事，後半段是到紐約讀研究所進聯合國實習的體悟
 
 - name: 今天的天氣適合離職
   author: 朴秀珍與「這裡」
+  country: 韓國
   isbn: 9786263163638
   date: 2024/04/18
   comment: 100 篇離職之後的生活日常，非常共感看著存款越來越少的擔憂
 
 - name: 朋友、戀人與最糟糕的事：馬修．派瑞回憶錄
   author: Matthew Perry
+  country: [加拿大, 美國]
   isbn: 9786263749795
   date: 2024/04/18
   comment: Friends 的靈魂之一，六人行的觀眾會想看的書，理解真實他的同時也羨慕他這麼有錢可以買到想要的物質💰
 
 - name: 大不列顛小怪癖
   author: 讀者太太 Mrs Reader
+  country: 臺灣
   isbn: 9789571390482
   date: 2024/04/17
   comment: 英國不同於歐洲大陸的文化，譬如先倒奶再倒茶才是正統英式茶🇬🇧
 
 - name: 關於牙醫師的那些事
   author: 林峰丕
+  country: 臺灣
   isbn: 9789866216374
   date: 2024/04/15
   comment: 寫作者身為牙醫師的看診故事，文字有種中生代熟齡感
 
 - name: 愛的手札：給我的女兒們
   author: 井村和清
+  country: 日本
   isbn: 9789861760643
   date: 2024/04/07
   comment: 親情流露的文字，感受到作者對女兒的愛很深
   
 - name: 父親這回事：我們的迷惘與驚奇
   author: 黃哲斌
+  country: 臺灣
   isbn: 9789861335209
   star: true
   date: 2024/04/13
@@ -507,18 +587,21 @@
 
 - name: 那些死亡教我如何活
   author: 特掃隊長
+  country: 臺灣
   isbn: 9786263531031
   date: 2024/04/05
   comment: 害怕自己哪一天也會掉到獨居無法自理生活的處境😵
 
 - name: 真實：超馬女神工藤真實的跑步人生
   author: 工藤真實
+  country: 日本
   isbn: 9789573273202
   date: 2024/04/05
   comment: 跑步的熱情如何維持，業餘跑者維持跑步、工作與生活
 
 - name: 聆聽寂靜
   author: Erling Kagge
+  country: 挪威
   isbn: 9789862138878
   date: 2024/04/02
   star: true
@@ -526,42 +609,49 @@
 
 - name: 歡迎來到志祺七七！不搞笑、談時事，資訊設計原來很可以
   author: 張志祺
+  country: 臺灣
   isbn: 9789865535940
   date: 2024/04/01
   comment: 志祺從大學一路做各種嘗試到創業的故事，欣賞他很有想法且努力實踐
 
 - name: 兩輪江湖的真相
   author: 林昱樹
+  country: 臺灣
   isbn: 9786269608850
   date: 2024/03/29
   comment: 外送員的職場書寫，書寫在路上穿梭送餐的場景
 
 - name: 不能不去愛的兩件事
   author: 松浦彌太郎
+  country: 日本
   isbn: 9789861738079
   date: 2024/03/28
   comment: 有點說教意味的正能量爆發，有能量看的時候可能會有收穫，篇幅不多很快可以讀完
 
 - name: 歡迎搭乘轉運計程車
   author: 喜多川泰
+  country: 日本
   isbn: 9786269631285
   date: 2024/03/26
   comment: 即使很努力，仍然無法獲得回報時，其實是在累積運氣，之後會遇到更大的好事，譯者是王蘊潔
 
 - name: 我是微笑，34歲，留職停薪中
   author: 櫻賀希奈子
+  country: 日本
   isbn: 9789865060466
   date: 2024/03/24
   comment: 休息一下暫離職場也沒關係，感受到作者想傳遞的温暖訊息😊
 
 - name: 微調一下！你也能是職場人才
   author: 小林弘幸
+  country: 日本
   isbn: 9789864730735
   date: 2024/03/22
   comment: 關於自律神經健康可使身心平靜的實際作法，像用睡前安排隔日行程並整理好包包等小技巧
 
 - name: 女性貧困
   author: NHK 特別採訪小組
+  country: 日本
   isbn: 9789864062362
   date: 2024/03/21
   comment: 感覺自己哪一步沒踩穩就會掉落成貧困的警示故事⚠️
@@ -569,18 +659,21 @@
 - name: 我當 AV 女優的那些年
   series: １－３
   author: 峰奈由果
+  country: 日本
   isbn: 9786269717286
   date: 2024/03/24
   comment: 日本前 AV 女優用漫畫的方式紀錄心情和工作樣態，滿有趣的視角
 
 - name: 那一天，憂鬱症找上了我
   author: 金正源
+  country: 韓國
   isbn: 9789865596385
   date: 2024/03/19
   comment: 跟憂鬱症展開非自願同居的生活，書寫感到低落到求助醫生的過程，有伴侶的支持也是很重要的復原力量🥺
 
 - name: 年輕人們
   author: 福澤徹三
+  country: 日本
   isbn: 9789865824433
   star: true
   date: 2024/03/18
@@ -588,24 +681,28 @@
 
 - name: 我的心，我的眼，看見台灣
   author: 齊柏林
+  country: 臺灣
   isbn: 9789861334691
   date: 2024
   comment: 敘述齊柏林空拍臺灣20年的心路歷程，包含許多空派實景照片📷
 
 - name: 白衣天使的天堂路
   author: 咩姐、牛皮
+  country: 臺灣
   isbn: 9789863363910
   date: 2024
   comment: 温暖的文筆、爆笑的漫畫書寫護理師的職場日常
 
 - name: 他們總在某個地方
   author: 小川洋子
+  country: 日本
   isbn: 9789571377131
   date: 2024
   comment: 優雅寧靜的短篇集，所有篇章都提及了動物，但每一篇都各自獨立
 
 - name: 手套與憐憫
   author: 吉本芭娜娜
+  country: 日本
   isbn: 9786263533653
   date: 2024
   star: true
@@ -613,18 +710,21 @@
 
 - name: 我扛得起水泥，扛得住人生
   author: 泥作阿鴻
+  country: 臺灣
   date: 2024
   isbn: 9786263580275
   comment: 泥作師傅的日常和人生故事，作者對自己的專業很驕傲
 
 - name: 做一件只有你能做的事
   author: 謝其濬
+  country: 臺灣
   isbn: 9789865253790
   date: 2024
   comment: 鮮乳坊創辦者的心力路程和這些年發展成 6 個牧場的故事，對奶粉來說有種看著鮮乳坊長大的欣慰感🐮🥛
 
 - name: 你走了以後，我一個人的旅程
   author: 林書宇
+  country: 臺灣
   date: 2024
   isbn: 9789861794181
   comment: 作者和病逝太太告別之後的一個人旅程，文字温馨動人
@@ -632,24 +732,28 @@
 - name: 孤獨的美食家
   series: １－２
   author: 久住昌之
+  country: 日本
   date: 2024
   isbn: 9789861334318
   comment: 西裝大叔在工作之餘以好吃的食物慰勞辛苦的自己🍽️
   
 - name: 逃／我們的寶島，他們的牢
   author: 逃跑外勞、四方報
+  country: 臺灣
   isbn: 9789571355559
   date: 2024
   comment: 四方報彙整 26 封在台逃跑中的越南外籍勞工投書，他們做著多數人做不來的繁重工作，賺取低廉的薪資撐起臺灣底層社會的勞動力，薪水低廉、工作超時、難得温飽、孤單無依🥲
 
 - name: 給不小心就會太在意的你
   author: 水島廣子
+  country: 日本
   date: 2024
   isbn: 9789862488416
   comment: 自己是會事情過了還會懊惱情緒留在心裡的人，學習放過自己🫶🏼
 
 - name: 走向內在：四國遍路、聖雅各朝聖道、AT&PCT，三大洲萬里徒步記
   author: Josie
+  country: 臺灣
   isbn: 9786267206713
   date: 2024
   star: true
@@ -657,6 +761,7 @@
 
 - name: 報導者事件簿 002：神木下的罪行
   author: 報導者
+  country: 臺灣
   star: true
   date: 2024
   isbn: 9789863197867
@@ -664,12 +769,14 @@
 
 - name: 報導者事件簿 001：留學黑工
   author: 報導者
+  country: 臺灣
   isbn: 9789863196570
   date: 2024
   comment: 報導私校對外國以大學教育為由招生來台學生，其實是半工半讀陷入債務漩渦的黑工😥
 
 - name: 你走了以後，我想繼續好好活
   author: 高璿圭
+  country: 韓國
   date: 2024
   isbn: 9786263533257
   comment: 關於自殺者遺族的復原故事，哀悼練習讓一直逃避面對的情緒能夠有出口
