@@ -4,6 +4,136 @@ title: 閱讀統計
 permalink: /stats
 ---
 
+<section class="author-country-stats" aria-labelledby="author-country-title">
+  <div class="author-country-stats__heading">
+    <div>
+      <h2 id="author-country-title">作者國家</h2>
+      <p>統計所有年份已讀完成、且已標示作者國家的書籍</p>
+    </div>
+    <div class="author-country-stats__summary" aria-live="polite">
+      <span><strong id="author-country-book-total">—</strong><small>有效書目</small></span>
+      <span><strong id="author-country-total">—</strong><small>作者國家</small></span>
+    </div>
+  </div>
+
+  <div class="author-country-stats__table-wrap">
+    <table class="author-country-stats__table">
+      <caption>作者國家閱讀本數與占比，依本數由大到小排序</caption>
+      <thead>
+        <tr>
+          <th scope="col">排名</th>
+          <th scope="col">國家</th>
+          <th scope="col">閱讀本數與占比</th>
+        </tr>
+      </thead>
+      <tbody id="author-country-table-body">
+        <tr>
+          <td class="author-country-stats__loading" colspan="3">統計資料載入中…</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+{% assign country_years = site.data | sort %}
+<script id="author-country-data" type="application/json">
+[
+  {% assign first_country = true %}
+  {% for country_year_data in country_years %}
+    {% assign country_year = country_year_data[0] | append: "" %}
+    {% assign country_year_number = country_year | plus: 0 %}
+    {% assign normalized_country_year = country_year_number | append: "" %}
+    {% if country_year_number >= 1000 and country_year_number <= 9999 and country_year == normalized_country_year %}
+      {% assign country_books = country_year_data[1] | where_exp: "book", "book.pending != true" | where_exp: "book", "book.finished != false" %}
+      {% for book in country_books %}
+        {% if book.country and book.country != false %}
+          {% assign country_name = book.country | strip %}
+          {% unless country_name == "" %}
+            {% unless first_country %},{% endunless %}{{ country_name | jsonify }}
+            {% assign first_country = false %}
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+]
+</script>
+
+<script>
+  (function () {
+    var dataElement = document.getElementById('author-country-data');
+    var tableBody = document.getElementById('author-country-table-body');
+    var bookTotalElement = document.getElementById('author-country-book-total');
+    var countryTotalElement = document.getElementById('author-country-total');
+
+    if (!dataElement || !tableBody || !bookTotalElement || !countryTotalElement) return;
+
+    var countries = JSON.parse(dataElement.textContent);
+    var counts = countries.reduce(function (result, country) {
+      result[country] = (result[country] || 0) + 1;
+      return result;
+    }, {});
+    var countryCollator = new Intl.Collator('zh-Hant');
+    var rows = Object.keys(counts).map(function (country) {
+      return { country: country, count: counts[country] };
+    }).sort(function (left, right) {
+      return right.count - left.count || countryCollator.compare(left.country, right.country);
+    });
+    var total = countries.length;
+
+    bookTotalElement.textContent = total.toLocaleString('zh-TW') + ' 本';
+    countryTotalElement.textContent = rows.length.toLocaleString('zh-TW') + ' 個';
+    tableBody.replaceChildren();
+
+    rows.forEach(function (item, index) {
+      var percentage = total === 0 ? 0 : item.count / total * 100;
+      var percentageText = percentage.toFixed(1) + '%';
+      var row = document.createElement('tr');
+
+      var rankCell = document.createElement('td');
+      rankCell.className = 'author-country-stats__rank';
+      var rank = document.createElement('span');
+      rank.textContent = index + 1;
+      if (index < 3) rank.classList.add('author-country-stats__rank--top');
+      rankCell.appendChild(rank);
+
+      var countryCell = document.createElement('th');
+      countryCell.scope = 'row';
+      countryCell.className = 'author-country-stats__country';
+      countryCell.textContent = item.country;
+
+      var distributionCell = document.createElement('td');
+      var value = document.createElement('span');
+      value.className = 'author-country-stats__value';
+      value.textContent = item.count.toLocaleString('zh-TW') + ' 本（' + percentageText + '）';
+
+      var bar = document.createElement('span');
+      bar.className = 'author-country-stats__bar';
+      bar.setAttribute('aria-hidden', 'true');
+      var barFill = document.createElement('span');
+      barFill.style.width = percentage + '%';
+      bar.appendChild(barFill);
+
+      distributionCell.appendChild(value);
+      distributionCell.appendChild(bar);
+      row.appendChild(rankCell);
+      row.appendChild(countryCell);
+      row.appendChild(distributionCell);
+      tableBody.appendChild(row);
+    });
+
+    if (rows.length === 0) {
+      var emptyRow = document.createElement('tr');
+      var emptyCell = document.createElement('td');
+      emptyCell.className = 'author-country-stats__loading';
+      emptyCell.colSpan = 3;
+      emptyCell.textContent = '目前沒有可統計的作者國家資料。';
+      emptyRow.appendChild(emptyCell);
+      tableBody.appendChild(emptyRow);
+    }
+  })();
+</script>
+
 <h2 id="monthly-reading-title">每月閱讀本數</h2>
 
 <div class="monthly-reading-chart">

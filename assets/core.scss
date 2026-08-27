@@ -35,6 +35,269 @@ h1.index, h1.authors, h1.unfinished, h1.stats {
   margin-bottom: 0.25em;
 }
 
+// Author country statistics
+.author-country-stats {
+  --country-accent: #8fa8a0;
+  --country-accent-soft: #e7efeb;
+  margin: 24px 0 46px;
+  color: #5f625f;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.author-country-stats__heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.author-country-stats__heading h2 {
+  margin: 0 0 5px;
+  color: #777b77;
+  font-size: 20px;
+}
+
+.author-country-stats__heading p {
+  margin: 0;
+  color: #969995;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.author-country-stats__summary {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+}
+
+.author-country-stats__summary span {
+  min-width: 76px;
+  padding: 8px 12px;
+  border: 1px solid #e4e6e1;
+  border-radius: 10px;
+  background: #fafbf8;
+  text-align: center;
+}
+
+.author-country-stats__summary strong,
+.author-country-stats__summary small {
+  display: block;
+}
+
+.author-country-stats__summary strong {
+  color: #66766f;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.author-country-stats__summary small {
+  margin-top: 2px;
+  color: #a0a39f;
+  font-size: 11px;
+}
+
+.author-country-stats__table-wrap {
+  overflow: hidden;
+  border: 1px solid #e5e6e1;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(79, 86, 80, 0.06);
+}
+
+.author-country-stats__table {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.author-country-stats__table caption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.author-country-stats__table thead {
+  background: #f6f7f3;
+}
+
+.author-country-stats__table th,
+.author-country-stats__table td {
+  border: 0;
+  border-bottom: 1px solid #eff0ec;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.author-country-stats__table thead th {
+  padding: 10px 14px;
+  color: #969a95;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.author-country-stats__table thead th:first-child {
+  width: 54px;
+  text-align: center;
+}
+
+.author-country-stats__table thead th:nth-child(2) {
+  width: 112px;
+}
+
+.author-country-stats__table tbody th,
+.author-country-stats__table tbody td {
+  padding: 11px 14px;
+}
+
+.author-country-stats__table tbody tr:last-child th,
+.author-country-stats__table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.author-country-stats__table tbody tr {
+  transition: background-color 120ms ease;
+}
+
+.author-country-stats__table tbody tr:hover {
+  background: #fbfcfa;
+}
+
+.author-country-stats__rank {
+  text-align: center !important;
+}
+
+.author-country-stats__rank span {
+  display: inline-flex;
+  width: 25px;
+  height: 25px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #9a9d99;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.author-country-stats__rank span.author-country-stats__rank--top {
+  background: var(--country-accent-soft);
+  color: #597068;
+  font-weight: 600;
+}
+
+.author-country-stats__country {
+  color: #555b57;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.author-country-stats__value {
+  display: block;
+  margin-bottom: 6px;
+  color: #626963;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.25;
+}
+
+.author-country-stats__bar {
+  display: block;
+  width: 100%;
+  height: 5px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #f0f1ed;
+}
+
+.author-country-stats__bar > span {
+  display: block;
+  min-width: 2px;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--country-accent);
+}
+
+.author-country-stats__loading {
+  padding: 28px 16px !important;
+  color: #9a9d99;
+  font-size: 13px;
+  text-align: center !important;
+}
+
+@media (max-width: 600px) {
+  .author-country-stats {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .author-country-stats__heading {
+    gap: 12px;
+  }
+
+  .author-country-stats__summary {
+    gap: 6px;
+  }
+
+  .author-country-stats__summary span {
+    box-sizing: border-box;
+    min-width: 70px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .author-country-stats__table-wrap {
+    border-radius: 12px;
+  }
+
+  .author-country-stats__table thead th:first-child {
+    width: 42px;
+  }
+
+  .author-country-stats__table thead th:nth-child(2) {
+    width: 72px;
+  }
+
+  .author-country-stats__table thead th,
+  .author-country-stats__table tbody th,
+  .author-country-stats__table tbody td {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .author-country-stats__country {
+    font-size: 13px;
+  }
+
+  .author-country-stats__value {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .author-country-stats__heading {
+    display: block;
+  }
+
+  .author-country-stats__summary {
+    margin-top: 12px;
+  }
+
+  .author-country-stats__summary span {
+    min-width: 0;
+    flex: 1;
+  }
+}
+
 // Monthly reading chart
 .monthly-reading-chart {
   --stats-2025-line: #e9d3c8;
@@ -50,25 +313,30 @@ h1.index, h1.authors, h1.unfinished, h1.stats {
   margin-top: 44px;
 }
 
+#monthly-reading-title,
+#cumulative-reading-title {
+  text-align: center;
+}
+
 .monthly-reading-chart__legend {
   display: flex;
   justify-content: center;
   gap: 24px;
   margin: 6px 0 2px;
   color: #666;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .monthly-reading-chart__legend span {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
 }
 
 .monthly-reading-chart__swatch {
   display: inline-block;
-  width: 22px;
-  height: 4px;
+  width: 25px;
+  height: 5px;
   border-radius: 2px;
 }
 
@@ -81,8 +349,8 @@ h1.index, h1.authors, h1.unfinished, h1.stats {
 }
 
 .monthly-reading-chart--cumulative .monthly-reading-chart__swatch {
-  width: 12px;
-  height: 10px;
+  width: 14px;
+  height: 12px;
 }
 
 #monthly-reading-chart,
