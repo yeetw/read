@@ -74,6 +74,11 @@ hide_title: true
       return element;
     }
 
+    function monthSearchUrl(year, month) {
+      var paddedMonth = month < 10 ? '0' + month : String(month);
+      return '/?q=' + encodeURIComponent(year + '/' + paddedMonth);
+    }
+
     function monthlyCounts(year) {
       var counts = new Array(12).fill(0);
       var lastMonth = 0;
@@ -297,12 +302,26 @@ hide_title: true
         }));
 
         points.forEach(function (point) {
-          group.appendChild(createSvgElement('circle', {
+          var pointLabel = point.year + ' 年 ' + point.month + ' 月，共 ' + point.count + ' 本；查看該月書目';
+          var pointLink = createSvgElement('a', {
+            class: 'monthly-reading-chart__point-link',
+            href: monthSearchUrl(point.year, point.month),
+            'aria-label': pointLabel
+          });
+          pointLink.appendChild(createSvgElement('circle', {
+            class: 'monthly-reading-chart__point-hit-area',
+            cx: point.x,
+            cy: point.y,
+            r: 14
+          }));
+          pointLink.appendChild(createSvgElement('circle', {
             class: 'monthly-reading-chart__point',
             cx: point.x,
             cy: point.y,
             r: 6
           }));
+          pointLink.appendChild(createSvgElement('title', {}, pointLabel));
+          group.appendChild(pointLink);
 
           var direction = labelDirections[point.year + '-' + point.month];
           var anchor = point.month === 1 ? 'start' : point.month === 12 ? 'end' : 'middle';

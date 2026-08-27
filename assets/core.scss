@@ -122,6 +122,33 @@ h1.index, h1.authors, h1.unfinished {
   fill: currentColor;
   stroke: #fff;
   stroke-width: 2;
+  pointer-events: none;
+  transition: r 120ms ease, stroke-width 120ms ease;
+}
+
+.monthly-reading-chart__point-link {
+  color: inherit;
+  cursor: pointer;
+}
+
+.monthly-reading-chart__point-hit-area {
+  fill: transparent;
+  stroke: transparent;
+  stroke-width: 2;
+}
+
+.monthly-reading-chart__point-link:hover .monthly-reading-chart__point,
+.monthly-reading-chart__point-link:focus-visible .monthly-reading-chart__point {
+  r: 8px;
+  stroke-width: 3;
+}
+
+.monthly-reading-chart__point-link:focus-visible {
+  outline: none;
+}
+
+.monthly-reading-chart__point-link:focus-visible .monthly-reading-chart__point-hit-area {
+  stroke: #777;
 }
 
 .monthly-reading-chart__bar {
