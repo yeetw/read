@@ -284,7 +284,7 @@ h1.index, h1.authors, h1.unfinished, h1.stats {
   }
 
   .author-country-stats__table thead th:nth-child(2) {
-    width: 62px;
+    width: 82px;
   }
 
   .author-country-stats__table thead th,
@@ -296,6 +296,7 @@ h1.index, h1.authors, h1.unfinished, h1.stats {
 
   .author-country-stats__country {
     font-size: 13px;
+    white-space: nowrap;
   }
 
   .author-country-stats__value {
