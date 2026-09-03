@@ -1,8 +1,10 @@
 {% assign book = include.book %}
 <li
+  {% if include.all_books %}class="all-books__item{% if book.finished == false %} all-books__item--unfinished{% else %} all-books__item--finished{% endif %}"{% endif %}
   isbn="{{ book.isbn }}"
   star="{{ book.star }}"
   date="{{ book.date }}"
+  {% if include.year %}data-year="{{ include.year }}"{% endif %}
   data-name="{{ book.name | escape }}"
   data-author="{{ book.author | escape }}"
   {% if book.country and book.country != false %}data-country="{{ book.country | escape }}"{% endif %}

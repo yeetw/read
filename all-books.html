@@ -1,0 +1,57 @@
+---
+layout: page
+title: 所有書籍
+permalink: /all-books
+---
+
+{% include search.html %}
+
+{% comment %}
+  Collect every non-pending book date, then render the dates newest first.
+  Iterating over the source data for each date preserves the existing order
+  when multiple books share the same date. Books without a date use the year
+  of their data file as their effective date.
+{% endcomment %}
+
+{% assign years = site.data | sort %}
+{% assign all_book_dates = "" | split: "" %}
+
+{% for year_data in years %}
+  {% assign year = year_data[0] | append: "" %}
+  {% assign year_number = year | plus: 0 %}
+  {% assign normalized_year = year_number | append: "" %}
+  {% if year_number >= 1000 and year_number <= 9999 and year == normalized_year %}
+    {% assign books = year_data[1] | where_exp: "book", "book.pending != true" %}
+    {% for book in books %}
+      {% assign book_date = book.date | append: "" %}
+      {% if book_date == "" %}
+        {% assign book_date = year %}
+      {% endif %}
+      {% assign all_book_dates = all_book_dates | push: book_date %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% assign all_book_dates = all_book_dates | uniq | sort | reverse %}
+
+<ol id="all-books-list" class="all-books-list">
+  {% for target_date in all_book_dates %}
+    {% for year_data in years reversed %}
+      {% assign year = year_data[0] | append: "" %}
+      {% assign year_number = year | plus: 0 %}
+      {% assign normalized_year = year_number | append: "" %}
+      {% if year_number >= 1000 and year_number <= 9999 and year == normalized_year %}
+        {% assign books = year_data[1] | where_exp: "book", "book.pending != true" %}
+        {% for book in books %}
+          {% assign book_date = book.date | append: "" %}
+          {% if book_date == "" %}
+            {% assign book_date = year %}
+          {% endif %}
+          {% if book_date == target_date %}
+            {% include book-row.html book=book year=year all_books=true %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</ol>

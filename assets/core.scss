@@ -27,7 +27,7 @@ font-size: 20px;
   }
 }
 
-h1.index, h1.authors, h1.unfinished, h1.stats {
+h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
   color: #a09e85;
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: 500;
@@ -550,14 +550,29 @@ li > a:hover {
 li > a > strong {
   font-weight: 400;
   font-family: 'Huninn', sans-serif;
-  color: #4a7c9d;
+  color: #c2a89b;
 }
 li > a > strong:hover {
   font-family: 'Huninn', sans-serif;
-  color: #7c9aaf;
+  color: #c2a89b;
 }
 li > a.no-isbn {
   color: #666;
+}
+
+// Combined finished and unfinished book list
+.all-books-list .all-books__item > a,
+.all-books-list .all-books__item > a:hover,
+.all-books-list .all-books__item > a > strong,
+.all-books-list .all-books__item > a > strong:hover {
+  color: #666666;
+}
+
+.all-books-list .all-books__item--unfinished > a,
+.all-books-list .all-books__item--unfinished > a:hover,
+.all-books-list .all-books__item--unfinished > a > strong,
+.all-books-list .all-books__item--unfinished > a > strong:hover {
+  color: #c2a89b;
 }
 
 // Search button

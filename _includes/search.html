@@ -66,7 +66,7 @@
       const fieldValues = {
         author,
         country,
-        year: (year || '').toLowerCase()
+        year: (li.dataset.year || year || '').toLowerCase()
       };
       const searchableFields = [name, author, country, comment, isbn, date, fieldValues.year];
 
@@ -94,6 +94,18 @@
           return name.indexOf(term.value) !== -1;
         });
         lis[i].style.display = matches ? 'list-item' : 'none';
+      }
+      return;
+    }
+
+    /* The combined list has no year sections, but keeps each book's year. */
+    const allBooksList = document.getElementById('all-books-list');
+    if (allBooksList) {
+      const lis = allBooksList.getElementsByTagName('li');
+      for (let i = 0; i < lis.length; i++) {
+        lis[i].style.display = matchesAllTerms(lis[i], searchTerms, lis[i].dataset.year || '')
+          ? 'list-item'
+          : 'none';
       }
       return;
     }
