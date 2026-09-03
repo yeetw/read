@@ -811,6 +811,15 @@ li > a.no-isbn {
 }
 
 @media (max-width: 480px) {
+  .slide-menu {
+    // Reserve the bottom 10% instead of stretching menu rows to the viewport edge.
+    padding-bottom: 10vh;
+
+    @supports (height: 100dvh) {
+      padding-bottom: 10dvh;
+    }
+  }
+
   .slide-menu__header {
     padding: 8px 12px;
   }
@@ -819,7 +828,7 @@ li > a.no-isbn {
     display: flex;
     flex-direction: column;
     padding-top: 4px;
-    padding-bottom: calc(4px + env(safe-area-inset-bottom));
+    padding-bottom: 4px;
 
     > li {
       padding-top: 0;
