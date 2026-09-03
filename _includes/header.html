@@ -1,7 +1,7 @@
 <aside class="logo">
   <a href="{{ "/" | prepend: site.baseurl | prepend: site.url }}">
     <img
-      src="{{ "/assets/logo.png" | prepend: site.baseurl | prepend: site.url}}"
+      src="{{ "/assets/logo.png" | prepend: site.baseurl | prepend: site.url }}?v={{ site.time | date: "%s" }}"
       alt=""
       class="logo-avatar">
   </a>
