@@ -6,6 +6,18 @@
 @import 'syntax';
 
 // Custom CSS
+.page-navigation {
+  margin-top: 20px;
+}
+
+.footer .block:last-child {
+  display: none;
+}
+
+.footer {
+  margin-top: 20px;
+}
+
 .logo {
   margin-bottom: 0px;
 }
