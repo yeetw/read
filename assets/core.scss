@@ -51,7 +51,7 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
 .author-country-stats {
   --country-accent: #8fa8a0;
   --country-accent-soft: #e7efeb;
-  margin: 24px 0 46px;
+  margin: 24px 0;
   color: #5f625f;
   font-family: 'Noto Sans TC', sans-serif;
 }
@@ -269,7 +269,7 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
 @media (max-width: 600px) {
   .author-country-stats {
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
   }
 
   .author-country-stats__heading {
@@ -350,15 +350,28 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
   font-family: 'Noto Sans TC', sans-serif;
 }
 
-#cumulative-reading-title,
-#yearly-reading-title {
-  margin-top: 44px;
-}
-
 #monthly-reading-title,
 #cumulative-reading-title,
 #yearly-reading-title {
   text-align: center;
+}
+
+#monthly-reading-title {
+  margin-top: 32px;
+}
+
+#cumulative-reading-title,
+#yearly-reading-title {
+  // Account for the SVG's bottom padding so the visible section gaps match.
+  margin-top: 8px;
+}
+
+#yearly-reading-title {
+  margin-bottom: 0;
+}
+
+.yearly-reading-chart {
+  margin-top: 0;
 }
 
 .monthly-reading-chart__legend {
