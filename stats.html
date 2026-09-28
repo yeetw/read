@@ -175,7 +175,18 @@ permalink: /stats
   <p id="cumulative-reading-description" class="monthly-reading-chart__description"></p>
 </div>
 
-{% assign stats_years = "2025,2026" | split: "," %}
+<h2 id="yearly-reading-title">每年總閱讀量</h2>
+
+<div class="monthly-reading-chart yearly-reading-chart">
+  <svg
+    id="yearly-reading-chart"
+    role="img"
+    aria-labelledby="yearly-reading-title yearly-reading-description">
+  </svg>
+  <p id="yearly-reading-description" class="monthly-reading-chart__description"></p>
+</div>
+
+{% assign stats_years = "2021,2022,2023,2024,2025,2026" | split: "," %}
 <script id="monthly-reading-data" type="application/json">
 {
   {% for stats_year in stats_years %}
@@ -191,11 +202,13 @@ permalink: /stats
   (function () {
     var svg = document.getElementById('monthly-reading-chart');
     var cumulativeSvg = document.getElementById('cumulative-reading-chart');
+    var yearlySvg = document.getElementById('yearly-reading-chart');
     var dataElement = document.getElementById('monthly-reading-data');
     var description = document.getElementById('monthly-reading-description');
     var cumulativeDescription = document.getElementById('cumulative-reading-description');
+    var yearlyDescription = document.getElementById('yearly-reading-description');
 
-    if (!svg || !cumulativeSvg || !dataElement) return;
+    if (!svg || !cumulativeSvg || !yearlySvg || !dataElement) return;
 
     var rawData = JSON.parse(dataElement.textContent);
     var namespace = 'http://www.w3.org/2000/svg';
@@ -204,6 +217,16 @@ permalink: /stats
       { year: '2025', lineClass: 'series-2025', labelClass: 'label-2025' },
       { year: '2026', lineClass: 'series-2026', labelClass: 'label-2026' }
     ];
+    var yearlySeries = [
+      { year: '2021', lineClass: 'series-2021', labelClass: 'label-2021' },
+      { year: '2022', lineClass: 'series-2022', labelClass: 'label-2022' },
+      { year: '2023', lineClass: 'series-2023', labelClass: 'label-2023' },
+      { year: '2024', lineClass: 'series-2024', labelClass: 'label-2024' },
+      { year: '2025', lineClass: 'series-2025', labelClass: 'label-2025' },
+      { year: '2026', lineClass: 'series-2026', labelClass: 'label-2026' }
+    ].map(function (item) {
+      return Object.assign({}, item, { total: (rawData[item.year] || []).length });
+    });
 
     function createSvgElement(name, attributes, text) {
       var element = document.createElementNS(namespace, name);
@@ -269,6 +292,10 @@ permalink: /stats
       var visibleMonths = visibleMonthCount(item.year);
       return item.year + ' 年一月至' + visibleMonths + '月的累積本數依序為 ' +
         item.cumulativeCounts.slice(0, visibleMonths).join('、') + ' 本';
+    }).join('；') + '。';
+
+    yearlyDescription.textContent = yearlySeries.map(function (item) {
+      return item.year + ' 年共閱讀 ' + item.total + ' 本';
     }).join('；') + '。';
 
     function smoothPath(points) {
@@ -603,12 +630,122 @@ permalink: /stats
       });
     }
 
+    function renderYearlyChart() {
+      var measuredWidth = yearlySvg.parentElement.clientWidth;
+      var width = Math.max(300, Math.floor(measuredWidth));
+      var height = width <= 480 ? 350 : 420;
+      var margin = { top: 34, right: 22, bottom: 42, left: 58 };
+      var plotLeft = margin.left;
+      var plotRight = width - margin.right;
+      var plotTop = margin.top;
+      var plotBottom = height - margin.bottom;
+      var plotWidth = plotRight - plotLeft;
+      var plotHeight = plotBottom - plotTop;
+      var groupWidth = plotWidth / yearlySeries.length;
+      var barWidth = Math.max(18, Math.min(64, groupWidth * 0.58));
+      var maximum = Math.max.apply(null, yearlySeries.map(function (item) {
+        return item.total;
+      }).concat([1]));
+      var tickStep = maximum <= 120 ? 20 : maximum <= 300 ? 50 : 100;
+      var yMaximum = Math.max(tickStep, Math.ceil((maximum + tickStep / 2) / tickStep) * tickStep);
+
+      function groupCenter(index) {
+        return plotLeft + (index + 0.5) * groupWidth;
+      }
+
+      function yPosition(value) {
+        return plotBottom - (value / yMaximum) * plotHeight;
+      }
+
+      yearlySvg.setAttribute('viewBox', '0 0 ' + width + ' ' + height);
+      yearlySvg.setAttribute('height', height);
+      yearlySvg.replaceChildren();
+
+      var grid = createSvgElement('g', { class: 'monthly-reading-chart__grid' });
+      for (var tick = 0; tick <= yMaximum; tick += tickStep) {
+        var tickY = yPosition(tick);
+        grid.appendChild(createSvgElement('line', {
+          x1: plotLeft,
+          x2: plotRight,
+          y1: tickY,
+          y2: tickY
+        }));
+        grid.appendChild(createSvgElement('text', {
+          x: plotLeft - 10,
+          y: tickY + 4,
+          'text-anchor': 'end'
+        }, tick));
+      }
+      yearlySvg.appendChild(grid);
+
+      yearlySvg.appendChild(createSvgElement('rect', {
+        class: 'monthly-reading-chart__frame',
+        x: plotLeft,
+        y: plotTop,
+        width: plotWidth,
+        height: plotHeight
+      }));
+
+      var years = createSvgElement('g', { class: 'yearly-reading-chart__years' });
+      yearlySeries.forEach(function (item, index) {
+        years.appendChild(createSvgElement('text', {
+          x: groupCenter(index),
+          y: plotBottom + 24,
+          'text-anchor': 'middle'
+        }, item.year));
+      });
+      yearlySvg.appendChild(years);
+
+      yearlySvg.appendChild(createSvgElement('text', {
+        class: 'monthly-reading-chart__axis-title',
+        x: -(plotTop + plotBottom) / 2,
+        y: 15,
+        transform: 'rotate(-90)',
+        'text-anchor': 'middle'
+      }, '總閱讀本數'));
+
+      yearlySeries.forEach(function (item, index) {
+        var center = groupCenter(index);
+        var x = center - barWidth / 2;
+        var y = yPosition(item.total);
+        var barLabel = item.year + ' 年共閱讀 ' + item.total + ' 本；查看該年書目';
+        var group = createSvgElement('g', {
+          class: 'monthly-reading-chart__series ' + item.lineClass,
+          'aria-label': item.year + ' 年'
+        });
+        var barLink = createSvgElement('a', {
+          class: 'monthly-reading-chart__bar-link',
+          href: yearSearchUrl(item.year),
+          'aria-label': barLabel
+        });
+
+        barLink.appendChild(createSvgElement('rect', {
+          class: 'monthly-reading-chart__bar yearly-reading-chart__bar',
+          x: x,
+          y: y,
+          width: barWidth,
+          height: Math.max(0, plotBottom - y),
+          rx: 4
+        }));
+        barLink.appendChild(createSvgElement('title', {}, barLabel));
+        group.appendChild(barLink);
+        group.appendChild(createSvgElement('text', {
+          class: 'monthly-reading-chart__value monthly-reading-chart__bar-value ' + item.labelClass,
+          x: center,
+          y: y - 10,
+          'text-anchor': 'middle'
+        }, item.total));
+        yearlySvg.appendChild(group);
+      });
+    }
+
     var scheduledFrame;
     function scheduleRender() {
       cancelAnimationFrame(scheduledFrame);
       scheduledFrame = requestAnimationFrame(function () {
         renderLineChart();
         renderCumulativeChart();
+        renderYearlyChart();
       });
     }
 
@@ -616,11 +753,13 @@ permalink: /stats
       var observer = new ResizeObserver(scheduleRender);
       observer.observe(svg.parentElement);
       observer.observe(cumulativeSvg.parentElement);
+      observer.observe(yearlySvg.parentElement);
     } else {
       window.addEventListener('resize', scheduleRender);
     }
 
     renderLineChart();
     renderCumulativeChart();
+    renderYearlyChart();
   })();
 </script>

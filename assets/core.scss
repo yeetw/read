@@ -333,8 +333,16 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
 
 // Monthly reading chart
 .monthly-reading-chart {
+  --stats-2021-line: #cbd8df;
+  --stats-2022-line: #d8d2df;
+  --stats-2023-line: #d7dece;
+  --stats-2024-line: #dfd7c7;
   --stats-2025-line: #e9d3c8;
   --stats-2026-line: #d4e6db;
+  --stats-2021-label: #536b78;
+  --stats-2022-label: #675f73;
+  --stats-2023-label: #5f7059;
+  --stats-2024-label: #70634e;
   --stats-2025-label: #6b4e34;
   --stats-2026-label: #2a9193;
   width: 100%;
@@ -342,12 +350,14 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
   font-family: 'Noto Sans TC', sans-serif;
 }
 
-#cumulative-reading-title {
+#cumulative-reading-title,
+#yearly-reading-title {
   margin-top: 44px;
 }
 
 #monthly-reading-title,
-#cumulative-reading-title {
+#cumulative-reading-title,
+#yearly-reading-title {
   text-align: center;
 }
 
@@ -387,7 +397,8 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
 }
 
 #monthly-reading-chart,
-#cumulative-reading-chart {
+#cumulative-reading-chart,
+#yearly-reading-chart {
   display: block;
   width: 100%;
   overflow: visible;
@@ -400,6 +411,7 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
 
 .monthly-reading-chart__grid text,
 .monthly-reading-chart__months text,
+.yearly-reading-chart__years text,
 .monthly-reading-chart__axis-title {
   fill: #777;
   font-size: 12px;
@@ -479,6 +491,22 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
   pointer-events: none;
 }
 
+.monthly-reading-chart__series.series-2021 {
+  color: var(--stats-2021-line);
+}
+
+.monthly-reading-chart__series.series-2022 {
+  color: var(--stats-2022-line);
+}
+
+.monthly-reading-chart__series.series-2023 {
+  color: var(--stats-2023-line);
+}
+
+.monthly-reading-chart__series.series-2024 {
+  color: var(--stats-2024-line);
+}
+
 .monthly-reading-chart__series.series-2025 {
   color: var(--stats-2025-line);
 }
@@ -494,6 +522,22 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
   stroke: #fff;
   stroke-width: 3px;
   stroke-linejoin: round;
+}
+
+.monthly-reading-chart__value.label-2021 {
+  fill: var(--stats-2021-label);
+}
+
+.monthly-reading-chart__value.label-2022 {
+  fill: var(--stats-2022-label);
+}
+
+.monthly-reading-chart__value.label-2023 {
+  fill: var(--stats-2023-label);
+}
+
+.monthly-reading-chart__value.label-2024 {
+  fill: var(--stats-2024-label);
 }
 
 .monthly-reading-chart__value.label-2025 {
@@ -519,6 +563,7 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
 @media (max-width: 480px) {
   .monthly-reading-chart__grid text,
   .monthly-reading-chart__months text,
+  .yearly-reading-chart__years text,
   .monthly-reading-chart__axis-title,
   .monthly-reading-chart__value {
     font-size: 11px;
