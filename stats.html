@@ -145,19 +145,15 @@ permalink: /stats
   })();
 </script>
 
-<h2 id="monthly-reading-title">每月閱讀本數</h2>
+<h2 id="yearly-reading-title">每年總閱讀量</h2>
 
-<div class="monthly-reading-chart">
-  <div class="monthly-reading-chart__legend" aria-label="年份圖例">
-    <span><i class="monthly-reading-chart__swatch monthly-reading-chart__swatch--2025"></i>2025</span>
-    <span><i class="monthly-reading-chart__swatch monthly-reading-chart__swatch--2026"></i>2026</span>
-  </div>
+<div class="monthly-reading-chart yearly-reading-chart">
   <svg
-    id="monthly-reading-chart"
+    id="yearly-reading-chart"
     role="img"
-    aria-labelledby="monthly-reading-title monthly-reading-description">
+    aria-labelledby="yearly-reading-title yearly-reading-description">
   </svg>
-  <p id="monthly-reading-description" class="monthly-reading-chart__description"></p>
+  <p id="yearly-reading-description" class="monthly-reading-chart__description"></p>
 </div>
 
 <h2 id="cumulative-reading-title">每月累積本數</h2>
@@ -175,15 +171,19 @@ permalink: /stats
   <p id="cumulative-reading-description" class="monthly-reading-chart__description"></p>
 </div>
 
-<h2 id="yearly-reading-title">每年總閱讀量</h2>
+<h2 id="monthly-reading-title">每月閱讀本數</h2>
 
-<div class="monthly-reading-chart yearly-reading-chart">
+<div class="monthly-reading-chart">
+  <div class="monthly-reading-chart__legend" aria-label="年份圖例">
+    <span><i class="monthly-reading-chart__swatch monthly-reading-chart__swatch--2025"></i>2025</span>
+    <span><i class="monthly-reading-chart__swatch monthly-reading-chart__swatch--2026"></i>2026</span>
+  </div>
   <svg
-    id="yearly-reading-chart"
+    id="monthly-reading-chart"
     role="img"
-    aria-labelledby="yearly-reading-title yearly-reading-description">
+    aria-labelledby="monthly-reading-title monthly-reading-description">
   </svg>
-  <p id="yearly-reading-description" class="monthly-reading-chart__description"></p>
+  <p id="monthly-reading-description" class="monthly-reading-chart__description"></p>
 </div>
 
 {% assign stats_years = "2021,2022,2023,2024,2025,2026" | split: "," %}
