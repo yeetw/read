@@ -356,10 +356,7 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
   text-align: center;
 }
 
-#monthly-reading-title {
-  margin-top: 32px;
-}
-
+#monthly-reading-title,
 #cumulative-reading-title,
 #yearly-reading-title {
   // Account for the SVG's bottom padding so the visible section gaps match.
