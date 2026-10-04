@@ -21,8 +21,8 @@
   country: 臺灣
   date: 2026/10/04
   isbn: 9786263967403
-  pending: true
-  comment: 「高度焦慮的對立面並不是高度快樂，而是高度的平靜」
+  finished: false
+  comment: 寫的面向很廣，包含一些知道但是做不到的事，「高度焦慮的對立面並不是高度快樂，而是高度的平靜」
 
 - name: 鋼筆醫生
   author: 蓮見恭子
