@@ -461,7 +461,9 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
 }
 
 .monthly-reading-chart__point-link:hover .monthly-reading-chart__point,
+.monthly-reading-chart__point-link:active .monthly-reading-chart__point,
 .monthly-reading-chart__point-link:focus-visible .monthly-reading-chart__point {
+  fill: #8b8b8b;
   r: 8px;
   stroke-width: 3;
 }
@@ -484,8 +486,10 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
   cursor: pointer;
 }
 
-.monthly-reading-chart__bar-link:hover .monthly-reading-chart__bar {
-  fill-opacity: 0.72;
+.monthly-reading-chart__bar-link:hover .monthly-reading-chart__bar,
+.monthly-reading-chart__bar-link:active .monthly-reading-chart__bar,
+.monthly-reading-chart__bar-link:focus-visible .monthly-reading-chart__bar {
+  fill: #8b8b8b;
 }
 
 .monthly-reading-chart__bar-link:focus-visible {
