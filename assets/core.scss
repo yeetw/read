@@ -352,18 +352,21 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
 
 #monthly-reading-title,
 #cumulative-reading-title,
-#yearly-reading-title {
+#yearly-reading-title,
+#country-yearly-title {
   text-align: center;
 }
 
 #monthly-reading-title,
 #cumulative-reading-title,
-#yearly-reading-title {
+#yearly-reading-title,
+#country-yearly-title {
   // Account for the SVG's bottom padding so the visible section gaps match.
   margin-top: 8px;
 }
 
-#yearly-reading-title {
+#yearly-reading-title,
+#country-yearly-title {
   margin-bottom: 0;
 }
 
@@ -408,7 +411,8 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
 
 #monthly-reading-chart,
 #cumulative-reading-chart,
-#yearly-reading-chart {
+#yearly-reading-chart,
+#country-yearly-chart {
   display: block;
   width: 100%;
   overflow: visible;
@@ -943,3 +947,12 @@ li > a.no-isbn {
     margin-bottom: 4px;
   }
 }
+
+.country-yearly-chart__taiwan { background: var(--stats-2021-line); }
+.country-yearly-chart__japan { background: var(--stats-2022-line); }
+.country-yearly-chart .monthly-reading-chart__swatch {
+  width: 14px;
+  height: 12px;
+  transform: translateY(2px);
+}
+.country-yearly-chart__value { stroke: none; }
