@@ -285,6 +285,10 @@ permalink: /stats
       return '/?q=' + encodeURIComponent('year:' + year);
     }
 
+    function countrySearchUrl(year, category) {
+      return '/?q=' + encodeURIComponent('year:' + year + ' country:' + ['臺灣', '日本', '其他'][category]);
+    }
+
     function monthlyCounts(year) {
       var counts = new Array(12).fill(0);
       var lastMonth = 0;
@@ -768,14 +772,20 @@ permalink: /stats
             stroke: cumulative === 0 || isTop ? 'none' : '#fff', 'stroke-width': 3
           });
           bar.appendChild(createSvgElement('title', {}, item.year + ' 年 ' + names[category] + '：' + percent.toFixed(1) + '%（' + count + ' 本）'));
-          group.appendChild(bar);
+          var barLink = createSvgElement('a', {
+            class: 'country-yearly-chart__link',
+            href: countrySearchUrl(item.year, category),
+            'aria-label': '查看 ' + item.year + ' 年' + names[category] + '作者的 ' + count + ' 本書'
+          });
+          barLink.appendChild(bar);
+          group.appendChild(barLink);
           if (cumulative === 0 && count > 0) group.appendChild(createSvgElement('path', {
             d: 'M ' + x + ' ' + plotBottom + ' V ' + top + ' H ' + (x + barWidth) + ' V ' + plotBottom,
-            fill: 'none', stroke: '#fff', 'stroke-width': 3
+            fill: 'none', stroke: '#fff', 'stroke-width': 3, 'pointer-events': 'none'
           }));
           if (isTop && count > 0) group.appendChild(createSvgElement('path', {
             d: 'M ' + x + ' ' + top + ' V ' + (top + segmentHeight) + ' H ' + (x + barWidth) + ' V ' + top,
-            fill: 'none', stroke: '#fff', 'stroke-width': 3
+            fill: 'none', stroke: '#fff', 'stroke-width': 3, 'pointer-events': 'none'
           }));
           if (count > 0) group.appendChild(createSvgElement('text', {
             class: 'monthly-reading-chart__value country-yearly-chart__value label-' + colors[category],
@@ -859,7 +869,7 @@ permalink: /stats
         y: 15,
         transform: 'rotate(-90)',
         'text-anchor': 'middle'
-      }, '總閱讀本數'));
+      }, '閱讀本數'));
 
       countrySeries.forEach(function (item, index) {
         var center = groupCenter(index);
@@ -878,10 +888,16 @@ permalink: /stats
             stroke: cumulative === 0 ? 'none' : '#fff', 'stroke-width': 3
           });
           bar.appendChild(createSvgElement('title', {}, item.year + ' 年 ' + names[category] + '：' + count + ' 本（' + (item.total ? count / item.total * 100 : 0).toFixed(1) + '%）'));
-          group.appendChild(bar);
+          var barLink = createSvgElement('a', {
+            class: 'country-yearly-chart__link',
+            href: countrySearchUrl(item.year, category),
+            'aria-label': '查看 ' + item.year + ' 年' + names[category] + '作者的 ' + count + ' 本書'
+          });
+          barLink.appendChild(bar);
+          group.appendChild(barLink);
           if (cumulative === 0 && count > 0) group.appendChild(createSvgElement('path', {
             d: 'M ' + x + ' ' + plotBottom + ' V ' + top + ' H ' + (x + barWidth) + ' V ' + plotBottom,
-            fill: 'none', stroke: '#fff', 'stroke-width': 3
+            fill: 'none', stroke: '#fff', 'stroke-width': 3, 'pointer-events': 'none'
           }));
           if (count > 0) group.appendChild(createSvgElement('text', {
             class: 'monthly-reading-chart__value country-yearly-chart__value label-' + colors[category],

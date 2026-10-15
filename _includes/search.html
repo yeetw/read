@@ -74,6 +74,9 @@
         if (term.field === 'all' && isStarToken(term.value)) {
           return isStarred;
         }
+        if (term.field === 'country' && term.value === '其他') {
+          return country.trim() !== '' && country.trim() !== '臺灣' && country.trim() !== '日本';
+        }
         if (term.field !== 'all') {
           return fieldValues[term.field].indexOf(term.value) !== -1;
         }

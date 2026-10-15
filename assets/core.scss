@@ -956,3 +956,8 @@ li > a.no-isbn {
   transform: translateY(2px);
 }
 .country-yearly-chart__value { stroke: none; }
+
+.country-yearly-chart__link { cursor: pointer; }
+.country-yearly-chart__link:hover rect,
+.country-yearly-chart__link:focus-visible rect { fill-opacity: 0.75; }
+.country-yearly-chart__value { pointer-events: none; }
