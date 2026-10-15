@@ -24,6 +24,14 @@
   pending: true
   comment: 譯者是丁世佳
 
+- name: 精神健康中醫講堂
+  author: 李辛
+  country: 中國
+  date: 2026/10/15
+  isbn: 9786267604632
+  finished: false
+  comment: 中國關注精神健康的中醫師，「練習『對身體的感受』是找回到中心的基石，在此基礎上，再慢慢練習對情緒、想法的覺察。」
+
 - name: 迷宮中的盲眼蚯蚓
   author:  威拉蓬．尼迪巴帕
   country: 泰國
