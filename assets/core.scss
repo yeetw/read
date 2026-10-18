@@ -178,15 +178,6 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
   border-bottom: 0;
 }
 
-.author-country-stats__table tbody tr {
-  transition: background-color 120ms ease;
-}
-
-.author-country-stats__table tbody tr:hover,
-.author-country-stats__table tbody tr:focus-within {
-  background: #fbfcfa;
-}
-
 .author-country-stats__row {
   cursor: pointer;
 }
@@ -225,12 +216,20 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
   text-decoration: none;
 }
 
-.author-country-stats__link:focus-visible {
-  outline: none;
+.author-country-stats__link {
+  display: inline-block;
+  border-radius: 4px;
+  transition: background-color 120ms ease, color 120ms ease;
 }
 
-.author-country-stats__table tbody tr:focus-within {
-  box-shadow: inset 0 0 0 2px var(--country-accent);
+.author-country-stats__link:hover {
+  background: #edf3ef;
+  color: #47645a;
+}
+
+.author-country-stats__link:focus-visible {
+  outline: 2px solid var(--country-accent);
+  outline-offset: 4px;
 }
 
 .author-country-stats__value {
@@ -977,25 +976,26 @@ li > a.no-isbn {
 
 #cumulative-reading-title { margin-top: 10px; }
 
-#country-star-title { text-align: center; margin-top: 8px; margin-bottom: 6px; }
-.country-star-chart { margin-bottom: 20px; }
-.country-star-chart__note { text-align: center; color: #888; font-size: 12px; margin: 0 0 12px; }
-.country-star-chart__row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 4px 12px;
-  padding: 9px 0;
-  color: #536b78;
-  text-decoration: none;
-  border: 0;
+
+.author-country-stats__columns,
+.author-country-stats__metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.author-country-stats__columns small { display: block; margin-top: 4px; font-size: 10px; letter-spacing: 0; font-weight: 400; }
+.author-country-stats__table thead th:nth-child(2) { width: 70px; }
+.author-country-stats__metric { display: block; border: 0; text-decoration: none; border-radius: 4px; transition: background-color 120ms ease; }
+.author-country-stats__metric--starred .author-country-stats__bar > span { background: #cbd8df; }
+.author-country-stats__metric--starred .author-country-stats__value { color: #536b78; }
+.author-country-stats__metric:hover,
+.author-country-stats__metric:focus-visible { background: #edf3ef; }
+.author-country-stats__metric--starred:hover,
+.author-country-stats__metric--starred:focus-visible { background: #eef3f6; }
+.author-country-stats__metric:focus-visible { outline: 2px solid #536b78; outline-offset: 4px; }
+.author-country-stats__mobile-label { display: none; }
+.author-country-stats__row { cursor: default; }
+@media (max-width: 600px) {
+  .author-country-stats__metrics { grid-template-columns: 1fr; gap: 12px; }
+  .author-country-stats__table thead th:nth-child(2) { width: 60px; }
+  .author-country-stats__columns { display: block; font-size: 0; letter-spacing: 0; }
+  .author-country-stats__columns > span { display: none; }
+  .author-country-stats__columns::after { content: '閱讀與特別好看'; font-size: 12px; }
+  .author-country-stats__mobile-label { display: block; color: #888; font-size: 10px; margin-bottom: 3px; }
 }
-.country-star-chart__country { font-size: 14px; }
-.country-star-chart__value { font-size: 14px; font-weight: 600; text-align: right; }
-.country-star-chart__value small { display: inline-block; margin-left: 10px; color: #777; font-size: 12px; font-weight: 400; }
-.country-star-chart__track { grid-column: 1 / -1; height: 10px; border-radius: 3px; background: #f1f3f4; overflow: hidden; }
-.country-star-chart__track > span { display: block; height: 100%; background: var(--stats-2021-line); }
-.country-star-chart__row:hover .country-star-chart__track > span,
-.country-star-chart__row:focus-visible .country-star-chart__track > span { background: #a8bfc9; }
-.country-star-chart__row:focus-visible { outline: 2px solid #536b78; outline-offset: 3px; }
-.country-star-chart__more { margin-top: 10px; }
-.country-star-chart__more summary { cursor: pointer; font-size: 12px; color: #777; }

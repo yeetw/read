@@ -8,7 +8,7 @@ permalink: /stats
   <div class="author-country-stats__heading">
     <div>
       <h2 id="author-country-title">作者國家</h2>
-      <p>2021 年至今・已讀書籍作者國家分布</p>
+      <p>2021 年至今・已讀書籍作者國家分布與特別好看比例</p>
     </div>
     <div class="author-country-stats__summary" aria-live="polite">
       <span><strong id="author-country-book-total">—</strong><small>已讀書籍</small></span>
@@ -18,12 +18,12 @@ permalink: /stats
 
   <div class="author-country-stats__table-wrap">
     <table class="author-country-stats__table">
-      <caption>作者國家閱讀本數與占比，依本數由大到小排序</caption>
+      <caption>作者國家閱讀本數與特別好看比例，依已讀本數由大到小排序</caption>
       <thead>
         <tr>
           <th scope="col">排名</th>
           <th scope="col">國家</th>
-          <th scope="col">閱讀本數・占比</th>
+          <th scope="col"><span class="author-country-stats__columns"><span>閱讀本數・占比<small>占全部已讀書籍</small></span><span>特別好看・占比<small>占該國已讀書籍</small></span></span></th>
         </tr>
       </thead>
       <tbody id="author-country-table-body">
@@ -49,7 +49,7 @@ permalink: /stats
         {% if book.country and book.country != false %}
           {% assign country_name = book.country | strip %}
           {% unless country_name == "" %}
-            {% unless first_country %},{% endunless %}{{ country_name | jsonify }}
+            {% unless first_country %},{% endunless %}{"country": {{ country_name | jsonify }}, "starred": {% if book.star == true %}true{% else %}false{% endif %}}
             {% assign first_country = false %}
           {% endunless %}
         {% endif %}
@@ -69,13 +69,15 @@ permalink: /stats
     if (!dataElement || !tableBody || !bookTotalElement || !countryTotalElement) return;
 
     var countries = JSON.parse(dataElement.textContent);
-    var counts = countries.reduce(function (result, country) {
-      result[country] = (result[country] || 0) + 1;
+    var counts = countries.reduce(function (result, book) {
+      if (!result[book.country]) result[book.country] = { count: 0, starred: 0 };
+      result[book.country].count += 1;
+      if (book.starred) result[book.country].starred += 1;
       return result;
     }, {});
     var countryCollator = new Intl.Collator('zh-Hant');
     var rows = Object.keys(counts).map(function (country) {
-      return { country: country, count: counts[country] };
+      return { country: country, count: counts[country].count, starred: counts[country].starred };
     }).sort(function (left, right) {
       return right.count - left.count || countryCollator.compare(left.country, right.country);
     });
@@ -87,7 +89,6 @@ permalink: /stats
 
     rows.forEach(function (item, index) {
       var percentage = total === 0 ? 0 : item.count / total * 100;
-      var percentageText = percentage.toFixed(1) + '%';
       var row = document.createElement('tr');
       row.className = 'author-country-stats__row';
 
@@ -108,25 +109,36 @@ permalink: /stats
       countryLink.setAttribute('aria-label', '篩選作者國家：' + item.country);
       countryCell.appendChild(countryLink);
 
-      row.addEventListener('click', function (event) {
-        if (event.target.closest('a')) return;
-        window.location.assign(countryLink.href);
-      });
 
       var distributionCell = document.createElement('td');
-      var value = document.createElement('span');
-      value.className = 'author-country-stats__value';
-      value.textContent = item.count.toLocaleString('zh-TW') + ' 本（' + percentageText + '）';
-
-      var bar = document.createElement('span');
-      bar.className = 'author-country-stats__bar';
-      bar.setAttribute('aria-hidden', 'true');
-      var barFill = document.createElement('span');
-      barFill.style.width = percentage + '%';
-      bar.appendChild(barFill);
-
-      distributionCell.appendChild(value);
-      distributionCell.appendChild(bar);
+      var metrics = document.createElement('div');
+      metrics.className = 'author-country-stats__metrics';
+      function addMetric(label, count, percent, href, starred) {
+        var link = document.createElement('a');
+        link.className = 'author-country-stats__metric' + (starred ? ' author-country-stats__metric--starred' : '');
+        link.href = href;
+        link.setAttribute('aria-label', item.country + '，' + label + ' ' + count + ' 本，' + percent.toFixed(1) + '%，查看書單');
+        var heading = document.createElement('small');
+        heading.className = 'author-country-stats__mobile-label';
+        heading.textContent = label;
+        var value = document.createElement('span');
+        value.className = 'author-country-stats__value';
+        value.textContent = count.toLocaleString('zh-TW') + ' 本（' + percent.toFixed(1) + '%）';
+        var bar = document.createElement('span');
+        bar.className = 'author-country-stats__bar';
+        bar.setAttribute('aria-hidden', 'true');
+        var fill = document.createElement('span');
+        fill.style.width = percent + '%';
+        fill.style.minWidth = count ? '2px' : '0';
+        bar.appendChild(fill);
+        link.appendChild(heading);
+        link.appendChild(value);
+        link.appendChild(bar);
+        metrics.appendChild(link);
+      }
+      addMetric('閱讀本數・占全部已讀', item.count, percentage, countryLink.href, false);
+      addMetric('特別好看・占該國已讀', item.starred, item.starred / item.count * 100, '/?q=' + encodeURIComponent('country:' + item.country + ' star'), true);
+      distributionCell.appendChild(metrics);
       row.appendChild(rankCell);
       row.appendChild(countryCell);
       row.appendChild(distributionCell);
@@ -181,83 +193,6 @@ permalink: /stats
   "{{ year }}": [null{% for book in books %}{% if book.country and book.country != false %}{% assign country = book.country | strip %}{% unless country == "" %},{{ country | jsonify }}{% endunless %}{% endif %}{% endfor %}]{% unless forloop.last %},{% endunless %}
 {% endfor %}
 }
-</script>
-
-<h2 id="country-star-title">作者國家・特別好看的書占比</h2>
-<div class="monthly-reading-chart country-star-chart">
-  <p class="country-star-chart__note">特別好看的書／已讀完書籍・依已讀本數排序</p>
-  <div id="country-star-bars"></div>
-  <details class="country-star-chart__more">
-    <summary>已讀未滿 5 本的國家</summary>
-    <div id="country-star-small-bars"></div>
-  </details>
-</div>
-<script id="country-star-data" type="application/json">
-[
-{% assign first_country_star = true %}
-{% assign country_star_years = site.data | sort %}
-{% for year_data in country_star_years %}
-  {% assign year = year_data[0] | append: "" %}
-  {% assign year_number = year | plus: 0 %}
-  {% assign normalized_year = year_number | append: "" %}
-  {% if year_number >= 1000 and year_number <= 9999 and year == normalized_year %}
-    {% assign completed = year_data[1] | where_exp: "book", "book.pending != true" | where_exp: "book", "book.finished != false" %}
-    {% for book in completed %}
-      {% if book.country and book.country != false %}
-        {% assign country = book.country | strip %}
-        {% unless country == "" %}
-          {% unless first_country_star %},{% endunless %}
-          {"country": {{ country | jsonify }}, "starred": {% if book.star == true %}true{% else %}false{% endif %}}
-          {% assign first_country_star = false %}
-        {% endunless %}
-      {% endif %}
-    {% endfor %}
-  {% endif %}
-{% endfor %}
-]
-</script>
-<script>
-(function () {
-  var counts = new Map();
-  JSON.parse(document.getElementById('country-star-data').textContent).forEach(function (book) {
-    if (!counts.has(book.country)) counts.set(book.country, {country: book.country, total: 0, starred: 0});
-    var item = counts.get(book.country);
-    item.total += 1;
-    if (book.starred) item.starred += 1;
-  });
-  var collator = new Intl.Collator('zh-Hant');
-  var rows = Array.from(counts.values()).sort(function (a, b) {
-    return b.total - a.total || collator.compare(a.country, b.country);
-  });
-  rows.forEach(function (item) {
-    var percentage = item.starred / item.total * 100;
-    var link = document.createElement('a');
-    link.className = 'country-star-chart__row';
-    link.href = '/?q=' + encodeURIComponent('country:' + item.country + ' star');
-    link.setAttribute('aria-label', item.country + '：特別好看 ' + item.starred + ' 本／已讀完 ' + item.total + ' 本，' + percentage.toFixed(1) + '%，查看書單');
-    var country = document.createElement('span');
-    country.className = 'country-star-chart__country';
-    country.textContent = item.country;
-    var value = document.createElement('span');
-    value.className = 'country-star-chart__value';
-    value.textContent = percentage.toFixed(1) + '%';
-    var count = document.createElement('small');
-    count.textContent = item.starred + ' / ' + item.total + ' 本';
-    value.appendChild(count);
-    var track = document.createElement('span');
-    track.className = 'country-star-chart__track';
-    track.setAttribute('aria-hidden', 'true');
-    var fill = document.createElement('span');
-    fill.style.width = percentage + '%';
-    track.appendChild(fill);
-    link.appendChild(country);
-    link.appendChild(value);
-    link.appendChild(track);
-    document.getElementById(item.total >= 5 ? 'country-star-bars' : 'country-star-small-bars').appendChild(link);
-  });
-  if (!rows.length) document.getElementById('country-star-bars').textContent = '目前沒有可統計的資料。';
-  document.querySelector('.country-star-chart__more').hidden = !rows.some(function (item) { return item.total < 5; });
-})();
 </script>
 
 <h2 id="star-yearly-title">每年特別好看的書・占比</h2>
