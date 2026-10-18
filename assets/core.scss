@@ -961,3 +961,18 @@ li > a.no-isbn {
 .country-yearly-chart__link:hover rect,
 .country-yearly-chart__link:focus-visible rect { fill-opacity: 0.75; }
 .country-yearly-chart__value { pointer-events: none; }
+
+#star-yearly-title { text-align: center; margin-top: 8px; margin-bottom: 6px; }
+.star-yearly-chart { margin-top: 0; }
+#star-yearly-chart { display: block; width: 100%; overflow: visible; }
+.star-yearly-chart__count { fill: #777; font-size: 10px; }
+
+.star-yearly-chart .monthly-reading-chart__value,
+.star-yearly-chart__count {
+  paint-order: stroke fill;
+  stroke: #fff;
+  stroke-width: 5px;
+  stroke-linejoin: round;
+}
+
+#cumulative-reading-title { margin-top: 10px; }

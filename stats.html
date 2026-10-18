@@ -183,6 +183,93 @@ permalink: /stats
 }
 </script>
 
+<h2 id="star-yearly-title">每年特別好看的書・占比</h2>
+
+<div class="monthly-reading-chart star-yearly-chart">
+  <svg id="star-yearly-chart" role="img" aria-labelledby="star-yearly-title star-yearly-description"></svg>
+  <p id="star-yearly-description" class="monthly-reading-chart__description"></p>
+</div>
+
+<script id="star-yearly-data" type="application/json">
+[
+{% assign star_years = site.data | sort %}
+{% assign first_star_year = true %}
+{% for year_data in star_years %}
+  {% assign year = year_data[0] | append: "" %}
+  {% assign year_number = year | plus: 0 %}
+  {% assign normalized_year = year_number | append: "" %}
+  {% if year_number >= 1000 and year_number <= 9999 and year == normalized_year %}
+    {% assign completed_books = year_data[1] | where_exp: "book", "book.pending != true" | where_exp: "book", "book.finished != false" %}
+    {% assign starred_books = completed_books | where: "star", true %}
+    {% unless first_star_year %},{% endunless %}
+    {"year": {{ year | jsonify }}, "total": {{ completed_books.size }}, "starred": {{ starred_books.size }}}
+    {% assign first_star_year = false %}
+  {% endif %}
+{% endfor %}
+]
+</script>
+
+<script>
+(function () {
+  var svg = document.getElementById('star-yearly-chart');
+  var description = document.getElementById('star-yearly-description');
+  var data = JSON.parse(document.getElementById('star-yearly-data').textContent);
+  var currentYear = new Date().getFullYear();
+  function percentage(item) { return (item.starred / item.total * 100).toFixed(1) + '%'; }
+  function add(name, attrs, text, parent) {
+    var element = document.createElementNS('http://www.w3.org/2000/svg', name);
+    Object.keys(attrs || {}).forEach(function (key) { element.setAttribute(key, attrs[key]); });
+    if (text !== undefined) element.textContent = text;
+    (parent || svg).appendChild(element);
+    return element;
+  }
+  description.textContent = data.map(function (item) {
+    return item.year + ' 年：' + item.starred + ' / ' + item.total + ' 本（' + (item.total ? percentage(item) : '無資料') + '）';
+  }).join('；') + '。以已讀完書籍為分母，排除待讀及未讀完的書籍；當年度截至目前。點選資料點可查看該年的特別好看書單。';
+  function render() {
+    var width = Math.max(svg.parentElement.clientWidth, 320);
+    var left = 46, right = width - 38, top = 10, bottom = 242;
+    svg.replaceChildren();
+    svg.setAttribute('viewBox', '0 0 ' + width + ' 291');
+    var grid = add('g', {class: 'monthly-reading-chart__grid'});
+    [10, 30, 50, 70].forEach(function (tick) {
+      var tickY = bottom - tick / 70 * (bottom - top);
+      add('line', {x1: left, x2: right, y1: tickY, y2: tickY}, undefined, grid);
+      add('text', {x: left - 8, y: tickY + 4, 'text-anchor': 'end'}, tick + '%', grid);
+    });
+    function x(index) { return data.length <= 1 ? (left + right) / 2 : left + index * (right - left) / (data.length - 1); }
+    function y(item) { return bottom - (item.starred / item.total * 100) / 70 * (bottom - top); }
+    var path = '', connected = false;
+    data.forEach(function (item, index) {
+      if (!item.total) { connected = false; return; }
+      path += (connected ? ' L ' : ' M ') + x(index) + ' ' + y(item);
+      connected = true;
+    });
+    add('path', {d: path, class: 'monthly-reading-chart__line', style: 'color: var(--stats-2021-line)'});
+    var years = add('g', {class: 'yearly-reading-chart__years'});
+    data.forEach(function (item, index) {
+      var center = x(index);
+      add('text', {x: center, y: bottom + 25, 'text-anchor': 'middle'}, item.year, years);
+      if (Number(item.year) === currentYear) add('text', {x: center, y: bottom + 44, 'text-anchor': 'middle'}, '截至目前', years);
+      if (!item.total) {
+        add('text', {x: center, y: bottom - 12, 'text-anchor': 'middle'}, '無資料', years);
+        return;
+      }
+      var label = item.year + ' 年：' + percentage(item) + '，' + item.starred + ' / ' + item.total + ' 本';
+      var link = add('a', {href: '/?q=' + encodeURIComponent('year:' + item.year + ' star'), class: 'monthly-reading-chart__point-link', 'aria-label': label + '，查看書單', style: 'color: var(--stats-2021-line)'});
+      add('title', {}, label, link);
+      add('circle', {cx: center, cy: y(item), r: 18, class: 'monthly-reading-chart__point-hit-area'}, undefined, link);
+      add('circle', {cx: center, cy: y(item), r: 5, class: 'monthly-reading-chart__point'}, undefined, link);
+      add('text', {x: center, y: y(item) - 25, 'text-anchor': 'middle', class: 'monthly-reading-chart__value label-2021'}, percentage(item), link);
+      add('text', {x: center, y: y(item) - 10, 'text-anchor': 'middle', class: 'star-yearly-chart__count'}, item.starred + ' / ' + item.total + ' 本', link);
+    });
+  }
+  if ('ResizeObserver' in window) new ResizeObserver(render).observe(svg.parentElement);
+  else window.addEventListener('resize', render);
+  render();
+})();
+</script>
+
 <h2 id="cumulative-reading-title">每月累積本數</h2>
 
 <div class="monthly-reading-chart monthly-reading-chart--cumulative">
