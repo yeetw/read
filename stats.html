@@ -145,6 +145,22 @@ permalink: /stats
   })();
 </script>
 
+<h2 id="yearly-reading-title">作者國家・每年閱讀占比</h2>
+
+<div class="monthly-reading-chart yearly-reading-chart country-yearly-chart">
+  <div class="monthly-reading-chart__legend" aria-label="作者國家圖例">
+    <span><i class="monthly-reading-chart__swatch country-yearly-chart__taiwan"></i>臺灣</span>
+    <span><i class="monthly-reading-chart__swatch country-yearly-chart__japan"></i>日本</span>
+    <span><i class="monthly-reading-chart__swatch monthly-reading-chart__swatch--2025"></i>其他</span>
+  </div>
+  <svg
+    id="yearly-reading-chart"
+    role="img"
+    aria-labelledby="yearly-reading-title yearly-reading-description">
+  </svg>
+  <p id="yearly-reading-description" class="monthly-reading-chart__description"></p>
+</div>
+
 <h2 id="country-yearly-title">作者國家・每年閱讀本數</h2>
 
 <div class="monthly-reading-chart yearly-reading-chart country-yearly-chart">
@@ -166,22 +182,6 @@ permalink: /stats
 {% endfor %}
 }
 </script>
-
-<h2 id="yearly-reading-title">作者國家・每年閱讀占比</h2>
-
-<div class="monthly-reading-chart yearly-reading-chart country-yearly-chart">
-  <div class="monthly-reading-chart__legend" aria-label="作者國家圖例">
-    <span><i class="monthly-reading-chart__swatch country-yearly-chart__taiwan"></i>臺灣</span>
-    <span><i class="monthly-reading-chart__swatch country-yearly-chart__japan"></i>日本</span>
-    <span><i class="monthly-reading-chart__swatch monthly-reading-chart__swatch--2025"></i>其他</span>
-  </div>
-  <svg
-    id="yearly-reading-chart"
-    role="img"
-    aria-labelledby="yearly-reading-title yearly-reading-description">
-  </svg>
-  <p id="yearly-reading-description" class="monthly-reading-chart__description"></p>
-</div>
 
 <h2 id="cumulative-reading-title">每月累積本數</h2>
 
