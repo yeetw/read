@@ -976,3 +976,26 @@ li > a.no-isbn {
 }
 
 #cumulative-reading-title { margin-top: 10px; }
+
+#country-star-title { text-align: center; margin-top: 8px; margin-bottom: 6px; }
+.country-star-chart { margin-bottom: 20px; }
+.country-star-chart__note { text-align: center; color: #888; font-size: 12px; margin: 0 0 12px; }
+.country-star-chart__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px 12px;
+  padding: 9px 0;
+  color: #536b78;
+  text-decoration: none;
+  border: 0;
+}
+.country-star-chart__country { font-size: 14px; }
+.country-star-chart__value { font-size: 14px; font-weight: 600; text-align: right; }
+.country-star-chart__value small { display: inline-block; margin-left: 10px; color: #777; font-size: 12px; font-weight: 400; }
+.country-star-chart__track { grid-column: 1 / -1; height: 10px; border-radius: 3px; background: #f1f3f4; overflow: hidden; }
+.country-star-chart__track > span { display: block; height: 100%; background: var(--stats-2021-line); }
+.country-star-chart__row:hover .country-star-chart__track > span,
+.country-star-chart__row:focus-visible .country-star-chart__track > span { background: #a8bfc9; }
+.country-star-chart__row:focus-visible { outline: 2px solid #536b78; outline-offset: 3px; }
+.country-star-chart__more { margin-top: 10px; }
+.country-star-chart__more summary { cursor: pointer; font-size: 12px; color: #777; }
