@@ -47,6 +47,102 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
   margin-bottom: 0.25em;
 }
 
+// Unfinished books by country
+.unfinished-country-chart {
+  margin: 24px 0 6px;
+  padding: 20px;
+  border: 1px solid #e5e6e1;
+  border-radius: 14px;
+  background: #f5f4f8;
+  color: #5f625f;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.unfinished-country-chart + h2 {
+  margin-top: 6px;
+}
+
+.unfinished-country-chart__heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+}
+
+.unfinished-country-chart__heading h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.unfinished-country-chart__heading p,
+.unfinished-country-chart__note {
+  margin: 0;
+  color: #777b77;
+  font-size: 12px;
+}
+
+.unfinished-country-chart__note {
+  margin: 8px 0 18px;
+  line-height: 1.7;
+}
+
+.unfinished-country-chart__rows {
+  display: grid;
+  gap: 5px;
+}
+
+.unfinished-country-chart__row {
+  display: grid;
+  grid-template-columns: 4em minmax(0, 1fr) 3.5em;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 0;
+  border-radius: 3px;
+  padding: 3px 0;
+}
+
+.unfinished-country-chart__row:hover {
+  color: #635776;
+  text-decoration: none;
+}
+
+.unfinished-country-chart__row:hover .unfinished-country-chart__track > span {
+  background: #a49ab9;
+}
+
+.unfinished-country-chart__row:focus-visible {
+  outline: 2px solid #a49ab9;
+  outline-offset: 4px;
+}
+
+.unfinished-country-chart__track {
+  height: 14px;
+  border-radius: 3px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.unfinished-country-chart__track > span {
+  display: block;
+  height: 100%;
+  background: #b8b1c8;
+  border-radius: inherit;
+}
+
+.unfinished-country-chart__count {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 480px) {
+  .unfinished-country-chart { padding: 16px 12px; }
+  .unfinished-country-chart__row { gap: 8px; font-size: 13px; }
+}
+
 // Author country statistics
 .author-country-stats {
   --country-accent: #8fa8a0;
