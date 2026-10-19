@@ -24,6 +24,14 @@
   pending: true
   comment: 譯者是丁世佳
 
+- name: 人魚逃走了
+  author: 青山美智子
+  country: 日本
+  date: 2026/10/19
+  isbn: 9786264341271
+  finished: false
+  comment: 書封是田中達也的作品，「客觀地認識自己的優點和缺點並不容易。所以，別人告訴你的話，第一次先坦誠地接受。將別人眼中的自己，當作一個指標，稍微參考就好。」
+
 - name: 不一樣，真的沒關係：兒童職能治療師的在日早療觀察手記
   author: 林欣誼
   country: 臺灣
