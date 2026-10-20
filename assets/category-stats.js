@@ -3,7 +3,7 @@
   var data = JSON.parse(document.getElementById('category-heatmap-data').textContent);
   var years = Object.keys(data.years).sort(), level = 'major';
   var total = years.reduce(function (n, y) { return n + data.years[y].length; }, 0);
-  var colors = ['#d5e2dc','#d8d2e2','#e7d3de','#cbdbe5','#ecd3c9','#c9d8e0','#e1e5cd','#e8d8c9','#d8d2df','#eee3c9','#e0e3e0'];
+  var colors = ['#d5e2dc','#d8d2e2','#e7d3de','#cbdbe5','#ecd3c9','#c9d8e0','#e1e5cd','#f6e2b5','#d0d9e6','#eee3c9','#e0e3e0'];
   function el(tag, text, parent, cls) { var e = document.createElement(tag); if (text !== undefined) e.textContent = text; if (cls) e.className = cls; if (parent) parent.appendChild(e); return e; }
   function id(s) { return document.getElementById(s); }
   function code(value) { var s = String(value == null ? '' : value).trim(); return /^\d{3}(\.\d+)?(?:\/\d{3}(\.\d+)?)*$/.test(s) ? s : null; }
