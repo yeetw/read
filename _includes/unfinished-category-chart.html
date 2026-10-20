@@ -1,0 +1,77 @@
+{% assign chart_books = "" | split: "" %}
+{% assign chart_years = site.data | sort %}
+{% for year_data in chart_years %}
+  {% assign chart_year = year_data[0] | append: "" %}
+  {% assign chart_year_number = chart_year | plus: 0 %}
+  {% assign chart_normalized_year = chart_year_number | append: "" %}
+  {% if chart_year_number >= 1000 and chart_year_number <= 9999 and chart_year == chart_normalized_year %}
+    {% assign year_unfinished = year_data[1] | where_exp: "book", "book.finished == false" %}
+    {% assign chart_books = chart_books | concat: year_unfinished %}
+  {% endif %}
+{% endfor %}
+{% if chart_books.size > 0 %}
+<section class="unfinished-category-chart" aria-labelledby="unfinished-category-title">
+  <div class="unfinished-category-chart__heading">
+    <h2 id="unfinished-category-title">沒讀完的書，都有哪些類型？</h2>
+    <p id="unfinished-category-summary">{{ chart_books.size }} 本</p>
+  </div>
+  <p class="unfinished-category-chart__note">依圖書大分類統計，橫條長度代表沒讀完的本數。點選分類可查看書單。</p>
+  <div class="unfinished-category-chart__rows"></div>
+  <noscript>請啟用 JavaScript 以顯示大分類統計。</noscript>
+</section>
+<script id="unfinished-category-data" type="application/json">
+{"majors": {{ site.data.categories.major_classes | jsonify }}, "categories": [{% for book in chart_books %}{{ book.category | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]}
+</script>
+<script>
+(function () {
+  var data = JSON.parse(document.getElementById('unfinished-category-data').textContent);
+  var counts = {};
+  data.categories.forEach(function (value) {
+    var category = String(value == null ? '' : value).trim();
+    var key = /^\d{3}(\.\d+)?(?:\/\d{3}(\.\d+)?)*$/.test(category) ? category[0] + '00' : 'unknown';
+    counts[key] = (counts[key] || 0) + 1;
+  });
+  var keys = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a] || a.localeCompare(b); });
+  var maximum = counts[keys[0]];
+  document.getElementById('unfinished-category-summary').textContent = data.categories.length + ' 本・' + keys.length + ' 個分類';
+  var rows = document.querySelector('.unfinished-category-chart__rows');
+  keys.forEach(function (key) {
+    var label = key === 'unknown' ? '未分類' : data.majors[key];
+    var query = 'category:' + (key === 'unknown' ? key : key[0] + '*');
+    var link = document.createElement('a');
+    link.className = 'unfinished-category-chart__row';
+    link.href = '?q=' + encodeURIComponent(query);
+    link.dataset.filter = query;
+    link.setAttribute('aria-label', '篩選' + label + '沒讀完的書，共 ' + counts[key] + ' 本');
+    var name = document.createElement('span');
+    name.textContent = label;
+    var track = document.createElement('span');
+    track.className = 'unfinished-category-chart__track';
+    track.setAttribute('aria-hidden', 'true');
+    var fill = document.createElement('span');
+    fill.style.width = counts[key] / maximum * 100 + '%';
+    track.appendChild(fill);
+    var count = document.createElement('span');
+    count.className = 'unfinished-category-chart__count';
+    count.textContent = counts[key] + ' 本';
+    link.append(name, track, count);
+    rows.appendChild(link);
+    link.addEventListener('click', function (event) {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      var input = document.getElementById('searchInput');
+      var search = document.getElementById('search');
+      if (!search.classList.contains('search--expanded')) {
+        document.getElementById('searchButton').click();
+      }
+      input.value = link.dataset.filter;
+      searchBookList(input.value);
+      input.focus({ preventScroll: true });
+      var url = new URL(window.location.href);
+      url.searchParams.set('q', input.value);
+      window.history.replaceState(null, '', url);
+    });
+  });
+})();
+</script>
+{% endif %}

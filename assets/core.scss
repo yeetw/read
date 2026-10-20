@@ -48,7 +48,7 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
 }
 
 // Unfinished books by country
-.unfinished-country-chart {
+.unfinished-category-chart {
   margin: 24px 0 6px;
   padding: 20px;
   border: 1px solid #e5e6e1;
@@ -58,11 +58,11 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
   font-family: 'Noto Sans TC', sans-serif;
 }
 
-.unfinished-country-chart + h2 {
+.unfinished-category-chart + h2 {
   margin-top: 6px;
 }
 
-.unfinished-country-chart__heading {
+.unfinished-category-chart__heading {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -70,31 +70,34 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
   gap: 6px 16px;
 }
 
-.unfinished-country-chart__heading h2 {
+.unfinished-category-chart__heading h2 {
   margin: 0;
   font-size: 18px;
 }
 
-.unfinished-country-chart__heading p,
-.unfinished-country-chart__note {
+.unfinished-category-chart__heading p,
+.unfinished-category-chart__note {
   margin: 0;
   color: #777b77;
   font-size: 12px;
 }
 
-.unfinished-country-chart__note {
+.unfinished-category-chart__note {
   margin: 8px 0 18px;
   line-height: 1.7;
 }
 
-.unfinished-country-chart__rows {
+.unfinished-category-chart__rows {
   display: grid;
   gap: 4px;
+  grid-template-columns: max-content minmax(0, 1fr) 3.5em;
+  column-gap: 12px;
 }
 
-.unfinished-country-chart__row {
+.unfinished-category-chart__row {
   display: grid;
-  grid-template-columns: 4em minmax(0, 1fr) 3.5em;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
   align-items: center;
   gap: 12px;
   font-size: 14px;
@@ -105,42 +108,47 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
   padding: 3px 0;
 }
 
-.unfinished-country-chart__row:hover {
+.unfinished-category-chart__row > :first-child {
+  white-space: nowrap;
+}
+
+.unfinished-category-chart__row:hover {
   color: #635776;
   text-decoration: none;
 }
 
-.unfinished-country-chart__row:hover .unfinished-country-chart__track > span {
+.unfinished-category-chart__row:hover .unfinished-category-chart__track > span {
   background: #a49ab9;
 }
 
-.unfinished-country-chart__row:focus-visible {
+.unfinished-category-chart__row:focus-visible {
   outline: 2px solid #a49ab9;
   outline-offset: 4px;
 }
 
-.unfinished-country-chart__track {
+.unfinished-category-chart__track {
   height: 14px;
   border-radius: 3px;
   background: #ffffff;
   overflow: hidden;
 }
 
-.unfinished-country-chart__track > span {
+.unfinished-category-chart__track > span {
   display: block;
   height: 100%;
   background: #b8b1c8;
   border-radius: inherit;
 }
 
-.unfinished-country-chart__count {
+.unfinished-category-chart__count {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
 @media (max-width: 480px) {
-  .unfinished-country-chart { padding: 16px 12px; }
-  .unfinished-country-chart__row { gap: 8px; font-size: 13px; }
+  .unfinished-category-chart { padding: 16px 12px; }
+  .unfinished-category-chart__rows { column-gap: 8px; }
+  .unfinished-category-chart__row { gap: 8px; font-size: 13px; }
 }
 
 // Author country statistics
