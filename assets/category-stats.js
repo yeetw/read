@@ -10,9 +10,9 @@
   function key(value, mode) { var c = code(value); return c ? (mode === 'major' ? c[0] + '00' : mode === 'section' ? c.slice(0, 3) : c.slice(0, 2) + '0') : 'unknown'; }
   function label(k, mode) { return k === 'unknown' ? '未分類／分類號缺漏' : (mode === 'major' ? data.majors : mode === 'section' ? data.sections : data.labels)[k] || '類目名稱缺漏'; }
   function rows(mode, subset) {
-    var map = {}; Object.keys(mode === 'major' ? data.majors : mode === 'section' ? data.sections : data.labels).forEach(function (k) { map[k] = 0; });
-    (subset || years).forEach(function (y) { data.years[y].forEach(function (v) { var k = key(v, mode); map[k] = (map[k] || 0) + 1; }); });
-    return Object.keys(map).map(function (k) { return {code:k, count:map[k]}; }).sort(function (a,b) { return b.count-a.count || a.code.localeCompare(b.code); });
+    var starred = {}, map = {}; Object.keys(mode === 'major' ? data.majors : mode === 'section' ? data.sections : data.labels).forEach(function (k) { map[k] = 0; });
+    (subset || years).forEach(function (y) { data.years[y].forEach(function (v) { var k = key(v.category, mode); map[k] = (map[k] || 0) + 1; if (v.starred) starred[k] = (starred[k] || 0) + 1; }); });
+    return Object.keys(map).map(function (k) { return {code:k, count:map[k], starred:starred[k] || 0}; }).sort(function (a,b) { return b.count-a.count || a.code.localeCompare(b.code); });
   }
   function pct(n,d) { return (d ? n/d*100 : 0).toFixed(1) + '%'; }
   function link(parent, row, mode, year) {
@@ -20,12 +20,13 @@
     var query = 'category:' + (mode === 'major' && row.code !== 'unknown' ? row.code[0] + '*' : mode === 'section' && row.code !== 'unknown' ? row.code + '*' : row.code);
     a.href = '/?q=' + encodeURIComponent((year ? 'year:' + year + ' ' : '') + query); return a;
   }
-  var largest = rows('major').find(function(r){return r.code === '800';});
-  id('category-total-value').textContent = total.toLocaleString('zh-TW');
+  var largest = rows('major').filter(function(r){return r.code !== 'unknown';})[0];
+  id('category-total-value').textContent = total.toLocaleString('zh-TW') + ' 本';
   id('category-period-value').textContent = years.length + ' 年';
-  id('category-period-detail').textContent = years[0] + '–' + years[years.length-1] + '・末年截至目前';
+  id('category-period-detail').textContent = years[0] + '–' + years[years.length-1];
   id('category-largest-value').textContent = largest && largest.count ? pct(largest.count,total) : '—';
   id('category-largest-detail').textContent = largest && largest.count ? largest.code + ' ' + label(largest.code,'major') + '・' + largest.count + ' 本' : '尚無分類資料';
+  var expanded = false;
   function render() {
     var body=id('category-heatmap-body'); body.replaceChildren();
     rows(level).filter(function(r){return level === 'major' || r.count;}).forEach(function(r){
@@ -33,21 +34,40 @@
       var td=el('td',undefined,tr), a=el('a',r.count,td); a.href=th.firstChild.href;
       td=el('td',undefined,tr); a=el('a',undefined,td); a.href=th.firstChild.href;
       var bar=el('span',undefined,a,'category-heatmap__bar'); bar.setAttribute('aria-hidden','true'); var fill=el('i',undefined,bar); fill.style.width=pct(r.count,total); if(!r.count) fill.style.minWidth='0'; el('span',pct(r.count,total),a);
+      td=el('td',undefined,tr,'category-starred'); a=el('a',undefined,td); a.href=th.firstChild.href + encodeURIComponent(' star');
+      el('span',r.starred + ' 本（' + pct(r.starred,r.count) + '）',a);
+      a.setAttribute('aria-label',label(r.code,level) + '，特別好看 ' + r.starred + ' 本，占該分類已讀 ' + pct(r.starred,r.count) + '，查看書單');
+      bar=el('span',undefined,a,'category-heatmap__bar'); bar.setAttribute('aria-hidden','true'); fill=el('i',undefined,bar); fill.style.width=pct(r.starred,r.count); if(!r.starred) fill.style.minWidth='0';
     });
     var foot=id('category-heatmap-total'); foot.replaceChildren(); var tr=el('tr',undefined,foot); el('th','已讀合計',tr).scope='row'; el('td',total,tr); el('td',total ? '100%' : '0%',tr);
+    var starredTotal=rows('major').reduce(function(n,r){return n+r.starred;},0); el('td',starredTotal + ' 本（' + pct(starredTotal,total) + '）',tr);
+    var limit = level === 'major' ? 6 : 8;
+    body.dataset.level = level;
+    id('category-heatmap-body').classList.toggle('is-expanded', expanded);
+    id('category-expand').hidden = body.children.length <= limit;
+    id('category-expand').textContent = expanded ? '收合・顯示 TOP ' + limit : '展開全部分類';
+    id('category-expand').setAttribute('aria-expanded', String(expanded));
     document.querySelectorAll('[data-level]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.level===level));});
   }
-  document.querySelectorAll('[data-level]').forEach(function(b){ b.addEventListener('click',function(){ level=b.dataset.level; render(); }); });
-  // Annual charts always use the ten broad classes for a stable comparison.
+  document.querySelectorAll('[data-level]').forEach(function(b){ b.addEventListener('click',function(){ level=b.dataset.level; expanded=false; render(); }); });
+  id('category-expand').addEventListener('click', function(){
+    expanded = !expanded; render();
+    if (!expanded) id('category-summary').scrollIntoView({block:'start'});
+  });
+  // Keep category colors stable; order every year by the latest year’s share.
   var keys=Object.keys(data.majors).sort();
-  if (years.some(function(y) { return data.years[y].some(function(v) { return !code(v); }); })) keys.push('unknown');
-  keys.forEach(function(k,i){var item=el('span',undefined,id('category-legend')); var swatch=el('i',undefined,item); swatch.style.backgroundColor=colors[i]; el('span',(k==='unknown'?'—':k)+' '+label(k,'major'),item);});
+  if (years.some(function(y) { return data.years[y].some(function(v) { return !code(v.category); }); })) keys.push('unknown');
+  var categoryColors = {}, latestCounts = {};
+  keys.forEach(function(k,i){ categoryColors[k] = colors[i]; });
+  rows('major', [years[years.length - 1]]).forEach(function(r){ latestCounts[r.code] = r.count; });
+  keys.sort(function(a,b){ return (latestCounts[b] || 0) - (latestCounts[a] || 0) || a.localeCompare(b); });
+  keys.forEach(function(k,i){var item=el('span',undefined,id('category-legend')); var swatch=el('i',undefined,item); swatch.style.backgroundColor=categoryColors[k]; el('span',(k==='unknown'?'—':k)+' '+label(k,'major'),item);});
   var chartDescriptions=[];
   years.slice().reverse().forEach(function(y){
     var n=data.years[y].length, annual=rows('major',[y]), counts={}; annual.forEach(function(r){counts[r.code]=r.count;});
     var row=el('div',undefined,id('category-year-chart'),'category-year-row'); el('span',y+'・'+n+' 本',row); var bar=el('div',undefined,row,'category-year-bar');
     keys.forEach(function(k,i){var count=counts[k]||0, text=y+' '+label(k,'major')+'：'+count+' 本（'+Math.round(count/n*100)+'%）';
-      if(count){var segment=link(bar,{code:k},'major',y); segment.textContent=''; segment.style.width=(count/n*100)+'%'; segment.style.backgroundColor=colors[i]; segment.title=text; segment.setAttribute('aria-label',text); segment.dataset.label=Math.round(count/n*100)+'%';}
+      if(count){var segment=link(bar,{code:k},'major',y); segment.textContent=''; segment.style.width=(count/n*100)+'%'; segment.style.backgroundColor=categoryColors[k]; segment.title=text; segment.setAttribute('aria-label',text); segment.dataset.label=Math.round(count/n*100)+'%';}
     });
     if(!n) el('span','無已讀紀錄',bar);
     chartDescriptions.push(y+' 年 '+n+' 本');

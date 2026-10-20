@@ -1,12 +1,13 @@
 <section class="category-heatmap" aria-labelledby="category-heatmap-title">
   <div id="category-summary" class="category-summary-cards" aria-live="polite">
-    <div class="category-summary-card"><strong id="category-total-value">—</strong><span>已讀本數</span></div>
-    <div class="category-summary-card"><strong id="category-period-value">—</strong><span>統計期間</span><small id="category-period-detail"></small></div>
-    <div class="category-summary-card"><strong id="category-largest-value">—</strong><span>最大類別占比</span><small id="category-largest-detail"></small></div>
+    <a class="category-summary-card" href="{{ "/" | relative_url }}" aria-label="已讀本數，前往閱讀旅程"><strong id="category-total-value">—</strong><span>已讀本數</span></a>
+    <a class="category-summary-card" href="#country-yearly-title" aria-label="統計期間，查看作者國家・每年閱讀本數"><strong id="category-period-value">—</strong><span id="category-period-detail"></span></a>
+    <a class="category-summary-card" href="#category-year-title" aria-label="最大類別占比，查看每年度閱讀主題占比"><strong id="category-largest-value">—</strong><span id="category-largest-detail"></span></a>
   </div>
   <div class="category-heatmap__heading"><h2 id="category-heatmap-title">讀了哪些主題</h2><p>臺灣使用的中文圖書分類法（2007 年版）・依閱讀本數排序</p></div>
   <div class="category-controls" role="group" aria-label="分類層級"><button type="button" data-level="major" aria-pressed="true">大分類</button><button type="button" data-level="division" aria-pressed="false">中分類</button><button type="button" data-level="section" aria-pressed="false">小分類</button></div>
-  <div class="category-heatmap__scroll" tabindex="0" role="region" aria-label="圖書分類排行，向下捲動看更多"><table><caption>各分類本數與占全部已讀紀錄的比例</caption><thead><tr><th scope="col">圖書分類</th><th scope="col">總量</th><th scope="col">比例</th></tr></thead><tbody id="category-heatmap-body"></tbody><tfoot id="category-heatmap-total"></tfoot></table></div>
+  <div class="category-heatmap__scroll" tabindex="0" role="region" aria-label="圖書分類排行"><table><caption>各分類本數、占全部已讀紀錄的比例，以及特別好看本數與占該分類已讀書籍的比例</caption><thead><tr><th scope="col">圖書分類</th><th scope="col">本數</th><th scope="col">比例</th><th scope="col">特別好看・占比<small>占該分類已讀書籍</small></th></tr></thead><tbody id="category-heatmap-body"></tbody><tfoot id="category-heatmap-total"></tfoot></table></div>
+  <button id="category-expand" class="category-expand" type="button" aria-expanded="false" aria-controls="category-heatmap-body">展開全部分類</button>
   <h2 id="category-year-title">每年度閱讀主題占比・2021 – 2026</h2>
   <div id="category-legend" class="category-legend"></div><div id="category-year-chart" role="region" aria-labelledby="category-year-title"></div>
   <noscript>請啟用 JavaScript 以顯示分類統計。</noscript>
@@ -20,7 +21,7 @@
   {% assign category_years = "2021,2022,2023,2024,2025,2026" | split: "," %}
   {% for year in category_years %}
     {% assign category_books = site.data[year] | where_exp: "book", "book.pending != true" | where_exp: "book", "book.finished != false" %}
-    "{{ year }}": [{% for book in category_books %}{{ book.category | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]{% unless forloop.last %},{% endunless %}
+    "{{ year }}": [{% for book in category_books %}{"category": {{ book.category | jsonify }}, "starred": {% if book.star == true %}true{% else %}false{% endif %}}{% unless forloop.last %},{% endunless %}{% endfor %}]{% unless forloop.last %},{% endunless %}
   {% endfor %}
   }
 }

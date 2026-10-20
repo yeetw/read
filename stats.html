@@ -35,6 +35,7 @@ permalink: /stats
       </tbody>
     </table>
   </div>
+  <button id="author-country-expand" type="button" aria-expanded="false" aria-controls="author-country-table-body" hidden>展開全部國家</button>
 </section>
 
 {% assign country_years = site.data | sort %}
@@ -147,6 +148,16 @@ permalink: /stats
       tableBody.appendChild(row);
     });
 
+    var expandButton = document.getElementById('author-country-expand');
+    expandButton.hidden = rows.length <= 5;
+    expandButton.addEventListener('click', function () {
+      var expanded = expandButton.getAttribute('aria-expanded') !== 'true';
+      tableBody.classList.toggle('is-expanded', expanded);
+      expandButton.setAttribute('aria-expanded', String(expanded));
+      expandButton.textContent = expanded ? '收合・顯示 TOP 5' : '展開全部國家';
+      if (!expanded) document.getElementById('author-country-title').scrollIntoView({block: 'start'});
+    });
+
     if (rows.length === 0) {
       var emptyRow = document.createElement('tr');
       var emptyCell = document.createElement('td');
@@ -239,7 +250,7 @@ permalink: /stats
   }
   description.textContent = data.map(function (item) {
     return item.year + ' 年：' + item.starred + ' / ' + item.total + ' 本（' + (item.total ? percentage(item) : '無資料') + '）';
-  }).join('；') + '。以已讀完書籍為分母，排除待讀及未讀完的書籍；當年度截至目前。點選資料點可查看該年的特別好看書單。';
+  }).join('；') + '。以已讀完書籍為分母，排除待讀及未讀完的書籍。點選資料點可查看該年的特別好看書單。';
   function render() {
     var width = Math.max(svg.parentElement.clientWidth, 320);
     var left = 46, right = width - 38, top = 10, bottom = 242;
@@ -264,7 +275,6 @@ permalink: /stats
     data.forEach(function (item, index) {
       var center = x(index);
       add('text', {x: center, y: bottom + 25, 'text-anchor': 'middle'}, item.year, years);
-      if (Number(item.year) === currentYear) add('text', {x: center, y: bottom + 44, 'text-anchor': 'middle'}, '截至目前', years);
       if (!item.total) {
         add('text', {x: center, y: bottom - 12, 'text-anchor': 'middle'}, '無資料', years);
         return;
@@ -349,7 +359,7 @@ permalink: /stats
     });
     document.getElementById('country-yearly-description').textContent = countrySeries.map(function (item) {
       return item.year + ' 年：臺灣 ' + item.counts[0] + ' 本，日本 ' + item.counts[1] + ' 本，其他 ' + item.counts[2] + ' 本';
-    }).join('；') + '。當年度截至目前紀錄，排除待讀及未讀完的書籍。';
+    }).join('；') + '。排除待讀及未讀完的書籍。';
     var rawData = JSON.parse(dataElement.textContent);
     var namespace = 'http://www.w3.org/2000/svg';
     var today = new Date();
