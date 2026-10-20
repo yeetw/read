@@ -5,6 +5,7 @@
   star="{{ book.star }}"
   date="{{ book.date }}"
   {% if include.year %}data-year="{{ include.year }}"{% endif %}
+  data-category="{{ book.category | escape }}"
   data-name="{{ book.name | escape }}"
   data-author="{{ book.author | escape }}"
   {% if book.country and book.country != false %}data-country="{{ book.country | escape }}"{% endif %}

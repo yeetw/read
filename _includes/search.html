@@ -28,7 +28,7 @@
     };
 
     const rawTokens = normalizedFilter === '' ? [] : tokenizeSearch(normalizedFilter);
-    const supportedFields = new Set(['author', 'country', 'year']);
+    const supportedFields = new Set(['author', 'country', 'year', 'category']);
 
     const searchTerms = rawTokens.map((token) => {
       const separatorIndex = token.indexOf(':');
@@ -62,6 +62,8 @@
           comment = tooltip[0].textContent.toLowerCase();
         }
       }
+      const category = (li.dataset.category || '').trim();
+      const categoryGroup = /^\d{3}(\.\d+)?$/.test(category) ? category.slice(0, 2) + '0' : 'unknown';
       const isStarred = (li.getAttribute('star') || '').toLowerCase() === 'true';
       const fieldValues = {
         author,
@@ -73,6 +75,9 @@
       return terms.every((term) => {
         if (term.field === 'all' && isStarToken(term.value)) {
           return isStarred;
+        }
+        if (term.field === 'category') {
+          return categoryGroup === term.value;
         }
         if (term.field === 'country' && term.value === '其他') {
           return country.trim() !== '' && country.trim() !== '臺灣' && country.trim() !== '日本';

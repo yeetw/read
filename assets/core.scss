@@ -1095,3 +1095,52 @@ li > a.no-isbn {
   .author-country-stats__columns::after { content: '閱讀與特別好看'; font-size: 12px; }
   .author-country-stats__mobile-label { display: block; color: #888; font-size: 10px; margin-bottom: 3px; }
 }
+
+.category-heatmap {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 52px;
+  color: #5f625f;
+  &__heading h2 { margin-bottom: 8px; }
+  &__heading p, &__note { color: #858b85; font-size: 12px; line-height: 1.8; }
+  table { width: 100%; table-layout: fixed; border-collapse: collapse; margin: 20px 0 0; font-size: 12px; }
+  caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  th, td { padding: 10px 5px; border: 0; border-bottom: 1px solid #edf0ec; line-height: 1.5; }
+  thead th { color: #818b83; font-weight: 500; text-align: right; background: #f6f7f3; }
+  th:first-child { width: 46%; text-align: left; }
+  th:nth-child(2) { width: 14%; }
+  tbody th { font-weight: 400; overflow-wrap: anywhere; }
+  tbody th small { display: inline-block; width: 30px; color: #a0a69f; font-size: 10px; font-variant-numeric: tabular-nums; }
+  td { text-align: right; font-variant-numeric: tabular-nums; }
+  &__bar { display: inline-block; width: 55%; height: 7px; margin-right: 9px; vertical-align: middle; border-radius: 4px; background: #edf2ee; overflow: hidden; }
+  &__bar i { display: block; height: 100%; min-width: 2px; background: #80ad94; border-radius: inherit; }
+  tbody tr:hover { background: #f6f8f5; }
+  tfoot th, tfoot td { border-top: 1px solid #dce3dd; border-bottom: 0; padding-top: 14px; font-weight: 600; }
+  &__note { margin-top: 12px; }
+  @media (max-width: 480px) {
+    th:first-child { width: 48%; }
+    &__bar { width: 35%; margin-right: 5px; }
+  }
+}
+
+.category-heatmap__scroll {
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  margin-top: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: #bdcbbf #f6f8f5;
+}
+.category-heatmap__scroll:focus-visible { outline: 2px solid #80ad94; outline-offset: 4px; }
+.category-heatmap__scroll table { margin-top: 0; }
+.category-heatmap thead th { position: sticky; top: 0; z-index: 2; }
+.category-heatmap tfoot th, .category-heatmap tfoot td {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  background: #fff;
+  box-shadow: 0 -1px 0 #dce3dd;
+}
+
+.category-heatmap tbody a { display: block; color: inherit; border: 0; text-decoration: none; }
+.category-heatmap tbody a:hover { color: #376e55; }
+.category-heatmap tbody a:focus-visible { outline: 2px solid #80ad94; outline-offset: 3px; }
