@@ -27,6 +27,14 @@
   pending: true
   comment: 譯者是丁世佳
 
+- name: 我可不這麼想
+  author: 佐野洋子
+  country: 日本
+  date: 2026/10/20
+  isbn: 9786263149717
+  finished: false
+  comment: 有點厚的中年回望之作，對作者背景不熟悉比較沒有共鳴，「或許所有的宗教，都是人類害怕有一天會失去『愛』而創出的智慧結晶。」
+
 - name: 關於我在無意間被隔壁的天使變成廢柴這件事
   series: special book
   author: 佐伯さん
