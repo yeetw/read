@@ -160,7 +160,9 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
   margin-bottom: 16px;
 }
 
-.author-country-stats__heading h2 {
+.author-country-stats__heading h2,
+#category-heatmap-title,
+#category-year-title {
   margin: 0 0 5px;
   color: #777b77;
   font-size: 20px;
@@ -1144,3 +1146,53 @@ li > a.no-isbn {
 .category-heatmap tbody a { display: block; color: inherit; border: 0; text-decoration: none; }
 .category-heatmap tbody a:hover { color: #376e55; }
 .category-heatmap tbody a:focus-visible { outline: 2px solid #80ad94; outline-offset: 3px; }
+
+.category-controls { display: flex; width: 100%; gap: 8px; margin: 16px 0; }
+.category-controls button { flex: 1; min-width: 0; border-radius: 999px; }
+.category-controls button, #category-explore-level { font: inherit; color: #5f625f; border: 1px solid #bdcbbf; border-radius: 4px; padding: 6px 12px; background: #fff; }
+.category-controls button { border-radius: 999px; }
+.category-controls button[aria-pressed="true"] { background: #edf2ee; color: #376e55; border-color: #80ad94; }
+.category-heatmap__scroll { max-height: 560px; }
+#category-year-title { margin-top: 28px; }
+.category-heatmap details { margin: 14px 0; font-size: 12px; }
+.category-heatmap summary { cursor: pointer; }
+#category-summary { font-size: 13px; line-height: 1.9; }
+.category-legend { display: flex; flex-wrap: wrap; gap: 6px 12px; font-size: 10px; margin: 16px 0; }
+.category-legend > span { display: inline-flex; align-items: center; gap: 4px; }
+.category-legend i { width: 10px; height: 10px; border-radius: 2px; }
+.category-year-row { margin: 14px 0; font-size: 11px; }
+.category-year-bar { display: flex; height: 30px; margin-top: 5px; background: #edf2ee; }
+.category-year-bar a { display: flex; justify-content: center; align-items: center; color: #4f5e68; font-size: 10px; border: 0; overflow: hidden; }
+.category-year-bar a:focus-visible { outline: 2px solid #333; outline-offset: 2px; }
+.category-year-table { overflow-x: auto; }
+.category-year-table table { min-width: 1250px; table-layout: auto; }
+.category-year-table th:first-child { width: auto; }
+.category-explore { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
+.category-explore a { background: #f6f8f5; color: #5f625f; padding: 5px 8px; border-radius: 3px; }
+
+.category-summary-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 0 0 28px; }
+.category-summary-card { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 94px; padding: 7px 5px; box-sizing: border-box; border-radius: 16px; background: #f0f4ef; text-align: center; }
+.category-summary-card strong { color: #52745e; font-size: 30px; font-weight: 600; line-height: 1.25; letter-spacing: .01em; font-variant-numeric: tabular-nums; }
+.category-summary-card > span { margin-top: 8px; color: #68756a; font-size: 12px; line-height: 1.5; }
+.category-summary-card small { margin-top: 5px; color: #778378; font-size: 9px; line-height: 1.5; }
+@media (max-width: 380px) { .category-summary-card strong { font-size: 25px; } .category-summary-card > span { font-size: 11px; } }
+
+.category-year-bar a { box-sizing: border-box; border: 1px solid #fff; flex-shrink: 0; }
+
+.category-summary-card { display: grid; grid-template-rows: auto auto 1.5em; align-content: center; justify-items: center; row-gap: 3px; }
+.category-summary-card > span { margin-top: 0; }
+.category-summary-card small { margin-top: 0; line-height: 1.5; letter-spacing: 0; }
+
+#category-heatmap-title, #category-year-title { font-family: 'Noto Sans TC', sans-serif; font-weight: 700; margin-bottom: 5px; }
+#category-year-title + .category-heatmap__note { margin-top: 0; }
+.category-year-bar { margin-top: 6px; }
+
+.category-summary-cards { margin-bottom: 6px; }
+#category-heatmap-title { margin-top: 0; }
+
+.category-summary-cards + .category-heatmap__heading { margin-top: 0; padding-top: 0; }
+.category-summary-cards + .category-heatmap__heading > #category-heatmap-title { margin-top: 0; padding-top: 0; line-height: 1.2; }
+.category-summary-cards { margin-bottom: 6px; }
+
+.category-heatmap__heading > #category-heatmap-title { margin-bottom: 6px; }
+.category-heatmap__heading > #category-heatmap-title + p { margin-top: 0; }

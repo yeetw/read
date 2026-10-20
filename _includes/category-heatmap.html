@@ -1,23 +1,21 @@
 <section class="category-heatmap" aria-labelledby="category-heatmap-title">
-  <div class="category-heatmap__heading">
-    <div>
-      <h2 id="category-heatmap-title">讀了哪些主題</h2>
-      <p>2021–2026 累計・依閱讀本數由多到少排列，向下捲動看更多</p>
-    </div>
+  <div id="category-summary" class="category-summary-cards" aria-live="polite">
+    <div class="category-summary-card"><strong id="category-total-value">—</strong><span>已讀本數</span></div>
+    <div class="category-summary-card"><strong id="category-period-value">—</strong><span>統計期間</span><small id="category-period-detail"></small></div>
+    <div class="category-summary-card"><strong id="category-largest-value">—</strong><span>最大類別占比</span><small id="category-largest-detail"></small></div>
   </div>
-  <div class="category-heatmap__scroll" tabindex="0" role="region" aria-label="圖書分類排行，向下捲動查看前十名以外的分類">
-    <table>
-      <caption>2021–2026 各圖書分類的已讀總量與占全部已讀紀錄的比例</caption>
-      <thead><tr><th scope="col">圖書分類</th><th scope="col">總量</th><th scope="col">比例</th></tr></thead>
-      <tbody id="category-heatmap-body"></tbody>
-      <tfoot id="category-heatmap-total"></tfoot>
-    </table>
-  </div>
-  <p class="category-heatmap__note">只計已讀完的閱讀紀錄，排除待讀與未讀完項目；2026 年為目前累計。分類號取至十位數，例如 861.57 → 860。</p>
+  <div class="category-heatmap__heading"><h2 id="category-heatmap-title">讀了哪些主題</h2><p>臺灣使用的中文圖書分類法（2007 年版）・依閱讀本數排序</p></div>
+  <div class="category-controls" role="group" aria-label="分類層級"><button type="button" data-level="major" aria-pressed="true">十大類</button><button type="button" data-level="division" aria-pressed="false">細分類</button><button type="button" data-level="section" aria-pressed="false">個位分類</button></div>
+  <div class="category-heatmap__scroll" tabindex="0" role="region" aria-label="圖書分類排行，向下捲動看更多"><table><caption>各分類本數與占全部已讀紀錄的比例</caption><thead><tr><th scope="col">圖書分類</th><th scope="col">總量</th><th scope="col">比例</th></tr></thead><tbody id="category-heatmap-body"></tbody><tfoot id="category-heatmap-total"></tfoot></table></div>
+  <h2 id="category-year-title">每年度閱讀主題占比・2021 – 2026</h2>
+  <p class="category-heatmap__note">每條合計 100%，分母為該年全部已讀紀錄；2026 為截至目前的累計。將游標移至圖表色塊，可查看本數及占比。百分比四捨五入至整數，顯示值加總可能不等於 100%。</p>
+  <div id="category-legend" class="category-legend"></div><div id="category-year-chart" role="region" aria-labelledby="category-year-title"></div>
   <noscript>請啟用 JavaScript 以顯示分類統計。</noscript>
 </section>
 <script id="category-heatmap-data" type="application/json">
 {
+  "sections": {{ site.data.category_sections | jsonify }},
+  "majors": {{ site.data.categories.major_classes | jsonify }},
   "labels": {{ site.data.categories.divisions | jsonify }},
   "years": {
   {% assign category_years = "2021,2022,2023,2024,2025,2026" | split: "," %}
@@ -28,83 +26,4 @@
   }
 }
 </script>
-<script>
-(function () {
-  var data = JSON.parse(document.getElementById('category-heatmap-data').textContent);
-  var years = Object.keys(data.years).sort();
-  var rows = {};
-  years.forEach(function (year) {
-    data.years[year].forEach(function (value) {
-      var code = String(value == null ? '' : value).trim();
-      var key = /^\d{3}(\.\d+)?$/.test(code) ? code.slice(0, 2) + '0' : 'unknown';
-      if (!rows[key]) rows[key] = { code: key, label: data.labels[key] || (key === 'unknown' ? '未分類' : '史地類：世界史地（未細分）'), counts: {}, total: 0 };
-      rows[key].counts[year] = (rows[key].counts[year] || 0) + 1;
-      rows[key].total++;
-    });
-  });
-  var total = years.reduce(function (sum, year) { return sum + data.years[year].length; }, 0);
-  function cell(tag, content) {
-    var element = document.createElement(tag);
-    element.textContent = content;
-    return element;
-  }
-  var sorted = Object.keys(rows).map(function (key) { return rows[key]; }).sort(function (a, b) {
-    return b.total - a.total || a.code.localeCompare(b.code);
-  });
-  var body = document.getElementById('category-heatmap-body');
-  sorted.forEach(function (row) {
-    var tr = document.createElement('tr');
-    var heading = cell('th', '');
-    heading.scope = 'row';
-    heading.appendChild(cell('small', row.code === 'unknown' ? '—' : row.code));
-    heading.appendChild(document.createTextNode(row.label));
-    var url = '/?q=' + encodeURIComponent('category:' + row.code);
-    var labelLink = cell('a', '');
-    labelLink.href = url;
-    while (heading.firstChild) labelLink.appendChild(heading.firstChild);
-    heading.appendChild(labelLink);
-    tr.appendChild(heading);
-    var countCell = cell('td', '');
-    var countLink = cell('a', row.total);
-    countLink.href = url;
-    countLink.setAttribute('aria-label', '查看' + row.label + '的 ' + row.total + ' 本書');
-    countCell.appendChild(countLink);
-    tr.appendChild(countCell);
-    var percent = total ? row.total / total * 100 : 0;
-    var proportion = cell('td', '');
-    var track = cell('span', '');
-    track.className = 'category-heatmap__bar';
-    track.setAttribute('aria-hidden', 'true');
-    var fill = cell('i', '');
-    fill.style.width = percent + '%';
-    track.appendChild(fill);
-    proportion.appendChild(track);
-    proportion.appendChild(cell('span', percent.toFixed(1) + '%'));
-    var proportionLink = cell('a', '');
-    proportionLink.href = url;
-    proportionLink.setAttribute('aria-label', '查看' + row.label + '書單，占全部已讀 ' + percent.toFixed(1) + '%');
-    while (proportion.firstChild) proportionLink.appendChild(proportion.firstChild);
-    proportion.appendChild(proportionLink);
-    tr.appendChild(proportion);
-    body.appendChild(tr);
-  });
-  var totalRow = document.createElement('tr');
-  var heading = cell('th', '已讀合計'); heading.scope = 'row'; totalRow.appendChild(heading);
-  totalRow.appendChild(cell('td', total));
-  totalRow.appendChild(cell('td', total ? '100%' : '0%'));
-  document.getElementById('category-heatmap-total').appendChild(totalRow);
-  var scroller = document.querySelector('.category-heatmap__scroll');
-  function sizeRanking() {
-    var visibleRows = Array.prototype.slice.call(body.rows, 0, 10);
-    var table = scroller.querySelector('table');
-    var height = table.tHead.getBoundingClientRect().height +
-      visibleRows.reduce(function (sum, row) { return sum + row.getBoundingClientRect().height; }, 0) +
-      table.tFoot.getBoundingClientRect().height;
-    scroller.style.maxHeight = Math.ceil(height + 2) + 'px';
-  }
-  sizeRanking();
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(sizeRanking);
-  if (window.ResizeObserver) new ResizeObserver(sizeRanking).observe(scroller.querySelector('table'));
-  else window.addEventListener('resize', sizeRanking);
-})();
-</script>
+<script src="{{ "/assets/category-stats.js" | relative_url }}" defer></script>
