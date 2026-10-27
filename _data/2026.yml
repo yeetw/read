@@ -27,6 +27,15 @@
   pending: true
   comment: 譯者是丁世佳
 
+- name: 我在 Amazon 上班，需要紅酒與心理師
+  author: Kristi Coulter
+  country: 美國
+  category: "785"
+  date: 2026/10/27
+  isbn: 9786263962682
+  finished: false
+  comment: 在 Amazon 工作 12 年的職場回憶錄，「我會將這些微小時刻變成閃亮的晶球。」
+
 - name: 從生命的車窗眺望
   author: 星野源
   country: 日本
