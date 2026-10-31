@@ -27,6 +27,15 @@
   pending: true
   comment: 譯者是丁世佳
 
+- name: 奇想之年
+  author: Joan Didion
+  country: 美國
+  category: "874"
+  date: 2026/10/31
+  isbn: 9789573260042
+  finished: false
+  comment: 可能我對英文的作品比較沒有共鳴，寫喪親者面對死亡和思念的長篇小說，「生命無常，你永遠無法知道下一秒你面對的會是什麼！」
+
 - name: 飛航管制的祕密世界
   author: 伊藤惠理
   country: 日本
