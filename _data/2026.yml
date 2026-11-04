@@ -27,9 +27,18 @@
   pending: true
   comment: 譯者是丁世佳
 
+- name: 高山上的小郵局
+  author: Ángeles Doñate
+  country: 西班牙
+  category: "878"
+  date: 2026/11/04
+  isbn: 9789576587146
+  finished: false
+  comment: 作者是西班牙人，對故事背景比較沒有共鳴，「你要在你認為會過得快樂的地方建立你的人生。」
+
 - name: 數位過勞
   author: 西多昌規
-  country: 臺灣
+  country: 日本
   category: "411"
   date: 2026/11/04
   isbn: 9789576587146
