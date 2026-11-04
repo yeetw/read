@@ -27,6 +27,15 @@
   pending: true
   comment: 譯者是丁世佳
 
+- name: 數位過勞
+  author: 西多昌規
+  country: 臺灣
+  category: "411"
+  date: 2026/11/04
+  isbn: 9789576587146
+  finished: false
+  comment: 2022 年出版，主要寫疫情期間遠距工作的自我調適，疫情過後現在能遠距的工作很稀有，這本書也有寫到睡前三小時不要進食
+
 - name: 我老了絕不會做的「蠢」事
   author: Steven Petrow、Roseann Foley Henry
   country: 美國
