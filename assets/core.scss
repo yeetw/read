@@ -90,7 +90,7 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
 .unfinished-category-chart__rows {
   display: grid;
   gap: 4px;
-  grid-template-columns: max-content minmax(0, 1fr) 3.5em;
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
   column-gap: 12px;
 }
 
@@ -142,6 +142,7 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
 
 .unfinished-category-chart__count {
   text-align: right;
+  white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
 

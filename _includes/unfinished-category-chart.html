@@ -15,7 +15,7 @@
     <h2 id="unfinished-category-title">沒讀完的書，都有哪些類型？</h2>
     <p id="unfinished-category-summary">{{ chart_books.size }} 本</p>
   </div>
-  <p class="unfinished-category-chart__note">依圖書大分類統計，橫條長度代表沒讀完的本數。點選分類可查看書單。</p>
+  <p class="unfinished-category-chart__note">依圖書大分類統計，顯示各類占未讀完書籍的比例。點選分類可查看書單。</p>
   <div class="unfinished-category-chart__rows"></div>
   <noscript>請啟用 JavaScript 以顯示大分類統計。</noscript>
 </section>
@@ -32,28 +32,30 @@
     counts[key] = (counts[key] || 0) + 1;
   });
   var keys = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a] || a.localeCompare(b); });
-  var maximum = counts[keys[0]];
+  var total = data.categories.length;
   document.getElementById('unfinished-category-summary').textContent = data.categories.length + ' 本・' + keys.length + ' 個分類';
   var rows = document.querySelector('.unfinished-category-chart__rows');
   keys.forEach(function (key) {
+    var percentage = counts[key] / total * 100;
+    var percentageLabel = percentage.toFixed(1) + '%';
     var label = key === 'unknown' ? '未分類' : data.majors[key];
     var query = 'category:' + (key === 'unknown' ? key : key[0] + '*');
     var link = document.createElement('a');
     link.className = 'unfinished-category-chart__row';
     link.href = '?q=' + encodeURIComponent(query);
     link.dataset.filter = query;
-    link.setAttribute('aria-label', '篩選' + label + '沒讀完的書，共 ' + counts[key] + ' 本');
+    link.setAttribute('aria-label', '篩選' + label + '沒讀完的書，占 ' + percentageLabel + '，共 ' + counts[key] + ' 本');
     var name = document.createElement('span');
     name.textContent = label;
     var track = document.createElement('span');
     track.className = 'unfinished-category-chart__track';
     track.setAttribute('aria-hidden', 'true');
     var fill = document.createElement('span');
-    fill.style.width = counts[key] / maximum * 100 + '%';
+    fill.style.width = percentage + '%';
     track.appendChild(fill);
     var count = document.createElement('span');
     count.className = 'unfinished-category-chart__count';
-    count.textContent = counts[key] + ' 本';
+    count.textContent = percentageLabel + ' · ' + counts[key] + ' 本';
     link.append(name, track, count);
     rows.appendChild(link);
     link.addEventListener('click', function (event) {
