@@ -21,6 +21,12 @@
 .logo {
   margin-bottom: 0px;
 }
+
+.logo a .logo-avatar {
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: 50% 100%;
+}
 .divider {
   margin: 12px 0px !important;
 }
@@ -45,6 +51,10 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
   font-weight: 500;
   margin-top: 0.25em;
   margin-bottom: 0.25em;
+}
+
+h1.index {
+  color: #777b65;
 }
 
 // Unfinished books by country
@@ -876,8 +886,8 @@ li > a.no-isbn {
   bottom: 12px;
   right: 12px;
   z-index: 1000;
-  background-color: #CECEC1;
-  color: #fff;
+  background-color: #e5e1d3;
+  color: #777b65;
   width: 40px;
   height: 40px;
   border-radius: 8px;
