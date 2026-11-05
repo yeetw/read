@@ -175,6 +175,16 @@
     const searchIcon = searchButton.querySelector('.search-icon');
     const closeIcon = searchButton.querySelector('.close-icon');
 
+    const fitSearchPlaceholder = () => {
+      const style = window.getComputedStyle(inputEle);
+      const context = document.createElement('canvas').getContext('2d');
+      context.font = style.font;
+      const width = Math.ceil(context.measureText(inputEle.placeholder).width) + 2;
+      inputEle.style.setProperty('--search-input-width', `${width}px`);
+    };
+    fitSearchPlaceholder();
+    document.fonts.ready.then(fitSearchPlaceholder);
+
     searchButton.addEventListener('click', (e) => {
       const isExpanded = searchEle.classList.contains('search--expanded');
       if (!isExpanded) {
@@ -219,7 +229,7 @@
 
 <div class="searchbox">
   <div class="search" id="search">
-    <input type="text" class="search__input" id="searchInput" placeholder="" />
+    <input type="text" class="search__input" id="searchInput" placeholder="搜尋書名、作者，或 star 找好書" />
     <button class="search__button" id="searchButton">
       <svg class="search__icon search-icon" focusable="false" viewBox="0 0 24 24">
         <path
