@@ -25,7 +25,7 @@
 .logo a .logo-avatar {
   aspect-ratio: 1;
   object-fit: cover;
-  object-position: 50% 100%;
+  object-position: 50% 50%;
 }
 .divider {
   margin: 12px 0px !important;
@@ -54,7 +54,7 @@ h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
 }
 
 h1.index {
-  color: #777b65;
+  color: #929e8e;
 }
 
 // Unfinished books by country
@@ -886,8 +886,8 @@ li > a.no-isbn {
   bottom: 12px;
   right: 12px;
   z-index: 1000;
-  background-color: #e5e1d3;
-  color: #777b65;
+  background-color: #e8ebe3;
+  color: #929e8e;
   width: 40px;
   height: 40px;
   border-radius: 8px;
