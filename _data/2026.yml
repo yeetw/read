@@ -45,6 +45,15 @@
   finished: false
   comment: 這本書將美感與商業競爭力連結，讀來沒有太多共鳴
 
+- name: 注意力商人：他們如何操弄人心？揭密媒體、廣告、群眾的角力戰
+  author: Tim Wu 吳修銘
+  country: 美國
+  category: "497"
+  date: 2026/11/05
+  isbn: 9789863983293
+  finished: false
+  comment: 很厚的一本書，「如果商品免費，那你就不是消費者，而是商品！」
+
 - name: 貧困旅行記
   author: 柘植義春
   country: 日本
