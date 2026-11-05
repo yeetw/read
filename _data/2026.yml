@@ -27,6 +27,15 @@
   pending: true
   comment: 譯者是丁世佳
 
+- name: 紅房子
+  author: 李桐豪
+  country: 臺灣
+  category: "489"
+  date: 2026/11/05
+  isbn: 9786267054482
+  finished: false
+  comment: 寫從日治時期至國民黨遷臺曾經發生於圓山大飯店的人事物，「史造化何其諷刺，當初紅房子為見證中美友好關係而建，然而兩國黯然斷交，也在同一棟紅房子。」
+
 - name: 高山上的小郵局
   author: Ángeles Doñate
   country: 西班牙
