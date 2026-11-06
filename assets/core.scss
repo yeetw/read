@@ -6,6 +6,19 @@
 @import 'syntax';
 
 // Custom CSS
+// Use Huninn for page text, form controls, and theme text styles.
+body,
+button,
+input,
+select,
+textarea,
+code,
+pre,
+.code,
+.footnotes {
+  font-family: 'Huninn', sans-serif;
+}
+
 .page-navigation {
   margin-top: 20px;
 }
@@ -47,7 +60,7 @@ font-size: 20px;
 
 h1.index, h1.authors, h1.unfinished, h1.stats, h1.all-books {
   color: #a09e85;
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'Huninn', sans-serif;
   font-weight: 500;
   margin-top: 0.25em;
   margin-bottom: 0.25em;
@@ -65,7 +78,7 @@ h1.index {
   border-radius: 14px;
   background: #f5f4f8;
   color: #5f625f;
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'Huninn', sans-serif;
 }
 
 .unfinished-category-chart + h2 {
@@ -168,7 +181,7 @@ h1.index {
   --country-accent-soft: #e7efeb;
   margin: 24px 0;
   color: #5f625f;
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'Huninn', sans-serif;
 }
 
 .author-country-stats__heading {
@@ -463,7 +476,7 @@ h1.index {
   --stats-2026-label: #3b5e45;
   width: 100%;
   margin-top: 4px;
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'Huninn', sans-serif;
 }
 
 #monthly-reading-title,
@@ -712,7 +725,7 @@ h1.drama {
 }
 h2 {
   color: #888888;
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'Huninn', sans-serif;
   font-weight: 500;
   font-size: 18px;
   margin-bottom: 0.5em;
@@ -897,7 +910,7 @@ li > a.no-isbn {
   justify-content: center;
   font-size: 20px;
   cursor: pointer;
-  font-family: 'Kosugi Maru', serif;
+  font-family: 'Huninn', sans-serif;
   font-weight: bold;
 }
 
@@ -973,7 +986,7 @@ li > a.no-isbn {
     color: #666;
     text-decoration: none;
     font-size: 15px;
-    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Huninn', sans-serif;
     border-left: 3px solid transparent;
     transition: background 0.15s, border-color 0.15s;
 
@@ -1202,7 +1215,7 @@ li > a.no-isbn {
 .category-summary-card > span { margin-top: 0; white-space: nowrap; }
 #category-largest-detail { font-size: clamp(8px, 2.4vw, 12px); }
 
-#category-heatmap-title, #category-year-title { font-family: 'Noto Sans TC', sans-serif; font-weight: 700; margin-bottom: 5px; }
+#category-heatmap-title, #category-year-title { font-family: 'Huninn', sans-serif; font-weight: 700; margin-bottom: 5px; }
 #category-year-title + .category-heatmap__note { margin-top: 0; }
 .category-year-bar { margin-top: 6px; }
 
