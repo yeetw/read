@@ -36,6 +36,15 @@
   star: true
   comment: 很好看，是母女旅行日本一個月造訪各地書店的日記，圖文並茂也很像旅遊文學，兩個人文筆都很流暢好讀，甚至也去了尾道！
 
+- name: 但求無傷
+  author: Henry Marsh
+  country: 英國
+  category: "416"
+  date: 2026/11/07
+  isbn: 9789863592372
+  finished: false
+  comment: 英國傑出的神經外科醫師寫的從醫回顧之書，推薦序其一是吳佳璇醫師所寫
+
 - name: 美意識：為什麼商界菁英都在培養美感？
   author: 山口周
   country: 日本
