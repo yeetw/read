@@ -8,15 +8,6 @@
   star: true
   pending: true
 
-- name: 94 歲阿嬤的專長是自拍
-  author: 西本喜美子
-  country: 日本
-  date: 2026/11/07
-  isbn: 9786264330015
-  category: "783"
-  star: true
-  comment: 黃玠演唱會前在南港 SHARE LOUNGE 快速看，書中文字可以感受到作者什麼都想嘗試的生命熱情✨
-
 - name: 賣瓜的人
   author: 洪倪
   country: 臺灣
@@ -40,10 +31,19 @@
   author: 李惠貞、陳德諠
   country: 臺灣
   category: "731"
-  date: 2026/11/07
+  date: 2026/11/09
   isbn: 9789860604627
   star: true
   comment: 很好看，是母女旅行日本一個月造訪各地書店的日記，圖文並茂也很像旅遊文學，兩個人文筆都很流暢好讀，甚至也去了尾道！
+
+- name: 94 歲阿嬤的專長是自拍
+  author: 西本喜美子
+  country: 日本
+  date: 2026/11/07
+  isbn: 9786264330015
+  category: "783"
+  star: true
+  comment: 黃玠演唱會前在南港 SHARE LOUNGE 快速看，書中文字可以感受到作者什麼都想嘗試的生命熱情✨
 
 - name: 但求無傷
   author: Henry Marsh
