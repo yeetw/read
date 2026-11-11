@@ -1335,7 +1335,7 @@ a.category-summary-card:focus-visible { outline: 2px solid #55584d; outline-offs
   .category-expand:not([hidden]) {
     display: block; width: 100%; margin: 12px 0 0; padding: 10px;
     border: 1px solid #cecec1; border-radius: 4px;
-    background: #efefe9; color: #55584d; font: inherit; cursor: pointer;
+    background: #e0e0e0; color: #55584d; font: inherit; cursor: pointer;
   }
 }
 
@@ -1354,7 +1354,7 @@ a.category-summary-card:focus-visible { outline: 2px solid #55584d; outline-offs
 .category-expand:not([hidden]) {
   display: block; width: 100%; margin: 12px 0 0; padding: 10px;
   border: 1px solid #cecec1; border-radius: 4px;
-  background: #efefe9; color: #55584d; font: inherit; cursor: pointer;
+  background: #e0e0e0; color: #55584d; font: inherit; cursor: pointer;
 }
 .category-expand:focus-visible { outline: 2px solid #55584d; outline-offset: 3px; }
 
