@@ -63,6 +63,15 @@
   finished: false
   comment: 精神醫學背景寫的心理學漫畫，畫風比較不是我喜歡的類型
 
+- name: 種族滅絕
+  author: 高野和明
+  country: 日本
+  category: "861"
+  date: 2026/11/11
+  isbn: 9786267415252
+  finished: false
+  comment: 超級厚，有 31 萬字，對推理小說比較沒有興趣
+
 - name: 犯罪手法系列５－認識司法精神醫學
   author: Vivian Chern Shnaidman
   country: 美國
