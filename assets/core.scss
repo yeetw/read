@@ -1266,9 +1266,9 @@ li > a.no-isbn {
   box-sizing: border-box;
 }
 .category-controls button { background: #efefe9; }
-.category-controls button[aria-pressed="true"] { background: #cecec1; color: #55584d; }
+.category-controls button[aria-pressed="true"] { background: #e0e0e0; color: #55584d; }
 
-.category-summary-card:first-child { background: #cecec1; }
+.category-summary-card:first-child { background: #e0e0e0; }
 .category-summary-card:nth-child(2) { background: #e8e8df; }
 .category-summary-card:nth-child(3) { background: #e8e8df; }
 .category-controls button:focus-visible { outline: 2px solid #55584d; outline-offset: 2px; }
