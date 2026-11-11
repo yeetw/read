@@ -765,6 +765,12 @@ li > a.no-isbn {
 }
 
 // Combined finished and unfinished book list
+.all-books-note {
+  margin: 0 0 8px;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
 .all-books-list .all-books__item > a,
 .all-books-list .all-books__item > a:hover,
 .all-books-list .all-books__item > a > strong,
@@ -772,6 +778,7 @@ li > a.no-isbn {
   color: #666666;
 }
 
+.all-books-note,
 .all-books-list .all-books__item--unfinished > a,
 .all-books-list .all-books__item--unfinished > a:hover,
 .all-books-list .all-books__item--unfinished > a > strong,
