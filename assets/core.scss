@@ -171,6 +171,7 @@ h1.index {
 
 @media (max-width: 480px) {
   .unfinished-category-chart { padding: 16px 12px; }
+  .unfinished-category-chart__note-action { display: block; }
   .unfinished-category-chart__rows { column-gap: 8px; }
   .unfinished-category-chart__row { gap: 8px; font-size: 13px; }
 }
