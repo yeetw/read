@@ -26,14 +26,23 @@
   pending: true
   comment: 譯者是劉子倩
 
+- name: 只有屍體不會說謊
+  author: Barbara Butcher
+  country: 美國
+  category: "585"
+  date: 2026/11/17
+  isbn: 9786264020336
+  pending: true
+  comment: 作者在紐約市首席法醫辦公室擔任死亡調查員
+
 - name: 成為歐洲人：親身經歷的戰後歐洲史
   author: Timothy Garton Ash
   country: 英國
   category: "740"
   date: 2026/11/17
   isbn: 9786267645277
-  star: true
-  comment: 譯者是閻紀宇，是列入博客來選書的好書，但我沒有好好吸收歷史的耐心，閱讀速食者🙇🏻‍♀️
+  finished: false
+  comment: 譯者是閻紀宇，是列入博客來選書的好書，但我沒有好好吸收歷史的耐心，閱讀速食者🙇🏻
 
 - name: 沒有的生活
   author: 言叔夏
