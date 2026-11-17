@@ -44,6 +44,15 @@
   pending: true
   comment: 作者是美國當代精神醫學大師級人物，書中有很多個案的故事
 
+- name: 終於悲哀的外國語
+  author: 村上春樹
+  country: 日本
+  category: "861"
+  date: 2026/11/17
+  isbn: 9789571343945
+  finished: false
+  comment: 2006 年出版，在美國任教寫的隨筆散文，譯者是賴明珠，佩服村上春樹幾乎每天跑步的自律
+
 - name: 成為歐洲人：親身經歷的戰後歐洲史
   author: Timothy Garton Ash
   country: 英國
