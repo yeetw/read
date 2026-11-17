@@ -44,6 +44,15 @@
   finished: false
   comment: 譯者是閻紀宇，是列入博客來選書的好書，但我沒有好好吸收歷史的耐心，閱讀速食者🙇🏻
 
+- name: 永不告別
+  author: 韓江
+  country: 南韓
+  category: "862"
+  date: 2026/11/17
+  isbn: 9789864897988
+  finished: false
+  comment: 覺得韓江文字尖銳地刺進心臟，既詩意又殘酷，「在那樣的地獄裡生存下來後，還能期待他成為有自由意志的人嗎？」
+
 - name: 沒有的生活
   author: 言叔夏
   country: 臺灣
