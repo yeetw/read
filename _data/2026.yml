@@ -35,6 +35,15 @@
   pending: true
   comment: 作者在紐約市首席法醫辦公室擔任死亡調查員
 
+- name: 最後的鑑定人
+  author: 岩井圭也
+  country: 日本
+  category: "861"
+  date: 2026/11/19
+  isbn: 9786267609866
+  star: true
+  comment: 故事很精彩，融合科學和推理，難得喜歡的鑑識小說，主角的信念是信奉科學，「科學不會說謊，說謊的永遠是人。」
+
 - name: 凝視太陽：面對死亡恐懼
   author: Irvin D. Yalom
   country: 美國
