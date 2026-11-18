@@ -44,6 +44,15 @@
   pending: true
   comment: 作者是美國當代精神醫學大師級人物，書中有很多個案的故事
 
+- name: 醫生說我可以去死沒關係
+  author: 平光源
+  country: 日本
+  category: "172"
+  date: 2026/11/18
+  isbn: 9789865596880
+  finished: false
+  comment: 作者是日本精神科醫師，對書中的道理比較沒有共鳴，「有時候真的只是單純不適合而已。」
+
 - name: 終於悲哀的外國語
   author: 村上春樹
   country: 日本
