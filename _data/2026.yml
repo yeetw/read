@@ -35,6 +35,15 @@
   pending: true
   comment: 作者在紐約市首席法醫辦公室擔任死亡調查員
 
+- name: 大腦升級 2.0
+  author: John B. Arden
+  country: 美國
+  category: "398"
+  date: 2026/11/24
+  isbn: 9786267074183
+  finished: false
+  comment: 資訊量很大的經典書籍，利用四個步驟組成的 FEED 法，重新連結你的大腦，重返平衡狀態：聚焦 (focus)、努力練習 (effort)、輕鬆自如 (effortlessness)、堅持不懈 (determination)；並利用五種生活習慣組成 SEEDS 法，讓你的大腦更健康：社交 (Social)、運動 (Exercise)、教育 (Education)、飲食 (Diet)、睡眠 (Sleep)
+
 - name: 最後的鑑定人
   author: 岩井圭也
   country: 日本
