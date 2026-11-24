@@ -35,6 +35,14 @@
   pending: true
   comment: 作者在紐約市首席法醫辦公室擔任死亡調查員
 
+- name: 第一顆藥
+  author: 戴伸峰
+  country: 臺灣
+  category: "411"
+  date: 2026/11/24
+  isbn: 9786264560252
+  comment: 作者對於毒品相當了解，書中清楚解釋了成癮物質的酬賞機制，「違反規則、犯罪，其實就是成本、風險與利益的綜合考量，當犯罪的成本加風險遠遠小於利益時，犯罪就會發生。」
+
 - name: 大腦升級 2.0
   author: John B. Arden
   country: 美國
